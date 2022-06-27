@@ -1,17 +1,19 @@
+<img src="../images/extra/banner_aws.png" alt="aws" width=80 height=50> [Conteudo Geral AWS Cloud][1]
+
+[1]: https://github.com/weder96/aws-certification-learning
+
+
 # Módulo 1: Visão geral dos conceitos de nuvem
 
 
+## Conteúdo
+1. <a href="#section-1">Seção 1 - Introdução à computação em nuvem</a>
+2. <a href="#section-2">Seção 2 - Vantagens da computação em nuvem</a>
+3. <a href="#section-3">Seção 3 - Introdução à Amazon Web Services (AWS)</a>
+4. <a href="#section-4">Seção 4 - Mudança para a Nuvem AWS – AWS Cloud Adoption Framework (AWS CAF)</a>
 
-## <a name=“section”><a/> Seção
 
-## Table of Contents
-[Ir para seção](#section)
-1. <a href="#introduction">Seção 1 - Introdução à computação em nuvem</a>
-2. <a href="#introduction">Seção 2 - Vantagens da computação em nuvem</a>
-3. <a href="#introduction">Seção 3 - Introdução à Amazon Web Services (AWS)</a>
-4. <a href="#introduction">Seção 4 - Mudança para a Nuvem AWS – AWS Cloud Adoption Framework (AWS CAF)</a>
-
-## Seção 1 - Introdução à computação em nuvem
+## <a id="section-1" ></a> Seção 1 - Introdução à computação em nuvem
 
 O que é computação em nuvem?
 
@@ -41,8 +43,7 @@ Há três principais modelos de implantação de computação em nuvem:
 
 Há muitas semelhanças entre a AWS e uma implementação de TI tradicional. 
 
-## Seção 2 - Vantagens da computação em nuvem
-
+## <a id="section-2" ></a> Seção 2 - Vantagens da computação em nuvem
 - Troque despesas de capital por despesas variáveis
 - Grande economia de escala
 - Pare de tentar adivinhar a capacidade
@@ -50,7 +51,7 @@ Há muitas semelhanças entre a AWS e uma implementação de TI tradicional.
 - Pare de gastar dinheiro com a operação e manutenção de datacenters
 - Tenha alcance global em minutos
 
-## Seção 3 - Introdução à Amazon Web Services (AWS)
+## <a id="section-3" ></a> Seção 3 - Introdução à Amazon Web Services (AWS)
 
 O que são serviços web?
 
@@ -70,7 +71,7 @@ Maneiras de interagir com a AWS
 - Interface da linha de comando (CLI da AWS): acesso a serviços por comandos ou scripts específicos
 - Kits de desenvolvimento de software (SDKs): acesse serviços diretamente do seu código (como Java, Python e outros)
 
-## Seção 4 - Mudança para a Nuvem AWS – AWS Cloud Adoption Framework (AWS CAF) 
+## <a id="section-4" ></a> Seção 4 - Mudança para a Nuvem AWS – AWS Cloud Adoption Framework (AWS CAF) 
 
 AWS Cloud Adoption Framework: é um documento criado para ajudar as organizações a projetar e percorrer um caminho acelerado para uma adoção bem-sucedida da nuvem
 
@@ -82,6 +83,3 @@ Perspectivas:
 
 - Foca nos recursos empresariais: negócios, pessoas e governança
 - Foca nos recursos técnicos: plataforma, segurança e operações
-
-
-## <a name=“section”></a> Seção
