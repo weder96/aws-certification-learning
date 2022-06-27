@@ -1,0 +1,1 @@
+# Módulo 10: Auto Scaling e monitoramento

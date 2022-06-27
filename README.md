@@ -30,13 +30,13 @@ A outros repositorios que será linkado ao mesmo porem espefico de cada Exame.
  - [x] [Módulo 9: Arquitetura de nuvem][9]
  - [x] [Módulo 10: Auto Scaling e monitoramento][10]
 
-[1]: https://github.com/weder96/aws_mind_maps_practitioner
-[2]: https://github.com/weder96/aws_mind_maps_practitioner
-[3]: https://github.com/weder96/aws_mind_maps_practitioner
-[4]: https://github.com/weder96/aws_mind_maps_practitioner
-[5]: https://github.com/weder96/aws_mind_maps_practitioner
-[6]: https://github.com/weder96/aws_mind_maps_practitioner
-[7]: https://github.com/weder96/aws_mind_maps_practitioner
-[8]: https://github.com/weder96/aws_mind_maps_practitioner
-[9]: https://github.com/weder96/aws_mind_maps_practitioner
-[10]: https://github.com/weder96/aws_mind_maps_practitioner
+[1]: https://github.com/weder96/aws-certification-learning/tree/main/module-1
+[2]: https://github.com/weder96/aws-certification-learning/tree/main/module-2
+[3]: https://github.com/weder96/aws-certification-learning/tree/main/module-3
+[4]: https://github.com/weder96/aws-certification-learning/tree/main/module-4
+[5]: https://github.com/weder96/aws-certification-learning/tree/main/module-5
+[6]: https://github.com/weder96/aws-certification-learning/tree/main/module-6
+[7]: https://github.com/weder96/aws-certification-learning/tree/main/module-7
+[8]: https://github.com/weder96/aws-certification-learning/tree/main/module-8
+[9]: https://github.com/weder96/aws-certification-learning/tree/main/module-9
+[10]: https://github.com/weder96/aws-certification-learning/tree/main/module-10
