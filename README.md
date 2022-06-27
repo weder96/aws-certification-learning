@@ -29,6 +29,8 @@ A outros repositorios que será linkado ao mesmo porem espefico de cada Exame.
  - [Módulo 8: Bancos de dados][8]
  - [Módulo 9: Arquitetura de nuvem][9]
  - [Módulo 10: Auto Scaling e monitoramento][10]
+ - [Módulo 11: AWS Analytics Services][11]
+ 
 
 [1]: https://github.com/weder96/aws-certification-learning/tree/main/module-1
 [2]: https://github.com/weder96/aws-certification-learning/tree/main/module-2
@@ -40,3 +42,4 @@ A outros repositorios que será linkado ao mesmo porem espefico de cada Exame.
 [8]: https://github.com/weder96/aws-certification-learning/tree/main/module-8
 [9]: https://github.com/weder96/aws-certification-learning/tree/main/module-9
 [10]: https://github.com/weder96/aws-certification-learning/tree/main/module-10
+[11]: https://github.com/weder96/aws-certification-learning/tree/main/module-11
