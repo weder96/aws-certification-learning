@@ -16,8 +16,6 @@
 9. <a href="#section-9"> Kinesis Data Analytics</a>
 10. <a href="#section-10"> Amazon OpenSearch</a>
 
-
-
 Existem vários serviços do AWS Analytics e incluem:
 
 - Amazon Athena Amazon EMR 

@@ -33,9 +33,14 @@ Infraestrutura como software:
 - Podem mudar com mais rapidez
 - Eliminam as tarefas monolíticas de trabalho pesado
 
-**Iass x Paas x Saas**
+**Tipos de Serviços Cloud - (Iass x Paas x Saas x Caas)**
 
-Há três principais modelos de implantação de computação em nuvem:
+### Há três principais modelos de implantação de computação em nuvem:
+
+- **Infrastructure as a Service (IaaS)** - Serviços que fornecem conexão de rede, SOs, armazenamento, alta flexibilidade de utilização. Costumam ser genéricos, podem ser utilizados para vários fins. Ex:  [EC2](https://aws.amazon.com/pt/ec2/) da AWS [instance-types](<https://aws.amazon.com/pt/ec2/instance-types/>).
+- **Platform as a Service (PaaS)** - Serviços que fornecem uma plataforma para deployment, restauração, manutenção de dados, mas não te dão acesso ao SO diretamente, Ex: Elastic BeanStalk, [S3](https://aws.amazon.com/pt/s3/).
+- **Software as a Service (SaaS)** - Serviços que atuam como uma aplicação na nuvem gerenciada pela AWS que você chama da sua aplicação para algum fim, Ex: Rekognition, Polly, Translate.
+- **Code as a Service (Caas)** ou Function as a Service (FaaS) - Serviços orientados a evento que executam uma função simples na núvem em um ambiente serverless, Ex: [Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html).
 
 ### **TIPOS DE COMPUTAÇÃO EM NUVEM**
 
@@ -45,9 +50,11 @@ Há três principais modelos de implantação de computação em nuvem:
 - Software como serviço (SaaS)
 
 **TIPOS DE IMPLANTAÇÃO DE NUVEM**
-Existem 3 tipos de implantação na nuvem:
+
+Existem 4 tipos de implantação na nuvem:
 - **Nuvem pública ou simples** “nuvem” – ex. AWS, Azure, GCP
 - **Nuvem Híbrida** – mistura de nuvens públicas e privadas
+- **Multi Cloud** - usando mais de 1 nuvem pública em uma implantação.
 - **Nuvem privada (on-premise)** – gerenciada em seu próprio data center, por exemplo, Hyper-V, OpenStack, VMware
 
 **Nuvem Pública**
@@ -66,6 +73,13 @@ A implantação de recursos no local usando ferramentas de virtualização e ger
 
 Na maioria dos casos, esse modelo de implantação é o mesmo que a infraestrutura de TI herdada, usando tecnologias de gerenciamento e virtualização de aplicativos para tentar aumentar a utilização de recursos.
 Há muitas semelhanças entre a AWS e uma implementação de TI tradicional. 
+
+**Multi Cloud** - 
+A linha entre nuvem híbrida e multicloud está embaçada neste momento. A nuvem híbrida é certamente mais expansiva em sua definição (pública, local, borda). 
+
+A multinuvem geralmente se refere a várias nuvens públicas. O que o torna embaçado é que a nuvem é uma mentalidade - não um local físico. Como resultado, vemos os termos usados alternadamente nos dias de hoje.
+
+Uma coisa é clara, no entanto, é que, independentemente das definições - os primeiros princípios necessários para o sucesso em ambos são notavelmente semelhantes.
 
 ***************************************************************************************************************************
 
