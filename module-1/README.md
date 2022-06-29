@@ -7,11 +7,11 @@
 
 
 ## Conteúdo
-1. <a href="#section-1">Seção 1 - Introdução à computação em nuvem</a>
-2. <a href="#section-2">Seção 2 - Vantagens da computação em nuvem</a>
-3. <a href="#section-3">Seção 3 - Introdução à Amazon Web Services (AWS)</a>
-4. <a href="#section-4">Seção 4 - Mudança para a Nuvem AWS – AWS Cloud Adoption Framework (AWS CAF)</a>
-
+1. <a href="#section-1"> Introdução à computação em nuvem </a>
+2. <a href="#section-2"> Vantagens da computação em nuvem </a>
+3. <a href="#section-3"> Introdução à Amazon Web Services (AWS) </a>
+4. <a href="#section-4"> Mudança para a Nuvem AWS – AWS Cloud Adoption Framework (AWS CAF)</a>
+5. <a href="#section-5"> AWS Shared Responsibility Model</a>
 
 ## <a id="section-1" ></a> Seção 1 - Introdução à computação em nuvem
 
@@ -312,18 +312,19 @@ Uma plataforma de serviços em nuvem, como a Amazon Web Services, possui e mant�
 
 ### **AS SEIS VANTAGENS**
 
-A AWS promove as seis vantagens da nuvem:
-1. **Trocar despesas de capital por despesas variáveis** ​​– Em vez de ter que investir pesadamente em data centers e servidores antes de saber como usá-los, você pode pagar apenas quando consumir recursos de computação e pagar apenas por quanto consumir .
+A AWS promove as [seis vantagens](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html) da nuvem:
+1. **Trocar despesas de capital por despesas variáveis** 
+**(Trade fixed expense for variable expense)** ​​– Em vez de ter que investir pesadamente em data centers e servidores antes de saber como usá-los, você pode pagar apenas quando consumir recursos de computação e pagar apenas por quanto consumir .
 
-2. **Beneficie-se de enormes economias de escala** – Ao usar a computação em nuvem, você pode obter um custo variável mais baixo do que poderia obter por conta própria. Como o uso de centenas de milhares de clientes é agregado na nuvem, provedores como a AWS podem obter maiores economias de escala, o que se traduz em preços mais baixos de pagamento conforme o uso.
+2. **Beneficie-se de enormes economias de escala (Benefit from massive economies of scale)** – Ao usar a computação em nuvem, você pode obter um custo variável mais baixo do que poderia obter por conta própria. Como o uso de centenas de milhares de clientes é agregado na nuvem, provedores como a AWS podem obter maiores economias de escala, o que se traduz em preços mais baixos de pagamento conforme o uso.
 
-3. **Pare de adivinhar sobre a capacidade** – Elimine adivinhações sobre suas necessidades de capacidade de infraestrutura. Quando você toma uma decisão de capacidade antes de implantar um aplicativo, geralmente acaba ficando com recursos ociosos caros ou lidando com capacidade limitada. Com a computação em nuvem, esses problemas desaparecem. Você pode acessar o máximo ou o mínimo de capacidade que precisar e aumentar e diminuir conforme necessário com apenas alguns minutos de antecedência.
+3. **Pare de adivinhar sobre a capacidade (Stop guessing capacity)** – Elimine adivinhações sobre suas necessidades de capacidade de infraestrutura. Quando você toma uma decisão de capacidade antes de implantar um aplicativo, geralmente acaba ficando com recursos ociosos caros ou lidando com capacidade limitada. Com a computação em nuvem, esses problemas desaparecem. Você pode acessar o máximo ou o mínimo de capacidade que precisar e aumentar e diminuir conforme necessário com apenas alguns minutos de antecedência.
 
-4. **Aumente a velocidade e a agilidade** – Em um ambiente de computação em nuvem, novos recursos de TI estão a apenas um clique de distância, o que significa que você reduz o tempo para disponibilizar esses recursos para seus desenvolvedores de semanas para apenas alguns minutos. Isso resulta em um aumento dramático na agilidade da organização, pois o custo e o tempo necessários para experimentar e desenvolver são significativamente menores.
+4. **Aumente a velocidade e a agilidade(Increase speed and agility)** – Em um ambiente de computação em nuvem, novos recursos de TI estão a apenas um clique de distância, o que significa que você reduz o tempo para disponibilizar esses recursos para seus desenvolvedores de semanas para apenas alguns minutos. Isso resulta em um aumento dramático na agilidade da organização, pois o custo e o tempo necessários para experimentar e desenvolver são significativamente menores.
 
-5. **Pare de gastar dinheiro executando e mantendo data centers** – Concentre-se em projetos que diferenciam seus negócios, não a infraestrutura. A computação em nuvem permite que você se concentre em seus próprios clientes, e não no trabalho pesado de armazenamento em rack, empilhamento e alimentação de servidores.
+5. **Pare de gastar dinheiro executando e mantendo data centers(Stop spending money running and maintaining data centers )** – Concentre-se em projetos que diferenciam seus negócios, não a infraestrutura. A computação em nuvem permite que você se concentre em seus próprios clientes, e não no trabalho pesado de armazenamento em rack, empilhamento e alimentação de servidores.
 
-6. **Torne-se global em minutos** – Implante facilmente seu aplicativo em várias regiões do mundo com apenas alguns cliques. Isso significa que você pode fornecer menor latência e uma melhor experiência para seus clientes a um custo mínimo.
+6. **Torne-se global em minutos(Go global in minutes)** – Implante facilmente seu aplicativo em várias regiões do mundo com apenas alguns cliques. Isso significa que você pode fornecer menor latência e uma melhor experiência para seus clientes a um custo mínimo.
 
 <a href="https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html" target="_blank"> 
     Whitepaper - Six advantages of cloud computing
@@ -383,3 +384,47 @@ Perspectivas:
 
 - Foca nos recursos empresariais: negócios, pessoas e governança
 - Foca nos recursos técnicos: plataforma, segurança e operações
+
+
+
+## <a id="section-5" ></a> **5 - AWS Shared Responsibility Model**
+The [AWS shared responsibility model](https://aws.amazon.com/compliance/shared-responsibility-model/) defines what you (as an AWS account holder/user) and AWS are responsible for when it comes to security and compliance.
+
+Security and Compliance is a shared responsibility between AWS and the customer. This shared model can help relieve customer’s operational burdens as AWS operates, manages, and controls the components from the host operating system and virtualization layer down to the physical security of the facilities in which the service operates.
+
+The customer assumes responsibility and management of the guest operating system (including updates and security patches), other associated application software as well as the configuration of the AWS provided security group firewall.
+
+AWS are responsible for “Security of the Cloud” .
+
+    AWS is responsible for protecting the infrastructure that runs all the services offered in the AWS Cloud.
+    This infrastructure is composed of the hardware, software, networking, and facilities that run AWS Cloud services.
+
+Customers are responsible for “Security in the Cloud”.
+
+    For EC2 this includes network level security (NACLs, security groups), operating system patches and updates, IAM user access management, and client and server-side data encryption.
+
+The following diagram shows the split of responsibilities between AWS and the customer:
+
+
+<img src="../images/extra/aws-shared-responsibility-model.jpeg" alt="aws-shared-responsibility-model" width=80% /> 
+
+
+Inherited Controls – Controls which a customer fully inherits from AWS.
+
+    Physical and Environmental controls.
+
+Shared Controls – Controls which apply to both the infrastructure layer and customer layers, but in separate contexts or perspectives.
+
+In the AWS shared security model, a shared control, AWS provides the requirements for the infrastructure and the customer must provide their own control implementation within their use of AWS services.
+
+Examples  of shared controls include:
+
+    Patch Management – AWS is responsible for patching and fixing flaws within the infrastructure, but customers are responsible for patching their guest OS and applications.
+    Configuration Management – AWS maintains the configuration of its infrastructure devices, but a customer is responsible for configuring their own guest operating systems, databases, and applications.
+    Awareness & Training – AWS trains AWS employees, but a customer must train their own employees.
+
+Customer Specific – Controls which are solely the responsibility of the customer based on the application they are deploying within AWS services. .
+
+Examples of customer specific controls include:
+
+    Service and Communications Protection or Zone Security which may require a customer to route or zone data within specific security environments.
