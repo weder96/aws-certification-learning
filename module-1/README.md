@@ -12,7 +12,9 @@
 3. <a href="#section-3"> Introdução à Amazon Web Services (AWS) </a>
 4. <a href="#section-4"> Mudança para a Nuvem AWS – AWS Cloud Adoption Framework (AWS CAF)</a>
 5. <a href="#section-5"> AWS Shared Responsibility Model</a>
+6. <a href="#section-6"> AWS Support</a>
 
+****************************************************************************************************
 ## <a id="section-1" ></a> Seção 1 - Introdução à computação em nuvem
 
 O que é computação em nuvem?
@@ -410,21 +412,42 @@ The following diagram shows the split of responsibilities between AWS and the cu
 
 
 Inherited Controls – Controls which a customer fully inherits from AWS.
-
-    Physical and Environmental controls.
+- Physical and Environmental controls.
 
 Shared Controls – Controls which apply to both the infrastructure layer and customer layers, but in separate contexts or perspectives.
 
 In the AWS shared security model, a shared control, AWS provides the requirements for the infrastructure and the customer must provide their own control implementation within their use of AWS services.
 
 Examples  of shared controls include:
-
-    Patch Management – AWS is responsible for patching and fixing flaws within the infrastructure, but customers are responsible for patching their guest OS and applications.
-    Configuration Management – AWS maintains the configuration of its infrastructure devices, but a customer is responsible for configuring their own guest operating systems, databases, and applications.
-    Awareness & Training – AWS trains AWS employees, but a customer must train their own employees.
+- Patch Management – AWS is responsible for patching and fixing flaws within the infrastructure, but customers are responsible for patching their guest OS and applications.
+- Configuration Management – AWS maintains the configuration of its infrastructure devices, but a customer is responsible for configuring their own guest operating systems, databases, and applications.
+- **Awareness & Training** – AWS trains AWS employees, but a customer must train their own employees.
 
 Customer Specific – Controls which are solely the responsibility of the customer based on the application they are deploying within AWS services. .
 
 Examples of customer specific controls include:
+- Service and Communications Protection or Zone Security which may require a customer to route or zone data within specific security environments.
 
-    Service and Communications Protection or Zone Security which may require a customer to route or zone data within specific security environments.
+**********************************************************************************
+## <a id="section-6" ></a> **6 - AWS Support**
+
+[AWS Support Plans](https://aws.amazon.com/premiumsupport/plans/)
+There are four AWS support plans available:
+- Basic – billing and account support only (access to forums only).
+- Developer – business hours support via email.
+- Business – 24×7 email, chat, and phone support.
+- Enterprise – 24×7 email, chat, and phone support.
+
+Enterprise support comes with a Technical Account Manager (TAM).
+
+Developer allows one person to open unlimited cases.
+
+Business and Enterprise allow unlimited contacts to open unlimited cases.
+
+<br/><br/>
+<img src="../images/aws/aws-support-plans-1.png" alt="aws" width=80%>
+<br/><br/>
+<img src="../images/aws/aws-support-plans-2.png" alt="aws" width=80%>
+
+
+

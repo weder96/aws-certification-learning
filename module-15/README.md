@@ -21,8 +21,11 @@
 14. <a href="#section-14" > Federation (typically AD)</a>
 15. <a href="#section-15" > Access Keys</a>
 16. <a href="#section-16" > IAM Best Practices</a>
-17. <a href="#section-17" > Generate a public SSH</a>
+17. <a href="#section-17" > Generate a public SSH </a>
+18. <a href="#section-18"> AWS Organizations </a>
+19. <a href="#section-19"> AWS Config </a>
 
+**********************************************************************************************************
 ## IAM Overview
 ## <a id="section-1" ></a> **1 - GENERAL IAM CONCEPTS**
 AWS Identity and Access Management (IAM) is a web service that helps you securely control access
@@ -231,6 +234,8 @@ Access keys and passwords should be changed regularly.
 
 
 ## <a id="section-7" ></a> **7 -  IAM Roles**
+### [IAM Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html)
+With IAM Roles you can delegate permissions to resources for users and services without using permanent credentials (e.g. username and password). To do so you can create a role and assign an IAM policy to the role that has the permissions required.
 - created & then "assumed" by another entity
 - eg, create an EC2 instance - assign a 'role' that allows full access to S3 storage service
 - roles bypass need for an explicit userid/password
@@ -245,6 +250,7 @@ used to make AWS API calls.
 - Temporary credentials are primarily used with IAM roles and automatically expire.
 - Roles can be assumed temporarily through the console or programmatically with the AWS CLI, Tools
   for Windows PowerShell or API.
+  
 
 ## <a id="section-8" ></a> **8 -  IAM roles with EC2 instances**
   - IAM roles can be used for granting applications running on EC2 instances permissions to AWS API requests using instance profiles.
@@ -446,6 +452,12 @@ Users can come from three sources.
   - Users can be given access to change their own keys through IAM policy (not from the console).
   - You can disable a user’s access key which prevents it from being used for API calls.
 
+## **Best practices include:**
+[aws-access-keys-best-practices](https://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html)
+– Don’t generate an access key for the root account user.
+– Use Temporary Security Credentials (IAM Roles) Instead of Long-Term Access Keys.
+– Manage IAM User Access Keys Properly.
+
 
 ## Server certificates:
   - SSL/TLS certificates that you can use to authenticate with some AWS services.
@@ -485,5 +497,60 @@ The following diagram shows the different methods of authentication available wi
     - Generate a public SSH key (.pub) file from the private SSH key (.pem) file.
     - Set the AWS Region you wish to import to.
     - Import the public SSH key into the new Region.
+
+
+## <a id="section-18" ></a> **18 - AWS Organizations**
+[AWS Organizations](https://aws.amazon.com/organizations/) and Consolidated Billing
+
+AWS organizations allows you to consolidate multiple AWS accounts into an organization that you create and centrally manage.
+
+Available in two feature sets:
+- Consolidated Billing.
+- All features.
+
+Includes root accounts and organizational units.
+
+Policies are applied to root accounts or OUs.
+
+Consolidated billing includes:
+- Paying Account – independent and cannot access resources of other accounts.
+- Linked Accounts – all linked accounts are independent.
+
+Consolidated billing has the following benefits:
+- One bill – You get one bill for multiple accounts.
+- Easy tracking – You can track the charges across multiple accounts and download the combined cost and usage data.
+- Combined usage – You can combine the usage across all accounts in the organization to share the volume pricing discounts and Reserved Instance discounts. This can result in a lower charge for your project, department, or company than with individual standalone accounts.
+- No extra fee – Consolidated billing is offered at no additional cost.
+
+Limit of 20 linked accounts (by default).
+
+One bill for multiple AWS accounts.
+
+Easy to track charges and allocate costs.
+
+Volume pricing discounts can be applied to resources.
+
+Billing alerts enabled on the Paying account include data for all Linked accounts (or can be created per Linked account).
+
+Consolidated billing allows you to get volume discounts on all your accounts.
+
+Unused reserved instances (RIs) for EC2 are applied across the group.
+
+CloudTrail is on a per account basis and per region basis but can be aggregated into a single bucket in the paying account.
+
+**Best practices:**
+- Always enable multi-factor authentication (MFA) on the root account.
+- Always use a strong and complex password on the root account.
+- The Paying account should be used for billing purposes only. Do not deploy resources into the Paying account.
+
+
+**For billing purposes**, the consolidated billing feature of AWS Organizations treats all the accounts in the organization as one account. This means that all accounts in the organization can receive the hourly cost benefit of Reserved Instances that are purchased by any other account.
+
+
+## <a id="section-19" ></a> **19 - AWS Config**
+[gs-console](https://docs.aws.amazon.com/config/latest/developerguide/gs-console.html)
+
+
+AWS Config is a fully-managed service that provides you with an AWS resource inventory, configuration history, and configuration change notifications to enable security and regulatory compliance.
 
 

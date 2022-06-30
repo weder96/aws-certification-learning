@@ -1,4 +1,4 @@
- <img src="../images/extra/banner_aws.png" alt="aws" width=80 height=50 /> [Conteudo Geral AWS Cloud][1]
+<img src="../images/extra/banner_aws.png" alt="aws" width=80 height=50 /> [Conteudo Geral AWS Cloud][1]
 
 [1]: https://github.com/weder96/aws-certification-learning
 
@@ -274,17 +274,23 @@ O Amazon EFS foi projetado para intermitência para permitir altos níveis de ta
 ----------------------------------------------------------------------------------------------------
 ## <a id="section-6" ></a> **6 - AWS Storage Gateway**
 
-O **AWS Storage Gateway** é um serviço de armazenamento em nuvem híbrida que oferece acesso local a armazenamento em nuvem praticamente ilimitado.
+O [**AWS Storage Gateway**](https://aws.amazon.com/storagegateway/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc) é um serviço de armazenamento em nuvem híbrida que oferece acesso local a armazenamento em nuvem praticamente ilimitado.
 
 Os clientes usam o Storage Gateway para simplificar o gerenciamento de armazenamento e reduzir custos para os principais casos de uso de armazenamento em nuvem híbrida.
 
 Isso inclui mover backups para a nuvem, usar compartilhamentos de arquivos locais com suporte de armazenamento em nuvem e fornecer acesso de baixa latência a dados na AWS para aplicativos locais.
 
 Para dar suporte a esses casos de uso, o Storage Gateway oferece três tipos diferentes de gateways:
-- File Gateway – fornece interfaces de sistema de arquivos para servidores locais.
-- Volume Gateway – fornece acesso baseado em bloco para servidores locais.
-- Tape Gateway – fornece uma biblioteca de fitas virtuais compatível com software de backup comum (interfaces de bloco e arquivo).
+- **File Gateway** – fornece interfaces de sistema de arquivos para servidores locais.
+- **Volume Gateway** – fornece acesso baseado em bloco para servidores locais.
+- **Tape Gateway** – fornece uma biblioteca de fitas virtuais compatível com software de backup comum (interfaces de bloco e arquivo).
 
+
+How it works
+
+AWS Storage Gateway is a set of hybrid cloud storage services that provide on-premises access to virtually unlimited cloud storage.
+
+<img src="../images/extra/product-page-diagram_AWS-Storage-Gateway_HIW@2x.6.png" alt="product-page-diagram_AWS-Storage-Gateway_HIW@2x.6" width=80% />
 
 
 

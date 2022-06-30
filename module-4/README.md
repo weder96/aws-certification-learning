@@ -19,7 +19,7 @@
 12. <a href="#section-12"> AWS Directory Services </a>
 13. <a href="#section-13"> AWS Systems Manager Parameter Store </a>
 14. <a href="#section-14"> AWS Secrets Manager </a>
-15. <a href="#section-15">How do I report abuse of AWS resources?</a>
+15. <a href="#section-15"> How do I report abuse of AWS resources?</a>
 
 ## <a id="section-1" ></a> **1 - Inspector**
 [inspector](https://aws.amazon.com/pt/inspector/)
@@ -59,6 +59,11 @@ Os relatórios disponíveis no AWS Artifact incluem nossos relatórios de:
 - Certificações de órgãos de credenciamento em todas as geografias e verticais de conformidade que validam a implementação e a eficácia operacional dos controles de segurança da AWS.
 
 Os contratos disponíveis no [AWS Artifact](https://aws.amazon.com/pt/artifact/) incluem o Business Associate Addendum (BAA) e o Nondisclosure Agreement (NDA).
+
+[AWS Artifact](https://aws.amazon.com/pt/artifact/) is the go-to, central resource for compliance-related information that matters to you. It provides on-demand access to AWS’ security and compliance reports and select online agreements.
+
+Reports available in [AWS Artifact](https://aws.amazon.com/pt/artifact/) include Service Organization Control [(SOC) reports, Payment Card Industry (PCI) reports](https://aws.amazon.com/blogs/security/tag/aws-soc-reports/), 
+and certifications from accreditation bodies across geographies and compliance verticals that validate the implementation and operating effectiveness of AWS security controls.
 
 
 ## <a id="section-3" ></a> **3 - Amazon GuardDuty**
