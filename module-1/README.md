@@ -450,4 +450,14 @@ Business and Enterprise allow unlimited contacts to open unlimited cases.
 <img src="../images/aws/aws-support-plans-2.png" alt="aws" width=80%>
 
 
+<br/><br/>
+*We will make every reasonable effort to respond to your initial request within the corresponding timeframes.
+
+**Business hours are generally defined as 8:00 AM to 6:00 PM in the customer country as set in My Account console, excluding holidays and weekends. These times may vary in countries with multiple time zones.
+
+*** Plans are subject to a 30 day minimum term.
+
+****Customers qualify for the regional pricing if all accounts on their billing profile are concentrated in qualified LATAM countries, India, or Mainland China subject to conditions below. 
+
+
 

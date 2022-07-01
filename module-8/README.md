@@ -11,6 +11,7 @@
 4. <a href="#section-4"> Amazon RedShift </a>
 5. <a href="#section-5"> Amazon ElastiCache </a>
 6. <a href="#section-6"> Amazon EMR </a>
+7. <a href="#section-7"> Amazon (RDS) Pricing </a>
 
 ***************************************************************************************************************
 ## <a id="section-1" ></a> **1 - Use Cases For Different Database Types**
@@ -265,3 +266,30 @@ Estrutura gerenciada do Hadoop para processar grandes quantidades de dados.
 Também suporta **Apache Spark, HBase, Presto e Flink**.
 
 Mais comumente usado para análise de log, análise financeira ou atividades de extração, tradução e carregamento (ETL).
+
+
+
+## <a id="section-7" ></a> **7 - Amazon (RDS) Pricing**
+
+[Amazon (RDS) Pricing](https://aws.amazon.com/rds/pricing/?nc1=h_ls)
+
+
+Amazon Relational Database Service (Amazon RDS) is a managed, highly available, and secure database service that makes it simple to set up, operate, and scale databases in the cloud. Amazon RDS is free to try and you pay only for what you use with no minimum fees. You can pay for Amazon RDS using On-Demand or Reserved Instances. Estimate your monthly bill using the AWS Pricing Calculator.
+
+Amazon RDS provides a selection of instance types optimized to fit different relational database use cases. Select one of the Amazon RDS database engines below to view pricing. See Previous Generation Instances for previous instance pricing not listed here.
+
+For Amazon RDS feature-level pricing, see RDS Performance Insights and RDS Proxy pricing pages.
+
+As part of the AWS Free Tier, Amazon RDS helps new AWS customers get started for free with a managed database service in the cloud. Each calendar month, the 
+
+**Amazon RDS Free Tier allows you to use:**
+- 750 hours of Amazon RDS Single-AZ db.t2.micro, db.t3.micro, and db.t4g.micro Instances usage running MySQL, MariaDB, PostgreSQL databases each month. If running more than one instance, usage is aggregated across instance classes.
+- 750 hours of Amazon RDS Single-AZ db.t2.micro Instance usage running Oracle BYOL or SQL Server (running SQL Server Express Edition). Oracle BYOL db.t3.micro  Single-AZ Instance usage is also included as part of the Amazon RDS free tier. If running both a db.t2.micro Single-AZ Instance and a db.t3.micro Single-AZ Instance on Oracle BYOL, usage is aggregated across Instance classes.
+- 20 GB of General Purpose (SSD) DB storage.
+- 20 GB of storage for your automated database backups and any user-initiated DB Snapshots.
+
+
+With Amazon RDS you are charged for the type and size of database, the uptime, any additional storage of backup (above the DB size), requests, deployment type (e.g. you pay for multi AZ), and data transfer outbound.
+
+
+

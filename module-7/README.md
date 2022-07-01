@@ -215,6 +215,19 @@ EBS Snapshots:
 - Embora os instantâneos sejam salvos de forma incremental, o processo de exclusão de instantâneo é projetado para que você precise reter apenas o instantâneo mais recente para restaurar o volume.
 - Snapshots só podem ser acessados ​​por meio das APIs do EC2.
 - Os volumes do EBS são específicos da AZ, mas os Snapshots são específicos da região.
+
+
+**EBS Pricing**
+[EBS Pricing](https://aws.amazon.com/ebs/pricing/)
+
+With Amazon Elastic Block Store (EBS), you pay only for what you provision. Volume storage for all EBS volume types is charged by the amount of GB you provision per month until you release the storage. Costs increase for EBS volumes that support additional input/output operations per second (IOPS) and throughput beyond baseline performance.
+
+- **Free Tier**
+    - AWS Free Tier includes 30 GB of storage, 2 million I/Os, and 1 GB of snapshot storage with Amazon Elastic Block Store (EBS).
+
+
+
+
 ----------------------------------------------------------------------------------------------------
 ## <a id="section-4" ></a> **4 - Instance Store Volumes**
 

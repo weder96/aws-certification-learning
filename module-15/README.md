@@ -516,7 +516,7 @@ Consolidated billing includes:
 - Paying Account – independent and cannot access resources of other accounts.
 - Linked Accounts – all linked accounts are independent.
 
-Consolidated billing has the following benefits:
+[Consolidated billing has the following benefits:](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html)
 - One bill – You get one bill for multiple accounts.
 - Easy tracking – You can track the charges across multiple accounts and download the combined cost and usage data.
 - Combined usage – You can combine the usage across all accounts in the organization to share the volume pricing discounts and Reserved Instance discounts. This can result in a lower charge for your project, department, or company than with individual standalone accounts.
@@ -545,6 +545,8 @@ CloudTrail is on a per account basis and per region basis but can be aggregated 
 
 
 **For billing purposes**, the consolidated billing feature of AWS Organizations treats all the accounts in the organization as one account. This means that all accounts in the organization can receive the hourly cost benefit of Reserved Instances that are purchased by any other account.
+
+
 
 
 ## <a id="section-19" ></a> **19 - AWS Config**

@@ -7,16 +7,17 @@
 ## Conteúdo
 1. <a href="#section-1"> Economia e faturamento </a>
 2. <a href="#section-2"> AWS budgets(Orçamento AWS) </a>
+3. <a href="#section-3"> AWS Pricing Calculator </a>
 
 
+*************************************************************************************************************
 ## <a id="section-1" ></a> **1 - Economia e faturamento**
 
 [six-advantages-of-cloud-computing](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html)
 
 [consolidated-billing](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html)
 
-
-
+*************************************************************************************************************
 ## <a id="section-2" ></a> **2 - AWS budgets(Orçamento AWS)**
 
 [aws-budgets](https://aws.amazon.com/aws-cost-management/aws-budgets/) Orçamento AWS
@@ -35,4 +36,24 @@ Custom budgets that meet your needs:
 - Create annual, quarterly, monthly, or even daily budgets depending on your business needs. 
 - This allows you to take timely actions to prevent cost or usage overage, or inefficient utilization or resource coverage of your Reserved Instances and Savings Plans.
 
- 
+
+AWS Budgets gives you the ability to set custom budgets that alert you when your costs or usage exceed (or are forecasted to exceed) your budgeted amount.
+
+<br/><br/>
+<img src="../images/extra/bugdets.JPG" alt="aws" width=80% />
+<br/><br/>
+
+You can also use AWS Budgets to set reservation utilization or coverage targets and receive alerts when your utilization drops below the threshold you define. Reservation alerts are supported for Amazon EC2, Amazon RDS, Amazon Redshift, Amazon ElastiCache, and Amazon Elasticsearch reservations.
+
+*************************************************************************************************************
+## <a id="section-3" ></a> **3 - AWS Pricing Calculator**
+[AWS Pricing Calculator](https://aws.amazon.com/tco-calculator/)
+
+To perform a [TCO](https://aws.amazon.com/tco-calculator/) you need to document all of the costs you’re incurring today to run your IT operations. That includes facilities equipment installation and data center security costs. That way you get to compare the full cost of running your IT on-premises today, to running it in the cloud.
+
+Facility operations and hardware procurement costs are something you no longer need to pay for in the AWS Cloud. These factors therefore must be included as an on-premise cost so you can understand the cost of staying in your own data centers.
+
+Database administration, operating system licensing and application licensing will still be required in the AWS Cloud.
+[AWS_TCO_Web_Applications](https://media.amazonwebservices.com/AWS_TCO_Web_Applications.pdf)
+
+
