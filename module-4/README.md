@@ -159,6 +159,12 @@ Conjunto completo de verificações para ajudar a otimizar toda a sua infraestru
 Aconselha sobre segurança, desempenho, custo, tolerância a falhas e limites de serviço.
 Os benefícios adicionais incluem notificações de atualização semanais, alertas, ações automatizadas com o CloudWatch e acesso programático usando a API do AWS Support.
 
+Trusted Advisor is an online resource that helps to reduce cost, increase performance and improve security by optimizing your AWS environment. Trusted Advisor provides real time guidance to help you provision your resources following best practices.
+
+<img src="../images/extra/trustedAdvisor.jpg" alt="aws" width=80%  />
+
+trustedAdvisor.jpg
+
 
 ## <a id="section-9" ></a> **9 - Penetration Testing**
 O **Penetration Testing** é a prática de testar a segurança do próprio aplicativo em busca de vulnerabilidades, simulando um ataque.

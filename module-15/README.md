@@ -156,6 +156,7 @@ AWS recommend that you use the AWS SDKs to make programmatic API calls to IAM.
 
 However, you can also use the IAM Query API to make direct calls to the IAM web service.
 
+*************************************************************************************************************
 ## <a id="section-2" ></a> **2 - Using AWS IAM Access Analyzer**
 - AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, shared with an external entity. 
 - This lets you identify unintended access to your resources and data, which is a security risk. 
@@ -173,6 +174,15 @@ However, you can also use the IAM Query API to make direct calls to the IAM web 
   - AWS Lambda functions and layers
   - Amazon Simple Queue Service queues
   - AWS Secrets Manager secrets
+
+
+**Access Advisor**
+[Access Advisor](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html)
+
+The IAM console provides information about when IAM users and roles last attempted to access AWS services. This information is called service last accessed data. This data can help you identify unnecessary permissions so that you can refine your IAM policies to better adhere to the principle of “least privilege.”
+
+That means granting the minimum permissions required to perform a specific task. You can find the data on the Access Advisor tab in the IAM console by examining the detail view for any IAM user, group, role, or managed policy.
+
 
 ## <a id="section-3" ></a> **3 -Understanding and getting your AWS credentials**
 - [secret-keys](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)

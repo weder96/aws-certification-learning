@@ -243,6 +243,10 @@ Regional Data Transfer rates apply if at least one of the following is true, but
 - The other instance is in a different Availability Zone, regardless of which type of address is used.
 - Public or Elastic IP addresses are used, regardless of which Availability Zone the other instance is in.
 
+**Capacity‌ ‌Reservations‌‌** ‌
+–‌ Allows‌ ‌you‌ ‌to‌ ‌reserve‌ ‌capacity‌ ‌for‌ ‌your‌ ‌EC2‌ ‌instances‌ ‌in‌ ‌a‌ ‌specific‌ ‌Availability‌‌
+- Zone‌ ‌for‌ ‌any‌ ‌duration.‌ ‌No‌ ‌commitment‌ ‌required.‌ ‌
+
 ***************************************************************************************************
 ## <a id="section-3" ></a> **3 - Instance Types**
 

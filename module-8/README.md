@@ -12,6 +12,7 @@
 5. <a href="#section-5"> Amazon ElastiCache </a>
 6. <a href="#section-6"> Amazon EMR </a>
 7. <a href="#section-7"> Amazon (RDS) Pricing </a>
+8. <a href="#section-8"> Amazon (RDS) Multiple Availability Zones (A-Z) </a>
 
 ***************************************************************************************************************
 ## <a id="section-1" ></a> **1 - Use Cases For Different Database Types**
@@ -290,6 +291,16 @@ As part of the AWS Free Tier, Amazon RDS helps new AWS customers get started for
 
 
 With Amazon RDS you are charged for the type and size of database, the uptime, any additional storage of backup (above the DB size), requests, deployment type (e.g. you pay for multi AZ), and data transfer outbound.
+
+
+***************************************************************************************************************
+## <a id="section-8" ></a> **8 - Amazon (RDS) Multiple Availability Zones (A-Z)**
+[Amazon (RDS) Multiple Availability Zones](https://aws.amazon.com/rds/features/multi-az/)
+
+
+Multi AZ provides a mechanism to failover the RDS database to another synchronously replicated copy in the event of the failure of an AZ. The endpoint address for the RDS instances gets remapped to the standby instance as can be seen in the image below:
+
+<img src="../images/extra/rds_multiply_a_z.png" alt="rds_multiply_a_z" width=80% />
 
 
 

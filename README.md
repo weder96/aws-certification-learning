@@ -36,6 +36,7 @@ A outros repositorios que será linkado ao mesmo porem espefico de cada Exame.
  - [Módulo 15: AWS Identity and Access Management (IAM)][15]
  - [Módulo 16: AWS Managed Services and Programas de conformidade][16]
  - [Módulo 17: Additional AWS Services][17]
+ - [Módulo 99: Concepts‌ ‌and‌‌ Strategies][99]
  
 
 [1]: https://github.com/weder96/aws-certification-learning/tree/main/module-1
@@ -55,3 +56,4 @@ A outros repositorios que será linkado ao mesmo porem espefico de cada Exame.
 [15]: https://github.com/weder96/aws-certification-learning/tree/main/module-15
 [16]: https://github.com/weder96/aws-certification-learning/tree/main/module-16
 [17]: https://github.com/weder96/aws-certification-learning/tree/main/module-17
+[99]: https://github.com/weder96/aws-certification-learning/tree/main/module-99

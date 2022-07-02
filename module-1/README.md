@@ -83,6 +83,53 @@ A multinuvem geralmente se refere a várias nuvens públicas. O que o torna emba
 
 Uma coisa é clara, no entanto, é que, independentemente das definições - os primeiros princípios necessários para o sucesso em ambos são notavelmente semelhantes.
 
+### **Others Concepts:**
+
+**High‌ ‌Availability‌** ‌
+
+High‌ ‌availability‌ ‌means‌ ‌having‌ ‌redundant‌ ‌copies‌ ‌of‌ ‌an‌ ‌object‌ ‌or‌ ‌resource‌ ‌to‌ ‌make‌ ‌sure‌ ‌that‌ ‌another‌ ‌can‌‌ take‌ ‌its‌ ‌place‌ ‌when‌ ‌something‌ ‌happens‌ ‌to‌ ‌it.‌ ‌High‌ ‌availability‌ ‌can‌ ‌apply‌ ‌to‌ ‌almost‌ ‌anything:‌ ‌compute‌‌ servers,‌ ‌data‌ ‌storage,‌ ‌databases,‌ ‌networks,‌ ‌etc.‌ ‌High‌ ‌availability‌ ‌is‌ ‌one‌ ‌of‌ ‌the‌ ‌main‌ ‌selling‌ ‌points‌ ‌of‌‌ using‌ ‌the‌ ‌cloud.‌ ‌It‌ ‌might‌ ‌be‌ ‌expensive,‌ ‌but‌ ‌companies‌ ‌that‌ ‌cannot‌ ‌risk‌ ‌having‌ ‌downtime‌ ‌nor‌ ‌data‌ ‌loss‌‌ should‌ ‌build‌ ‌highly‌ ‌available‌ ‌infrastructures‌ ‌in‌ ‌the‌ ‌cloud‌ ‌to‌ ‌protect‌ ‌their‌ ‌assets.‌ ‌Furthermore,‌ ‌because‌‌ the‌ ‌data‌ ‌centers‌ ‌in‌ ‌the‌ ‌cloud‌ ‌are‌ ‌geographically‌ ‌distributed‌ ‌and‌ ‌are‌ ‌usually‌ ‌far‌ ‌apart‌ ‌from‌ ‌one‌ ‌another,‌‌ in‌ ‌case‌ ‌one‌ ‌of‌ ‌these‌ ‌data‌ ‌centers‌ ‌go‌ ‌offline,‌ ‌other‌ ‌data‌ ‌centers‌ ‌are‌ ‌not‌ ‌affected‌ ‌and‌ ‌can‌  continue‌ serving‌ ‌you.‌ ‌
+
+
+**Fault‌ ‌Tolerance‌** ‌
+
+Fault‌ ‌tolerance‌ ‌is‌ ‌different‌ ‌from‌ ‌high‌ ‌availability.‌ ‌Fault‌ ‌tolerance‌ ‌means‌ ‌that‌ ‌a‌ ‌system‌ ‌can‌ ‌continue‌‌ operating‌ ‌even‌ ‌if‌ ‌one‌ ‌or‌ ‌more‌ ‌components‌ ‌begin‌ ‌to‌ ‌degrade‌ ‌and‌ ‌fail.‌ ‌Oftentimes,‌ ‌fault‌ ‌tolerance‌ ‌can‌ ‌be‌‌ attributed‌ ‌to‌ ‌redundancy‌ ‌as‌ ‌well.‌ ‌
+When‌ ‌a‌ ‌component‌ ‌begins‌ ‌to‌ ‌fail,‌ ‌the‌ ‌system‌ ‌detects‌ ‌this‌ ‌and‌‌ replaces‌ ‌the‌ ‌faulty‌ ‌component‌ ‌to‌ ‌restore‌ ‌working‌ ‌operations.‌ ‌Other‌ ‌times,‌ ‌fault‌ ‌tolerance‌ ‌can‌ ‌mean‌‌ proper‌ ‌error‌ ‌handling.‌ ‌When‌ ‌a‌ ‌component‌ ‌begins‌ ‌to‌ ‌fail,‌ ‌the‌ ‌system‌ ‌detects‌ ‌this‌ ‌and‌ ‌reroutes‌ ‌the‌‌ operation‌ ‌to‌ ‌somewhere‌ ‌else‌ ‌that‌ ‌is‌ ‌healthy.‌ ‌A‌ ‌properly‌ ‌built‌ ‌infrastructure‌ ‌is‌ ‌capable‌ ‌of‌ ‌withstanding‌‌ component‌ ‌degradation‌ ‌and‌ ‌eventual‌ ‌failure,‌ ‌and‌ ‌if‌ ‌possible,‌ ‌repair‌ ‌itself‌ ‌as‌ ‌well.‌ ‌
+
+‌
+**Elasticity‌** ‌
+
+Elasticity‌ ‌is‌ ‌the‌ ‌ability‌ ‌to‌ ‌quickly‌ ‌provision‌ ‌resources‌ ‌when‌ ‌you‌ ‌need‌ ‌them,‌ ‌and‌ ‌release‌ ‌them‌ ‌once‌ ‌you‌‌ don’t‌ ‌need‌ ‌them‌ ‌anymore.‌ ‌Unlike‌ ‌traditional‌ ‌infrastructure,‌ ‌in‌ ‌the‌ ‌cloud,‌ ‌you‌ ‌should‌ ‌treat‌ ‌servers‌ ‌and‌‌ storage‌ ‌as‌ ‌disposable.‌ ‌
+They‌ ‌should‌ ‌not‌ ‌be‌ ‌kept‌ ‌beyond‌ ‌their‌ ‌usefulness.‌ ‌Compute‌ ‌power‌ ‌and‌ ‌storage‌‌ space‌ ‌can‌ ‌be‌ ‌easily‌ ‌acquired‌ ‌anyway‌ ‌when‌ ‌you‌ ‌need‌ ‌it,‌ ‌so‌ ‌be‌ ‌cost-effective‌ ‌with‌ ‌your‌ ‌budget,‌ ‌use‌ ‌only‌‌ what‌ ‌you‌ ‌need‌ ‌and‌ ‌don’t‌ ‌keep‌ ‌them‌ ‌idle.‌ ‌Elasticity‌ ‌is‌ ‌another‌ ‌major‌ ‌selling‌ ‌point‌ ‌of‌ ‌the‌ ‌cloud,‌ ‌since‌ ‌you‌‌ do‌ ‌not‌ ‌have‌ ‌hardware‌ ‌ownership.‌ ‌You‌ ‌don’t‌ ‌need‌ ‌to‌ ‌worry‌ ‌about‌ ‌purchasing‌ ‌new‌ ‌hardware‌ ‌to‌ ‌meet‌ ‌your‌‌ requirements‌ ‌and‌ ‌think‌ ‌about‌ ‌how‌ ‌to‌ ‌get‌ ‌your‌ ‌money‌ ‌back‌ ‌once‌ ‌it‌ ‌is‌ ‌beyond‌ ‌its‌ ‌lifespan.‌ ‌
+
+‌
+**Scalability‌** ‌
+
+Scalability‌ ‌is‌ ‌the‌ ‌concept‌ ‌of‌ ‌provisioning‌ ‌additional‌ ‌resources‌ ‌to‌ ‌increase‌ ‌performance‌ ‌and‌ ‌support‌‌ high‌ ‌demand,‌ ‌and‌ ‌reducing‌ ‌them‌ ‌once‌ ‌demand‌ ‌is‌ ‌not‌ ‌as‌ ‌high‌ ‌anymore.‌ ‌Scalability‌ ‌is‌ ‌an‌ ‌important‌‌ practice‌ ‌that‌ ‌you‌ ‌must‌ ‌apply‌ ‌to‌ ‌keep‌ ‌your‌ ‌users‌ ‌happy.‌ ‌Imagine‌ ‌if‌ ‌your‌ ‌website‌ ‌suddenly‌ ‌receives‌ ‌a‌ ‌high‌‌ number‌ ‌of‌ ‌traffic,‌ ‌and‌ ‌you‌ ‌don’t‌ ‌have‌ ‌enough‌ ‌compute‌ ‌power‌ ‌to‌ ‌serve‌ ‌content‌ ‌to‌ ‌all‌ ‌your‌ ‌customers.‌‌
+The‌ ‌negative‌ ‌impact‌ ‌on‌ ‌customer‌ ‌satisfaction‌ ‌will‌ ‌greatly‌ ‌affect‌ ‌your‌ ‌reputation‌ ‌and‌ ‌your‌ ‌profits.‌When‌‌ scaling‌ ‌a‌ ‌resource,‌ ‌like‌ ‌a‌ ‌website‌ ‌for‌ ‌example,‌ ‌make‌ ‌sure‌ ‌that‌ ‌it‌ ‌is‌ ‌stateless‌ ‌so‌ ‌that‌ ‌you‌ ‌won’t‌ ‌lose‌ ‌any‌‌ important‌ ‌data‌ ‌once‌ ‌it‌ ‌scales‌ ‌down.‌ ‌You‌ ‌should‌ ‌also‌ ‌use‌ ‌appropriate‌ ‌metrics‌ ‌as‌ ‌a‌ ‌basis‌ ‌of‌ ‌your‌ ‌scaling‌‌ activity.‌
+
+
+**Redundancy‌**
+
+Redundancy‌ ‌is‌ ‌a‌ ‌mix‌ ‌of‌ ‌all‌ ‌the‌ ‌things‌ ‌above.‌ ‌It‌ ‌is‌ ‌important‌ ‌that‌ ‌you‌ ‌practice‌ ‌redundancy‌ ‌in‌ ‌the‌ ‌cloud,‌‌
+as‌ ‌it‌ ‌can‌ ‌protect‌ ‌you‌ ‌from‌ ‌all‌ ‌sorts‌ ‌of‌ ‌issues‌ ‌that‌ ‌are‌ ‌not‌ ‌as‌ ‌tolerable‌ ‌in‌ ‌an‌ ‌on-premises‌ ‌setup.‌ ‌There‌ ‌are‌‌ a‌ ‌lot‌ ‌of‌ ‌things‌ ‌in‌ ‌the‌ ‌cloud‌ ‌that‌ ‌you‌ ‌can‌ and‌ ‌must‌‌ apply‌ ‌redundancy.‌ ‌It's‌ ‌not‌ ‌just‌ ‌servers‌ ‌and‌ ‌databases,‌‌ but‌ ‌also‌ ‌file‌ ‌storages,‌ ‌security‌ ‌applications,‌ ‌networks,‌ ‌monitoring‌ ‌tools‌ ‌and‌ ‌even‌ ‌personnel.‌ ‌By‌ ‌having‌‌ additional‌ ‌layers‌ ‌of‌ ‌safeguards,‌ ‌you‌ ‌lessen‌ ‌the‌ ‌risk‌ ‌of‌ ‌things‌ ‌going‌ ‌haywire‌ ‌and‌ ‌costing‌ ‌you‌ ‌more‌ ‌than‌ ‌a‌‌ few‌ ‌bucks‌ ‌of‌ ‌extra‌ ‌servers.‌ ‌
+
+‌
+**Disaster‌ ‌Recovery‌** 
+
+‌
+Disaster‌ ‌recovery‌ ‌is‌ ‌the‌ ‌practice‌ ‌of‌ ‌ensuring‌ ‌that‌ ‌you‌ ‌have‌ ‌a‌ ‌standardized‌ ‌plan‌ ‌on‌ ‌how‌ ‌to‌ recover‌ ‌your‌‌ operations‌ ‌in‌ ‌case‌ ‌of‌ ‌total‌ ‌failure.‌ ‌Usually,‌ ‌this‌ ‌means‌ ‌having‌ ‌a‌ ‌copy‌ ‌of‌ ‌your‌ ‌infrastructure‌ ‌running‌ ‌in‌ ‌a‌‌ different‌ ‌location,‌ ‌so‌ ‌that‌ ‌if‌ ‌your‌ ‌primary‌ ‌experiences‌ ‌a‌ ‌disaster,‌ ‌you‌ ‌can‌ ‌quickly‌ ‌failover‌ ‌to‌ ‌your‌‌ secondary.‌ ‌
+Your‌ ‌disaster‌ ‌recovery‌ ‌plan‌ ‌depends‌ ‌on‌ ‌the‌ ‌amount‌ ‌of‌ ‌time‌ ‌that‌ ‌you‌ ‌have‌ ‌to‌ ‌bring‌ ‌back‌ ‌up‌‌ your‌ ‌operations‌ ‌(RTO),‌ ‌and‌ ‌the‌ ‌amount‌ ‌of‌ ‌data‌ ‌loss‌ ‌that‌ ‌your‌ ‌business‌ ‌can‌ ‌tolerate‌ ‌(RPO).‌ ‌Having‌ ‌a‌‌ disaster‌ ‌recovery‌ ‌plan‌ ‌is‌ ‌crucial‌ ‌especially‌ ‌for‌ ‌live‌ ‌production‌ ‌databases.‌ ‌We‌ ‌have‌ ‌a‌ ‌number‌ ‌of‌ ‌DR‌‌ strategies‌ ‌that‌ ‌meet‌ ‌different‌ ‌RTO‌ ‌and‌ ‌RPO‌ ‌objectives,‌ ‌which‌ ‌we‌ ‌will‌ ‌discuss‌ ‌in‌ ‌more‌ ‌detail‌ ‌later‌ ‌on.‌ ‌
+
+‌
+**Serverless‌** ‌
+
+Serverless‌ ‌is‌ ‌a‌ ‌cloud‌ ‌computing‌ ‌model‌ ‌wherein‌ ‌the‌ ‌cloud‌ ‌provider‌ ‌handles‌ ‌the‌ ‌server‌ ‌and‌ ‌all‌‌
+maintenance,‌ ‌while‌ ‌you‌ ‌just‌ ‌put‌ ‌your‌ ‌code‌ ‌in.‌ ‌The‌ ‌term‌ ‌“Serverless”‌ ‌confuses‌ ‌a‌ ‌bunch‌ ‌of‌ ‌people‌ ‌who‌‌ think‌ ‌that‌ ‌there‌ ‌are‌ ‌literally‌ ‌no‌ ‌servers‌ ‌involved‌ ‌in‌ ‌this‌ ‌model.‌ ‌That’s‌ ‌not‌ ‌true
+Serverless‌ ‌is‌ ‌still‌ ‌using‌‌ servers‌ ‌in‌ ‌the‌ ‌backend,‌ ‌but‌ ‌it‌ ‌takes‌ ‌away‌ ‌from‌ ‌you‌ ‌the‌ ‌responsibility‌ ‌of‌ ‌provisioning‌ ‌and‌ ‌maintaining‌‌ one,‌ ‌so‌ ‌you‌ ‌can‌ ‌dedicate‌ ‌everything‌ ‌to‌ ‌your‌ ‌code‌ ‌and‌ ‌not‌ ‌have‌ ‌to‌ ‌worry‌ ‌about‌ ‌scalability,‌ ‌patching,‌ ‌etc.‌‌
+Serverless‌ ‌involves‌ ‌a‌ ‌whole‌ ‌new‌ ‌dynamic‌ ‌of‌ ‌writing‌ ‌code‌ ‌and‌ ‌building‌ ‌applications,‌ ‌so‌ ‌it‌ ‌may‌  not‌ ‌fit‌‌ everyone’s‌ ‌bill.‌ ‌
+The‌ ‌technology‌ ‌can‌ ‌save‌ ‌you‌ ‌a‌ ‌lot‌ ‌of‌ ‌cost‌ ‌due‌ ‌to‌ ‌its‌ ‌lower‌ ‌pricing‌ ‌than‌ ‌those‌ ‌of‌‌ traditional‌ ‌server‌ ‌models,‌ ‌but‌ ‌it‌ ‌may‌ ‌also‌ ‌introduce‌ ‌additional‌ ‌complexity‌ ‌to‌ ‌your‌ ‌code‌ ‌due‌ ‌to‌ ‌its‌‌ distributed‌ ‌nature.‌ ‌You‌ ‌also‌ ‌lose‌ ‌a‌ ‌lot‌ ‌of‌ ‌control‌ ‌over‌ ‌your‌ ‌environment‌ ‌if‌ ‌you‌ ‌usually‌ ‌manage‌ ‌your‌ ‌own‌‌ runtimes,‌ ‌etc.‌ ‌Serverless‌ ‌functions‌ ‌are‌ ‌also‌ ‌event-driven.‌ ‌If‌ ‌you’re‌ ‌a‌ ‌Node‌ ‌JS‌ ‌developer,‌ ‌get‌ ‌ready‌ ‌for‌ ‌a‌‌ lot‌ ‌of‌ ‌callbacks‌ ‌with‌ ‌this‌ ‌one.‌ ‌
+
+
 ***************************************************************************************************************************
 
 ## <a id="section-2" ></a> Seção 2 - Vantagens da computação em nuvem
