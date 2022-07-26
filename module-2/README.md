@@ -2,23 +2,24 @@
 
 [1]: https://github.com/weder96/aws-certification-learning
 
-# Módulo 2: Economia e faturamento da nuvem [aws-cost-optimization](https://aws.amazon.com/pt/aws-cost-management/aws-cost-optimization/)
+# Module 2: Cloud Savings and Billing
+[aws-cost-optimization](https://aws.amazon.com/pt/aws-cost-management/aws-cost-optimization/)
 
-## Conteúdo
-1. <a href="#section-1"> Economia e faturamento </a>
-2. <a href="#section-2"> AWS budgets(Orçamento AWS) </a>
+## Contents
+1. <a href="#section-1"> Savings and Billing </a>
+2. <a href="#section-2"> AWS budgets </a>
 3. <a href="#section-3"> AWS Pricing Calculator </a>
 
 
 *************************************************************************************************************
-## <a id="section-1" ></a> **1 - Economia e faturamento**
+## <a id="section-1" ></a> **1 - Savings and Billing**
 
 [six-advantages-of-cloud-computing](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html)
 
 [consolidated-billing](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html)
 
 *************************************************************************************************************
-## <a id="section-2" ></a> **2 - AWS budgets(Orçamento AWS)**
+## <a id="section-2" ></a> **2 - AWS budgets**
 
 [aws-budgets](https://aws.amazon.com/aws-cost-management/aws-budgets/) Orçamento AWS
 

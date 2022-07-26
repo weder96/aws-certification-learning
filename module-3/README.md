@@ -2,25 +2,24 @@
 
 [1]: https://github.com/weder96/aws-certification-learning
 
+# Module 3: Overview of AWS Global Infrastructure
 
-# Módulo 3: Visão geral da infraestrutura global da AWS
 
+## Contents
+1. <a href="#section-1">AWS Global Infrastructure</a>
 
-## Conteúdo
-1. <a href="#section-1">Infraestrutura global da AWS</a>
+****************************************************** ********************************************
+## <a id="section-1"></a> Section 1 - Global AWS Infrastructure
+An AWS Region is a physical location in the world where AWS has multiple AZs.
 
-*******************************************************************************************
-## <a id="section-1" ></a> Seção 1 - Infraestrutura global da AWS
-Uma região da AWS é um local físico no mundo onde a AWS tem várias AZs.
+AZs consist of one or more discrete data centers, each with redundant power, network, and connectivity, hosted in separate facilities.
 
-As AZs consistem em um ou mais data centers discretos, cada um com energia, rede e conectividade redundantes, hospedados em instalações separadas.
+Each region is completely independent. Each Availability Zone is isolated, but Availability Zones within a region are connected through low-latency links.
 
-Cada região é completamente independente. Cada zona de disponibilidade é isolada, mas as zonas de disponibilidade em uma região são conectadas por meio de links de baixa latência.
-
-A AWS está em constante expansão em todo o mundo e atualmente existem:
-- Regiões da AWS (AWS Regions) 
-- AWS Availability Zones 
-- AWS Data Centers 
+AWS is constantly expanding around the world and currently there are:
+- AWS Regions (AWS Regions)
+- AWS Availability Zones
+- AWS Data Centers
 - AWS Edge Locations / Points of Presence
 
 [infra](https://aws.amazon.com/pt/about-aws/global-infrastructure/regions_az/)
@@ -28,123 +27,118 @@ A AWS está em constante expansão em todo o mundo e atualmente existem:
 
 <img src="../images/extra/aws_regions_resume.png" alt="aws_regions_resume" width=80%>
 
+**AWS Regions**
+- AWS has regions all over the world
+- Names can be us-east-1, eu-west-3…
+- A region is a cluster of data centers
+- Most AWS services are region-scop
 
-**Regiões da AWS**  
-- A AWS tem regiões em todo o mundo 
-- Os nomes podem ser us-east-1, eu-west-3… 
-- Uma região é um cluster de data centers 
-- A maioria dos serviços da AWS são region-scop
+The AWS Region is an area of ​​the world that they have selected for a full deployment of their AWS infrastructure.
 
-A região da AWS é uma área do mundo que eles selecionaram para uma implantação completa da infraestrutura da AWS.
-
-**Áreas como países ou estados:**
+**Areas such as countries or states:**
 - Ohio
-- Califórnia
-- Cingapura
-- Pequim
-- Londres
+- California
+- Singapore
+- Beijing
+- London
 - Paris
 
-**Como escolher uma região da AWS?**
+**How ​​do I choose an AWS Region?**
 
-Se você precisar iniciar um novo aplicativo, onde você deve fazer?
+If you need to start a new app, where should you do it?
 
-- Conformidade com a governança de dados e legal requisitos: os dados nunca saem de uma região sem sua permissão explícita
-- Proximidade com os clientes: latência reduzida
-- Serviços disponíveis em uma região: novos serviços e novos recursos não estão disponíveis em todas as regiões
-- Preços: os preços variam de região para região e são transparente na página de preços do serviço
+- Compliance with data governance and legal requirements: data never leaves a region without your explicit permission
+- Proximity to customers: reduced latency
+- Services available in one region: New services and new features are not available in all regions
+- Pricing: Pricing varies from region to region and is transparent on the service pricing page
 
-**Zonas de disponibilidade da AWS**
+**AWS Availability Zones**
 
--  Cada região tem muitas zonas de disponibilidade (geralmente 3, min é 2, max é 6). 
-    - Exemplo:
-        - ap-sudeste-2a
-        - ap-sudeste-2b
-        - ap-sudeste-2c
+- Each region has many Availability Zones (usually 3, min is 2, max is 6).
+    - Example:
+        - ap-southeast-2a
+        - ap-southeast-2b
+        - ap-southeast-2c
 
 <img src="../images/extra/awsPregions.png" alt="aws Regions" width=300>
 
-- Cada zona de disponibilidade (AZ) é uma ou mais data centers discretos com energia redundante, rede e conectividade
-- Eles estão separados um do outro, de modo que eles estão isolados de desastres
-- Eles estão conectados com alta largura de banda, rede de latência ultrabaixa
+- Each Availability Zone (AZ) is one or more discrete data centers with redundant power, networking, and connectivity
+- They are separated from each other so that they are isolated from disasters
+- They are connected with high bandwidth, ultra-low latency network
 
 <img src="../images/extra/infra.png" alt="aws" width=80%>
+**AWS Edge Locations**
+Local distribution points. Useful for services like Netflix so they can store data closer to customers for high-speed, low-latency transfers.
 
+If a customer wants to access data stored in Brisbane, they will transmit data from the Sydney region through a point of presence hosted in Brisbane.
 
-**Pontos de presença da AWS(AWS Edge Locations)**
-Pontos de distribuição locais. Útil para serviços como Netflix para que possam armazenar dados mais perto dos clientes para transferências de alta velocidade de baixa latência.
+Amazon has 216 points of presence (205 points of presence and 11 regional points
+Caches) in 84 cities in 42 countries
 
-Se um cliente quiser acessar dados armazenados em Brisbane, ele transmitirá dados da região de Sydney por meio de um ponto de presença hospedado em Brisbane.
+Availability Zones are physically separated and isolated from each other.
 
-A Amazon tem 216 pontos de presença (205 pontos de presença e 11 pontos regionais
-Caches) em 84 cidades em 42 países
+AZs span one or more data centers and have direct, low-latency, high-throughput, redundant network connections to each other.
 
-As zonas de disponibilidade são fisicamente separadas e isoladas umas das outras.
+Each AZ is designed as an independent fault zone.
 
-As AZs abrangem um ou mais data centers e têm conexões de rede diretas, de baixa latência, alta taxa de transferência e redundantes entre si.
+When launching an instance, you can select an Availability Zone or let AWS choose one for you.
 
-Cada AZ é projetada como uma zona de falha independente.
+If you distribute your EC2 instances across multiple Availability Zones and one instance fails, you can design your application so that an instance in another Availability Zone can handle requests.
 
-Ao executar uma instância, você pode selecionar uma zona de disponibilidade ou deixar a AWS escolher uma para você.
+You can also use Elastic IP addresses to mask the failure of an instance in one Availability Zone by quickly remapping the address to an instance in another Availability Zone.
 
-Se você distribuir suas instâncias do EC2 em várias zonas de disponibilidade e uma instância falhar, você poderá projetar seu aplicativo para que uma instância em outra zona de disponibilidade possa lidar com solicitações.
+An Availability Zone is represented by a region code followed by an identifying letter; for example, us-east-1a.
 
-Você também pode usar endereços IP elásticos para mascarar a falha de uma instância em uma zona de disponibilidade remapeando rapidamente o endereço para uma instância em outra zona de disponibilidade.
+To ensure that resources are distributed across a region's Availability Zones, AWS independently maps Availability Zones to names in each AWS account.
 
-Uma zona de disponibilidade é representada por um código de região seguido por uma letra identificadora; por exemplo,  us-east-1a.
+For example, the Availability Zone us-east-1a for your AWS account might not be the same location as us-east-1a for another AWS account.
 
-Para garantir que os recursos sejam distribuídos nas zonas de disponibilidade de uma região, a AWS mapeia independentemente as zonas de disponibilidade para nomes de cada conta da AWS.
+To coordinate Availability Zones across accounts, you must use the AZ ID , which is a unique and consistent identifier for an Availability Zone.
 
-Por exemplo, a zona de disponibilidade  us-east-1a  para sua conta da AWS pode não ser o mesmo local que us-east-1a para outra conta da AWS.
+AZs are physically separated within a typical metropolitan region and are on lower risk floodplains.
 
-Para coordenar as zonas de disponibilidade entre contas, você deve usar o  AZ ID , que é um identificador exclusivo e consistente para uma zona de disponibilidade.
+AZs use discrete UPS and on-site backup generation facilities and are powered by different networks of independent facilities.
 
-As AZs são fisicamente separadas dentro de uma região metropolitana típica e estão em planícies de inundação de menor risco.
+The AZs are all redundantly connected to multiple tier 1 transit providers.
 
-As AZs usam UPS discretas e instalações de geração de backup no local e são alimentadas por diferentes redes de instalações independentes.
+The following graphic shows three AWS Regions, each with three Availability Zones:
 
-As AZs são todas conectadas de forma redundante a vários provedores de trânsito de nível 1.
+Content is delivered to end users with lower latency
 
-O gráfico a seguir mostra três regiões da AWS, cada uma com três zonas de disponibilidade:
+List of Regional Services - [Serviços](https://aws.amazon.com/pt/about-aws/global-infrastructure/regional-product-services/)
 
-O conteúdo é entregue aos usuários finais com menor latência
+**Local Zones**
+AWS Local Zones bring select AWS compute, storage, database, and other services closer to end users.
 
-Lista de Serviços Regionais [Serviços](https://aws.amazon.com/pt/about-aws/global-infrastructure/regional-product-services/)
+With AWS Local Zones, you can easily run highly demanding applications that require single-digit millisecond latencies for your end users.
 
+Each AWS Local Zone location is an extension of an AWS Region where you can run your latency sensitive applications using AWS services such as Amazon Elastic Compute Cloud, Amazon Virtual Private Cloud, Amazon Elastic Block Store, Amazon File Storage, and Amazon Elastic Load Balancing in geographic proximity to end users.
 
-**Zonas locais (Local Zones)**
-As zonas locais da AWS colocam computação, armazenamento, banco de dados e outros serviços selecionados da AWS mais próximos dos usuários finais.
+AWS Local Zones provide a secure, high-bandwidth connection between on-premises workloads and those running in the AWS Region, allowing you to seamlessly connect to the full range of services in the region through the same APIs and data sets. tools.
 
-Com as zonas locais da AWS, você pode executar facilmente aplicativos altamente exigentes que exigem latências de milissegundos de um dígito para seus usuários finais.
+**AWS Wavelength(AWS Wavelength)**
+AWS Wavelength enables developers to build applications that deliver single-digit millisecond latencies to mobile devices and end users.
 
-Cada local da zona local da AWS é uma extensão de uma região da AWS onde você pode executar seus aplicativos sensíveis à latência usando serviços da AWS, como Amazon Elastic Compute Cloud, Amazon Virtual Private Cloud, Amazon Elastic Block Store, Amazon File Storage e Amazon Elastic Load Balancing em proximidade geográfica com os usuários finais.
+AWS developers can deploy their applications in wavelength zones, AWS infrastructure deployments that embed AWS compute and storage services in telecom providers' data centers at the edge of 5G networks, and easily access the breadth of AWS services at the region.
 
-As zonas locais da AWS fornecem uma conexão segura e de alta largura de banda entre cargas de trabalho locais e aquelas executadas na região da AWS, permitindo que você se conecte perfeitamente a toda a gama de serviços na região por meio das mesmas APIs e conjuntos de ferramentas.
+AWS Wavelength brings AWS services to the edge of the 5G network, minimizing latency for connecting to an application from a mobile device.
 
-**Comprimento de onda da AWS(AWS Wavelength)**
-O AWS Wavelength permite que os desenvolvedores criem aplicativos que fornecem latências de milissegundos de um dígito para dispositivos móveis e usuários finais.
+**AWS Outposts(AWS Outposts)**
+AWS Outposts bring native AWS services, infrastructure, and operating models to virtually any data center, co-location space, or on-premises facility.
 
-Os desenvolvedores da AWS podem implantar seus aplicativos em zonas de comprimento de onda, implantações de infraestrutura da AWS que incorporam serviços de computação e armazenamento da AWS nos datacenters dos provedores de telecomunicações na borda das redes 5G e acessar facilmente a variedade de serviços da AWS na região.
+You can use the same AWS APIs, tools and infrastructure on-premises and in the AWS cloud to deliver a truly consistent hybrid experience.
 
-O AWS Wavelength leva os serviços da AWS para a borda da rede 5G, minimizando a latência para se conectar a um aplicativo a partir de um dispositivo móvel.
+AWS Outposts is designed for connected environments and can be used to support workloads that need to remain on-premises due to low latency or local data processing needs.
 
-**Postos avançados da AWS(AWS Outposts)**
-Os AWS Outposts trazem serviços, infraestrutura e modelos operacionais nativos da AWS para praticamente qualquer data center, espaço de co-localização ou instalação local.
+**Edge Locations and Regional Edge Caches**
+Edge locations are Content Delivery Network (CDN) endpoints for CloudFront.
 
-Você pode usar as mesmas APIs, ferramentas e infraestrutura da AWS no local e na nuvem da AWS para oferecer uma experiência híbrida verdadeiramente consistente.
+There are many more points of presence than regions.
 
-O AWS Outposts foi projetado para ambientes conectados e pode ser usado para dar suporte a cargas de trabalho que precisam permanecer no local devido à baixa latência ou às necessidades de processamento de dados locais.
+Currently, there are more than 200 points of presence.
 
-**Locais de borda e caches de borda regionais (Edge Locations and Regional Edge Caches)**
-Os pontos de presença são endpoints da Content Delivery Network (CDN) para o CloudFront.
+Regional edge caches are located between CloudFront origin servers and edge locations.
 
-Existem muito mais pontos de presença do que regiões.
+A regional edge cache has a larger cache width than each of the individual edge locations.
 
-Atualmente, existem mais de 200 pontos de presença.
-
-Os caches de borda regionais ficam entre os servidores de origem do CloudFront e os pontos de presença.
-
-Um cache de borda regional tem uma largura de cache maior do que cada um dos pontos de presença individuais.
-
-O diagrama a seguir mostra os locais do CloudFront Edge:
-
+The following diagram shows CloudFront Edge locations:

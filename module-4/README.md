@@ -2,176 +2,300 @@
 
 [1]: https://github.com/weder96/aws-certification-learning
 
-# Módulo 4: Segurança na nuvem (AWS Security Services)
+# Module 4: Cloud Security (AWS Security Services)
 
-## Conteúdo
-1. <a href="#section-1"> Inspector </a>
-2. <a href="#section-2"> AWS Artifact </a>
+## Contents
+1. <a href="#section-1"> Amazon Inspector </a>
+2. <a href="#section-2"> Amazon Artifact </a>
 3. <a href="#section-3"> Amazon GuardDuty</a>
-4. <a href="#section-4"> AWS WAF & AWS Shield</a>
-5. <a href="#section-5"> AWS Key Management Service (AWS KMS)</a>
-6. <a href="#section-6"> AWS CloudHSM</a>
-7. <a href="#section-7"> AWS Certificate Manager</a>
-8. <a href="#section-8"> AWS Inspector and AWS Trusted Advisor</a>
-9. <a href="#section-9"> Penetration Testing</a>
-10. <a href="#section-10"> AWS Single Sign-On (AWS SSO)</a>
+4. <a href="#section-4"> Amazon WAF & AWS Shield</a>
+5. <a href="#section-5"> Amazon Key Management Service (AWS KMS)</a>
+6. <a href="#section-6"> Amazon CloudHSM</a>
+7. <a href="#section-7"> Amazon Certificate Manager(ACM)</a>
+8. <a href="#section-8"> Amazon Inspector and AWS Trusted Advisor</a>
+9. <a href="#section-9"> Amazon Penetration Testing</a>
+10. <a href="#section-10"> Amazon Single Sign-On (AWS SSO)</a>
 11. <a href="#section-11"> Amazon Cognito</a>
-12. <a href="#section-12"> AWS Directory Services </a>
-13. <a href="#section-13"> AWS Systems Manager Parameter Store </a>
-14. <a href="#section-14"> AWS Secrets Manager </a>
-15. <a href="#section-15"> How do I report abuse of AWS resources?</a>
+12. <a href="#section-12"> Amazon Directory Services </a>
+13. <a href="#section-13"> Amazon Systems Manager Parameter Store </a>
+14. <a href="#section-14"> Amazon Secrets Manager </a>
+15. <a href="#section-15"> Amazon Audit Manager </a>
+16. <a href="#section-16"> Amazon Certificate Manager</a>   
+17. <a href="#section-17"> Amazon Detective </a>
+18. <a href="#section-18"> Amazon Firewall Manager </a>
+19. <a href="#section-19"> Amazon Macie </a>
+20. <a href="#section-20"> Amazon Network Firewall</a> 
+21. <a href="#section-21"> Amazon Resource Access Manager (AWS RAM)</a> 
+22. <a href="#section-22"> Amazon Security Hub  </a>
+23. <a href="#section-23"> Amazon Shield </a>
+24. <a href="#section-24"> Amazon WAF </a>
+25. <a href="#section-99"> How do I report abuse of AWS resources? </a>
 
-## <a id="section-1" ></a> **1 - Inspector**
-[inspector](https://aws.amazon.com/pt/inspector/)
+---------------------------------------------------------------------------------------
+## <a id="section-1" ></a> **1 - Amazon Inspector**
+![Amazon Inspector](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_Amazon-Inspector_48.png)
 
-A Nuvem AWS permite um  modelo de responsabilidade compartilhada .
+The AWS Cloud allows for a shared responsibility model.
 
-AWS gerencia a segurança da nuvem; você é responsável pela segurança na nuvem .
+AWS manages cloud security; you are responsible for security in the cloud.
 
-Você mantém o controle da segurança que escolhe implementar para proteger seu próprio conteúdo, plataforma, aplicativos, sistemas e redes da mesma forma que faria em um data center local.
+You retain control of the security you choose to implement to protect your own content, platform, applications, systems and networks just as you would in an on-premises data center.
 
-**Benefícios da segurança da AWS**
-- Mantenha seus dados seguros  – a infraestrutura da AWS implementa fortes proteções para ajudar.
-- Proteja sua privacidade  – Todos os dados são armazenados em data centers altamente seguros da AWS.
-- Atenda aos requisitos de conformidade  – a AWS gerencia dezenas de programas de conformidade em sua infraestrutura. Isso significa que os segmentos de sua conformidade já foram concluídos.
-- Economize dinheiro  – reduza custos usando data centers da AWS. Mantenha o mais alto padrão de segurança sem ter que gerenciar suas próprias instalações.
-- Escale rapidamente  – a segurança é dimensionada com o uso da Nuvem AWS. Não importa o tamanho do seu negócio, a infraestrutura da AWS foi projetada para manter seus dados seguros.
+**Amazon Security Benefits**
+- Keep your data safe – AWS infrastructure implements strong protections to help.
+- Protect your privacy – All data is stored in highly secure AWS data centers.
+- Meet compliance requirements – AWS manages dozens of compliance programs across its infrastructure. This means that your compliance segments have already been completed.
+- Save money – reduce costs by using AWS data centers. Maintain the highest standard of security without having to manage your own facilities.
+- Scale quickly – Security scales using the AWS Cloud. No matter the size of your business, the AWS infrastructure is designed to keep your data safe.
 
-**Observância(Compliance)**
-O AWS Cloud Compliance permite que você entenda os controles robustos em vigor na AWS para manter a segurança e a proteção de dados na nuvem.
+**Compliance**
+AWS Cloud Compliance lets you understand the robust controls in place at AWS to keep your data safe and secure in the cloud.
 
-À medida que os sistemas são criados com base na infraestrutura da Nuvem AWS, as responsabilidades de conformidade serão compartilhadas.
+As systems are built on top of the AWS Cloud infrastructure, compliance responsibilities will be shared.
 
-Os programas de conformidade incluem:
-- Certificações / atestados.
-- Leis, regulamentos e privacidade.
-- Alinhamentos/quadros.
+Compliance programs include:
+- Certifications / attestations.
+- Laws, regulations and privacy.
+- Alignments/frames.
+
+**Cheat Sheets**
+
+[https://digitalcloud.training/amazon-inspector/](https://digitalcloud.training/amazon-inspector/)
+
+[https://tutorialsdojo.com/amazon-inspector/](https://tutorialsdojo.com/amazon-inspector/)
+
+**References:**
+
+[https://aws.amazon.com/pt/inspector/](https://aws.amazon.com/pt/inspector/)
+
+[https://docs.aws.amazon.com/inspector/latest/userguide](https://docs.aws.amazon.com/inspector/latest/userguide)
+
+[https://aws.amazon.com/inspector/pricing/](https://docs.aws.amazon.com/inspector/latest/userguide)
+
+[https://aws.amazon.com/inspector/faqs/](https://docs.aws.amazon.com/inspector/latest/userguide)
+
+**Videos**
+
+---------------------------------------------------------------------------------------
+## <a id="section-2" ></a> **2 - Amazon Artifact**
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Artifact_48.png)
+
+[AWS Artifact](https://aws.amazon.com/en/artifact/) is your one-stop resource for compliance-related information that is important to you.
+
+It provides on-demand access to AWS security and compliance reports and select online contracts.
+
+Reports available on AWS Artifact include our reports for:
+- Service Organization Control (SOC)
+- Payment Card Industry (PCI) reports
+- Certifications from accreditation bodies across geographies and compliance verticals that validate the implementation and operational effectiveness of AWS security controls.
+
+Agreements available on [AWS Artifact](https://aws.amazon.com/en/artifact/) include the Business Associate Addendum (BAA) and Nondisclosure Agreement (NDA).
+
+[AWS Artifact](https://aws.amazon.com/pt/artifact/) is the go-to, central resource for compliance-related information that matters to you. It provides on-demand access to AWS' security and compliance reports and select online agreements.
+
+Reports available in [AWS Artifact](https://aws.amazon.com/en/artifact/) include Service Organization Control [(SOC) reports, Payment Card Industry (PCI) reports](https://aws.amazon. com/blogs/security/tag/aws-soc-reports/),
+and certifications from accreditation bodies across geographies and vertical compliance that validate the implementation and operating effectiveness of AWS security controls.
 
 
-## <a id="section-2" ></a> **2 - AWS Artifact**
-O [AWS Artifact](https://aws.amazon.com/pt/artifact/) é seu recurso central para informações relacionadas à conformidade que são importantes para você.
+**Cheat Sheets**
 
-Ele fornece acesso sob demanda aos relatórios de segurança e conformidade da AWS e contratos online selecionados.
+[https://tutorialsdojo.com/aws-artifact/](https://tutorialsdojo.com/aws-artifact/)
 
-Os relatórios disponíveis no AWS Artifact incluem nossos relatórios de: 
-- Service Organization Control (SOC) 
-- Relatórios do Payment Card Industry (PCI)  
-- Certificações de órgãos de credenciamento em todas as geografias e verticais de conformidade que validam a implementação e a eficácia operacional dos controles de segurança da AWS.
+**References**
 
-Os contratos disponíveis no [AWS Artifact](https://aws.amazon.com/pt/artifact/) incluem o Business Associate Addendum (BAA) e o Nondisclosure Agreement (NDA).
+[https://aws.amazon.com/artifact/](https://aws.amazon.com/artifact/)
 
-[AWS Artifact](https://aws.amazon.com/pt/artifact/) is the go-to, central resource for compliance-related information that matters to you. It provides on-demand access to AWS’ security and compliance reports and select online agreements.
+[https://docs.aws.amazon.com/artifact/latest/ug/what-is-aws-artifact.html](https://docs.aws.amazon.com/artifact/latest/ug/what-is-aws-artifact.html)
 
-Reports available in [AWS Artifact](https://aws.amazon.com/pt/artifact/) include Service Organization Control [(SOC) reports, Payment Card Industry (PCI) reports](https://aws.amazon.com/blogs/security/tag/aws-soc-reports/), 
-and certifications from accreditation bodies across geographies and compliance verticals that validate the implementation and operating effectiveness of AWS security controls.
+[https://aws.amazon.com/artifact/faq/](https://aws.amazon.com/artifact/faq/)
 
 
+
+---------------------------------------------------------------------------------------
 ## <a id="section-3" ></a> **3 - Amazon GuardDuty**
-O Amazon GuardDuty oferece detecção de ameaças e monitoramento contínuo de segurança para comportamento mal-intencionado ou não autorizado para ajudar a proteger suas contas e cargas de trabalho da AWS.
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Artifact_48.png)
 
-Serviço inteligente de detecção de ameaças.
+Amazon GuardDuty provides threat detection and continuous security monitoring for malicious or unauthorized behavior to help protect your AWS accounts and workloads.
 
-Detecta comprometimento de conta, comprometimento de instância, reconhecimento malicioso e comprometimento de bucket.
+Intelligent threat detection service.
 
-Monitoramento contínuo de eventos em:
-- Eventos de gerenciamento do AWS CloudTrail.
-- Eventos de dados do AWS CloudTrail S3.
-- Logs de fluxo da Amazon VPC.
-- Registros DNS.
+Detects account compromise, instance compromise, malicious reconnaissance, and bucket compromise.
+
+Continuous monitoring of events in:
+- AWS CloudTrail Management Events.
+- AWS CloudTrail S3 data events.
+- Amazon VPC Flow Logs.
+- DNS records.
 
 
-## <a id="section-4" ></a> **4 - AWS WAF & AWS Shield**
+**Cheat Sheets**
+[https://digitalcloud.training/aws-guardduty/](https://digitalcloud.training/aws-guardduty/)
+
+[https://tutorialsdojo.com/amazon-guardduty/](https://tutorialsdojo.com/amazon-guardduty/)
+
+**References**
+
+[https://aws.amazon.com/guardduty/](https://aws.amazon.com/guardduty/)
+
+[https://aws.amazon.com/guardduty/faqs/](https://aws.amazon.com/guardduty/faqs/)
+
+[https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html](https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html)
+
+[https://www.youtube.com/watch?time_continue=7&v=o2YaIsps5LY](https://www.youtube.com/watch?time_continue=7&v=o2YaIsps5LY)
+
+
+**Videos**
+
+---------------------------------------------------------------------------------------
+## <a id="section-4"></a> **4 - AWS WAF & AWS Shield**
+
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Shield_48.png)
+
 **WAF:**
-- AWS WAF é um firewall de aplicativo web.
-- Protege contra explorações comuns que podem comprometer a disponibilidade do aplicativo, comprometer a segurança ou consumir recursos excessivos.
-- O WAF permite criar regras para filtrar o tráfego da Web com base em condições que incluem endereços IP, cabeçalhos e corpo HTTP ou URIs personalizados.
-- O WAF facilita a criação de regras que bloqueiam explorações comuns da Web, como injeção de SQL e script entre sites.
-- As regras são conhecidas como Web ACLs.
+- AWS WAF is a web application firewall.
+- Protects against common exploits that can compromise application availability, compromise security, or consume excessive resources.
+- WAF allows you to create rules to filter web traffic based on conditions that include IP addresses, HTTP headers and body or custom URIs.
+- WAF makes it easy to create rules that block common web exploits such as SQL injection and cross-site scripting.
+- Rules are known as Web ACLs.
 
 **AWS Shield**
-- O AWS Shield é um serviço de proteção de negação de serviço distribuído (DDoS) gerenciado.
-- Protege o aplicativo da web em execução na AWS com detecção sempre ativa e mitigações automáticas em linha.
-Ajuda a minimizar o tempo de inatividade e a latência do aplicativo.
-Dois níveis – Padrão e Avançado.
-
-## <a id="section-5" ></a> **5 - AWS Key Management Service (AWS KMS)**
-O AWS Key Management Service oferece controle centralizado sobre as chaves de criptografia usadas para proteger seus dados.
-
-Você pode criar, importar, alternar, desabilitar, excluir, definir políticas de uso e auditar o uso de chaves de criptografia usadas para criptografar seus dados.
-
-O AWS Key Management Service é integrado à maioria dos outros serviços da AWS, facilitando a criptografia dos dados armazenados nesses serviços com as chaves de criptografia que você controla.
-
-O AWS KMS é integrado ao AWS CloudTrail, que oferece a capacidade de auditar quem usou quais chaves, em quais recursos e quando.
-
-O AWS KMS permite que os desenvolvedores criptografem dados com facilidade, seja por meio de criptografia com um clique no Console de gerenciamento da AWS ou usando o AWS SDK para adicionar criptografia facilmente ao código do aplicativo.
+- AWS Shield is a managed distributed denial-of-service (DDoS) protection service.
+- Protects the web application running on AWS with always-on detection and automatic in-line mitigations.
+Helps minimize application downtime and latency.
+Two levels – Standard and Advanced.
 
 
+---------------------------------------------------------------------------------------
+## <a id="section-5"></a> **5 - AWS Key Management Service (AWS KMS)**
+
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Key-Management-Service_48.png)
+
+AWS Key Management Service gives you centralized control over the encryption keys used to protect your data.
+
+You can create, import, toggle, disable, delete, set usage policies, and audit the usage of encryption keys used to encrypt your data.
+
+The AWS Key Management Service is integrated with most other AWS services, making it easy to encrypt the data stored in those services with encryption keys that you control.
+
+AWS KMS is integrated with AWS CloudTrail, which gives you the ability to audit who used which keys, on which resources, and when.
+
+AWS KMS allows developers to easily encrypt data, either through one-click encryption in the AWS Management Console or using the AWS SDK to easily add encryption to application code.
+
+**Cheat Sheets**
+
+[https://digitalcloud.training/aws-kms/](https://digitalcloud.training/aws-kms/)
+
+[https://tutorialsdojo.com/aws-key-management-service-aws-kms/](https://tutorialsdojo.com/aws-key-management-service-aws-kms/)
+
+**References:**
+
+[https://docs.aws.amazon.com/kms/latest/developerguide](https://docs.aws.amazon.com/kms/latest/developerguide)
+
+[https://aws.amazon.com/kms/features/](https://aws.amazon.com/kms/features/)
+
+[https://aws.amazon.com/kms/pricing/](https://aws.amazon.com/kms/pricing/)
+
+[https://aws.amazon.com/kms/faqs/](https://aws.amazon.com/kms/faqs/)
+
+**Videos**
+
+---------------------------------------------------------------------------------------
 ## <a id="section-6" ></a> **6 - AWS CloudHSM**
-O **AWS CloudHSM** é um módulo de segurança de hardware (HSM) baseado em nuvem que permite gerar e usar facilmente suas próprias chaves de criptografia na Nuvem AWS.
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-CloudHSM_48.png)
 
-Com o CloudHSM, você pode gerenciar suas próprias chaves de criptografia usando HSMs validados para FIPS 140-2 Nível 3.
+**AWS CloudHSM** is a cloud-based Hardware Security Module (HSM) that allows you to easily generate and use your own encryption keys in the AWS Cloud.
 
-O CloudHSM oferece a flexibilidade de integração com seus aplicativos usando APIs padrão do setor, como PKCS#11, Java Cryptography Extensions (JCE) e bibliotecas Microsoft CryptoNG (CNG).
+With CloudHSM, you can manage your own encryption keys using FIPS 140-2 Level 3 validated HSMs.
+
+CloudHSM gives you the flexibility to integrate with your applications using industry-standard APIs such as PKCS#11, Java Cryptography Extensions (JCE), and Microsoft CryptoNG (CNG) libraries.
+
+**Cheat Sheets**
+
+[https://digitalcloud.training/aws-cloudhsm/](https://digitalcloud.training/aws-cloudhsm/)
+
+**References**
+
+**Videos**
 
 
-## <a id="section-7" ></a> **7 - AWS Certificate Manager**
-O **AWS Certificate Manager** é um serviço que permite provisionar, gerenciar e implantar facilmente certificados Secure Sockets Layer/Transport Layer Security (SSL/TLS) públicos e privados para uso com serviços da AWS e seus recursos internos conectados.
 
-Os certificados SSL/TLS são usados ​​para proteger as comunicações de rede e estabelecer a identidade de sites na Internet, bem como recursos em redes privadas.
+---------------------------------------------------------------------------------------
+## <a id="section-7"></a> **7 - AWS Certificate Manager**
 
-O AWS Certificate Manager remove o demorado processo manual de compra, upload e renovação de certificados SSL/TLS.
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Certificate-Manager_48.png)
 
+**AWS Certificate Manager** is a service that allows you to easily provision, manage, and deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS services and their connected internal resources.
 
+SSL/TLS certificates are used to secure network communications and establish the identity of websites on the Internet as well as resources on private networks.
+
+AWS Certificate Manager removes the time-consuming manual process of purchasing, uploading, and renewing SSL/TLS certificates.
+
+**Cheat Sheets**
+
+**References**
+
+**Videos**
+
+https://tutorialsdojo.com/aws-certificate-manager/
+
+---------------------------------------------------------------------------------------
 ## <a id="section-8" ></a> **8 - AWS Inspector and AWS Trusted Advisor**
+
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_Amazon-Inspector_48.png)
+
 **AWS Inspector:**
 
-O **Inspector** é um serviço automatizado de avaliação de segurança que ajuda a melhorar a segurança e a conformidade de aplicativos implantados na AWS.
-O **Inspector** avalia automaticamente os aplicativos quanto a vulnerabilidades ou desvios das melhores práticas.
-Usa um agente instalado em instâncias do EC2.
-As instâncias devem ser marcadas.
+**Inspector** is an automated security assessment service that helps improve the security and compliance of applications deployed on AWS.
+The **Inspector** automatically assesses applications for vulnerabilities or deviations from best practices.
+Uses an agent installed on EC2 instances.
+Instances must be tagged.
 
 **Trusted Advisor**
-O **Trusted Advisor** é um recurso online que ajuda a reduzir custos, aumentar o desempenho e melhorar a segurança otimizando seu ambiente AWS.
-O **Trusted Advisor** fornece orientação em tempo real para ajudá-lo a provisionar seus recursos seguindo as práticas recomendadas.
-O **Trusted Advisor** irá aconselhá-lo sobre otimização de custos, desempenho, segurança e tolerância a falhas.
+**Trusted Advisor** is an online resource that helps you reduce costs, increase performance, and improve security by optimizing your AWS environment.
+**Trusted Advisor** provides real-time guidance to help you provision your resources following best practices.
+The **Trusted Advisor** will advise you on cost optimization, performance, security and fault tolerance.
 
-O **Trusted Advisor** verifica sua infraestrutura da AWS e a compara com as melhores práticas da AWS em cinco categorias:
-- Otimização de Custos.
+The **Trusted Advisor** checks your AWS infrastructure and compares it to AWS best practices in five categories:
+- Cost Optimization.
 - Performance.
-- Segurança.
-- Tolerância ao erro.
-- Limites de serviço.
+- Safety.
+- Fault tolerance.
+- Service limits.
 
-O Trusted Advisor vem em duas versões:
+Trusted Advisor comes in two versions:
 Core Checks and Recommendations (free):
-- Acesso às 7 verificações principais para ajudar a aumentar a segurança e o desempenho.
-- As verificações incluem:
-     - S3 bucket permissions; 
-     - Security Groups; 
-     - IAM use;
+- Access to top 7 checks to help increase security and performance.
+- Checks include:
+     - S3 bucket permissions;
+     - Security Groups;
+     - AMI use;
      - MFA on root account;
-     - EBS public snapshots; 
+     - EBS public snapshots;
      - RDS public snapshots;
 
-Benefícios Completos do Trusted Advisor (planos de suporte empresarial e empresarial):
+Trusted Advisor Full Benefits (Enterprise and Enterprise Support Plans):
 
-Conjunto completo de verificações para ajudar a otimizar toda a sua infraestrutura da AWS.
-Aconselha sobre segurança, desempenho, custo, tolerância a falhas e limites de serviço.
-Os benefícios adicionais incluem notificações de atualização semanais, alertas, ações automatizadas com o CloudWatch e acesso programático usando a API do AWS Support.
+Complete set of checks to help optimize your entire AWS infrastructure.
+It advises on safety, performance, cost, fault tolerance and service limits.
+Additional benefits include weekly update notifications, alerts, automated actions with CloudWatch, and programmatic access using the AWS Support API.
 
 Trusted Advisor is an online resource that helps to reduce cost, increase performance and improve security by optimizing your AWS environment. Trusted Advisor provides real time guidance to help you provision your resources following best practices.
 
-<img src="../images/extra/trustedAdvisor.jpg" alt="aws" width=80%  />
+<img src="../images/extra/trustedAdvisor.jpg" alt="trustedAdvisor" width=80%  />
 
-trustedAdvisor.jpg
+**Cheat Sheets**
 
+**References**
 
+**Videos**
+
+---------------------------------------------------------------------------------------
 ## <a id="section-9" ></a> **9 - Penetration Testing**
-O **Penetration Testing** é a prática de testar a segurança do próprio aplicativo em busca de vulnerabilidades, simulando um ataque.
 
-A AWS permite **Penetration Testing**. Há um conjunto limitado de recursos nos quais o teste de penetração pode ser realizado.
+**Penetration Testing** is the practice of testing the security of the application itself for vulnerabilities, simulating an attack.
 
-**Você não precisa de permissão para realizar testes de penetração nos seguintes serviços:**
+AWS allows **Penetration Testing**. There is a limited set of resources on which penetration testing can be performed.
+
+**You do not need permission to perform penetration tests on the following services:**
 - Amazon EC2 instances, NAT Gateways, and Elastic Load Balancers.
 - Amazon RDS.
 - Amazon CloudFront.
@@ -181,77 +305,239 @@ A AWS permite **Penetration Testing**. Há um conjunto limitado de recursos nos 
 - Amazon LightSail resources.
 - Amazon Elastic Beanstalk environments.
 
-Você pode ler a política completa de suporte a testes de vulnerabilidade e penetração  [aqui](https://aws.amazon.com/pt/security/penetration-testing/) .
+You can read the full vulnerability and penetration testing support policy [here](https://aws.amazon.com/en/security/penetration-testing/) .
 
-Caso uma conta esteja ou possa estar comprometida, a AWS recomenda que as seguintes etapas sejam executadas:
+If an account is or could be compromised, AWS recommends that the following steps be taken:
 1. Change your AWS root account password.
-2. Change all IAM user’s passwords.
+2. Change all IAM user's passwords.
 3. Delete or rotate all programmatic (API) access keys.
 4. Delete any resources in your account that you did not create.
 5. Respond to any notifications you received from AWS through the AWS Support Center and/or contact AWS Support to open a support case.
 
-## <a id="section-10" ></a> **10 - AWS Single Sign-On (AWS SSO)**
-O **AWS Single Sign-On (AWS SSO)** é um serviço de logon único (SSO) baseado em nuvem que facilita o gerenciamento centralizado do acesso SSO a todas as suas contas da AWS e aplicativos de nuvem.
+**Cheat Sheets**
 
-Ele ajuda você a gerenciar o acesso de SSO e as permissões de usuário em todas as suas contas da AWS no AWS Organizations.
+**References**
 
-O AWS SSO também ajuda a gerenciar o acesso e as permissões para aplicativos de software como serviço (SaaS) de terceiros comumente usados, aplicativos integrados ao AWS SSO, bem como aplicativos personalizados que oferecem suporte a Security Assertion Markup Language (SAML) 2.0.
+**Videos**
 
-O AWS SSO inclui um portal do usuário no qual seus usuários finais podem encontrar e acessar todas as contas atribuídas da AWS, aplicativos de nuvem e aplicativos personalizados em um só lugar.
+---------------------------------------------------------------------------------------
+## <a id="section-10"></a> **10 - AWS Single Sign-On (AWS SSO)**
 
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Single-Sign-On_48.png)
+
+**AWS Single Sign-On (AWS SSO)** is a cloud-based single sign-on (SSO) service that makes it easy to centrally manage SSO access to all your AWS accounts and cloud applications.
+
+It helps you manage SSO access and user permissions across all your AWS accounts in AWS Organizations.
+
+AWS SSO also helps you manage access and permissions for commonly used third-party software-as-a-service (SaaS) applications, applications integrated with AWS SSO, as well as custom applications that support Security Assertion Markup Language (SAML) 2.0.
+
+AWS SSO includes a user portal where your end users can find and access all assigned AWS accounts, cloud applications, and custom applications in one place.
+
+**Cheat Sheets**
+
+**References**
+
+**Videos**
+
+
+---------------------------------------------------------------------------------------
 ## <a id="section-11" ></a> **11 - Amazon Cognito**
-O Amazon Cognito permite que você adicione a inscrição, o login e o controle de acesso do usuário aos seus aplicativos web e móveis de maneira rápida e fácil.
 
-O Amazon Cognito é dimensionado para milhões de usuários e oferece suporte ao login com provedores de identidade social, como Apple, Facebook, Google e Amazon, e provedores de identidade corporativa via SAML 2.0 e OpenID Connect.
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_Amazon-Cognito_48.png)
 
-Os dois principais componentes do AWS Cognito são grupos de usuários e grupos de identidades:
-- **User pools** são diretórios de usuários que fornecem opções de inscrição e entrada para os usuários do seu aplicativo.
-- Os **Identity pools** permitem que você conceda aos usuários acesso a outros serviços da AWS.
+Amazon Cognito lets you add user enrollment, login, and access control to your web and mobile apps quickly and easily.
 
-Você pode usar grupos de identidades e grupos de usuários separadamente ou em conjunto.
+Amazon Cognito scales to millions of users and supports signing in with social identity providers such as Apple, Facebook, Google and Amazon, and corporate identity providers via SAML 2.0 and OpenID Connect.
+
+The two main components of AWS Cognito are User Pools and Identity Pools:
+- **User pools** are user directories that provide enrollment and sign-in options for your app users.
+- **Identity pools** allow you to grant users access to other AWS services.
+
+You can use identity pools and user pools separately or together.
+
+**Cheat Sheets**
+
+**References**
+
+**Videos**
 
 
+---------------------------------------------------------------------------------------
 ## <a id="section-12" ></a> **12 - AWS Directory Services**
-A AWS fornece vários tipos de diretório.
 
-Os três tipos a seguir aparecem atualmente no exame e serão abordados nesta página:
-- Serviço Active Directory para Microsoft Active Directory.
-- AD simples.
-- Conector AD.
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Directory-Service_48.png)
 
-Como alternativa ao serviço AWS Directory, você pode criar seus próprios DCs do Microsoft AD na nuvem AWS (no EC2).
 
-A tabela abaixo resume os serviços de diretório abordados nesta página, bem como alguns outros, e fornece alguns casos de uso típicos:
+AWS provides several types of directories.
 
-|Opção de serviço de diretório	|Descrição	|Caso de uso|
+The following three types currently appear on the exam and will be covered on this page:
+- Active Directory Service for Microsoft Active Directory.
+- Simple AD.
+- AD connector.
+
+As an alternative to the AWS Directory service, you can create your own Microsoft AD DCs in the AWS cloud (on EC2).
+
+The table below summarizes the directory services covered on this page, as well as a few others, and provides some typical use cases:
+
+
+|Directory Service Option |Description |Use Case|
 |-------------------------------|-----------|-----------|
-|AWS Directory Service para Microsoft Active Directory	|Microsoft AD completo gerenciado pela AWS em execução no Windows Server 2012 R2	|Empresas que desejam o Microsoft AD hospedado ou você precisa de LDAP para aplicativos Linux|
-|Conector AD	|Permite que os usuários locais façam login nos serviços da AWS com suas credenciais do AD existentes. Também permite que instâncias do EC2 ingressem no domínio AD	|Logon único para funcionários locais e para adicionar instâncias do EC2 ao domínio|
-|AD simples	|Implementação de AD de baixa escala e baixo custo com base no Samba	|Diretório de usuário simples ou você precisa de compatibilidade com LDAP|
+|AWS Directory Service for Microsoft Active Directory |Full Microsoft AD managed by AWS running on Windows Server 2012 R2 |Enterprises that want hosted Microsoft AD or you need LDAP for Linux applications|
+|AD Connector |Allows on-premises users to sign in to AWS services with their existing AD credentials. It also allows EC2 instances to join the AD domain |Single sign-on for local employees and to add EC2 instances to the domain|
+|Simple AD |Low-scale, low-cost AD implementation based on Samba |Simple user directory or you need LDAP compatibility|
 
 
-## <a id="section-13" ></a> **13 - AWS Systems Manager Parameter Store**
-Fornece armazenamento seguro e hierárquico para gerenciamento de dados de configuração e gerenciamento de segredos.
+**Cheat Sheets**
 
-É altamente escalável, disponível e durável.
+**References**
 
-Você pode armazenar dados como senhas, strings de banco de dados e códigos de licença como valores de parâmetro.
+**Videos**
 
-Você pode armazenar valores como texto simples (dados não criptografados) ou texto cifrado (dados criptografados).
 
-Você pode então referenciar valores usando o nome exclusivo que você especificou quando criou o parâmetro.
+---------------------------------------------------------------------------------------
+## <a id="section-13"></a> **13 - AWS Systems Manager Parameter Store**
+Provides secure, hierarchical storage for configuration data management and secret management.
 
-## <a id="section-14" ></a> **14 - AWS Secrets Manager**
+It is highly scalable, available and durable.
 
-Como Loja de Parâmetros.
+You can store data such as passwords, database strings, and license codes as parameter values.
 
-Permite rotação nativa e automática de chaves.
+You can store values ​​as plain text (unencrypted data) or ciphertext (encrypted data).
 
-Permissões refinadas.
+You can then reference values ​​using the unique name you specified when you created the parameter.
 
-Auditoria central para rotação secreta.
+**Cheat Sheets**
 
-## <a id="section-15" ></a> **15 -  How do I report abuse of AWS resources?**
+**References**
+
+**Videos**
+
+---------------------------------------------------------------------------------------
+## <a id="section-14"></a> **14 - AWS Secrets Manager**
+
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Secrets-Manager_48.png)
+
+As Parameter Store.
+
+Allows native and automatic key rotation.
+
+Fine-grained permissions.
+
+Central audit for secret rotation.
+
+
+**Cheat Sheets**
+
+**References**
+
+**Videos**
+
+---------------------------------------------------------------------------------------
+## <a id="section-15"></a> **15 - Amazon Audit Manager**
+
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Audit-Manager_48.png)
+
+**Cheat Sheets**
+
+**References**
+
+**Videos**
+
+---------------------------------------------------------------------------------------
+## <a id="section-16"></a> **16 - Amazon Certificate Manager**
+
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Certificate-Manager_48.png)
+
+**Cheat Sheets**
+
+**References**
+
+**Videos**
+
+---------------------------------------------------------------------------------------
+## <a id="section-17"></a> **17 - Amazon Detective**
+
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_Amazon-Detective_48.png)
+
+**Cheat Sheets**
+
+**References**
+
+**Videos**
+
+---------------------------------------------------------------------------------------
+## <a id="section-18"></a> **18 - Amazon Firewall Manager**
+
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Firewall-Manager_48.png)
+
+---------------------------------------------------------------------------------------
+## <a id="section-19"></a> **19 - Amazon Macie**
+
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_Amazon-Macie_48.png)
+
+**Cheat Sheets**
+
+**References**
+
+**Videos**
+
+---------------------------------------------------------------------------------------
+## <a id="section-20"></a> **20 - Amazon Network Firewall**
+
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Network-Firewall_48.png)
+
+**Cheat Sheets**
+
+**References**
+
+**Videos**
+
+---------------------------------------------------------------------------------------
+## <a id="section-21"></a> **21 - Amazon Resource Access Manager (AWS RAM)**
+
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Resource-Access-Manager_48.png)
+
+**Cheat Sheets**
+
+**References**
+
+**Videos**
+
+---------------------------------------------------------------------------------------
+## <a id="section-22"></a> **22 - Amazon Security Hub**
+
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Security-Hub_48.png)
+
+**Cheat Sheets**
+
+**References**
+
+**Videos**
+
+---------------------------------------------------------------------------------------
+## <a id="section-23"></a> **23 - Amazon Shield**
+
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Shield_48.png)
+
+**Cheat Sheets**
+
+**References**
+
+**Videos**
+
+---------------------------------------------------------------------------------------
+## <a id="section-24"></a> **24 - Amazon WAF**
+
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-WAF_48.png)
+
+**Cheat Sheets**
+
+**References**
+
+**Videos**
+
+---------------------------------------------------------------------------------------
+## <a id="section-99" ></a> **25 -  How do I report abuse of AWS resources?**
 
 
 ### **I suspect that AWS resources are used for abusive or illegal purposes. How do I let AWS know?** [here](https://aws.amazon.com/pt/premiumsupport/knowledge-center/report-aws-abuse/)
