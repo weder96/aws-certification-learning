@@ -146,6 +146,13 @@ AWS Glue DataBrew is a new visual data preparation tool that makes it easy for d
 
 [https://aws.amazon.com/glue/features/databrew/](https://aws.amazon.com/glue/features/databrew/)
 
+
+
+**AWS Glue Elastic Views**
+
+![AWS Glue Databrew](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_AWS-Glue-Elastic-Views_48.png)
+
+
 ------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-4"></a> **4 - Data Analysis and Query Use Cases**
 Query services like Amazon Athena, data warehouses like Amazon Redshift, and sophisticated data processing frameworks like Amazon EMR all address different needs and use cases.

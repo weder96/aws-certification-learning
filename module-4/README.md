@@ -129,6 +129,7 @@ Continuous monitoring of events in:
 
 
 **Cheat Sheets**
+
 [https://digitalcloud.training/aws-guardduty/](https://digitalcloud.training/aws-guardduty/)
 
 [https://tutorialsdojo.com/amazon-guardduty/](https://tutorialsdojo.com/amazon-guardduty/)
@@ -470,6 +471,12 @@ Central audit for secret rotation.
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Firewall-Manager_48.png)
 
+**Cheat Sheets**
+
+**References**
+
+**Videos**
+
 ---------------------------------------------------------------------------------------
 ## <a id="section-19"></a> **19 - Amazon Macie**
 
@@ -559,5 +566,3 @@ Note: AWS Support can't assist with reports of abuse or questions about notifica
 
 If you suspect that AWS resources are used for abusive purposes, contact the AWS Trust & Safety team using the Report Amazon AWS abuse form, or by contacting abuse@amazonaws.com. Provide all the necessary information, including logs in plaintext, email headers, and so on, when you submit your request.
 AWS Trust & Safety team.
-
-

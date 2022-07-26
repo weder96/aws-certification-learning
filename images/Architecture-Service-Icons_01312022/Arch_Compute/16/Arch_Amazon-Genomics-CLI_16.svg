@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon-Architecture/16/Arch_Amazon-Genomics-CLI_16</title>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#C8511B" offset="0%"></stop>
+            <stop stop-color="#FF9900" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Icon-Architecture/16/Arch_Amazon-Genomics-CLI_16" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle" fill="url(#linearGradient-1)">
+            <rect x="0" y="0" width="24" height="24"></rect>
+        </g>
+        <g id="Icon-Service/16/Amazon-Genomics-CLI_16" transform="translate(4.000000, 4.000000)" fill="#FFFFFF">
+            <path d="M12,2 L14,2 L14,1 L12,1 L12,2 Z M12,9 L14,9 L14,8 L12,8 L12,9 Z M6.854,9.354 C7.049,9.158 7.049,8.842 6.854,8.646 L2.854,4.646 L2.146,5.354 L5.793,9 L2.146,12.646 L2.854,13.354 L6.854,9.354 Z M7,13 L12,13 L12,12 L7,12 L7,13 Z M16,15.5 L16,12 L15,12 L15,15 L1,15 L1,1 L8,1 L8,0 L0.5,0 C0.224,0 0,0.224 0,0.5 L0,15.5 C0,15.776 0.224,16 0.5,16 L15.5,16 C15.776,16 16,15.776 16,15.5 L16,15.5 Z M11,8.329 C11,7.928 11.156,7.551 11.439,7.268 L15.268,3.439 C15.74,2.967 16,2.339 16,1.671 L16,0 L15,0 L15,1.671 C15,2.072 14.844,2.449 14.561,2.732 L10.732,6.561 C10.26,7.033 10,7.661 10,8.329 L10,10 L11,10 L11,8.329 Z M11.232,3.939 L11.939,3.232 L11.439,2.732 C11.156,2.449 11,2.072 11,1.671 L11,0 L10,0 L10,1.671 C10,2.339 10.26,2.967 10.732,3.439 L11.232,3.939 Z M15.268,6.561 C15.74,7.033 16,7.661 16,8.329 L16,10 L15,10 L15,8.329 C15,7.928 14.844,7.551 14.561,7.268 L14.061,6.768 L14.768,6.061 L15.268,6.561 Z" id="Fill-4"></path>
+        </g>
+    </g>
+</svg>
