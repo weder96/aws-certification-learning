@@ -2,92 +2,91 @@
 
 [1]: https://github.com/weder96/aws-certification-learning
 
+# Module 1: Overview of Cloud Concepts
 
-# Módulo 1: Visão geral dos conceitos de nuvem
 
-
-## Conteúdo
-1. <a href="#section-1"> Introdução à computação em nuvem </a>
-2. <a href="#section-2"> Vantagens da computação em nuvem </a>
-3. <a href="#section-3"> Introdução à Amazon Web Services (AWS) </a>
-4. <a href="#section-4"> Mudança para a Nuvem AWS – AWS Cloud Adoption Framework (AWS CAF)</a>
+## Contents
+1. <a href="#section-1">Introduction to Cloud Computing</a>
+2. <a href="#section-2"> Advantages of Cloud Computing </a>
+3. <a href="#section-3"> Introduction to Amazon Web Services (AWS) </a>
+4. <a href="#section-4"> Moving to the AWS Cloud – AWS Cloud Adoption Framework (AWS CAF)</a>
 5. <a href="#section-5"> AWS Shared Responsibility Model</a>
-6. <a href="#section-6"> AWS Support</a>
+6. <a href="#section-6">AWS Support</a>
 
-****************************************************************************************************
-## <a id="section-1" ></a> Seção 1 - Introdução à computação em nuvem
+****************************************************** ******************************************************
+## <a id="section-1" ></a> Section 1 - Introduction to Cloud Computing
 
-O que é computação em nuvem?
+What is cloud computing?
 
-- É a entrega sob demanda de poder computacional, banco de dados, armazenamento, aplicativos e outros recursos de TI pela Internet com uma definição de preço conforme o uso.
-- Servidores em grandes datacenters
-- Pensar na infraestrutura como um software
+- It is the on-demand delivery of computing power, database, storage, applications and other IT resources over the Internet with pay-as-you-go pricing.
+- Servers in large data centers
+- Think of infrastructure as software
 
-Infraestrutura como hardware:
+Infrastructure as hardware:
 
-- Exigem espaço, equipe, segurança física, planejamento, despesas de capital
-- Têm um ciclo longo de aquisição de hardware
-- Exigem provisionamento de capacidade por meio da tentativa de adivinhar os picos máximos teóricos
+- Require space, staff, physical security, planning, capital expenditures
+- Have a long hardware acquisition cycle
+- Require capacity provisioning by trying to guess the theoretical maximum peaks
 
-Infraestrutura como software:
+Infrastructure as software:
 
-- São flexíveis
-- Podem mudar com mais rapidez
-- Eliminam as tarefas monolíticas de trabalho pesado
+- Are flexible
+- Can change faster
+- Eliminate monolithic, heavy-duty tasks
 
-**Tipos de Serviços Cloud - (Iass x Paas x Saas x Caas)**
+**Types of Cloud Services - (Iass x Paas x Saas x Caas)**
 
-### Há três principais modelos de implantação de computação em nuvem:
+### There are three main cloud computing deployment models:
 
-- **Infrastructure as a Service (IaaS)** - Serviços que fornecem conexão de rede, SOs, armazenamento, alta flexibilidade de utilização. Costumam ser genéricos, podem ser utilizados para vários fins. Ex:  [EC2](https://aws.amazon.com/pt/ec2/) da AWS [instance-types](<https://aws.amazon.com/pt/ec2/instance-types/>).
-- **Platform as a Service (PaaS)** - Serviços que fornecem uma plataforma para deployment, restauração, manutenção de dados, mas não te dão acesso ao SO diretamente, Ex: Elastic BeanStalk, [S3](https://aws.amazon.com/pt/s3/).
-- **Software as a Service (SaaS)** - Serviços que atuam como uma aplicação na nuvem gerenciada pela AWS que você chama da sua aplicação para algum fim, Ex: Rekognition, Polly, Translate.
-- **Code as a Service (Caas)** ou Function as a Service (FaaS) - Serviços orientados a evento que executam uma função simples na núvem em um ambiente serverless, Ex: [Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html).
+- **Infrastructure as a Service (IaaS)** - Services that provide network connection, OS, storage, high flexibility of use. They are usually generic, can be used for various purposes. Ex: [EC2](https://aws.amazon.com/pt/ec2/) from AWS [instance-types](<https://aws.amazon.com/pt/ec2/instance-types/>) .
+- **Platform as a Service (PaaS)** - Services that provide a platform for deploying, restoring, maintaining data, but not giving you access to the OS directly, Ex: Elastic BeanStalk, [S3](https://aws .amazon.com/en/s3/).
+- **Software as a Service (SaaS)** - Services that act as an AWS managed cloud application that you call from your application for some purpose, Ex: Rekognition, Polly, Translate.
+- **Code as a Service (Caas)** or Function as a Service (FaaS) - Event-driven services that perform a simple function in the cloud in a serverless environment, Ex: [Lambda](https://docs.aws .amazon.com/lambda/latest/dg/welcome.html).
 
-### **TIPOS DE COMPUTAÇÃO EM NUVEM**
+### **TYPES OF CLOUD COMPUTING**
 
-3 tipos de modelo de computação em nuvem: 
-- Infraestrutura como serviço (IaaS) 
-- Plataforma como serviço (PaaS) 
-- Software como serviço (SaaS)
+3 types of cloud computing model:
+- Infrastructure as a Service (IaaS)
+- Platform as a Service (PaaS)
+- Software as a Service (SaaS)
 
-**TIPOS DE IMPLANTAÇÃO DE NUVEM**
+**TYPES OF CLOUD DEPLOYMENT**
 
-Existem 4 tipos de implantação na nuvem:
-- **Nuvem pública ou simples** “nuvem” – ex. AWS, Azure, GCP
-- **Nuvem Híbrida** – mistura de nuvens públicas e privadas
-- **Multi Cloud** - usando mais de 1 nuvem pública em uma implantação.
-- **Nuvem privada (on-premise)** – gerenciada em seu próprio data center, por exemplo, Hyper-V, OpenStack, VMware
+There are 4 types of cloud deployment:
+- **Public or simple cloud** “cloud” – ex. AWS, Azure, GCP
+- **Hybrid Cloud** – mix of public and private clouds
+- **Multi Cloud** - using more than 1 public cloud in a deployment.
+- **Private cloud (on-premise)** – managed in your own data center, e.g. Hyper-V, OpenStack, VMware
 
-**Nuvem Pública**
+**Public Cloud**
 
-Um aplicativo baseado em nuvem é totalmente implantado na nuvem e todas as partes do aplicativo são executadas na nuvem. Os aplicativos na nuvem foram criados na nuvem ou migrados de uma infraestrutura existente para aproveitar os benefícios da computação em nuvem. Os aplicativos baseados em nuvem podem ser criados em peças de infraestrutura de baixo nível ou podem usar serviços de nível superior que fornecem abstração dos requisitos de gerenciamento, arquitetura e dimensionamento da infraestrutura principal.
+A cloud-based application is fully deployed in the cloud and all parts of the application run in the cloud. Cloud applications were built in the cloud or migrated from an existing infrastructure to take advantage of cloud computing. Cloud-based applications can be built on low-level pieces of infrastructure, or they can use higher-level services that provide abstraction from the management, architecture, and scaling requirements of the core infrastructure.
 
-**Híbrido**
+**Hybrid**
 
-Uma implantação híbrida é uma maneira de conectar infraestrutura e aplicativos entre recursos baseados em nuvem e recursos existentes que não estão localizados na nuvem.
+A hybrid deployment is a way to connect infrastructure and applications between cloud-based resources and existing resources that are not located in the cloud.
 
-O método mais comum de implantação híbrida é entre a nuvem e a infraestrutura local existente para estender e expandir a infraestrutura de uma organização para a nuvem enquanto conecta os recursos da nuvem ao sistema interno.
+The most common hybrid deployment method is between the cloud and existing on-premises infrastructure to extend and expand an organization's infrastructure to the cloud while connecting cloud resources to the internal system.
 
-**Nuvem privada (on-premise)**
+**Private Cloud (on-premise)**
 
-A implantação de recursos no local usando ferramentas de virtualização e gerenciamento de recursos às vezes é chamada de “nuvem privada”. A implantação no local não oferece muitos dos benefícios da computação em nuvem, mas às vezes é procurada por sua capacidade de fornecer recursos dedicados.
+Deploying on-premises resources using virtualization and resource management tools is sometimes referred to as a “private cloud”. On-premises deployment doesn't offer many of the benefits of cloud computing, but is sometimes sought after for its ability to provide dedicated resources.
 
-Na maioria dos casos, esse modelo de implantação é o mesmo que a infraestrutura de TI herdada, usando tecnologias de gerenciamento e virtualização de aplicativos para tentar aumentar a utilização de recursos.
-Há muitas semelhanças entre a AWS e uma implementação de TI tradicional. 
+In most cases, this deployment model is the same as legacy IT infrastructure, using application management and virtualization technologies to try to increase resource utilization.
+There are many similarities between AWS and a traditional IT implementation.
 
-**Multi Cloud** - 
-A linha entre nuvem híbrida e multicloud está embaçada neste momento. A nuvem híbrida é certamente mais expansiva em sua definição (pública, local, borda). 
+**Multi Cloud** -
+The line between hybrid cloud and multicloud is blurred at this point. The hybrid cloud is certainly more expansive in its definition (public, on-premises, edge).
 
-A multinuvem geralmente se refere a várias nuvens públicas. O que o torna embaçado é que a nuvem é uma mentalidade - não um local físico. Como resultado, vemos os termos usados alternadamente nos dias de hoje.
+Multicloud generally refers to multiple public clouds. What makes it blurry is that the cloud is a mindset - not a physical location. As a result, we see the terms used interchangeably these days.
 
-Uma coisa é clara, no entanto, é que, independentemente das definições - os primeiros princípios necessários para o sucesso em ambos são notavelmente semelhantes.
+One thing is clear, however, is that regardless of the definitions - the first principles needed for success in both are remarkably similar.
 
 ### **Others Concepts:**
 
 **High‌ ‌Availability‌** ‌
 
-High‌ ‌availability‌ ‌means‌ ‌having‌ ‌redundant‌ ‌copies‌ ‌of‌ ‌an‌ ‌object‌ ‌or‌ ‌resource‌ ‌to‌ ‌make‌ ‌sure‌ ‌that‌ ‌another‌ ‌can‌‌ take‌ ‌its‌ ‌place‌ ‌when‌ ‌something‌ ‌happens‌ ‌to‌ ‌it.‌ ‌High‌ ‌availability‌ ‌can‌ ‌apply‌ ‌to‌ ‌almost‌ ‌anything:‌ ‌compute‌‌ servers,‌ ‌data‌ ‌storage,‌ ‌databases,‌ ‌networks,‌ ‌etc.‌ ‌High‌ ‌availability‌ ‌is‌ ‌one‌ ‌of‌ ‌the‌ ‌main‌ ‌selling‌ ‌points‌ ‌of‌‌ using‌ ‌the‌ ‌cloud.‌ ‌It‌ ‌might‌ ‌be‌ ‌expensive,‌ ‌but‌ ‌companies‌ ‌that‌ ‌cannot‌ ‌risk‌ ‌having‌ ‌downtime‌ ‌nor‌ ‌data‌ ‌loss‌‌ should‌ ‌build‌ ‌highly‌ ‌available‌ ‌infrastructures‌ ‌in‌ ‌the‌ ‌cloud‌ ‌to‌ ‌protect‌ ‌their‌ ‌assets.‌ ‌Furthermore,‌ ‌because‌‌ the‌ ‌data‌ ‌centers‌ ‌in‌ ‌the‌ ‌cloud‌ ‌are‌ ‌geographically‌ ‌distributed‌ ‌and‌ ‌are‌ ‌usually‌ ‌far‌ ‌apart‌ ‌from‌ ‌one‌ ‌another,‌‌ in‌ ‌case‌ ‌one‌ ‌of‌ ‌these‌ ‌data‌ ‌centers‌ ‌go‌ ‌offline,‌ ‌other‌ ‌data‌ ‌centers‌ ‌are‌ ‌not‌ ‌affected‌ ‌and‌ ‌can‌  continue‌ serving‌ ‌you.‌ ‌
+High‌ ‌availability‌ ‌means‌ ‌having‌ ‌redundant‌ ‌copies‌ ‌of‌ ‌an‌ ‌object‌ ‌or‌ ‌resource‌ ‌to‌ ‌make‌ ‌sure‌ ‌that‌ ‌another‌ ‌can‌‌ take‌ ‌its‌ ‌place‌ ‌when‌ ‌something‌ ‌happens‌ ‌to‌ ‌it.‌ ‌High‌ ‌availability‌ ‌can‌ ‌apply‌ ‌to‌ ‌almost‌ ‌anything:‌ ‌compute‌‌ servers,‌ ‌data‌ ‌storage,‌ ‌databases,‌ ‌networks,‌ ‌etc.‌ ‌High‌ ‌availability‌ ‌is‌ ‌one‌ ‌of‌ ‌the‌ ‌main‌ ‌selling‌ ‌points‌ ‌of‌‌ using‌ ‌the‌ ‌cloud.‌ ‌It‌ ‌might‌ ‌be‌ ‌expensive,‌ ‌but‌ ‌companies‌ ‌that‌ ‌cannot‌ ‌risk‌ ‌having‌ ‌downtime‌ ‌nor‌ ‌data‌ ‌loss‌‌ should‌ ‌build‌ ‌highly‌ ‌available‌ ‌infrastructures‌ ‌in‌ ‌the‌ ‌cloud‌ ‌to‌ ‌protect‌ ‌their‌ ‌assets.‌ ‌Furthermore, ‌ ‌because‌‌ the‌ ‌data‌ ‌centers‌ ‌in‌ ‌the‌ ‌cloud‌ ‌are‌ ‌geographically‌ ‌distributed‌ ‌and‌ ‌are‌ ‌usually‌ ‌far‌ ‌apart‌ ‌from‌ ‌one‌ ‌another,‌‌ in‌ ‌case‌ ‌one‌ ‌of‌ ‌these‌ ‌data‌ ‌centers‌ ‌go‌ ‌offline,‌ ‌other‌ ‌data‌ ‌centers‌ ‌are‌ ‌not‌ ‌affected‌ ‌and‌ ‌can‌  continue‌ serving‌ ‌you.‌ ‌
 
 
 **Fault‌ ‌Tolerance‌** ‌
@@ -99,13 +98,13 @@ When‌ ‌a‌ ‌component‌ ‌begins‌ ‌to‌ ‌fail,‌ ‌the‌ ‌s
 **Elasticity‌** ‌
 
 Elasticity‌ ‌is‌ ‌the‌ ‌ability‌ ‌to‌ ‌quickly‌ ‌provision‌ ‌resources‌ ‌when‌ ‌you‌ ‌need‌ ‌them,‌ ‌and‌ ‌release‌ ‌them‌ ‌once‌ ‌you‌‌ don’t‌ ‌need‌ ‌them‌ ‌anymore.‌ ‌Unlike‌ ‌traditional‌ ‌infrastructure,‌ ‌in‌ ‌the‌ ‌cloud,‌ ‌you‌ ‌should‌ ‌treat‌ ‌servers‌ ‌and‌‌ storage‌ ‌as‌ ‌disposable.‌ ‌
-They‌ ‌should‌ ‌not‌ ‌be‌ ‌kept‌ ‌beyond‌ ‌their‌ ‌usefulness.‌ ‌Compute‌ ‌power‌ ‌and‌ ‌storage‌‌ space‌ ‌can‌ ‌be‌ ‌easily‌ ‌acquired‌ ‌anyway‌ ‌when‌ ‌you‌ ‌need‌ ‌it,‌ ‌so‌ ‌be‌ ‌cost-effective‌ ‌with‌ ‌your‌ ‌budget,‌ ‌use‌ ‌only‌‌ what‌ ‌you‌ ‌need‌ ‌and‌ ‌don’t‌ ‌keep‌ ‌them‌ ‌idle.‌ ‌Elasticity‌ ‌is‌ ‌another‌ ‌major‌ ‌selling‌ ‌point‌ ‌of‌ ‌the‌ ‌cloud,‌ ‌since‌ ‌you‌‌ do‌ ‌not‌ ‌have‌ ‌hardware‌ ‌ownership.‌ ‌You‌ ‌don’t‌ ‌need‌ ‌to‌ ‌worry‌ ‌about‌ ‌purchasing‌ ‌new‌ ‌hardware‌ ‌to‌ ‌meet‌ ‌your‌‌ requirements‌ ‌and‌ ‌think‌ ‌about‌ ‌how‌ ‌to‌ ‌get‌ ‌your‌ ‌money‌ ‌back‌ ‌once‌ ‌it‌ ‌is‌ ‌beyond‌ ‌its‌ ‌lifespan.‌ ‌
+They‌ ‌should‌ ‌not‌ ‌be‌ ‌kept‌ ‌beyond‌ ‌their‌ ‌usefulness.‌ ‌Compute‌ ‌power‌ ‌and‌ ‌storage‌‌ space‌ ‌can‌ ‌be‌ ‌easily‌ ‌acquired‌ ‌anyway‌ ‌when‌ ‌you‌ ‌need‌ ‌it,‌ ‌so‌ ‌be‌ ‌cost-effective‌ ‌with‌ ‌your‌ ‌budget,‌ ‌use‌ ‌only‌‌ what‌ ‌you‌ ‌need‌ ‌and‌ ‌don't‌ ‌keep‌ ‌them‌ ‌idle.‌ ‌Elasticity‌ ‌is‌ ‌another‌ ‌major‌ ‌selling‌ ‌point‌ ‌of‌ ‌the‌ ‌cloud,‌ ‌since‌ ‌you‌‌ do‌ ‌not‌ ‌have‌ ‌hardware‌ ‌ownership.‌ ‌You‌ ‌don't‌ ‌need‌ ‌to‌ ‌worry‌ ‌about‌ ‌purchasing‌ ‌new‌ ‌hardware‌ ‌to‌ ‌meet‌ ‌your‌‌ requirements‌ ‌and‌ ‌think‌ ‌about‌ ‌how‌ ‌to‌ ‌get‌ ‌your‌ ‌money‌ ‌back‌ ‌once‌ ‌it‌ ‌is‌ ‌beyond‌ ‌its‌ ‌lifespan .‌ ‌
 
 ‌
 **Scalability‌** ‌
 
-Scalability‌ ‌is‌ ‌the‌ ‌concept‌ ‌of‌ ‌provisioning‌ ‌additional‌ ‌resources‌ ‌to‌ ‌increase‌ ‌performance‌ ‌and‌ ‌support‌‌ high‌ ‌demand,‌ ‌and‌ ‌reducing‌ ‌them‌ ‌once‌ ‌demand‌ ‌is‌ ‌not‌ ‌as‌ ‌high‌ ‌anymore.‌ ‌Scalability‌ ‌is‌ ‌an‌ ‌important‌‌ practice‌ ‌that‌ ‌you‌ ‌must‌ ‌apply‌ ‌to‌ ‌keep‌ ‌your‌ ‌users‌ ‌happy.‌ ‌Imagine‌ ‌if‌ ‌your‌ ‌website‌ ‌suddenly‌ ‌receives‌ ‌a‌ ‌high‌‌ number‌ ‌of‌ ‌traffic,‌ ‌and‌ ‌you‌ ‌don’t‌ ‌have‌ ‌enough‌ ‌compute‌ ‌power‌ ‌to‌ ‌serve‌ ‌content‌ ‌to‌ ‌all‌ ‌your‌ ‌customers.‌‌
-The‌ ‌negative‌ ‌impact‌ ‌on‌ ‌customer‌ ‌satisfaction‌ ‌will‌ ‌greatly‌ ‌affect‌ ‌your‌ ‌reputation‌ ‌and‌ ‌your‌ ‌profits.‌When‌‌ scaling‌ ‌a‌ ‌resource,‌ ‌like‌ ‌a‌ ‌website‌ ‌for‌ ‌example,‌ ‌make‌ ‌sure‌ ‌that‌ ‌it‌ ‌is‌ ‌stateless‌ ‌so‌ ‌that‌ ‌you‌ ‌won’t‌ ‌lose‌ ‌any‌‌ important‌ ‌data‌ ‌once‌ ‌it‌ ‌scales‌ ‌down.‌ ‌You‌ ‌should‌ ‌also‌ ‌use‌ ‌appropriate‌ ‌metrics‌ ‌as‌ ‌a‌ ‌basis‌ ‌of‌ ‌your‌ ‌scaling‌‌ activity.‌
+Scalability‌ ‌is‌ ‌the‌ ‌concept‌ ‌of‌ ‌provisioning‌ ‌additional‌ ‌resources‌ ‌to‌ ‌increase‌ ‌performance‌ ‌and‌ ‌support‌‌ high‌ ‌demand,‌ ‌and‌ ‌reducing‌ ‌them‌ ‌once‌ ‌demand‌ ‌is‌ ‌not‌ ‌as‌ ‌high‌ ‌anymore.‌ ‌Scalability‌ ‌is‌ ‌an‌ ‌important‌‌ practice‌ ‌that‌ ‌you‌ ‌must‌ ‌apply‌ ‌to‌ ‌keep‌ ‌your‌ ‌users‌ ‌happy.‌ ‌Imagine‌ ‌if‌ ‌your‌ ‌website‌ ‌suddenly‌ ‌Receiives‌ ‌a‌ ‌high‌‌ Number‌ ‌OF‌ ‌TRAFFIC, ‌and‌ ‌you‌ ‌don't‌ ‌have‌ ‌enough‌ ‌power‌ ‌to‌ ‌content‌ ‌to‌ ‌your‌ ‌customers.‌‌
+The‌ ‌negative‌ ‌impact‌ ‌on‌ ‌customer‌ ‌satisfaction‌ ‌will‌ ‌greatly‌ ‌affect‌ ‌your‌ ‌reputation‌ ‌and‌ ‌your‌ ‌profits.‌When‌‌ scaling‌ ‌a‌ ‌resource,‌ ‌like‌ ‌a‌ ‌website‌ ‌for‌ ‌example,‌ ‌make‌ ‌sure‌ ‌that‌ ‌it‌ ‌is‌ ‌stateless‌ ‌so‌ ‌that‌ ‌you‌ ‌won't‌ ‌lose‌ ‌any‌‌ important‌ ‌data‌ ‌once‌ ‌it‌ ‌scales‌ ‌down.‌ ‌You‌ ‌should‌ ‌also‌ ‌use‌ ‌appropriate‌ ‌metrics‌ ‌as‌ ‌a‌ ‌basis‌ ‌of‌ ‌your‌ ‌scaling‌‌ activity.‌
 
 
 **Redundancy‌**
@@ -116,7 +115,6 @@ as‌ ‌it‌ ‌can‌ ‌protect‌ ‌you‌ ‌from‌ ‌all‌ ‌sorts�
 ‌
 **Disaster‌ ‌Recovery‌** 
 
-‌
 Disaster‌ ‌recovery‌ ‌is‌ ‌the‌ ‌practice‌ ‌of‌ ‌ensuring‌ ‌that‌ ‌you‌ ‌have‌ ‌a‌ ‌standardized‌ ‌plan‌ ‌on‌ ‌how‌ ‌to‌ recover‌ ‌your‌‌ operations‌ ‌in‌ ‌case‌ ‌of‌ ‌total‌ ‌failure.‌ ‌Usually,‌ ‌this‌ ‌means‌ ‌having‌ ‌a‌ ‌copy‌ ‌of‌ ‌your‌ ‌infrastructure‌ ‌running‌ ‌in‌ ‌a‌‌ different‌ ‌location,‌ ‌so‌ ‌that‌ ‌if‌ ‌your‌ ‌primary‌ ‌experiences‌ ‌a‌ ‌disaster,‌ ‌you‌ ‌can‌ ‌quickly‌ ‌failover‌ ‌to‌ ‌your‌‌ secondary.‌ ‌
 Your‌ ‌disaster‌ ‌recovery‌ ‌plan‌ ‌depends‌ ‌on‌ ‌the‌ ‌amount‌ ‌of‌ ‌time‌ ‌that‌ ‌you‌ ‌have‌ ‌to‌ ‌bring‌ ‌back‌ ‌up‌‌ your‌ ‌operations‌ ‌(RTO),‌ ‌and‌ ‌the‌ ‌amount‌ ‌of‌ ‌data‌ ‌loss‌ ‌that‌ ‌your‌ ‌business‌ ‌can‌ ‌tolerate‌ ‌(RPO).‌ ‌Having‌ ‌a‌‌ disaster‌ ‌recovery‌ ‌plan‌ ‌is‌ ‌crucial‌ ‌especially‌ ‌for‌ ‌live‌ ‌production‌ ‌databases.‌ ‌We‌ ‌have‌ ‌a‌ ‌number‌ ‌of‌ ‌DR‌‌ strategies‌ ‌that‌ ‌meet‌ ‌different‌ ‌RTO‌ ‌and‌ ‌RPO‌ ‌objectives,‌ ‌which‌ ‌we‌ ‌will‌ ‌discuss‌ ‌in‌ ‌more‌ ‌detail‌ ‌later‌ ‌on.‌ ‌
 
@@ -131,329 +129,305 @@ The‌ ‌technology‌ ‌can‌ ‌save‌ ‌you‌ ‌a‌ ‌lot‌ ‌of�
 
 
 ***************************************************************************************************************************
+## <a id="section-2" ></a> Section 2 - Advantages of Cloud Computing
+- Swap capital expenses for variable expenses
+- Great economy of scale
+- Stop trying to guess the ability
+- Increase speed and agility
+- Stop spending money on data center operation and maintenance
+- Get global reach in minutes
 
-## <a id="section-2" ></a> Seção 2 - Vantagens da computação em nuvem
-- Troque despesas de capital por despesas variáveis
-- Grande economia de escala
-- Pare de tentar adivinhar a capacidade
-- Aumente a velocidade e a agilidade
-- Pare de gastar dinheiro com a operação e manutenção de datacenters
-- Tenha alcance global em minutos
+**Why is cloud computing so popular?**
 
-**Por que a computação em nuvem é tão popular?**
+Depending on who you ask, some estimates put the global cloud computing market at around $370 billion in 2020, growing to around $830 billion by 2025.
 
-Dependendo de para quem você pergunta, algumas estimativas apontam o mercado global de computação em nuvem em cerca de US$ 370 bilhões em 2020, crescendo para cerca de US$ 830 bilhões em 2025.
+This implies a compound annual growth rate (CAGR) of around 18% for the period.
 
-Isso implica uma taxa de crescimento anual composta (CAGR) de cerca de 18% para o período. 
+There are several reasons why the cloud market is growing so fast. Some of them are:
 
-Existem várias razões pelas quais o mercado de nuvem está crescendo tão rápido. Alguns deles são: 
+- Elasticity
+- Safety
+- Availability
+- Faster hardware cycles
+- System administration staff
+- Faster time to market
 
-- Elasticidade
-- Segurança
-- Disponibilidade
-- Ciclos de hardware mais rápidos
-- Pessoal de administração do sistema
-- Tempo de comercialização mais rápido
-
-## Os seis pilares de uma estrutura bem arquitetada
+## The six pillars of a well-architected structure
 
 <a href="https://aws.amazon.com/blogs/apn/the-6-pillars-of-the-aws-well-architected-framework/" target="_blank"> 
-    Os seis pilares de uma estrutura bem arquitetada
+    The six pillars of a well-architected structure
 </a>
 
-Acesso em: Junho de 2022.
+Accessed in: June 2022.
 
-Criar um sistema de software é muito parecido com construir um edifício. Se a fundação não for sólida, problemas estruturais podem prejudicar a integridade e a função do edifício.
+Creating a software system is a lot like building a building. If the foundation is not solid, structural problems can impair the integrity and function of the building.
 
-Ao criar soluções de tecnologia na Amazon Web Services (AWS), se você negligenciar os seis pilares de excelência operacional, segurança, confiabilidade, eficiência de desempenho, otimização de custos e sustentabilidade, pode se tornar um desafio criar um sistema que atenda às suas expectativas e requisitos.
+When building technology solutions on Amazon Web Services (AWS), if you neglect the six pillars of operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability, it can become challenging to create a system that meets your expectations. and requirements.
 
-Incorporar esses pilares em sua arquitetura ajuda a produzir sistemas estáveis ​​e eficientes. Isso permite que você se concentre em outros aspectos do design, como requisitos funcionais.
+Incorporating these pillars into your architecture helps produce stable and efficient systems. This allows you to focus on other aspects of the design, such as functional requirements.
 
-O AWS Well-Architected Framework ajuda os arquitetos de nuvem a criar a infraestrutura mais segura, de alto desempenho, resiliente e eficiente possível para seus aplicativos. A estrutura oferece uma abordagem consistente para que clientes e parceiros da AWS avaliem arquiteturas e fornece orientação para implementar designs que se adaptam às necessidades do seu aplicativo ao longo do tempo.
+The AWS Well-Architected Framework helps cloud architects build the most secure, high-performance, resilient, and efficient infrastructure possible for their applications. The framework provides a consistent approach for AWS customers and partners to evaluate architectures and provides guidance for implementing designs that adapt to the needs of your application over time.
 
-Fornecemos uma visão geral dos seis pilares do Well-Architected Framework e exploramos os princípios de design e as melhores práticas. Você pode encontrar mais detalhes, incluindo definições, perguntas frequentes e recursos, no whitepaper de cada pilar ao qual linkamos abaixo.
+We provide an overview of the six pillars of the Well-Architected Framework and explore design principles and best practices. You can find more details, including definitions, FAQs, and resources, in the whitepaper for each pillar that we link to below.
 
 <a href="https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html" target="_blank"> 
-    Whitepaper - visão geral dos seis pilares do Well-Architected Framework
+    Whitepaper - overview of the six pillars of the Well-Architected Framework
 </a>
 <br/><br/><br/>
 
-**1. Excelência Operacional**
+**1. Operational Excellence**
 
-O pilar Excelência Operacional inclui a capacidade de dar suporte ao desenvolvimento e executar cargas de trabalho de forma eficaz, obter informações sobre sua operação e melhorar continuamente os processos e procedimentos de suporte para fornecer valor comercial. 
+The Operational Excellence pillar includes the ability to effectively support the development and execution of workloads, gain insights into your operation, and continually improve support processes and procedures to deliver business value.
 
-Você pode encontrar orientações prescritivas sobre implementação no whitepaper do Pilar de Excelência Operacional.
+You can find prescriptive guidance on implementation in the Operational Excellence Pillar whitepaper.
 
-### Princípios de design
+### Design Principles
 
-Existem cinco princípios de design para excelência operacional na nuvem:
-- Executar operações como código
-- Faça mudanças frequentes, pequenas e reversíveis
-- Refine os procedimentos de operações com frequência
-- Antecipar falha
-- Aprenda com todas as falhas operacionais
+There are five design principles for operational excellence in the cloud:
+- Perform operations as code
+- Make frequent, small and reversible changes
+- Refine operations procedures frequently
+- Anticipate failure
+- Learn from all operational failures
 
 
-### Melhores Práticas
-- As equipes de operações precisam entender suas necessidades de negócios e clientes para que possam oferecer suporte aos resultados de negócios. 
-- O Operador cria e usa procedimentos para responder a eventos operacionais e valida sua eficácia para atender às necessidades de negócios. 
-- O Operador também coleta métricas que são usadas para medir a obtenção dos resultados de negócios desejados.
-- Tudo continua a mudar - seu contexto de negócios, prioridades de negócios e necessidades do cliente. 
-- É importante projetar operações para apoiar a evolução ao longo do tempo em resposta à mudança e incorporar as lições aprendidas por meio de seu desempenho.
+### Best Practices
+- Operations teams need to understand their business and customer needs so they can support business outcomes.
+- The Operator creates and uses procedures to respond to operational events and validates their effectiveness to meet business needs.
+- The Operator also collects metrics that are used to measure the achievement of desired business results.
+- Everything keeps changing - your business context, business priorities and customer needs.
+- It is important to design operations to support evolution over time in response to change and to incorporate lessons learned through their performance.
 
-**2. Segurança**
+**two. Safety**
 
-O pilar Segurança inclui a capacidade de proteger dados, sistemas e ativos para aproveitar as tecnologias de nuvem para melhorar sua segurança. Você pode encontrar orientações prescritivas sobre implementação no whitepaper do Pilar de Segurança.
+The Security pillar includes the ability to protect data, systems and assets to leverage cloud technologies to improve your security. You can find prescriptive guidance on implementation in the Security Pillar whitepaper.
 
 
-## Princípios de design
+## Design Principles
 
-Existem sete princípios de design para segurança na nuvem:
+There are seven design principles for cloud security:
 
-- Implemente uma base de identidade forte
-- Ativar rastreabilidade
-- Aplique segurança em todas as camadas
-- Automatize as melhores práticas de segurança
-- Proteja os dados em trânsito e em repouso
-- Mantenha as pessoas longe dos dados
-- Prepare-se para eventos de segurança
+- Implement a strong identity foundation
+- Activate traceability
+- Apply security on all layers
+- Automate security best practices
+- Protect data in transit and at rest
+- Keep people away from data
+- Prepare for security events
 
-### Melhores Práticas
+### Best Practices
 
-Antes de arquitetar qualquer carga de trabalho, você precisa implementar práticas que influenciem a segurança. 
+Before architecting any workload, you need to implement practices that influence security.
 
-Você vai querer controlar quem pode fazer o quê. Além disso, você deseja identificar incidentes de segurança, proteger seus sistemas e serviços e manter a confidencialidade e a integridade dos dados por meio da proteção de dados.
+You will want to control who can do what. In addition, you want to identify security incidents, protect your systems and services, and maintain data confidentiality and integrity through data protection.
 
-Você deve ter um processo bem definido e praticado para responder a incidentes de segurança. Essas ferramentas e técnicas são importantes porque dão suporte a objetivos como evitar perdas financeiras ou cumprir obrigações regulatórias.
+You must have a well-defined and practiced process for responding to security incidents. These tools and techniques are important because they support goals such as avoiding financial losses or meeting regulatory obligations.
 
-O modelo de responsabilidade compartilhada da AWS permite que as organizações que adotam a nuvem atinjam suas metas de segurança e conformidade. 
+AWS' shared responsibility model enables organizations that adopt the cloud to achieve their security and compliance goals.
 
-Como a AWS protege fisicamente a infraestrutura que dá suporte aos nossos serviços de nuvem, como cliente da AWS, você pode se concentrar no uso de serviços para atingir suas metas. 
+Because AWS physically secures the infrastructure that supports our cloud services, as an AWS customer you can focus on using the services to achieve your goals.
 
-A Nuvem AWS também oferece maior acesso aos dados de segurança e uma abordagem automatizada para responder a eventos de segurança.
+The AWS Cloud also offers greater access to security data and an automated approach to responding to security events.
 
-**3. Confiabilidade**
+**3. Reliability**
 
-O pilar Confiabilidade abrange a capacidade de uma carga de trabalho de executar sua função pretendida de forma correta e consistente quando se espera. 
+The Reliability pillar encompasses the ability of a workload to perform its intended function correctly and consistently when expected.
 
-Isso inclui a capacidade de operar e testar a carga de trabalho durante todo o seu ciclo de vida. Você pode encontrar orientações prescritivas sobre implementação no whitepaper do Pilar de Confiabilidade.
+This includes the ability to operate and test the workload throughout its lifecycle. You can find prescriptive guidance on implementation in the Reliability Pillar whitepaper.
 
-### Princípios de design
+### Design Principles
 
-Existem cinco princípios de design para confiabilidade na nuvem:
+There are five design principles for cloud reliability:
 
-Recuperar automaticamente de falhas:
-- Procedimentos de recuperação de teste
-- Dimensione horizontalmente para aumentar a disponibilidade da carga de trabalho agregada
-- Pare de adivinhar a capacidade
-- Gerenciar mudanças na automação
+Automatically recover from crashes:
+- Test recovery procedures
+- Scale horizontally to increase aggregate workload availability
+- Stop guessing ability
+- Manage automation changes
 
-### Melhores Práticas
-Antes de construir qualquer sistema, os requisitos fundamentais que influenciam a confiabilidade devem estar em vigor. 
+### Best Practices
+Before building any system, fundamental requirements that influence reliability must be in place.
 
-Por exemplo, você deve ter largura de banda de rede suficiente para seu data center. Esses requisitos às vezes são negligenciados (porque estão além do escopo de um único projeto). 
+For example, you must have enough network bandwidth for your data center. These requirements are sometimes overlooked (because they are beyond the scope of a single project).
 
-Com a AWS, no entanto, a maioria dos requisitos fundamentais já está incorporada ou pode ser abordada conforme necessário.
+With AWS, however, most of the fundamental requirements are already built in or can be addressed as needed.
 
-A nuvem foi projetada para ser quase ilimitada, portanto, é responsabilidade da AWS atender ao requisito de rede e capacidade de computação suficientes, deixando você livre para alterar o tamanho e as alocações de recursos sob demanda.
+The cloud is designed to be nearly unlimited, so it is AWS's responsibility to meet the requirement of sufficient network and computing power, leaving you free to change the size and resource allocations on demand.
 
-Uma carga de trabalho confiável começa com decisões iniciais de design para software e infraestrutura. 
+A reliable workload starts with initial design decisions for software and infrastructure.
 
-Suas escolhas de arquitetura afetarão o comportamento da carga de trabalho em todos os seis pilares do AWS Well-Architected. 
+Your architectural choices will affect workload behavior across all six pillars of AWS Well-Architected.
 
-Para confiabilidade, há padrões específicos que você deve seguir, como dependências fracamente acopladas, degradação normal e tentativas limitantes.
+For reliability, there are specific standards you must follow, such as loosely coupled dependencies, normal degradation, and limiting attempts.
 
-As alterações em sua carga de trabalho ou em seu ambiente devem ser antecipadas e acomodadas para obter uma operação confiável da carga de trabalho.
+Changes to your workload or your environment must be anticipated and accommodated for reliable workload operation.
 
- As alterações incluem aquelas impostas à sua carga de trabalho, como picos de demanda, bem como aquelas internas, como implantações de recursos e patches de segurança.
+ Changes include those imposed on your workload, such as spikes in demand, as well as internal ones, such as feature deployments and security patches.
 
-Falhas de componentes de hardware de baixo nível são algo a ser tratado todos os dias em um data center local. 
+Low-level hardware component failures are something to be dealt with every day in an on-premises data center.
 
-Na nuvem, no entanto, eles geralmente são abstraídos. Independentemente do seu provedor de nuvem, existe a possibilidade de falhas afetarem sua carga de trabalho. 
+In the cloud, however, they are usually abstracted. Regardless of your cloud provider, there is a possibility that failures will affect your workload.
 
-Portanto, você deve tomar medidas para implementar a resiliência em sua carga de trabalho, como isolamento de falhas, failover automatizado para recursos íntegros e uma estratégia de recuperação de desastres.
+Therefore, you should take steps to implement resilience in your workload, such as fault isolation, automated failover to healthy resources, and a disaster recovery strategy.
 
-**4. Eficiência de Desempenho**
+**4. Performance Efficiency**
 
-O pilar Eficiência de Desempenho inclui a capacidade de usar recursos de computação com eficiência para atender aos requisitos do sistema e manter essa eficiência à medida que a demanda muda e as tecnologias evoluem. 
+The Performance Efficiency pillar includes the ability to efficiently use computing resources to meet system requirements and maintain that efficiency as demand changes and technologies evolve.
 
-Você pode encontrar orientações prescritivas sobre implementação no whitepaper do Pilar de Eficiência de Desempenho.
+You can find prescriptive implementation guidance in the Performance Efficiency Pillar whitepaper.
 
-### Princípios de design
+### Design Principles
 
-Existem cinco princípios de design para eficiência de desempenho na nuvem:
+There are five design principles for performance efficiency in the cloud:
 
-Democratizar tecnologias avançadas:
-- Torne-se global em minutos
-- Use arquiteturas sem servidor
-- Experimente com mais frequência
-- Considere a simpatia mecânica
+Democratize advanced technologies:
+- Go global in minutes
+- Use serverless architectures
+- Try it more often
+- Consider mechanical sympathy
 
-### Melhores Práticas
+### Best Practices
 
-Adote uma abordagem orientada por dados para criar uma arquitetura de alto desempenho. Reúna dados sobre todos os aspectos da arquitetura, desde o design de alto nível até a seleção e configuração de tipos de recursos.
+Take a data-driven approach to building a high-performance architecture. Gather data on all aspects of the architecture, from high-level design to the selection and configuration of feature types.
 
-Revisar suas escolhas regularmente garante que você aproveite a constante evolução da Nuvem AWS. O monitoramento garante que você esteja ciente de qualquer desvio do desempenho esperado. Faça compensações em sua arquitetura para melhorar o desempenho, como usar compactação ou armazenamento em cache ou relaxar os requisitos de consistência
+Reviewing your choices regularly ensures that you take advantage of the ever-evolving AWS Cloud. Monitoring ensures that you are aware of any deviation from expected performance. Make trade-offs in your architecture to improve performance, such as using compression or caching or relaxing consistency requirements
 
-A solução ideal para uma carga de trabalho específica varia e as soluções geralmente combinam várias abordagens. As cargas de trabalho AWS Well-Architected usam várias soluções e habilitam diferentes recursos para melhorar o desempenho
+The optimal solution for a specific workload varies, and solutions often combine several approaches. AWS Well-Architected workloads use multiple solutions and enable different features to improve performance
 
 
-**5. Otimização de Custos**
+**5. Cost Optimization**
 
-O pilar Otimização de Custos inclui a capacidade de executar sistemas para fornecer valor comercial ao menor preço. Você pode encontrar orientações prescritivas sobre implementação no whitepaper do Pilar de Otimização de Custos.
+The Cost Optimization pillar includes the ability to run systems to deliver business value at the lowest price. You can find prescriptive implementation guidance in the Cost Optimization Pillar whitepaper.
 
-### Princípios de design
+### Design Principles
 
-Existem cinco princípios de design para otimização de custos na nuvem:
-- Implemente o gerenciamento financeiro na nuvem
-- Adote um modelo de consumo
-- Meça a eficiência geral
-- Pare de gastar dinheiro em trabalho pesado indiferenciado
-- Analisar e atribuir despesas
+There are five design principles for cost optimization in the cloud:
+- Implement financial management in the cloud
+- Adopt a consumption model
+- Measure overall efficiency
+- Stop wasting money on undifferentiated heavy lifting
+- Analyze and assign expenses
 
-### Melhores Práticas
-Tal como acontece com os outros pilares, existem trade-offs a serem considerados. 
+### Best Practices
+As with the other pillars, there are trade-offs to consider.
 
-Por exemplo, você deseja otimizar a velocidade de lançamento no mercado ou o custo? Em alguns casos, é melhor otimizar a velocidade – entrar no mercado rapidamente, enviar novos recursos ou simplesmente cumprir um prazo – em vez de investir na otimização de custos inicial.
+For example, do you want to optimize speed to market or cost? In some cases, it's better to optimize for speed—get to market quickly, ship new features, or simply meet a deadline—rather than investing in upfront cost optimization.
 
-As decisões de design às vezes são direcionadas pela pressa em vez de dados, e como sempre existe a tentação de supercompensar em vez de gastar tempo fazendo benchmarking para a implantação com o melhor custo-benefício. 
-Isso pode levar a implantações superprovisionadas e subotimizadas.
+Design decisions are sometimes driven by haste rather than data, and as always there is a temptation to overcompensate rather than spend time benchmarking for the most cost-effective deployment.
+This can lead to over-provisioned and under-optimized deployments.
 
-Usar os serviços, recursos e configurações apropriados para suas cargas de trabalho é fundamental para a economia de custos
+Using the appropriate services, features and settings for your workloads is critical to cost savings
 
-**6. Sustentabilidade**
+**6. Sustainability**
 
-A disciplina de sustentabilidade aborda o impacto ambiental, econômico e social de longo prazo de suas atividades de negócios. Você pode encontrar orientações prescritivas sobre implementação no whitepaper do Pilar de Sustentabilidade.
+The sustainability discipline addresses the long-term environmental, economic and social impact of your business activities. You can find prescriptive guidance on implementation in the Sustainability Pillar whitepaper.
 
-### Princípios de design
+### Design Principles
 
-Existem seis princípios de design para sustentabilidade na nuvem:
-- Entenda seu impacto
-- Estabeleça metas de sustentabilidade
-- Maximizar a utilização
-- Antecipar e adotar novas ofertas de hardware e software mais eficientes
-- Usar serviços gerenciados
-- Reduza o impacto downstream de suas cargas de trabalho na nuvem
+There are six design principles for cloud sustainability:
+- Understand your impact
+- Set sustainability goals
+- Maximize usage
+- Anticipate and adopt new, more efficient hardware and software offerings
+- Use managed services
+- Reduce the downstream impact of your cloud workloads
 
-### Melhores Práticas
+### Best Practices
 
-Escolha as regiões da AWS onde você implementará cargas de trabalho com base em seus requisitos de negócios e metas de sustentabilidade.
+Choose the AWS regions where you will deploy workloads based on your business requirements and sustainability goals.
 
-Os padrões de comportamento do usuário podem ajudá-lo a identificar melhorias para atingir as metas de sustentabilidade. Por exemplo, reduza a infraestrutura quando não for necessária, posicione recursos para limitar a rede necessária para que os usuários os consumam e remova ativos não utilizados.
+User behavior patterns can help you identify improvements to achieve sustainability goals. For example, scale back infrastructure when not needed, position resources to limit the network required for users to consume them, and remove unused assets.
 
-Implemente padrões de software e arquitetura para realizar a suavização de carga e manter a alta utilização consistente dos recursos implantados. 
+Implement software and architectural patterns to perform load smoothing and maintain consistent high utilization of deployed resources.
 
-Entenda o desempenho de seus componentes de carga de trabalho e otimize os componentes que consomem mais recursos.
+Understand the performance of your workload components and optimize the components that consume the most resources.
 
-Analise os padrões de dados para implementar práticas de gerenciamento de dados que reduzem o armazenamento provisionado necessário para dar suporte à sua carga de trabalho. Use os recursos do ciclo de vida para mover dados para um armazenamento mais eficiente e de menor desempenho quando os requisitos diminuirem e excluir dados que não são mais necessários.
+Analyze data patterns to implement data management practices that reduce the provisioned storage needed to support your workload. Use lifecycle capabilities to move data to more efficient, lower performing storage when requirements decrease and delete data that is no longer needed.
 
-Analise os padrões de hardware para identificar oportunidades que reduzem os impactos de sustentabilidade da carga de trabalho, minimizando a quantidade de hardware necessária para provisionar e implantar. Selecione o hardware mais eficiente para sua carga de trabalho individual.
+Analyze hardware patterns to identify opportunities that reduce workload sustainability impacts by minimizing the amount of hardware required to provision and deploy. Select the most efficient hardware for your individual workload.
 
-Em seu processo de desenvolvimento e implantação, identifique oportunidades para reduzir seu impacto de sustentabilidade fazendo mudanças, como atualizar sistemas para obter eficiências de desempenho e gerenciar impactos de sustentabilidade. Use a automação para gerenciar o ciclo de vida de seus ambientes de desenvolvimento e teste e use farms de dispositivos gerenciados para teste.
+In your development and deployment process, identify opportunities to reduce your sustainability impact by making changes, such as updating systems for performance efficiencies and managing sustainability impacts. Use automation to manage the lifecycle of your development and test environments, and use managed device farms for testing.
 
 
-## CONCEITOS GERAIS DE COMPUTAÇÃO EM NUVEM
-A computação em nuvem é a entrega sob demanda de poder de computação, armazenamento de banco de dados, aplicativos e outros recursos de TI por meio de uma plataforma de serviços em nuvem pela Internet com preços pagos conforme o uso.
+## GENERAL CONCEPTS OF CLOUD COMPUTING
+Cloud computing is the on-demand delivery of computing power, database storage, applications, and other IT resources through a cloud services platform over the Internet at pay-as-you-go pricing.
 
-A computação em nuvem fornece uma maneira simples de acessar servidores, armazenamento, bancos de dados e um amplo conjunto de serviços de aplicativos pela Internet.
+Cloud computing provides a simple way to access servers, storage, databases, and a broad set of application services over the Internet.
 
-Uma plataforma de serviços em nuvem, como a Amazon Web Services, possui e mantém o hardware conectado à rede necessário para esses serviços de aplicativos, enquanto você provisiona e usa o que precisa por meio de um aplicativo da web.
+A cloud services platform like Amazon Web Services owns and maintains the network-connected hardware needed for those application services, while you provision and use what you need through a web application.
 
-### **AS SEIS VANTAGENS**
+### **Six advantages of cloud computing**
 
-A AWS promove as [seis vantagens](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html) da nuvem:
-1. **Trocar despesas de capital por despesas variáveis** 
-**(Trade fixed expense for variable expense)** ​​– Em vez de ter que investir pesadamente em data centers e servidores antes de saber como usá-los, você pode pagar apenas quando consumir recursos de computação e pagar apenas por quanto consumir .
+A AWS promove as [seis vantagens](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html) of  Cloud:
 
-2. **Beneficie-se de enormes economias de escala (Benefit from massive economies of scale)** – Ao usar a computação em nuvem, você pode obter um custo variável mais baixo do que poderia obter por conta própria. Como o uso de centenas de milhares de clientes é agregado na nuvem, provedores como a AWS podem obter maiores economias de escala, o que se traduz em preços mais baixos de pagamento conforme o uso.
+1. **(Trade fixed expense for variable expense)** – Instead of having to invest heavily in data centers and servers before knowing how to use them, you can pay only when you consume compute resources and pay only for how much you consume .
 
-3. **Pare de adivinhar sobre a capacidade (Stop guessing capacity)** – Elimine adivinhações sobre suas necessidades de capacidade de infraestrutura. Quando você toma uma decisão de capacidade antes de implantar um aplicativo, geralmente acaba ficando com recursos ociosos caros ou lidando com capacidade limitada. Com a computação em nuvem, esses problemas desaparecem. Você pode acessar o máximo ou o mínimo de capacidade que precisar e aumentar e diminuir conforme necessário com apenas alguns minutos de antecedência.
+2. **Benefit from massive economies of scale** – By using cloud computing, you can achieve lower variable cost than you could achieve on your own. As the usage of hundreds of thousands of customers is aggregated in the cloud, providers like AWS can achieve greater economies of scale, which translates into lower pay-as-you-go pricing.
 
-4. **Aumente a velocidade e a agilidade(Increase speed and agility)** – Em um ambiente de computação em nuvem, novos recursos de TI estão a apenas um clique de distância, o que significa que você reduz o tempo para disponibilizar esses recursos para seus desenvolvedores de semanas para apenas alguns minutos. Isso resulta em um aumento dramático na agilidade da organização, pois o custo e o tempo necessários para experimentar e desenvolver são significativamente menores.
+3. **Stop guessing capacity** – Take the guesswork out of your infrastructure capacity needs. When you make a capacity decision before deploying an application, you often end up with expensive idle resources or dealing with limited capacity. With cloud computing, these problems disappear. You can access as much or as little capacity as you need and scale up and down as needed with just a few minutes' notice.
 
-5. **Pare de gastar dinheiro executando e mantendo data centers(Stop spending money running and maintaining data centers )** – Concentre-se em projetos que diferenciam seus negócios, não a infraestrutura. A computação em nuvem permite que você se concentre em seus próprios clientes, e não no trabalho pesado de armazenamento em rack, empilhamento e alimentação de servidores.
+4. **Increase speed and agility** – In a cloud computing environment, new IT resources are just a click away, which means you reduce the time to deliver these resources for your developers from weeks to just a few minutes. This results in a dramatic increase in the organization's agility as the cost and time required to experiment and develop is significantly lower.
 
-6. **Torne-se global em minutos(Go global in minutes)** – Implante facilmente seu aplicativo em várias regiões do mundo com apenas alguns cliques. Isso significa que você pode fornecer menor latência e uma melhor experiência para seus clientes a um custo mínimo.
+5. **Stop spending money running and maintaining data centers** – Focus on projects that differentiate your business, not the infrastructure. Cloud computing lets you focus on your own customers, not the heavy lifting of racking, stacking and powering servers.
+
+6. **Go global in minutes** – Easily deploy your application to multiple regions of the world with just a few clicks. This means you can provide lower latency and a better experience for your customers at minimal cost.
 
 <a href="https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html" target="_blank"> 
     Whitepaper - Six advantages of cloud computing
 </a>
 <br/><br/><br/>
 
-
-**DESPESAS DE CAPITAL DE COMÉRCIO PARA DESPESAS VARIÁVEIS**
-Em vez de ter que investir pesadamente em data centers e servidores antes de saber como usá-los, você pode pagar apenas quando consumir recursos de computação e pagar apenas por quanto consumir.
-
-**BENEFÍCIOS DE ECONOMIAS MASSIVAS DE ESCALA**
-Ao usar a computação em nuvem, você pode obter um custo variável mais baixo do que pode obter por conta própria. À medida que o uso de centenas de milhares de clientes é agregado na nuvem, provedores como a AWS podem obter maiores economias de escala, o que se traduz em preços mais baixos de pagamento conforme o uso.
-
-**PARE DE SUGERIR SOBRE A CAPACIDADE**
-Quando você toma uma decisão de capacidade antes de implantar um aplicativo, geralmente acaba ficando com recursos ociosos caros ou lidando com capacidade limitada. Com a computação em nuvem, você elimina as suposições sobre suas necessidades de capacidade de infraestrutura. Você pode acessar o máximo ou o mínimo de capacidade que precisar e aumentar e diminuir conforme necessário com apenas alguns minutos de antecedência.
-
-**AUMENTAR VELOCIDADE E AGILIDADE**
-Em um ambiente de computação em nuvem, novos recursos de TI estão a apenas um clique de distância, o que significa que você reduz o tempo para disponibilizar esses recursos para seus desenvolvedores de semanas para apenas alguns minutos. Isso resulta em um aumento dramático na agilidade da organização, pois o custo e o tempo necessários para experimentar e desenvolver são significativamente menores
-
-**PARAR DE GASTAR DINHEIRO EXECUTAR E MANTER DATA CENTERS**
-Concentre-se em projetos que diferenciam seu negócio, não na infraestrutura. A computação em nuvem permite que você se concentre em seus próprios clientes, e não no trabalho pesado de armazenamento em rack, empilhamento e alimentação de servidores.
-
-**GLOBAL EM MINUTOS**
-Implante facilmente seu aplicativo em várias regiões do mundo com apenas alguns cliques. Isso significa que você pode fornecer menor latência e uma melhor experiência para seus clientes a um custo mínimo.
-
 ***************************************************************************************************************************
+## <a id="section-3" ></a> Section 3 - Introduction to Amazon Web Services (AWS)
 
-## <a id="section-3" ></a> Seção 3 - Introdução à Amazon Web Services (AWS)
+What are web services?
 
-O que são serviços web?
+- Any software made available over the Internet that uses a standardized format, such as XML or JSON, for the request and response of an API interaction.
 
-- É qualquer software disponibilizado pela Internet que usa um formato padronizado, como XML ou JSON, para a solicitação e resposta de uma interação de API.
+What is AWS?
 
-O que é a AWS?
+- A secure cloud platform offering a broad set of global cloud-based products.
+- Provides on-demand access to compute, storage, network, database and other IT resources and management tools.
+- Offers flexibility.
+- You only pay for the individual services you need, for as long as you use them.
+- AWS services work together as building blocks.
 
-- Uma plataforma de nuvem segura que oferece um amplo conjunto de produtos globais baseados na nuvem.
-- Oferece acesso sob demanda a recursos de computação, armazenamento, rede, banco de dados e outros recursos de TI e ferramentas de gerenciamento.
-- Oferece flexibilidade.
-- Você paga apenas pelos serviços individuais de que precisa, pelo tempo que os utilizar.
-- Os serviços da AWS funcionam juntos como componentes básicos.
+Ways to Interact with AWS
 
-Maneiras de interagir com a AWS
+- AWS Management Console: Easy-to-use graphical interface
+- Command Line Interface (AWS CLI): Access to services by specific commands or scripts
+- Software development kits (SDKs): Access services directly from your code (such as Java, Python and others)
 
-- Console de Gerenciamento da AWS: interface gráfica fácil de usar
-- Interface da linha de comando (CLI da AWS): acesso a serviços por comandos ou scripts específicos
-- Kits de desenvolvimento de software (SDKs): acesse serviços diretamente do seu código (como Java, Python e outros)
+## <a id="section-4" ></a> Section 4 - Moving to the AWS Cloud – AWS Cloud Adoption Framework (AWS CAF)
 
-## <a id="section-4" ></a> Seção 4 - Mudança para a Nuvem AWS – AWS Cloud Adoption Framework (AWS CAF) 
+AWS Cloud Adoption Framework: is a document created to help organizations design and navigate an accelerated path to successful cloud adoption
 
-AWS Cloud Adoption Framework: é um documento criado para ajudar as organizações a projetar e percorrer um caminho acelerado para uma adoção bem-sucedida da nuvem
+- Offers guidance and best practices to help organizations create a comprehensive approach to cloud computing across the organization and throughout the IT lifecycle to accelerate successful cloud adoption
+- It is organized into six perspectives
+- Perspectives consist of feature sets
 
-- Oferece orientações e melhores práticas para ajudar as organizações a criar uma abordagem abrangente para a computação em nuvem em toda a organização e durante todo o ciclo de vida de TI para acelerar a adoção bem-sucedida da nuvem
-- Está organizado em seis perspectivas
-- As perspectivas consistem em conjuntos de recursos
+Outlook:
 
-Perspectivas:
-
-- Foca nos recursos empresariais: negócios, pessoas e governança
-- Foca nos recursos técnicos: plataforma, segurança e operações
-
-
+- Focuses on business resources: business, people and governance
+- Focuses on technical resources: platform, security and operations
 
 ## <a id="section-5" ></a> **5 - AWS Shared Responsibility Model**
 The [AWS shared responsibility model](https://aws.amazon.com/compliance/shared-responsibility-model/) defines what you (as an AWS account holder/user) and AWS are responsible for when it comes to security and compliance.
 
-Security and Compliance is a shared responsibility between AWS and the customer. This shared model can help relieve customer’s operational burdens as AWS operates, manages, and controls the components from the host operating system and virtualization layer down to the physical security of the facilities in which the service operates.
+Security and Compliance is a shared responsibility between AWS and the customer. This shared model can help relieve customer's operational burdens as AWS operates, manages, and controls the components from the host operating system and virtualization layer down to the physical security of the facilities in which the service operates.
 
-The customer assumes responsibility and management of the guest operating system (including updates and security patches), other associated application software as well as the configuration of the AWS provided security group firewall.
+The customer assumes responsibility for and management of the guest operating system (including updates and security patches), other associated application software as well as the configuration of the AWS provided security group firewall.
 
-AWS are responsible for “Security of the Cloud” .
+AWS are responsible for “Security of the Cloud”.
 
-    AWS is responsible for protecting the infrastructure that runs all the services offered in the AWS Cloud.
-    This infrastructure is composed of the hardware, software, networking, and facilities that run AWS Cloud services.
+AWS is responsible for protecting the infrastructure that runs all the services offered in the AWS Cloud.
+This infrastructure is composed of the hardware, software, networking, and facilities that run AWS Cloud services.
 
 Customers are responsible for “Security in the Cloud”.
 
-    For EC2 this includes network level security (NACLs, security groups), operating system patches and updates, IAM user access management, and client and server-side data encryption.
+For EC2 this includes network level security (NACLs, security groups), operating system patches and updates, IAM user access management, and client and server-side data encryption.
 
 The following diagram shows the split of responsibilities between AWS and the customer:
-
 
 <img src="../images/extra/aws-shared-responsibility-model.jpeg" alt="aws-shared-responsibility-model" width=80% /> 
 
