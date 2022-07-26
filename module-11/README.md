@@ -14,273 +14,301 @@
 7. <a href="#section-7"> Kinesis Data Streams</a>
 8. <a href="#section-8"> Kinesis Data Firehose</a>
 9. <a href="#section-9"> Kinesis Data Analytics</a>
-10. <a href="#section-10"> Amazon OpenSearch</a>
+10. <a href="#section-10"> Amazon OpenSearch </a>
+11. <a href="#section-11"> AWS Data Exchange </a>
+12. <a href="#section-12"> AWS Data Pipeline </a>
 
-Existem vários serviços do AWS Analytics e incluem:
+------------------------------------------------------------------------------------------------------------------------
 
-- Amazon Athena Amazon EMR 
-- Amazon CloudSearch 
-- Amazon Opensearch Service 
-- Amazon Kinesis 
-- Amazon QuickSight 
-- Amazon Data Pipeline 
-- AWS Glue 
-- AWS Lake Formation 
-- Amazon MSK 
+There are several AWS Analytics services and they include:
 
-Abaixo, teremos uma analise de cada um, pois esses são os serviços com maior probabilidade
-Você também pode querer seguir os links para os outros serviços e ler para entender o que eles são em alto nível.
-Porem aqui tentaremos fazer uma explanação de cada um e suas vantagens e também as suas desvantagens, bem como os links
-para você se aprofundar mais.
+- Amazon Athena Amazon EMR
+- Amazon CloudSearch
+- Amazon Opensearch Service
+- Amazon Kinesis
+- Amazon QuickSight
+- Amazon Data Pipeline
+- AWS Glue
+- AWS Lake Formation
+- Amazon MSK
+
+Below, we will have an analysis of each one, as these are the services most likely
+You may also want to follow the links to the other services and read on to understand what they are at a high level.
+But here we will try to explain each one and its advantages and also its disadvantages, as well as the links
+for you to delve deeper.
+
+------------------------------------------------------------------------------------------------------------------------
 
 ## <a id="section-1" ></a> **1 - Amazon Elastic Map Reduce**
-O Amazon EMR é um serviço da web que permite que empresas, pesquisadores, analistas de dados e desenvolvedores processem grandes quantidades de dados de maneira fácil e econômica.
+Amazon EMR is a web service that enables companies, researchers, data analysts, and developers to process large amounts of data easily and cost-effectively.
 
-O EMR utiliza uma estrutura do Hadoop hospedada em execução no Amazon EC2 e no Amazon S3.
+EMR uses a hosted Hadoop framework running on Amazon EC2 and Amazon S3.
 
-Estrutura gerenciada do Hadoop para processar grandes quantidades de dados.
+Managed Hadoop framework for processing large amounts of data.
 
-Também suporta Apache Spark, HBase, Presto e Flink.
+It also supports Apache Spark, HBase, Presto and Flink.
 
-Mais comumente usado para análise de log, análise financeira ou atividades de extração, tradução e carregamento (ETL).
+Most commonly used for log analysis, financial analysis, or extract, translate, and load (ETL) activities.
 
-Um Step é uma tarefa programática para realizar algum processo nos dados (por exemplo, contar palavras).
+A Step is a programmatic task to perform some process on the data (eg count words).
 
-Um cluster é uma coleção de instâncias do EC2 provisionadas pelo EMR para executar suas etapas.
+A cluster is a collection of EC2 instances provisioned by EMR to run its steps.
 
-O EMR usa o Apache Hadoop como seu mecanismo de processamento de dados distribuído, que é uma estrutura de software Java de código aberto que oferece suporte a aplicativos distribuídos com uso intenso de dados executados em grandes clusters de hardware comum.
+EMR uses Apache Hadoop as its distributed data processing engine, which is an open source Java software framework that supports data-intensive distributed applications running on large clusters of common hardware.
 
-O EMR é um bom lugar para implantar o Apache Spark, um processamento distribuído de código aberto usado para cargas de trabalho de big data que utiliza cache na memória e execução otimizada de consultas.
+EMR is a good place to deploy Apache Spark, an open source distributed processing used for big data workloads that utilizes in-memory caching and optimized query execution.
 
-Você também pode iniciar clusters Presto. Presto é um mecanismo de consulta SQL distribuído de código aberto projetado para consultas analíticas rápidas em grandes conjuntos de dados.
+You can also start Presto clusters. Presto is an open source distributed SQL query engine designed for fast analytical queries on large datasets.
 
-O EMR inicia todos os nós de um determinado cluster na mesma zona de disponibilidade do Amazon EC2.
+EMR starts all nodes in a given cluster in the same Amazon EC2 Availability Zone.
 
-Você pode acessar o Amazon EMR usando o AWS Management Console, Command Line Tools, SDKS ou a API do EMR.
+You can access Amazon EMR using the AWS Management Console, Command Line Tools, SDKS, or the EMR API.
 
-Com o EMR, você tem acesso ao sistema operacional subjacente (você pode usar o SSH).
+With EMR you have access to the underlying operating system (you can use SSH).
 
-## <a id="section-2" ></a> **2 - Amazona Athena**
-O Amazon Athena é um serviço de consulta interativa que facilita a análise de dados no Amazon S3 usando SQL padrão.
+------------------------------------------------------------------------------------------------------------------------
+## <a id="section-2" ></a> **2 - Amazon Athena**
+Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL.
 
-O Athena não tem servidor, portanto, não há infraestrutura para gerenciar e você paga apenas pelas consultas executadas.
+Athena is serverless, so there is no infrastructure to manage and you only pay for the queries you run.
 
-O Athena é fácil de usar – basta apontar para seus dados no Amazon S3, definir o esquema e começar a consultar usando SQL padrão.
+Athena is easy to use – just point to your data in Amazon S3, define the schema and start querying using standard SQL.
 
-O Amazon Athena usa o Presto com suporte total a SQL padrão e funciona com vários formatos de dados padrão, incluindo CSV, JSON, ORC, Apache Parquet e Avro.
+Amazon Athena uses Presto with full support for standard SQL and works with many standard data formats, including CSV, JSON, ORC, Apache Parquet, and Avro.
 
-Embora o Amazon Athena seja ideal para consultas rápidas e ad-hoc e se integre ao Amazon QuickSight para facilitar a visualização, ele também pode lidar com análises complexas, incluindo grandes junções, funções de janela e arrays.
+While Amazon Athena is ideal for fast, ad-hoc queries and integrates with Amazon QuickSight for easy visualization, it can also handle complex analysis, including large joins, window functions, and arrays.
 
-O Amazon Athena usa um catálogo de dados gerenciado para armazenar informações e esquemas sobre os bancos de dados e tabelas que você cria para seus dados armazenados no Amazon S3.
+Amazon Athena uses a managed data catalog to store information and schemas about the databases and tables you create for your data stored in Amazon S3.
 
+[digitalcloud.training](https://digitalcloud.training/amazon-athena/)
+
+[https://tutorialsdojo.com/amazon-athena/](https://tutorialsdojo.com/amazon-athena/)
+
+[AWS Knowledge Center Videos: How do I analyze my S3 logs using Athena?](https://www.youtube.com/watch?v=uoLsrKZha0E&t=9s)
+
+**References:**
+
+[https://docs.aws.amazon.com/athena/latest/ug/](https://docs.aws.amazon.com/athena/latest/ug/)
+
+[https://aws.amazon.com/athena/features](https://aws.amazon.com/athena/features)
+
+[https://aws.amazon.com/athena/pricing](https://aws.amazon.com/athena/pricing)
+
+[https://aws.amazon.com/athena/faqs](https://aws.amazon.com/athena/faqs)
+
+------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-3"></a> **3 - AWS Glue**
-O AWS Glue é um serviço totalmente gerenciado, com pagamento conforme o uso, extração, transformação e carregamento (ETL) que automatiza as etapas demoradas de preparação de dados para análise.
+AWS Glue is a fully managed, pay-as-you-go, extract, transform, and load (ETL) service that automates the time-consuming steps of preparing data for analysis.
 
-O AWS Glue descobre e cria perfis automaticamente por meio do Glue Data Catalog, recomenda e gera código ETL para transformar seus dados de origem em esquemas de destino.
+AWS Glue automatically discovers and profiles through the Glue Data Catalog, recommends and generates ETL code to transform your source data into target schemas.
 
-O AWS Glue executa os trabalhos de ETL em um ambiente Apache Spark totalmente gerenciado e escalável para carregar seus dados em seu destino.
+AWS Glue runs your ETL jobs in a fully managed and scalable Apache Spark environment to load your data to your destination.
 
-O AWS Glue também permite configurar, orquestrar e monitorar fluxos de dados complexos.
+AWS Glue also lets you configure, orchestrate, and monitor complex data flows.
 
-Você pode criar e executar um trabalho ETL com apenas alguns cliques no Console de gerenciamento da AWS.
+You can create and run an ETL job with just a few clicks from the AWS Management Console.
 
-Use o AWS Glue para descobrir propriedades de dados, transformá-los e prepará-los para análises.
+Use AWS Glue to discover data properties, transform it, and prepare it for analysis.
 
-O Glue pode descobrir automaticamente dados estruturados e semiestruturados armazenados em data lakes no Amazon S3, data warehouses no Amazon Redshift e vários bancos de dados executados na AWS.
+Glue can automatically discover structured and semi-structured data stored in data lakes on Amazon S3, data warehouses on Amazon Redshift, and multiple databases running on AWS.
 
-Ele fornece uma visão unificada dos dados por meio do Glue Data Catalog que está disponível para ETL, consulta e geração de relatórios usando serviços como Amazon Athena, Amazon EMR e Amazon Redshift Spectrum.
+It provides a unified view of data through the Glue Data Catalog which is available for ETL, querying and reporting using services such as Amazon Athena, Amazon EMR and Amazon Redshift Spectrum.
 
-O Glue gera automaticamente código Scala ou Python para trabalhos de ETL que você pode personalizar ainda mais usando ferramentas com as quais já está familiarizado.
+Glue automatically generates Scala or Python code for ETL jobs that you can further customize using tools you are already familiar with.
 
-O AWS Glue não tem servidor, portanto, não há recursos de computação para configurar e gerenciar.
+AWS Glue is serverless, so there are no compute resources to configure and manage.
 
+------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-4"></a> **4 - Data Analysis and Query Use Cases**
-Serviços de consulta como Amazon Athena, data warehouses como Amazon Redshift e estruturas sofisticadas de processamento de dados como Amazon EMR, todos atendem a diferentes necessidades e casos de uso.
+Query services like Amazon Athena, data warehouses like Amazon Redshift, and sophisticated data processing frameworks like Amazon EMR all address different needs and use cases.
 
-O Amazon Redshift oferece o desempenho de consulta mais rápido para relatórios corporativos e cargas de trabalho de business intelligence, principalmente aquelas que envolvem SQL extremamente complexo com várias junções e subconsultas.
+Amazon Redshift provides the fastest query performance for enterprise reporting and business intelligence workloads, particularly those involving extremely complex SQL with multiple joins and subqueries.
 
-O Amazon EMR torna simples e econômico executar estruturas de processamento altamente distribuídas, como Hadoop, Spark e Presto, em comparação com implantações locais. O Amazon EMR é flexível – você pode executar aplicativos e códigos personalizados e definir parâmetros específicos de computação, memória, armazenamento e aplicativos para otimizar seus requisitos analíticos.
+Amazon EMR makes it simple and cost-effective to run highly distributed processing frameworks such as Hadoop, Spark, and Presto compared to on-premises deployments. Amazon EMR is flexible – you can run custom applications and code and define specific compute, memory, storage, and application parameters to optimize your analytical requirements.
 
-O Amazon Athena oferece a maneira mais fácil de executar consultas ad-hoc para dados no S3 sem a necessidade de configurar ou gerenciar servidores.
+Amazon Athena provides the easiest way to run ad-hoc queries for data on S3 without having to configure or manage servers.
 
-A tabela abaixo mostra o caso de uso principal e as situações para usar alguns serviços de consulta e análise da AWS:
+**The table below shows the main use case and situations for using some AWS query and analysis services:**
 
-|AWS Service | Caso de uso principal | Quando usar |
+|AWS Service | Main use case | When to use |
 |-------------|----------------------|-------------|
-|Amazon Athena |Query  |Execute consultas interativas em dados diretamente no Amazon S3 sem se preocupar com a formatação de dados ou o gerenciamento da infraestrutura. Pode ser usado com outros serviços, como Amazon RedShift| 
-|Amazon RedShift|Data Warehouse | Extrair dados de várias fontes, formatá-los e organizá-los, armazená-los e oferecer suporte a consultas complexas e de alta velocidade que produzem relatórios de negócios. |
-|Amazon EMR | Processamento de dados   | Estruturas de processamento altamente distribuídas, como Hadoop, Spark e Presto. Execute uma ampla variedade de tarefas de processamento de dados em escala horizontal para aplicativos como aprendizado de máquina, análise de gráficos, transformação de dados, dados de streaming.| 
-|AWS Glue | ETL Service | Transforme e mova dados para vários destinos. Usado para preparar e carregar dados para análise. A fonte de dados pode ser S3, RedShift ou outro banco de dados. O Glue Data Catalog pode ser consultado pelo Athena, EMR e RedShift Spectrum|
+|Amazon Athena |Query |Run interactive queries on data directly in Amazon S3 without worrying about formatting the data or managing the infrastructure. Can be used with other services such as Amazon RedShift| 
+|Amazon RedShift|Data Warehouse | Extract data from multiple sources, format and organize it, store it, and support complex, high-speed queries that produce business reports. |
+|Amazon EMR | Data Processing | Highly distributed processing frameworks such as Hadoop, Spark and Presto. Perform a wide variety of data processing tasks at scale-out for applications such as machine learning, graph analysis, data transformation, streaming data.|
+|AWS Glue | ETL Service | Transform and move data to multiple destinations. Used to prepare and load data for analysis. The data source can be S3, RedShift or another database. The Glue Data Catalog can be consulted by Athena, EMR and RedShift Spectrum|
 
+------------------------------------------------------------------------------------------------------------------------
+## <a id="section-5"></a> **5 - Kinesis**
+Amazon Kinesis makes it easy to collect, process, and analyze streaming data in real time so you can gain timely insights and react quickly to new information.
 
-## <a id="section-5"></a> **5 -  Kinesis**
-O Amazon Kinesis facilita a coleta, o processamento e a análise de dados de streaming em tempo real para que você possa obter insights oportunos e reagir rapidamente a novas informações.
+- Collection services for processing streams of various data.
+- Data is processed in “fragments(Shards)”.
+- There are **four types of Kinesis service**, detailed below.
 
-- Coleta de serviços para processamento de fluxos de vários dados.
-- Os dados são processados ​​em “fragmentos(Shards)”.
-- Existem **quatro tipos de serviço do Kinesis**, detalhados abaixo.
-
+------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-6"></a> **6 - Kinesis Video Streams**
-O Kinesis Video Streams facilita o streaming de vídeo com segurança de dispositivos conectados para a AWS para análise, machine learning (ML) e outros processamentos.
+Kinesis Video Streams makes it easy to securely stream video from device
+those connected to AWS for analytics, machine learning (ML), and other processing.
 
-Armazena, criptografa e indexa de forma durável os fluxos de dados de vídeo e permite o acesso aos dados por meio de APIs fáceis de usar.
-- Os produtores fornecem fluxos de dados.
-- Armazena dados por 24 horas por padrão, até 7 dias.
-- Os consumidores recebem e processam dados.
-- Pode ter vários fragmentos em um fluxo.
-- Suporta criptografia em repouso com criptografia do lado do servidor (KMS) com uma chave mestra do cliente
+Durably stores, encrypts and indexes video data streams and allows access to the data through easy-to-use APIs.
+- Producers provide data streams.
+- Stores data for 24 hours by default, up to 7 days.
+- Consumers receive and process data.
+- Can have multiple fragments in a stream.
+- Supports encryption at rest with server-side encryption (KMS) with a client master key
 
+------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-7"></a> **7 - Kinesis Data Streams**
 
-O Kinesis Data Streams permite criar aplicativos personalizados que processam ou analisam dados de streaming para necessidades especializadas.
+Kinesis Data Streams lets you build custom applications that process or analyze streaming data for specialized needs.
 
-O Kinesis Data Streams permite o processamento em tempo real de streaming de big data.
+Kinesis Data Streams enables real-time processing of streaming big data.
 
-O Kinesis Data Streams é útil para mover dados rapidamente dos produtores de dados e processá-los continuamente.
+Kinesis Data Streams is useful for quickly moving data from data producers and continuously processing it.
 
-O Kinesis Data Streams armazena dados para processamento posterior por aplicativos (diferença principal com o Firehose, que entrega dados diretamente aos serviços da AWS).
+Kinesis Data Streams stores data for further processing by applications (key difference with Firehose, which delivers data directly to AWS services).
 
-Os casos de uso comuns incluem:
-- Registro acelerado e ingestão de feed de dados.
-- Métricas e relatórios em tempo real.
-- Análise de dados em tempo real.
-- Processamento de fluxo complexo.
+Common use cases include:
+- Accelerated registration and data feed ingestion.
+- Real-time metrics and reports.
+- Real-time data analysis.
+- Complex stream processing.
 
-
+------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-8"></a> **8 - Kinesis Data Firehose**
-O Kinesis Data Firehose é a maneira mais fácil de carregar dados de streaming em armazenamentos de dados e ferramentas de análise.
+Kinesis Data Firehose is the easiest way to load streaming data into data stores and analytics tools.
 
-Captura, transforma e carrega dados de streaming.
+Captures, transforms and loads streaming data.
 
-Permite análises quase em tempo real com ferramentas e painéis de inteligência de negócios existentes.
+Enables near real-time analytics with existing business intelligence tools and dashboards.
 
-O Kinesis Data Streams pode ser usado como fonte(s) do Kinesis Data Firehose.
+Kinesis Data Streams can be used as source(s) for Kinesis Data Firehose.
 
-Você pode configurar o Kinesis Data Firehose para transformar seus dados antes de entregá-los.
+You can configure Kinesis Data Firehose to transform your data before you deliver it.
 
-Com o Kinesis Data Firehose, você não precisa escrever um aplicativo nem gerenciar recursos.
+With Kinesis Data Firehose, you don't have to write an application or manage resources.
 
-O Firehose pode agrupar, compactar e criptografar dados antes de carregá-los.
+Firehose can bundle, compress, and encrypt data before loading.
 
-O Firehose replica dados de forma síncrona em três AZs à medida que são transportados para os destinos.
+Firehose synchronously replicates data across three AZs as it travels to destinations.
 
-Cada fluxo de entrega armazena registros de dados por até 24 horas.
+Each delivery stream stores data records for up to 24 hours.
 
+------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-9"></a> **9 - Kinesis Data Analytics**
-O Amazon Kinesis Data Analytics é a maneira mais fácil de processar e analisar dados de streaming em tempo real.
+Amazon Kinesis Data Analytics is the easiest way to process and analyze streaming data in real time.
 
-Pode usar consultas SQL padrão para processar streams de dados do Kinesis.
+Can use standard SQL queries to process Kinesis data streams.
 
-Fornece análise em tempo real.
-Casos de uso:
-- Gere análises de séries temporais.
-- Alimente painéis em tempo real.
-- Crie alertas e notificações em tempo real.
-- Crie e execute rapidamente código SQL poderoso em fontes de streaming.
+Provides real-time analytics.
+Use cases:
+- Generate time series analyses.
+- Power panels in real time.
+- Create real-time alerts and notifications.
+- Quickly create and execute powerful SQL code in streaming sources.
 
-Pode ingerir dados do Kinesis Streams e do Kinesis Firehose.
+It can ingest data from Kinesis Streams and Kinesis Firehose.
 
-Saída para S3, RedShift, Elasticsearch e Kinesis Data Streams.
+Output to S3, RedShift, Elasticsearch and Kinesis Data Streams.
 
-Fica sobre o Kinesis Data Streams e o Kinesis Data Firehose.
+It sits on top of Kinesis Data Streams and Kinesis Data Firehose.
 
+------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-10"></a> **10 - Amazon OpenSearch**
 
-O Amazon OpenSearch Service é o sucessor do Amazon Elasticsearch Service.
+Amazon OpenSearch Service is the successor to Amazon Elasticsearch Service.
 
-O Amazon OpenSearch Service é um pacote de pesquisa e análise distribuído de código aberto baseado no Elasticsearch.
+Amazon OpenSearch Service is an open source distributed research and analytics package based on Elasticsearch.
 
-O Elasticsearch é um mecanismo distribuído de pesquisa e análise desenvolvido no Apache Lucene.
+Elasticsearch is a distributed search and analysis engine built on Apache Lucene.
 
-O Elasticsearch é um mecanismo de pesquisa popular comumente usado para casos de uso de análise de log, pesquisa de texto completo, inteligência de segurança, análise de negócios e inteligência operacional.
+Elasticsearch is a popular search engine commonly used for log analytics, full-text search, security intelligence, business analytics, and operational intelligence use cases.
 
-Com o OpenSearch, você pode realizar análises de logs de forma interativa, realizar monitoramento de aplicativos em tempo real, pesquisa de sites, análise de métricas de desempenho e muito mais.
+With OpenSearch, you can interactively perform log analysis, perform real-time application monitoring, site search, analyze performance metrics, and much more.
 
-Você pode escolher entre uma variedade de opções de mecanismo de código aberto para seu cluster OpenSearch.
+You can choose from a variety of open source engine options for your OpenSearch cluster.
 
-As opções incluem a versão mais recente do OpenSearch e muitas versões do ALv2 Elasticsearch.
-
+Options include the latest version of OpenSearch and many versions of ALv2 Elasticsearch.
 
 <img src="../images/aws/graphical-user-interface-description-automaticall.png" alt="graphical-user-interface-description-automaticall.png" width=90% height=300 />
 <br/><br/><br/>
 
 ### **Deployment and Monitoring**
 
-Um cluster OpenSearch pode ser criado usando o AWS Management Console, API ou AWS CLI.
+An OpenSearch cluster can be created using the AWS Management Console, API, or AWS CLI.
 
-Especifique o número de instâncias, tipos de instância e opções de armazenamento.
+Specify the number of instances, instance types, and storage options.
 
-As atualizações in-loco podem ser executadas sem tempo de inatividade.
+In-place upgrades can be performed without downtime.
 
-Fornece monitoramento e alertas integrados com notificações automáticas.
+Provides built-in monitoring and alerts with automatic notifications.
 
-Você pode configurar alertas usando os painéis Kibana ou OpenSearch e a API REST.
+You can configure alerts using Kibana or OpenSearch dashboards and the REST API.
 
-As notificações podem ser enviadas por meio de webhooks personalizados, Slack, Amazon SNS e Amazon Chime.
+Notifications can be sent via custom webhooks, Slack, Amazon SNS, and Amazon Chime.
 
-O serviço OpenSearch oferece suporte a vários idiomas de consulta, como:
+The OpenSearch service supports multiple query languages ​​such as:
 
-**Linguagem Específica de Domínio (DSL).**
-- Consultas SQL com OpenSearch SQL.
-- Linguagem de processamento canalizado OpenSearch (PPL).
+**Domain-Specific Language (DSL).**
+- SQL queries with OpenSearch SQL.
+- OpenSearch piped processing language (PPL).
 
-**O OpenSearch integra-se a ferramentas de código aberto, incluindo:**
+**OpenSearch integrates with open source tools including:**
 - Logstash.
 - OpenTelemetry.
-- APIs do ElasticSearch.
+- ElasticSearch APIs.
 
-### **OpenSearch em uma Amazon VPC**
+### **OpenSearch in an Amazon VPC**
 
-Os domínios do OpenSearch Services podem ser executados em uma Amazon VPC.
+OpenSearch Services domains can run in an Amazon VPC.
 
-O uso de uma VPC permite a comunicação segura entre o OpenSearch Service e outros serviços na VPC.
+Using a VPC allows secure communication between the OpenSearch Service and other services in the VPC.
 
-Veja a seguir algumas das diferenças entre os domínios VPC e os domínios públicos.
-- Por causa de seu isolamento lógico, os domínios que residem em uma VPC têm uma camada extra de segurança em comparação com domínios que usam endpoints públicos.
-- Embora os domínios públicos sejam acessíveis de qualquer dispositivo conectado à Internet, os domínios VPC exigem alguma forma de VPN ou proxy.
-- Comparados aos domínios públicos, os domínios VPC exibem menos informações no console. Especificamente, a guia de integridade do cluster não inclui informações de estilhaços e a guia Índices não está presente.
-- Os endpoints de domínio assumem formas diferentes (https://search-domain-name vs. https://vpc-domain-name).
-- Você não pode aplicar políticas de acesso baseadas em IP a domínios que residem em uma VPC porque os grupos de segurança já impõem políticas de acesso baseadas em IP.
+Here are some of the differences between VPC domains and public domains.
+- Because of their logical isolation, domains that reside in a VPC have an extra layer of security compared to domains that use public endpoints.
+- While public domains are accessible from any device connected to the internet, VPC domains require some form of VPN or proxy.
+- Compared to public domains, VPC domains display less information in the console. Specifically, the cluster health tab does not include shards information and the Indexes tab is not present.
+- Domain endpoints take different forms (https://search-domain-name vs. https://vpc-domain-name).
+- You cannot apply IP-based access policies to domains that reside in a VPC because security groups already enforce IP-based access policies.
 
-**Observe as seguintes limitações:**
-- Se você iniciar um novo domínio em uma VPC, não poderá alterná-lo posteriormente para usar um endpoint público. O contrário também é verdade.
-- Você pode iniciar seu domínio em uma VPC ou usar um endpoint público, mas não pode fazer as duas coisas.
-- Você não pode iniciar seu domínio em uma VPC que usa locação dedicada. Você deve usar uma VPC com locação definida como Padrão.
-- Depois de colocar um domínio em uma VPC, você não pode movê-lo para uma VPC diferente, mas pode alterar as configurações de sub-redes e grupos de segurança.
-- Para acessar a instalação padrão do OpenSearch Dashboards para um domínio que reside em uma VPC, os usuários devem ter acesso à VPC.
-
+**Please note the following limitations:**
+- If you start a new domain in a VPC, you cannot later switch it to use a public endpoint. The opposite is also true.
+- You can launch your domain in a VPC or use a public endpoint, but you cannot do both.
+- You cannot launch your domain in a VPC that uses dedicated tenancy. You must use a VPC with tenancy set to Default.
+- Once you place a domain in a VPC, you cannot move it to a different VPC, but you can change the subnets and security groups settings.
+- To access the default installation of OpenSearch Dashboards for a domain residing in a VPC, users must have access to the VPC.
 
 ### **The ELK Stack**
-ELK é um acrônimo que descreve uma combinação popular de projetos: Elasticsearch, Logstash e Kibana.
+ELK is an acronym that describes a popular combination of projects: Elasticsearch, Logstash, and Kibana.
 
-A pilha ELK oferece a capacidade de agregar logs de todos os seus sistemas e aplicativos, analisar esses logs e criar visualizações.
+The ELK stack gives you the ability to aggregate logs from all your systems and applications, analyze those logs, and create views.
 
-O ELK é útil para visualizar dados de monitoramento de aplicativos e infraestrutura, solução de problemas, análise de segurança e muito mais.
+ELK is useful for visualizing application and infrastructure monitoring data, troubleshooting, security analysis, and more.
 
-### **Segurança**
-Os domínios do serviço OpenSearch oferecem criptografia de dados em repouso.
+### **Safety**
+OpenSearch service domains offer data encryption at rest.
 
-Usa o AWS KMS para armazenamento e gerenciamento de chaves de criptografia.
+Uses AWS KMS for encryption key storage and management.
 
-A criptografia usa AES-256.
+Encryption uses AES-256.
 
-A criptografia também criptografa as comunicações nó a nó usando TLS 1.2.
+Encryption also encrypts node-to-node communications using TLS 1.2.
 
-A criptografia de nó a nó é opcional e pode ser habilitada por meio do console, CLI ou API.
+Node-to-node encryption is optional and can be enabled through the console, CLI, or API.
 
-Depois que a criptografia de nó a nó é habilitada, ela não pode ser desabilitada. Em vez disso, você deve criar um novo domínio a partir de um instantâneo sem essa configuração habilitada.
+Once node-to-node encryption is enabled, it cannot be disabled. Instead, you must create a new domain from a snapshot without this setting enabled.
 
-O Amazon OpenSearch Service oferece suporte a três tipos de políticas de acesso:
-- Políticas baseadas em recursos
-- Políticas baseadas em identidade
-- Políticas baseadas em IP
+Amazon OpenSearch Service supports three types of access policies:
+- Resource-based policies
+- Identity-based policies
+- IP-based policies
 
-O controle de acesso refinado oferece recursos adicionais no Amazon OpenSearch Service.
+Fine-grained access control provides additional features in Amazon OpenSearch Service.
 
-**O controle de acesso refinado oferece os seguintes benefícios:**
-- Controle de acesso baseado em função.
-- Segurança no nível de índice, documento e campo.
-- Multilocação do OpenSearch Dashboards.
-- Autenticação básica HTTP para painéis OpenSearch e OpenSearch.
+**Fine access control offers the following benefits:**
+- Role-based access control.
+- Index, document and field level security.
+- OpenSearch Dashboards multi-tenancy.
+- Basic HTTP authentication for OpenSearch and OpenSearch dashboards.
 
-O OpenSearch Service oferece suporte à autenticação por meio de SAML e Amazon Cognito.
+OpenSearch Service supports authentication through SAML and Amazon Cognito.

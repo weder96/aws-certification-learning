@@ -10,33 +10,32 @@ aws-certification-learning
     AWS Cloud Certification Learning
 </h1>
 
-Este repositorio é direcionado para estudantes que procuram um entendimento dos conceitos 
-de computação em nuvem, independentemente de funções técnicas específicas. 
-Tendo uma visão geral detalhada dos conceitos de nuvem, principais 
-serviços AWS, segurança, arquitetura, definição de preço e suporte entre outros.
-Cada partes Foi separada por Modulos e seções, para facilitar o estudo.
-A outros repositorios que será linkado ao mesmo porem espefico de cada Exame.
+This repository is intended for students seeking an understanding of the concepts
+of cloud computing, regardless of specific technical roles.
+Having a detailed overview of cloud concepts, key AWS services, security, architecture, pricing, and support, and more.
+Each parts was separated by Modules and sections, to facilitate the study.
+To other repositories that will be linked to the same but specific to each Exam.
 
-## Módulos de estudo
+## Learning Modules
 
- - [Módulo 1:  Visão geral dos conceitos de nuvem][1]
- - [Módulo 2:  Economia e faturamento da nuvem][2]
- - [Módulo 3:  Visão geral da infraestrutura global da AWS][3]
- - [Módulo 4:  Segurança, identidade e conformidade na nuvem][4]
- - [Módulo 5:  Redes e entrega de conteúdo][5]
- - [Módulo 6:  Computação][6]
- - [Módulo 7:  Armazenamento][7]
- - [Módulo 8:  Bancos de dados][8]
- - [Módulo 9:  Arquitetura de nuvem][9]
- - [Módulo 10: Auto Scaling e monitoramento][10]
- - [Módulo 11: AWS Analytics Services][11]
- - [Módulo 12: Integração de aplicações][12]
- - [Módulo 13: Migração e transferência][13]
- - [Módulo 14: Princípios de design sem servidor][14]
- - [Módulo 15: AWS Identity and Access Management (IAM)][15]
- - [Módulo 16: AWS Managed Services and Programas de conformidade][16]
- - [Módulo 17: Additional AWS Services][17]
- - [Módulo 99: Concepts‌ ‌and‌‌ Strategies][99]
+  - [Module 1: Overview of Cloud Concepts][1]
+  - [Module 2: Cloud Savings and Billing][2]
+  - [Module 3: Overview of AWS Global Infrastructure][3]
+  - [Module 4: Cloud Security, Identity and Compliance][4]
+  - [Module 5: Networks and Content Delivery][5]
+  - [Module 6: Computing][6]
+  - [Module 7: Storage][7]
+  - [Module 8: Databases][8]
+  - [Module 9: Cloud Architecture][9]
+  - [Module 10: Auto Scaling and Monitoring][10]
+  - [Module 11: AWS Analytics Services][11]
+  - [Module 12: Application Integration][12]
+  - [Module 13: Migration and Transfer][13]
+  - [Module 14: Serverless Design Principles][14]
+  - [Module 15: AWS Identity and Access Management (IAM)][15]
+  - [Module 16: AWS Managed Services and Compliance Programs][16]
+  - [Module 17: Additional AWS Services][17]
+  - [Module 99: Concepts‌ ‌and‌‌ Strategies][99]
  
 
 [1]: https://github.com/weder96/aws-certification-learning/tree/main/module-1

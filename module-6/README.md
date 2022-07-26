@@ -269,8 +269,71 @@ Each instance type includes one or more instance sizes, allowing you to scale yo
 ***************************************************************************************************
 ## <a id="section-6" ></a> **6 - Amazon LightSail**
 
+[Amazon LightSail](https://aws.amazon.com/lightsail/features/)
+
+Amazon LightSail Instances
+
+[Amazon LightSail](https://aws.amazon.com/lightsail/features/) is one of the newest services in the AWS Compute suite of products. Amazon LightSail is great for users who do not have deep AWS technical expertise as it makes it very easy to provision compute services.
+
+[Amazon LightSail](https://aws.amazon.com/lightsail/features/) provides developers compute, storage, and networking capacity and capabilities to deploy and manage websites, web applications, and databases in the cloud.
+
+[Amazon LightSail](https://aws.amazon.com/lightsail/features/) includes everything you need to launch your project quickly – a virtual machine, SSD-based storage, data transfer, DNS management, and a static IP.
+
+[Amazon LightSail](https://aws.amazon.com/lightsail/features/) provides preconfigured virtual private servers (instances) that include everything required to deploy and application or create a database.
+
+The underlying infrastructure and operating system is managed by Amazon LightSail.
+
+Best suited to projects that require a few dozen instances or fewer.
+
+Provides a simple management interface.
+
+Good for blogs, websites, web applications, e-commerce etc.
+
+Can deploy load balancers and attach block storage.
+
+Public API.
+
+**Limited to:** 
+    - 20 Amazon LightSail instances 
+    - 5 static IPs 
+    - 3 DNS zones 
+    - 20 TB block storage
+    - 40 databases
+    - 5 load balancers per account.
+
+Up to 20 certificates per calendar year.
+
+Can connect to each other and other AWS resources through public Internet and private (VPC peering) networking.
+
+Application templates include WordPress, WordPress Multisite, Drupal, Joomla!, Magento, Redmine, LAMP, Nginx (LEMP), MEAN, Node.js, and more.
+
+Amazon LightSail currently supports 6 Linux or Unix-like distributions: Amazon Linux, CentOS, Debian, FreeBSD, OpenSUSE, and Ubuntu, as well as 2 Windows Server versions: 2012 R2 and 2016.
+
 ***************************************************************************************************
 ## <a id="section-7" ></a> **7 - Amazon LightSail Databases**
+
+## **Amazon LightSail Databases**
+Amazon LightSail databases are instances that are dedicated to running databases.
+
+An Amazon LightSail database can contain multiple user-created databases, and you can access it by using the same tools and applications that you use with a stand-alone database.
+
+**Amazon LightSail** managed databases provide an easy, low maintenance way to store your data in the cloud.
+
+**Amazon LightSail** manages a range of maintenance activities and security for your database and its underlying infrastructure.
+
+**Amazon LightSail** automatically backs up your database and allows point in time restore from the past 7 days using the database restore tool.
+
+**Amazon LightSail databases** support the latest major versions of MySQL. Currently, these versions are 5.6, 5.7, and 8.0 for MySQL.
+
+**Amazon LightSail databases** are available in Standard and High Availability plans.
+
+High Availability plans add redundancy and durability to your database, by automatically creating standby database in a separate Availability Zone.
+
+**Amazon LightSail** is very affordable.
+
+**Amazon LightSail** plans are billed on an on-demand hourly rate, so you pay only for what you use.
+
+For every **Amazon LightSail** plan you use, we charge you the fixed hourly price, up to the maximum monthly plan cost.
 
 ***************************************************************************************************
 ## <a id="section-8" ></a> **8 - AWS Elastic Beanstalk**

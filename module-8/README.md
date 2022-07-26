@@ -13,6 +13,8 @@
 6. <a href="#section-6"> Amazon EMR </a>
 7. <a href="#section-7"> Amazon (RDS) Pricing </a>
 8. <a href="#section-8"> Amazon (RDS) Multiple Availability Zones (A-Z) </a>
+9. <a href="#section-9"> Enable automatic patching for the instances using the Amazon RDS console </a>
+10. <a href="#section-10"> Restoring a DB instance to a specified time </a>
 
 ***************************************************************************************************************
 ## <a id="section-1" ></a> **1 - Use Cases For Different Database Types**
@@ -302,5 +304,26 @@ Multi AZ provides a mechanism to failover the RDS database to another synchronou
 
 <img src="../images/extra/rds_multiply_a_z.png" alt="rds_multiply_a_z" width=80% />
 
+
+
+## <a id="section-9" ></a> **9 - Enable automatic patching for the instances using the Amazon RDS console**
+
+[Enable automatic patching](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html)
+
+Periodically, Amazon RDS performs maintenance on Amazon RDS resources. Maintenance most often involves updates to the DB instance's underlying hardware, underlying operating system (OS), or database engine version. Updates to the operating system most often occur for security issues and should be done as soon as possible.
+
+Required patching is automatically scheduled only for patches that are related to security and instance reliability. Such patching occurs infrequently (typically once every few months) and seldom requires more than a fraction of your maintenance window.
+
+
+
+## <a id="section-10" ></a> **10 - Restoring a DB instance to a specified time**
+
+[Restoring a DB instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIT.html)
+
+You can restore an Amazon RDS database instance to a specific point in time with a granularity of 5 minutes. Amazon RDS uses transaction logs which it uploads to Amazon S3 to do this.
+
+**To restore a DB instance to a specified time in aws console:**
+ - Restore to point in time.
+ - The Restore to point in time window appears.
 
 

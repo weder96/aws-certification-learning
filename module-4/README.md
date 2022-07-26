@@ -171,7 +171,7 @@ O **Penetration Testing** é a prática de testar a segurança do próprio aplic
 
 A AWS permite **Penetration Testing**. Há um conjunto limitado de recursos nos quais o teste de penetração pode ser realizado.
 
-Você não precisa de permissão para realizar testes de penetração nos seguintes serviços:
+**Você não precisa de permissão para realizar testes de penetração nos seguintes serviços:**
 - Amazon EC2 instances, NAT Gateways, and Elastic Load Balancers.
 - Amazon RDS.
 - Amazon CloudFront.
