@@ -1,4 +1,4 @@
- <img src="../images/extra/banner_aws.png" alt="aws" width=80 height=50 /> [Conteudo Geral AWS Cloud][1]
+ <img src="../images/extra/banner_aws.png" alt="aws" width=80 height=50 /> [General Content AWS Cloud][1]
 
 [1]: https://github.com/weder96/aws-certification-learning
 
