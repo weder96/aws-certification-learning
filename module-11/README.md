@@ -19,6 +19,8 @@
 12. <a href="#section-12"> Amazon Data Pipeline </a>
 13. <a href="#section-13"> Amazon CloudSearch </a>
 14. <a href="#section-14"> Amazon Lake Formation </a>
+15. <a href="#section-15"> Amazon QuickSight </a>
+16. <a href="#section-16"> Amazon RedShift </a>
 ------------------------------------------------------------------------------------------------------------------------
 
 There are several AWS Analytics services and they include:
@@ -429,7 +431,7 @@ For example, you can use AWS Data Pipeline to archive your web server's logs to 
 ------------------------------------------------------------------------------------------------------------------------
 ## <a href="#section-13"></a> **13 - Amazon CloudSearch**
 
-![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-CloudSearch_48.png)
+![Amazon CloudSearch](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-CloudSearch_48.png)
 
 A fully-managed service in the AWS Cloud that makes it easy to set up, manage, and scale a search solution for your website or application.
 
@@ -471,7 +473,7 @@ A fully-managed service in the AWS Cloud that makes it easy to set up, manage, a
 ------------------------------------------------------------------------------------------------------------------------
 ## <a href="#section-14"></a> **14 - Amazon Lake Formation**
 
-![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_AWS-Lake-Formation_48.png)
+![Amazon Lake Formation](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_AWS-Lake-Formation_48.png)
 
 AWS Lake Formation is a service that makes it easy to set up a secure data lake in days. A data lake is a centralized, curated, and secured repository that stores all your data, both in its original form and prepared for analysis. A data lake lets you break down data silos and combine different types of analytics to gain insights and guide better business decisions.
 
@@ -483,8 +485,10 @@ Creating a data lake with Lake Formation is as simple as defining data sources a
 
 Your users can access a centralized data catalog that describes available datasets and their appropriate usage. They then use these datasets with their choice of analytics and ML services, such as Amazon Redshift, Amazon Athena, Amazon EMR for Apache Spark, and Amazon QuickSight. Lake Formation builds on the capabilities available in AWS Glue.
 
+**Cheat Sheets**
 
-**References:**
+
+**References**
 
 [https://aws.amazon.com/lake-formation/?nc1=h_ls&whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc](https://aws.amazon.com/lake-formation/?nc1=h_ls&whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc)
 
@@ -492,6 +496,26 @@ Your users can access a centralized data catalog that describes available datase
 **Videos**
 
 [https://www.youtube.com/watch?v=Aj5T5fcZZr0](https://www.youtube.com/watch?v=Aj5T5fcZZr0)
+
+
+------------------------------------------------------------------------------------------------------------------------
+## <a href="#section-15"></a> **Amazon QuickSight**
+
+![Amazon QuickSight](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-QuickSight_48.png)
+
+**Cheat Sheets**
+**References**
+**Videos**
+
+
+------------------------------------------------------------------------------------------------------------------------
+## <a href="#section-16"></a> **Amazon RedShift**
+
+![Amazon RedShift](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Redshift_48.png)
+
+**Cheat Sheets**
+**References**
+**Videos**
 
 
 

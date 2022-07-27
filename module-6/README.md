@@ -13,10 +13,16 @@
 6. <a href="#section-6"> Amazon LightSail</a>
 7. <a href="#section-7"> Amazon LightSail Databases</a>
 8. <a href="#section-8"> AWS Elastic Beanstalk</a>
-9. <a href="#section-9"> AWS Batch</a>
+9. <a href="#section-9"> AWS Batch </a>
+10. <a href="#section-10"> AWS Outposts </a>
+11. <a href="#section-11"> AWS Serverless Application Repository </a>
+12. <a href="#section-12"> VMware Cloud on AWS </a>
+13. <a href="#section-13"> AWS Wavelength </a>
 
 ***************************************************************************************************
 ## <a id="section-1" ></a> **1 - Amazon [EC2](https://aws.amazon.com/ec2/?nc1=h_ls)**
+
+![Amazon EC2](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_Amazon-EC2_48.png "Amazon EC2")
 
 Amazon Elastic Compute Cloud (Amazon [EC2](https://aws.amazon.com/ec2/?nc1=h_ls)) is a web service that provides resizable compute capacity in the cloud.
 
@@ -118,6 +124,11 @@ AMIs are regional. You can only launch an AMI from the region in which it is sto
 - Instance store volumes are ephemeral (non-persistent). That means data is lost if the instance is shut down. A template stored on Amazon S3 is used to create the volume.
 
 
+**Cheat Sheets**
+
+**References:**
+
+**Videos**
 
 ***************************************************************************************************
 ## <a id="section-2" ></a> **2 - Pricing**
@@ -263,11 +274,31 @@ Each instance type includes one or more instance sizes, allowing you to scale yo
 ***************************************************************************************************
 ## <a id="section-4" ></a> **4 - Amazon Elastic Container Service (ECS)**
 
+![Amazon-Elastic-Container-Service](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_Amazon-Elastic-Container-Service_48.png "Amazon-Elastic-Container-Service")
+
+
+**Cheat Sheets**
+
+**References:**
+
+**Videos**
+
 ***************************************************************************************************
 ## <a id="section-5" ></a> **5 - AWS Lambda**
 
+![AWS Lambda](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Lambda_48.png "AWS Lambda")
+
+
+**Cheat Sheets**
+
+**References:**
+
+**Videos**
+
 ***************************************************************************************************
 ## <a id="section-6" ></a> **6 - Amazon LightSail**
+
+![Amazon LightSail](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_Amazon-Lightsail_48.png "Amazon Lightsail")
 
 [Amazon LightSail](https://aws.amazon.com/lightsail/features/)
 
@@ -656,3 +687,65 @@ You can also create [user policies](https://docs.aws.amazon.com/elasticbeanstalk
 
 ***************************************************************************************************
 ## <a id="section-9" ></a> **9 - AWS Batch**
+
+![AWS-Batch](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Batch_48.png "AWS-Batch")
+
+**Cheat Sheets**
+
+**References:**
+
+**Videos**
+
+***************************************************************************************************
+## <a id="section-10" ></a> **10 - AWS Outposts**
+
+![AWS Outposts Server](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Outposts-servers_48.png "AWS Outposts Server")
+
+![AWS Outposts Family](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Outposts-family_48.png "AWS Outposts Family")
+
+![AWS Outposts Rack](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Outposts-rack_48.png "AWS Outposts Rack")
+
+**Cheat Sheets**
+
+**References:**
+
+**Videos**
+
+
+***************************************************************************************************
+## <a id="section-11" ></a> **11 - AWS Serverless Application Repository**
+
+![AWS-Serverless-Application-Repository](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Serverless-Application-Repository_48.png "AWS-Serverless-Application-Repository")
+
+
+**Cheat Sheets**
+
+**References:**
+
+**Videos**
+
+
+***************************************************************************************************
+## <a id="section-12" ></a> **12 - VMware Cloud on AWS**
+
+![VMware-Cloud-on-AWS](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_VMware-Cloud-on-AWS_48.png "VMware-Cloud-on-AWS")
+
+
+**Cheat Sheets**
+
+**References:**
+
+**Videos**
+
+
+***************************************************************************************************
+## <a id="section-13" ></a> **13 - AWS Wavelength**
+
+![AWS-Wavelength](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Wavelength_48.png "AWS-Wavelength")
+
+
+**Cheat Sheets**
+
+**References:**
+
+**Videos**

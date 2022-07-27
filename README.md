@@ -23,7 +23,7 @@ To other repositories that will be linked to the same but specific to each Exam.
   - [Module 3: Overview of AWS Global Infrastructure][3]
   - [Module 4: Cloud Security, Identity and Compliance][4]
   - [Module 5: Networks and Content Delivery][5]
-  - [Module 6: Computing][6]
+  - [Module 6: Compute][6]
   - [Module 7: Storage][7]
   - [Module 8: Databases][8]
   - [Module 9: Cloud Architecture][9]
@@ -35,6 +35,9 @@ To other repositories that will be linked to the same but specific to each Exam.
   - [Module 15: AWS Identity and Access Management (IAM)][15]
   - [Module 16: AWS Managed Services and Compliance Programs][16]
   - [Module 17: Additional AWS Services][17]
+  - [Module 18: Containers][18]
+  - [Module 19: Machine Learning][19]
+  - [Module 20: Management and Governance][20]
   - [Module 99: Concepts‌ ‌and‌‌ Strategies][99]
  
 
@@ -55,4 +58,7 @@ To other repositories that will be linked to the same but specific to each Exam.
 [15]: https://github.com/weder96/aws-certification-learning/tree/main/module-15
 [16]: https://github.com/weder96/aws-certification-learning/tree/main/module-16
 [17]: https://github.com/weder96/aws-certification-learning/tree/main/module-17
+[18]: https://github.com/weder96/aws-certification-learning/tree/main/module-18
+[19]: https://github.com/weder96/aws-certification-learning/tree/main/module-19
+[20]: https://github.com/weder96/aws-certification-learning/tree/main/module-20
 [99]: https://github.com/weder96/aws-certification-learning/tree/main/module-99
