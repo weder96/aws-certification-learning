@@ -61,3 +61,128 @@ As‌ ‌mentioned‌ ‌in‌ ‌this‌ ‌review,‌ ‌you‌ ‌should‌ �
 - Service Control Policies vs IAM Policies
 - SNI Custom SSL vs Dedicated IP Custom SSL
 - Step Scaling vs Simple Scaling Policies in Amazon EC2
+
+
+------------------------------------------------------------------------------------------------
+- S3
+https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html
+
+https://aws.amazon.com/s3/storage-classes/
+
+https://tutorialsdojo.com/amazon-s3/
+
+https://tutorialsdojo.com/aws-cheat-sheets-storage-services/
+
+
+- Cloudtrail
+
+https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-concepts.html#cloudtrail-concepts-global-service-events
+https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail-by-using-the-aws-cli.html
+http://docs.aws.amazon.com/IAM/latest/UserGuide/cloudtrail-integration.html
+
+https://tutorialsdojo.com/aws-cloudtrail/
+
+
+
+
+- Amazon-MQ
+
+https://aws.amazon.com/amazon-mq/faqs/
+https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html#sqs-difference-from-amazon-mq-sns
+
+https://tutorialsdojo.com/amazon-mq/
+
+
+- Storage Gateway
+
+https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html
+
+https://docs.aws.amazon.com/storagegateway/latest/userguide/StorageGatewayConcepts.html
+
+https://tutorialsdojo.com/amazon-s3/
+
+https://tutorialsdojo.com/aws-certified-solutions-architect-associate-saa-c02/
+
+
+- aws-auto-scaling
+
+https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html#default-termination-policy
+
+https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html
+
+https://tutorialsdojo.com/aws-auto-scaling/
+
+
+
+- Amazon Elasticache
+
+https://aws.amazon.com/caching/database-caching/
+
+https://aws.amazon.com/caching/session-management/
+
+https://tutorialsdojo.com/amazon-elasticache/
+
+
+- Amazon Aurora
+
+https://aws.amazon.com/rds/aurora/global-database/
+
+https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html
+
+https://youtu.be/iwS1h7rLNBQ
+
+https://tutorialsdojo.com/amazon-aurora/
+
+
+- aws-directory-service
+
+https://aws.amazon.com/blogs/security/how-to-connect-your-on-premises-active-directory-to-aws-using-ad-connector/
+
+https://tutorialsdojo.com/aws-identity-and-access-management-iam/
+
+https://tutorialsdojo.com/aws-directory-service/
+
+https://youtu.be/4XeqotTYBtY
+
+
+
+- aurora-serverless
+
+https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html
+
+https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html
+
+
+
+- Amazon VPC
+
+https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html
+
+https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-comparison.html
+
+http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html
+
+https://tutorialsdojo.com/amazon-vpc/
+
+https://www.youtube.com/watch?v=oIDHKeNxvQQ
+
+
+
+- Amazon RDS
+
+https://tutorialsdojo.com/amazon-relational-database-service-amazon-rds/
+
+
+- Amazon CloudWatch
+
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#USER_Monitoring.OS.CloudWatchLogs
+
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html#monitoring-cloudwatch
+
+https://tutorialsdojo.com/amazon-cloudwatch/
+
+
+
+
