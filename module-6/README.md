@@ -749,3 +749,6 @@ You can also create [user policies](https://docs.aws.amazon.com/elasticbeanstalk
 **References:**
 
 **Videos**
+
+
+https://docs.aws.amazon.com/savingsplans/latest/userguide/what-is-savings-plans.html

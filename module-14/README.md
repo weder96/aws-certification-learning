@@ -11,3 +11,8 @@
 
 ## <a id="section-1" ></a> **1 - Amazon Simple Notification Service (Amazon SNS)**
 ## <a id="section-2" ></a> **2 - Amazon Simple Queue Service (Amazon SQS)**
+
+
+https://docs.aws.amazon.com/elasticloadbalancing/latest/application/lambda-functions.html
+https://aws.amazon.com/pt/elasticloadbalancing/pricing/
+https://aws.amazon.com/pt/lambda/pricing/

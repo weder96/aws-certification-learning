@@ -69,11 +69,33 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html
 
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html
 
+https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html
+
+https://docs.aws.amazon.com/efs/latest/ug/lifecycle-management-efs.html
+
 https://aws.amazon.com/s3/storage-classes/
+
+https://aws.amazon.com/s3/faqs/
 
 https://tutorialsdojo.com/amazon-s3/
 
 https://tutorialsdojo.com/aws-cheat-sheets-storage-services/
+
+
+
+- Amazon EC2
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-modifying.html
+
+https://aws.amazon.com/ec2/pricing/reserved-instances/
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-reserved-instances.html
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/reserved-instances-types.html
+
+https://youtu.be/7VsGIHT_jQE
+
+https://tutorialsdojo.com/amazon-elastic-compute-cloud-amazon-ec2/
 
 
 - Cloudtrail
@@ -131,6 +153,8 @@ https://aws.amazon.com/rds/aurora/global-database/
 
 https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html
 
+https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html
+
 https://youtu.be/iwS1h7rLNBQ
 
 https://tutorialsdojo.com/amazon-aurora/
@@ -174,6 +198,10 @@ https://www.youtube.com/watch?v=oIDHKeNxvQQ
 
 https://tutorialsdojo.com/amazon-relational-database-service-amazon-rds/
 
+https://aws.amazon.com/rds/details/multi-az/
+
+https://tutorialsdojo.com/amazon-relational-database-service-amazon-rds/
+
 
 - Amazon CloudWatch
 
@@ -181,7 +209,26 @@ https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#U
 
 https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html#monitoring-cloudwatch
 
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring_ec2.html
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/mon-scripts.html#using_put_script
+
+https://tutorialsdojo.com/cloudwatch-agent-vs-ssm-agent-vs-custom-daemon-scripts/
+
 https://tutorialsdojo.com/amazon-cloudwatch/
+
+
+
+- Amazon FSx 
+
+https://docs.aws.amazon.com/fsx/latest/WindowsGuide/aws-ad-integration-fsxW.html
+
+https://aws.amazon.com/fsx/windows/faqs/
+
+https://docs.aws.amazon.com/storagegateway/latest/userguide/CreatingAnSMBFileShare.html
+
+https://tutorialsdojo.com/amazon-fsx/
+
 
 
 

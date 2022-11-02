@@ -305,5 +305,7 @@ AWS Storage Gateway is a set of hybrid cloud storage services that provide on-pr
 
 
 
+https://docs.aws.amazon.com/vpc/latest/privatelink/gateway-endpoints.html#gateway-endpoint-pricing
+
 
 
