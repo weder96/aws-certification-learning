@@ -449,6 +449,19 @@ Customer Specific – Controls which are solely the responsibility of the custom
 Examples of customer specific controls include:
 - Service and Communications Protection or Zone Security which may require a customer to route or zone data within specific security environments.
 
+**Cheat Sheets**
+
+https://digitalcloud.training/aws-shared-responsibility-model/
+
+**References:**
+
+https://aws.amazon.com/compliance/shared-responsibility-model/
+
+**Videos**
+
+https://www.youtube.com/watch?v=iODPCcQEPto
+
+
 **********************************************************************************
 ## <a id="section-6" ></a> **6 - AWS Support**
 

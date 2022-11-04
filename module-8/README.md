@@ -14,263 +14,268 @@
 7. <a href="#section-7"> Amazon (RDS) Pricing </a>
 8. <a href="#section-8"> Amazon (RDS) Multiple Availability Zones (A-Z) </a>
 9. <a href="#section-9"> Enable automatic patching for the instances using the Amazon RDS console </a>
-10. <a href="#section-10"> Restoring a DB instance to a specified time </a>
+10. <a href="#section-10"> Backups and Restoring a DB instance to a specified time </a>
 
 ***************************************************************************************************************
 ## <a id="section-1" ></a> **1 - Use Cases For Different Database Types**
 
-A tabela abaixo fornece orientação sobre os casos de uso típicos para vários serviços de banco de dados/armazenamento de dados da AWS:
+The table below provides guidance on typical use cases for various AWS database/data storage services:
 
-### **Banco de dados no EC2**
-- Controle total sobre instância e banco de dados
-- DB preferencial não disponível no RDS
+### **Database on EC2**
+- Full control over instance and database
+- Preferred DB not available in RDS
 
 
 ### **Amazon RDS**
-- Precisa de banco de dados relacional tradicional para OLTP
-- Seus dados estão bem formados e estruturados
-- Aplicativos existentes que requerem RDBMS
+- Need traditional relational database for OLTP
+- Your data is well formed and structured
+- Existing applications that require RDBMS
 
 ### **Amazon DynamoDB**
-- Dados do par nome/valor
-- Estrutura de dados imprevisível
-- Desempenho na memória com persistência
-- Altas necessidades de E/S
-- Requer dimensionamento dinâmico
+- Name/value pair data
+- Unpredictable data structure
+- In-memory performance with persistence
+- High I/O needs
+- Requires dynamic scaling
 
 
 ### **Amazon RedShift**
-- Data warehouse para grandes volumes de dados agregados
-- Principalmente cargas de trabalho OLAP
+- Data warehouse for large volumes of aggregated data
+- Mainly OLAP workloads
 
-### **Amazon Neptuno**
-- Relacionamentos entre objetos são de alto valor
+### **Amazon Neptune**
+- Relationships between objects are of high value
 
 ### **Amazon ElastiCache**
-- Armazenamento temporário rápido para pequenas quantidades de dados
-- Dados altamente voláteis (não persistentes)
+- Fast temporary storage for small amounts of data
+- Highly volatile (non-persistent) data
 
 ### **Amazon S3**
-- Grandes objetos binários (BLOBs)
-- Sites estáticos
+- Large binary objects (BLOBs)
+- static websites
 
-Agora abordaremos vários desses tipos de banco de dados que podem surgir no exame.
+We will now cover several of these database types that may come up on the exam.
 
-***************************************************************************************************************
+****************************************************** ****************************************************** ***********
 ## <a id="section-2" ></a> **2 - Amazon Relational Database Service (RDS)**
-O Amazon Relational Database Service (Amazon RDS) é um serviço gerenciado que facilita a configuração, operação e dimensionamento de um banco de dados relacional na nuvem.
 
-Os bancos de dados relacionais são conhecidos como bancos de dados SQL (Structured Query Language).
+Amazon Relational Database Service (Amazon RDS) is a managed service that makes it easy to set up, operate, and scale a relational database in the cloud.
 
-Os bancos de dados não relacionais são conhecidos como bancos de dados NoSQL.
+Relational databases are known as SQL (Structured Query Language) databases.
 
-RDS é um tipo de banco de dados OLTP (Online Transaction Processing).
+Non-relational databases are known as NoSQL databases.
 
-### **Recursos e benefícios do RDS:**
-- Tipo de banco de dados SQL.
-- Pode ser usado para realizar consultas e junções complexas.
-- Fácil de configurar, altamente disponível, tolerante a falhas e escalável.
-- Usado quando os dados são claramente definidos.
-- Casos de uso comuns incluem lojas online e sistemas bancários.
+RDS is a type of OLTP (Online Transaction Processing) database.
+
+Amazon RDS is a managed relational database service on which you can run several types of database software. The service is managed so this reduces the database administration tasks an administrator would normally undertake. The managed service includes hardware provisioning, database setup, patching and backups.
+
+### **RDS Features and Benefits:**
+- SQL database type.
+- Can be used to perform complex queries and joins.
+- Easy to configure, highly available, fault tolerant and scalable.
+- Used when the data is clearly defined.
+- Common use cases include online stores and banking systems.
 
 
-### **O Amazon RDS oferece suporte aos seguintes mecanismos de banco de dados:**
+### **Amazon RDS supports the following database engines:**
 - SQL Server.
 - Oracle.
-- MySQL Serber.
+- MySQL Server.
 - PostgreSQL.
 - Aurora.
 - MariaDB.
 
-**Aurora é o banco de dados proprietário da Amazon**.
+**Aurora is Amazon's proprietary database**.
 
-O RDS é um serviço totalmente gerenciado e você não tem acesso à instância do EC2 subjacente (sem acesso root).
+RDS is a fully managed service and you do not have access to the underlying EC2 instance (no root access).
 
-### **O serviço RDS inclui o seguinte:**
-- Segurança e patching das instâncias de banco de dados.
-- Backup automatizado para as instâncias de banco de dados.
-- Atualizações de software para o mecanismo de banco de dados.
-- Fácil dimensionamento para armazenamento e computação.
-- Opção Multi-AZ com replicação síncrona.
-- Failover automático para opção Multi-AZ.
-- Opção de réplicas de leitura para cargas de trabalho pesadas de leitura.
-- Uma instância de banco de dados é um ambiente de banco de dados na nuvem com os recursos de computação e armazenamento que você especifica.
+### **RDS service includes the following:**
+- Security and patching of database instances.
+- Automated backup for the DB instances.
+- Software updates for the database engine.
+- Easy scaling for storage and compute.
+- Multi-AZ option with synchronous replication.
+- Automatic failover for Multi-AZ option.
+- Read replica option for read-heavy workloads.
+- A DB instance is a cloud database environment with the compute and storage resources you specify.
 
-### **Criptografia:**
+### **Cryptography:**
 
-- Você pode criptografar suas instâncias e snapshots do Amazon RDS em repouso ativando a opção de criptografia para sua instância de banco de dados do Amazon RDS.
-- A criptografia em repouso é compatível com todos os tipos de banco de dados e usa o AWS KMS.
-- Você não pode criptografar um banco de dados existente, você precisa criar um instantâneo, copiá-lo, criptografar a cópia e construir um banco de dados criptografado a partir do instantâneo.
+- You can encrypt your Amazon RDS instances and snapshots at rest by enabling the encryption option for your Amazon RDS DB instance.
+- Encryption at rest is supported for all database types and uses AWS KMS.
+- You cannot encrypt an existing database, you need to create a snapshot, copy it, encrypt the copy and build an encrypted database from the snapshot.
 
-### **Grupos de sub-redes de banco de dados:**
+### **Database subnet groups:**
 
-- Um grupo de sub-redes de banco de dados é uma coleção de sub-redes (normalmente privadas) que você cria em uma VPC e designa para suas instâncias de banco de dados.
-- Cada grupo de sub-redes de banco de dados deve ter sub-redes em pelo menos duas zonas de disponibilidade em cada região.
-- Recomenda-se configurar um grupo de sub-redes com sub-redes em cada AZ (mesmo para instâncias independentes).
+- A DB subnet group is a collection of subnets (usually private) that you create within a VPC and assign to your DB instances.
+- Each DB subnet group must have subnets in at least two Availability Zones in each region.
+- It is recommended to configure a subnet group with subnets in each AZ (even for standalone instances).
 
-### **Cobrança da AWS por:**
-- Horas da instância de banco de dados (horas parciais são cobradas como horas completas).
-- Armazenamento GB/mês.
-- Solicitações de E/S/mês – para armazenamento magnético.
-- IOPS provisionado/mês – para SSD IOPS provisionado por RDS.
-- Transferência de dados de saída.
-- Armazenamento de backup (backups de banco de dados e instantâneos manuais).
+### **AWS billing by:**
+- DB instance hours (partial hours are billed as full hours).
+- GB/month storage.
+- I/O requests/month – for magnetic storage.
+- Provisioned IOPS/month – for SSD IOPS provisioned by RDS.
+- Outgoing data transfer.
+- Backup storage (database backups and manual snapshots).
 
 
-### **Escalabilidade:**
-- Você só pode aumentar o RDS (computação e armazenamento).
-- Você não pode diminuir o armazenamento alocado para uma instância do RDS.
-- Você pode dimensionar o armazenamento e alterar o tipo de armazenamento para todos os mecanismos de banco de dados, exceto MS SQL.
+### **Scalability:**
+- You can only increase RDS (compute and storage).
+- You cannot decrease the storage allocated to an RDS instance.
+- You can scale storage and change storage type for all database engines except MS SQL.
 
-### **O RDS fornece multi-AZ para recuperação de desastres que oferece tolerância a falhas em zonas de disponibilidade:**
-- O RDS Multi-AZ cria uma réplica em outra AZ e replica de forma síncrona para ela (somente DR).
-- Há uma opção para escolher multi-AZ durante o assistente de inicialização.
-- A AWS recomenda o uso de armazenamento IOPS provisionado para instâncias de banco de dados RDS multi-AZ.
-- Cada AZ é executada em sua própria infraestrutura fisicamente distinta e independente e é projetada para ser altamente confiável.
-- Você não pode escolher qual AZ na região será escolhida para criar a instância de banco de dados em espera.
+### **RDS provides multi-AZ disaster recovery that provides fault tolerance across Availability Zones:**
+- RDS Multi-AZ creates a replica in another AZ and synchronously replicates to it (DR only).
+- There is an option to choose multi-AZ during startup wizard.
+- AWS recommends using provisioned IOPS storage for multi-AZ RDS DB Instances.
+- Each AZ runs on its own physically distinct and independent infrastructure and is designed to be highly reliable.
+- You cannot choose which AZ in the region to choose to create the standby DB instance.
 
-### **Réplicas de leitura – fornecem desempenho aprimorado para leituras:**
-- As réplicas de leitura são usadas para bancos de dados pesados ​​de leitura e a replicação é assíncrona.
-- As réplicas de leitura são para compartilhamento e descarregamento de carga de trabalho.
-- As réplicas de leitura fornecem DR somente leitura.
-- As réplicas de leitura são criadas a partir de um instantâneo da instância mestre.
-- Deve ter backups automatizados habilitados no primário (período de retenção > 0).
 
-***************************************************************************************************************
+### **Read replicas - provide improved performance for reads:**
+- Read replicas are used for read heavy databases and replication is asynchronous.
+- Read replicas are for workload sharing and offloading.
+- Read replicas provide read-only DR.
+- Read replicas are created from a snapshot of the master instance.
+- Must have automated backups enabled on the primary (retention period > 0).
+
+****************************************************** ****************************************************** ***********
 ## <a id="section-3" ></a> **3 - Amazon DynamoDB**
-O Amazon DynamoDB é um serviço de banco de dados NoSQL totalmente gerenciado que oferece desempenho rápido e previsível com escalabilidade perfeita.
+Amazon DynamoDB is a fully managed NoSQL database service that delivers fast, predictable performance with seamless scalability.
 
-## **Recursos e benefícios do Dynamo DB:**
-- Tipo de banco de dados NoSQL (não relacional).
-- Rápido, altamente disponível e totalmente gerenciado.
-- Usado quando os dados são fluidos e podem mudar.
-- Casos de uso comuns incluem redes sociais e análise da web.
+## **Features and Benefits of Dynamo DB:**
+- NoSQL (non-relational) database type.
+- Fast, highly available and fully managed.
+- Used when data is fluid and can change.
+- Common use cases include social media and web analytics.
 
-O dimensionamento por botão significa que você pode dimensionar o banco de dados a qualquer momento sem incorrer em tempo de inatividade.
+Button scaling means you can scale your database at any time without incurring downtime.
 
-Baseado em SSD e usa indexação limitada em atributos para desempenho.
+SSD-based and uses limited indexing on attributes for performance.
 
-O DynamoDB é um serviço da Web que usa HTTP sobre SSL (HTTPS) como transporte e JSON como formato de serialização de mensagens.
+DynamoDB is a web service that uses HTTP over SSL (HTTPS) as the transport and JSON as the message serialization format.
 
-O Amazon DynamoDB armazena três réplicas distribuídas geograficamente de cada tabela para permitir alta disponibilidade e durabilidade dos dados.
+Amazon DynamoDB stores three geographically distributed replicas of each table to enable high availability and data durability.
 
-Os dados são replicados de forma síncrona em 3 instalações (AZs) em uma região.
+Data is synchronously replicated across 3 facilities (AZs) in a region.
 
-## **A replicação entre regiões permite replicar entre regiões:**
-- As tabelas globais do Amazon DynamoDB fornecem uma solução totalmente gerenciada para implantar um banco de dados multirregional e multimestre.
-- Ao criar uma tabela global, você especifica as regiões da AWS em que deseja que a tabela esteja disponível.
-- O DynamoDB executa todas as tarefas necessárias para criar tabelas idênticas nessas regiões e propagar alterações de dados contínuas para todas elas.
+## **Interregion replication allows you to replicate between regions:**
+- Amazon DynamoDB Global Tables provides a fully managed solution for deploying a multi-region, multi-master database.
+- When creating a global table, you specify the AWS regions where you want the table to be available.
+- DynamoDB performs all the necessary tasks to create identical tables in these regions and propagate rolling data changes to all of them.
 
 
-Fornece baixa latência de leitura e gravação.
+Provides low read and write latency.
 
-Aumente ou diminua o armazenamento e a taxa de transferência conforme necessário, sem alterações de código ou tempo de inatividade.
+Increase or decrease storage and throughput as needed, with no code changes or downtime.
 
-O DynamoDB não tem esquema.
+DynamoDB has no schema.
 
-O DynamoDB pode ser usado para armazenar o estado da sessão.
+DynamoDB can be used to store session state.
 
-Fornece dois modelos de leitura.
+It provides two reading models.
 
-## **Leituras eventualmente consistentes (Padrão):**
-- A opção de consistência eventual maximiza seu rendimento de leitura (melhor desempenho de leitura).
-- Uma leitura eventualmente consistente pode não refletir os resultados de uma gravação concluída recentemente.
-- Consistência em todas as cópias alcançadas em 1 segundo.
+## **Occasionally consistent readings (Default):**
+- The eventual consistency option maximizes your read throughput (better read performance).
+- An eventually consistent read may not reflect the results of a recently completed write.
+- Consistency in all copies reached in 1 second.
 
-## **Leituras fortemente consistentes:**
-- Uma leitura fortemente consistente retorna um resultado que reflete todas as gravações que receberam uma resposta bem-sucedida antes da leitura (consistência mais rápida).
+## **Strongly consistent readings:**
+- A strongly consistent read returns a result that reflects all writes that received a successful response before the read (faster consistency).
 
-O Amazon DynamoDB Accelerator (DAX) é um cache de memória totalmente gerenciado e altamente disponível para o DynamoDB que oferece uma melhoria de desempenho de até 10 vezes – de milissegundos a microssegundos – mesmo com milhões de solicitações por segundo.
+Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available in-memory cache for DynamoDB that delivers up to a 10x performance improvement – ​​from milliseconds to microseconds – even at millions of requests per second.
+
+****************************************************** ****************************************************** ***********
+## <a id="section-4"></a> **4 - Amazon RedShift**
+
+Amazon Redshift is a fast, fully managed data warehouse that makes it simple and cost-effective to analyze all your data using standard SQL and existing Business Intelligence (BI) tools.
+
+RedShift is an SQL-based data warehouse used for analytics applications.
+
+RedShift is a relational database used for OLAP (Online Analytics Processing) use cases.
+
+RedShift is used to run complex analytical queries on petabytes of structured data, using sophisticated query optimization, columnar storage on high-performance local disks, and massively parallel query execution.
+
+RedShift is ideal for processing large amounts of data for business intelligence.
+
+RedShift is 10x faster than a traditional SQL database.
+
+## **RedShift uses columnar data storage:**
+- Data is stored sequentially in columns instead of rows.
+- Column-based database is ideal for data storage and analysis.
+- Requires less I/Os, which greatly increases performance.
+
+## **RedShift provides advanced compression:**
+- Data is stored sequentially in columns, which allows for much better performance and less storage space.
+- RedShift automatically selects the compression scheme.
+
+RedShift uses replication and continuous backups to increase availability and durability and can automatically recover from component and node failures.
+
+## **RedShift always keeps three copies of your data:**
+- The original.
+- A replica on compute nodes (within the cluster).
+- A backup copy on S3.
+
+## **RedShift provides continuous/incremental backups:**
+- Multiple copies within a cluster.
+- Continuous and incremental backups to S3.
+- Continuous and incremental backups between regions.
+- Restoration of streaming.
+
+## **RedShift provides fault tolerance for the following faults:**
+- Disk failures.
+- Faults from us.
+- Network failures.
+- AZ/region level disasters.
 
 ***************************************************************************************************************
-## <a id="section-4" ></a> **4 - Amazon RedShift**
 
-O Amazon Redshift é um data warehouse rápido e totalmente gerenciado que torna simples e econômica a análise de todos os seus dados usando SQL padrão e ferramentas de Business Intelligence (BI) existentes.
-
-RedShift é um data warehouse baseado em SQL usado para aplicativos de análise.
-
-RedShift é um banco de dados relacional usado para casos de uso de OLAP (Online Analytics Processing).
-
-O RedShift é usado para executar consultas analíticas complexas em petabytes de dados estruturados, usando otimização de consulta sofisticada, armazenamento colunar em discos locais de alto desempenho e execução de consulta maciçamente paralela.
-
-O RedShift é ideal para processar grandes quantidades de dados para inteligência de negócios.
-
-RedShift é 10x mais rápido que um banco de dados SQL tradicional.
-
-## **RedShift usa armazenamento de dados colunar:**
-- Os dados são armazenados sequencialmente em colunas em vez de linhas.
-- O banco de dados baseado em colunas é ideal para armazenamento e análise de dados.
-- Requer menos I/Os, o que aumenta muito o desempenho.
-
-## **RedShift fornece compactação avançada:**
-- Os dados são armazenados sequencialmente em colunas, o que permite um desempenho muito melhor e menos espaço de armazenamento.
-- RedShift seleciona automaticamente o esquema de compressão.
-
-O RedShift usa replicação e backups contínuos para aumentar a disponibilidade e a durabilidade e pode se recuperar automaticamente de falhas de componentes e nós.
-
-## **RedShift sempre mantém três cópias de seus dados:**
-- O original.
-- Uma réplica em nós de computação (dentro do cluster).
-- Uma cópia de backup no S3.
-
-## **RedShift fornece backups contínuos/incrementais:**
-- Várias cópias dentro de um cluster.
-- Backups contínuos e incrementais para S3.
-- Backups contínuos e incrementais entre regiões.
-- Restauração de streaming.
-
-## **RedShift fornece tolerância a falhas para as seguintes falhas:**
-- Falhas de disco.
-- Falhas de nós.
-- Falhas de rede.
-- Desastres em nível AZ/região.
-
-***************************************************************************************************************
 ## <a id="section-5" ></a> **5 - Amazon ElastiCache**
-O ElastiCache é um serviço da Web que facilita a implantação e a execução de nós de servidor compatíveis com o protocolo Memcached ou Redis na nuvem.
+ElastiCache is a web service that makes it easy to deploy and run server nodes that support the Memcached or Redis protocol in the cloud.
 
-O cache na memória fornecido pelo ElastiCache pode ser usado para melhorar significativamente a latência e a taxa de transferência para muitas cargas de trabalho de aplicativos de leitura intensa ou cargas de trabalho de computação intensiva.
+The in-memory cache provided by ElastiCache can be used to significantly improve latency and throughput for many read-intensive application workloads or compute-intensive workloads.
 
-Melhor para cenários em que a carga do banco de dados é baseada em transações OLAP (Online Analytics Processing).
+Best for scenarios where the database load is based on OLAP (Online Analytics Processing) transactions.
 
-## **A tabela a seguir descreve alguns casos de uso típicos do ElastiCache:**
+## **The following table describes some typical ElastiCache use cases:**
 ### **Web session store**
-- Em casos com servidores da Web com balanceamento de carga, armazene as informações da sessão da Web no Redis para que, se um servidor for perdido, as informações da sessão não sejam perdidas e outro servidor da Web possa recuperá-lo
+- In cases with load balanced web servers, store the web session information in Redis so that if one server is lost, the session information is not lost and another web server can recover it
 
 ### **Database caching**
-- Use o Memcached na frente do AWS RDS para armazenar em cache consultas populares para descarregar o trabalho do RDS e retornar resultados mais rapidamente aos usuários
+- Use Memcached in front of AWS RDS to cache popular queries to offload RDS work and return results faster to users
 
 ### **Leaderboards**
-- Use o Redis para fornecer uma tabela de classificação ao vivo para milhões de usuários do seu aplicativo móvel
+- Use Redis to provide a live leaderboard to millions of users of your mobile app
 
 ### **Streaming data dashboards**
-- Fornecer um ponto de aterrissagem para transmitir dados do sensor no chão de fábrica, fornecendo exibições de painel ao vivo em tempo real
+- Provide a landing point to transmit sensor data to the shop floor, providing real-time live dashboard views
 
 
-Os nós do ElastiCache EC2 não podem ser acessados ​​pela Internet nem por instâncias do EC2 em outras VPCs.
+ElastiCache EC2 nodes cannot be accessed from the internet or EC2 instances in other VPCs.
 
-Também podem ser instâncias sob demanda ou reservadas (mas não instâncias spot).
+They can also be On-Demand or Reserved Instances (but not Spot Instances).
 
-O ElastiCache pode ser usado para armazenar o estado da sessão.
+ElastiCache can be used to store session state.
 
-## **Existem dois tipos de mecanismo ElastiCache:**
-- **Memcached** – modelo mais simples, pode executar nós grandes com vários núcleos/threads, pode ser dimensionado para dentro e para fora, pode armazenar em cache objetos como bancos de dados.
-- **Redis** – modelo complexo, suporta criptografia, replicação mestre/escravo, cross AZ (HA), failover automático e backup/restauração.
+## **There are two types of ElastiCache engine:**
+- **Memcached** – simpler model, can run large nodes with multiple cores/threads, can scale in and out, can cache objects like databases.
+- **Redis** – complex model, supports encryption, master/slave replication, cross AZ (HA), automatic failover and backup/restore.
 
-***************************************************************************************************************
+****************************************************** ****************************************************** ***********
 ## <a id="section-6" ></a> **6 - Amazon EMR**
 
-O **Amazon EMR** é um serviço da web que permite que empresas, pesquisadores, analistas de dados e desenvolvedores processem grandes quantidades de dados de maneira fácil e econômica.
+**Amazon EMR** is a web service that enables companies, researchers, data analysts, and developers to process large amounts of data easily and cost-effectively.
 
-O EMR utiliza uma estrutura do Hadoop hospedada em execução no Amazon EC2 e no Amazon S3.
+EMR uses a hosted Hadoop framework running on Amazon EC2 and Amazon S3.
 
-Estrutura gerenciada do Hadoop para processar grandes quantidades de dados.
+Managed Hadoop framework for processing large amounts of data.
 
-Também suporta **Apache Spark, HBase, Presto e Flink**.
+It also supports **Apache Spark, HBase, Presto and Flink**.
 
-Mais comumente usado para análise de log, análise financeira ou atividades de extração, tradução e carregamento (ETL).
+Most commonly used for log analysis, financial analysis, or extract, translate, and load (ETL) activities.
 
-
+****************************************************** ****************************************************** ***********
 
 ## <a id="section-7" ></a> **7 - Amazon (RDS) Pricing**
 
@@ -316,7 +321,7 @@ Required patching is automatically scheduled only for patches that are related t
 
 
 
-## <a id="section-10" ></a> **10 - Restoring a DB instance to a specified time**
+## <a id="section-10" ></a> **10 - Backups and Restoring a DB instance to a specified time**
 
 [Restoring a DB instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIT.html)
 
@@ -327,3 +332,27 @@ You can restore an Amazon RDS database instance to a specific point in time with
  - The Restore to point in time window appears.
 
 
+ **Point-in-time recovery (PITR)
+ Point-in-time recovery (PITR) provides continuous backups of your DynamoDB table data. When enabled, DynamoDB maintains incremental backups of your table for the last 35 days until you explicitly turn it off. It is a customer responsibility to enable PITR on and AWS is responsible for actually performing the backups.
+
+"The customer is responsible for configuring and AWS is responsible for performing backups".
+
+**Cheat Sheets**
+
+https://digitalcloud.training/aws-database-services/
+
+
+**References:**
+
+https://aws.amazon.com/blogs/aws/new-amazon-dynamodb-continuous-backups-and-point-in-time-recovery-pitr/
+
+
+**Videos**
+
+https://www.youtube.com/watch?v=YVe9amljgaw&t=45s
+https://www.youtube.com/watch?v=n0KK094sPnQ
+
+
+**Cheat Sheets**
+**References:**
+**Videos**

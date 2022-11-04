@@ -6,16 +6,16 @@
 
 ## Conteúdo
 1. <a href="#section-1"> AWS Managed Services </a>
-2. <a href="#section-2"> Programas de conformidade da AWS </a>
+2. <a href="#section-2"> AWS Compliance Programs </a>
 
 ## <a id="section-1" ></a> **1 - AWS Managed Services**
-O AWS Managed Services (AMS) ajuda você a adotar a AWS em escala e a operar com mais eficiência e segurança. 
+AWS Managed Services (AMS) helps you adopt AWS at scale and operate more efficiently and securely.
 
-Aproveitamos os serviços padrão da AWS e oferecemos orientação e execução das práticas recomendadas operacionais, com automações, habilidades e experiência especializadas que são contextuais ao seu ambiente e aplicações. 
+We leverage standard AWS services and offer guidance and execution of operational best practices, with specialized automations, skills, and experience that are contextual to your environment and applications.
 
-O AMS fornece recursos proativos, preventivos e de detecção que elevam o nível operacional e ajudam a reduzir riscos sem restringir a agilidade, permitindo que você se concentre na inovação. 
+AMS provides proactive, preventive and detection capabilities that take the operational level to the next level and help reduce risk without constraining agility, allowing you to focus on innovation.
 
-O AMS amplia sua equipe com recursos operacionais, incluindo monitoramento, detecção e gerenciamento de incidentes, segurança, patch, backup e otimização de custos.
+AMS extends your team with operational capabilities including monitoring, incident detection and management, security, patching, backup and cost optimization.
 
 
 <img src="../images/extra/Product-Diagram-Page_AWS-Managed-Services.png" alt="aws" width=80%  />
@@ -69,8 +69,52 @@ Atualmente, os serviços gerenciados da AWS oferecem suporte aos mais de 20 serv
 
 O AWS Managed Services foi projetado para atender às necessidades de empresas que exigem SLAs rigorosos, aderência à conformidade corporativa e integração com seus sistemas e processos baseados em ITIL®.
 
+## **Benefits**
 
-## <a id="section-2" ></a> **2 - Programas de conformidade da AWS**
+**Safety**
+AMS elevates operational excellence with security monitoring and remediation.
+AMS continually mitigates risk for customers by adopting AWS best practices and a rich set of native AWS tools. Our security mechanisms provide prevention and detection controls.
+
+
+**Availability**
+AMS provides well-architected reviews, configuration rule checks, risk prevention, management, and more.
+**AMS monitors service 24 hours a day**, with proactive alarms and a complete incident management lifecycle from response to resolution.
+
+**Efficiency**
+AMS takes an approach that prioritizes operations automation to reduce human error and promote consistency, speed, accuracy and cost savings. Our customers receive an average AWS and operational cost reduction of 10-15%. Through automation, our teams can focus on complex customer issues and continually improve mechanisms to achieve customer results.
+
+**Resilience**
+AMS scales our customers' operational capabilities and evolves to meet their needs and the ever-changing security landscape. The AMS operating model is based on a continuous learning engine that evaluates workloads and pipelines according to dynamic security policies.
+
+**Conformity**
+AMS offers an accelerated path toward meeting compliance needs. AMS has obtained certifications and attestations of compliance with **PCI-DSS, HIPAA, HiTrust, GDPR, ISO, SOC 1, 2 and 3 regulations.**
+We have pre-authorization to operate workloads that require the Moderate level of FedRamp.
+
+**Safety**
+150+ managed security checks and guardrails
+
+**Incident Management**
+80% of incidents detected and reported proactively
+
+**Automation**
+1.35 million SSM documents executed per month. up to 97% automated
+
+**Cost reduction**
+Average 10-15% annual AWS and operational cost savings
+
+**AWS Specialist**
+24/7 global coverage with Tier 1 response and remediation
+
+
+AWS Managed Services manages the day-to-day operations of your AWS infrastructure in alignment with ITIL processes. AWS Managed Services provides basic integration with IT Service Management (ITSM) tools such as the ServiceNow platform.
+
+AWS Managed Services provide ongoing management of your AWS infrastructure so you can focus on your applications. By implementing best practices to maintain your infrastructure, AWS Managed Services helps reduce your operational overhead and risk.
+
+AWS Managed Services currently support more than 20 of the most critical services for businesses and will continue to expand our list of integrated AWS services.
+
+AWS Managed Services are designed to meet the needs of companies that require stringent SLAs, adhere to corporate compliance, and integrate with their ITIL®-based systems and processes.
+
+## <a id="section-2" ></a> **2 - AWS Compliance Programs**
 
 [Programas de conformidade da AWS](https://aws.amazon.com/pt/compliance/programs/)
 

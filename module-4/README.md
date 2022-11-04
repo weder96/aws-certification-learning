@@ -279,13 +279,19 @@ Complete set of checks to help optimize your entire AWS infrastructure.
 It advises on safety, performance, cost, fault tolerance and service limits.
 Additional benefits include weekly update notifications, alerts, automated actions with CloudWatch, and programmatic access using the AWS Support API.
 
+AWS Trusted Advisor can improve the performance of your service by checking your service limits, ensuring you take advantage of provisioned throughput, and monitoring for overutilized instances.
+
 Trusted Advisor is an online resource that helps to reduce cost, increase performance and improve security by optimizing your AWS environment. Trusted Advisor provides real time guidance to help you provision your resources following best practices.
 
 <img src="../images/extra/trustedAdvisor.jpg" alt="trustedAdvisor" width=80%  />
 
 **Cheat Sheets**
 
+https://digitalcloud.training/aws-security-services/
+
 **References**
+
+https://aws.amazon.com/premiumsupport/technology/trusted-advisor/
 
 **Videos**
 

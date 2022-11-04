@@ -18,6 +18,19 @@
 
 [consolidated-billing](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html)
 
+
+**Cheat Sheets**
+
+https://digitalcloud.training/aws-billing-and-pricing/
+
+**References:**
+
+https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html
+
+**Videos**
+
+https://www.youtube.com/watch?v=YiqTBDmn00I
+
 *************************************************************************************************************
 ## <a id="section-2" ></a> **2 - AWS budgets**
 
