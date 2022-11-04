@@ -58,8 +58,8 @@ S3 is a universal namespace, so bucket names must be globally unique.
 
 The table below provides the details for each Amazon S3 storage class:
 
-| |S3 Standard |S3 Intelligent Tiering |S3 Standard-IA |S3 One Zone-IA |S3 Glacier Instant Retrieval |S3 Glacier Flexible Retrieval |S3 Glacier Deep Archive|
-|---|---------------|-----------------------|----- ----------|---------------|----------------------- --------|-------------------------------|--------- ------|
+|S3 Standard |S3 Intelligent Tiering |S3 Standard-IA |S3 One Zone-IA |S3 Glacier Instant Retrieval |S3 Glacier Flexible Retrieval |S3 Glacier Deep Archive|
+|------------|-----------------------|---------------|---------------|-----------------------------|-----------------------------|-----------------------|
 |Designed for durability |11 9s |11 9s |11 9s |11 9s |11 9s |11 9s |11 9s|
 |Designed for availability |99.99% |99.9& |99.9% |99.5% |99.9% |99.99% |99.99%|
 |Availability SLA |99.9% |99% |99% |99% |99% |99.99% |99.9%|
@@ -70,7 +70,8 @@ The table below provides the details for each Amazon S3 storage class:
 |First byte latency |milliseconds |milliseconds |milliseconds |milliseconds |milliseconds |minutes or hours| hours|
 
 
-When you successfully upload a file to S3, you receive an HTTP 200 code.
+
+#### When you successfully upload a file to S3, you receive an HTTP 200 code.
 
 S3 is a highly durable, persistent data store.
 
@@ -86,6 +87,7 @@ The following table provides a description of persistent, transient, and ephemer
 |Persistent Data Store |Data is durable and sticks around after reboots, restarts, or power cycles |S3, Glacier, EBS, EFS|
 |Transient Data Store |Data is just temporarily stored and passed along to another process or persistent store |SQS, SNS|
 |Ephemeral Data Store |Data is lost when the system is stopped |EC2 Instance Store, Memcached|
+
 
 
 **Bucket names must follow a set of rules:**
@@ -187,7 +189,7 @@ Amazon EBS volumes provide the consistent, low-latency performance you need to r
 The following EBS volumes appear most frequently in AWS exams:
 
 |Volume Type |EBS Provisioned IOPS SSD (io1/io2) |EBS General Purpose SSD (gp2/gp3) |Throughput Optimized HDD (st1) |Cold HDD (sc1)|
-|---------------|-------------------------------- -----|------------------------------------|------- ------------------------|--------------|
+|---------------|-------------------------------------|------------------------------------|-------------------------------|--------------|
 |Short Description |Highest performance SSD volume designed for latency-sensitive transactional workloads| General Purpose SSD volume that balances price performance for a wide variety of transactional workloads| Low-cost HDD volume, designed for frequently accessed. Throughput intensive workloads| Lowest cost HDD volume designed for less frequently accessed workloads|
 |Use Cases |I/O-intensive NoSQL and relational databases| Boot volumes, low-latency interactive apps, dev & test| Big data, data warehouses, log processing| Colder data requiring fewer scans per day|
 |Volume Size |4 GiB – 16 TiB| 1 GiB – 16 TiB| 125 GB – 16 TiB |125 GB – 16 TiB|
@@ -306,6 +308,14 @@ AWS Storage Gateway is a set of hybrid cloud storage services that provide on-pr
 
 
 https://docs.aws.amazon.com/vpc/latest/privatelink/gateway-endpoints.html#gateway-endpoint-pricing
+
+
+
+**Cheat Sheets**
+
+**References:**
+
+**Videos**
 
 
 

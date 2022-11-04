@@ -40,7 +40,7 @@ To other repositories that will be linked to the same but specific to each Exam.
   - [Module 20: Management and Governance][20]
   - [Module 21: Amazon CloudFront][21]
   - [Module 22: Suggestion of laboratories AWS][22]
-  - [MOdule 23: AWS Management Tools (SOA)][23]
+  - [Module 23: AWS Management Tools (SOA)][23]
   - [Module 99: Concepts‌ ‌and‌‌ Strategies][99]
  
 
