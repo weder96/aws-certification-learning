@@ -6,17 +6,18 @@
 
 ## Content
 1. <a href="#section-1"> Amazon Simple Storage Service (S3) </a>
-2. <a href="#section-2"> AWS Snowball </a>
+2. <a href="#section-2"> Amazon Snowball Edge </a>
 3. <a href="#section-3"> Amazon Elastic Block Store (EBS) </a>
-4. <a href="#section-4"> Instance Store Volumes </a>
+4. <a href="#section-4"> Amazon Instance Store Volumes </a>
 5. <a href="#section-5"> Amazon Elastic File System (EFS) </a>
-6. <a href="#section-6"> AWS Storage Gateway </a>
+6. <a href="#section-6"> Amazon Storage Gateway </a>
 7. <a href="#section-7"> Amazon FSx </a>
-
+8. <a href="#section-7"> AWS Backup  </a>
+9. <a href="#section-7"> AWS Snowmobile </a>
+10. <a href="#section-7"> AWS Transfer Family </a>
 
 ----------------------------------------------------------------------------------------------------
-
-## <a id="section-1" ></a> **1 - Amazon Simple Storage Service (S3)**
+## <a id="section-1"></a> **1 - Amazon Simple Storage Service (S3)**
 
 Amazon S3 is an object store built to store and retrieve any amount of data from anywhere – websites and mobile apps, enterprise applications, and data from sensors or IoT devices.
 
@@ -1166,7 +1167,7 @@ AWS provide some performance guidelines for Amazon S3. These are summarized here
 
 **Use Amazon S3 Transfer Acceleration to Minimize Latency Caused by Distance** – Amazon S3 Transfer Acceleration manages fast, easy, and secure transfers of files over long geographic distances between the client and an S3 bucket. Transfer Acceleration takes advantage of the globally distributed edge locations in Amazon CloudFront. As the data arrives at an edge location, it is routed to Amazon S3 over an optimized network path. Transfer Acceleration is ideal for transferring gigabytes to terabytes of data regularly across continents. It’s also useful for clients that upload to a centralized bucket from all over the world.
 
-## Glacier
+### Glacier
 
 Glacier is an archiving storage solution for infrequently accessed data.
 
@@ -1292,7 +1293,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-bucket-user-policy-spec
 
 
 ----------------------------------------------------------------------------------------------------
-## <a id="section-2"></a> **2 - AWS Snowball**
+## <a id="section-2"></a> **2 - AWS Snowball Edge**
 
 AWS Snowball (Snowball), you can transfer hundreds of terabytes or petabytes of data between your on-premises data centers and Amazon Simple Storage Service (Amazon S3).
 
@@ -1321,8 +1322,7 @@ Snowball must be ordered and returned in the same region.
 To speed up data transfer, it is recommended that you run simultaneous instances of the AWS Snowball Client on multiple endpoints and transfer small files in batches.
 
 ----------------------------------------------------------------------------------------------------
-## <a id="section-3" ></a> **3 - Amazon Elastic Block Store (EBS)**
-
+## <a id="section-3"></a> **3 - Amazon Elastic Block Store (EBS)**
 
 **EBS Pricing**
 [EBS Pricing](https://aws.amazon.com/ebs/pricing/)
@@ -1349,7 +1349,6 @@ The following EBS volumes appear most frequently in AWS exams:
 |Max Throughput***Volume |1,000 MiB/s |250 MiB/s (gp2) |1000 MiB/s (gp3) |500 MiB/s |250 MiB/s|
 |Can be boot volume? |Yes |Yes |No |No|
 |EBS Multi-attach |Supported |Not Supported |Not Supported |Not Supported|
-
 
 
 EBS volume data persists regardless of the lifetime of the instance.
@@ -1379,8 +1378,26 @@ EBS Snapshots:
 - Snapshots can only be accessed through EC2 APIs.
 - EBS volumes are AZ specific, but Snapshots are region specific.
 
+
+**Cheat Sheets**
+
+https://tutorialsdojo.com/amazon-ebs/
+
+https://tutorialsdojo.com/ebs-ssd-vs-hdd/
+
+**References:**
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html
+
+https://aws.amazon.com/ebs/faqs/
+
+**Videos**
+
+https://www.youtube.com/watch?v=LW7x8wyLFvw
+
+
 ----------------------------------------------------------------------------------------------------
-## <a id="section-4" ></a> **4 - Instance Store Volumes**
+## <a id="section-4"></a> **4 - Instance Store Volumes**
 
 **Instance Store Volumes** are high-performance local disks that are physically connected to the host computer on which an EC2 instance runs.
 
@@ -1393,7 +1410,7 @@ EBS Snapshots:
 **Instance Store Volumes** cannot be detached/reattached.
 
 -------------------------------------------------- --------------------------------------------------
-## <a id="section-5" ></a> **5 - Amazon Elastic File System (EFS)**
+## <a id="section-5"></a> **5 - Amazon Elastic File System (EFS)**
 
 EFS is a fully managed service that makes it easy to configure and scale your file storage on the Amazon Cloud.
 
@@ -1435,9 +1452,177 @@ Instances can be behind an ELB.
 
 Amazon EFS is designed for bursting to allow for high levels of throughput over periods of time.
 
-----------------------------------------------------------------------------------------------------
 
-## <a id="section-6" ></a> **6 - AWS Storage Gateway**
+Amazon EFS is a fully managed service for hosting Network File System (NFS) filesystems in the cloud.
+
+It is an implementation of a NFS file share and is accessed using the NFS protocol.
+
+It provides elastic storage capacity and pay for what you use (in contrast to Amazon EBS with which you pay for what you provision).
+
+You can configure mount-points in one, or many, AZs.
+
+You can mount an AWS EFS filesystem from on-premises systems ONLY if you are using AWS Direct Connect or a VPN connection.
+
+Typical use cases include big data and analytics, media processing workflows, content management, web serving, home directories etc.
+
+Uses a pay for what you use model with no pre-provisioning required.
+
+AWS EFS can scale up to petabytes.
+
+AWS EFS is elastic and grows and shrinks as you add and remove data.
+
+You can concurrently connect up to thousands of Amazon EC2 instances, from multiple AZs.
+
+A file system can be accessed concurrently from all AZs in the region where it is located.
+
+The following diagram depicts the various options for mounting an EFS filesystem:
+
+
+![EFS filesystem](../images/extra//amazon-efs-file-system.jpeg)
+
+
+
+Access to AWS EFS file systems from on-premises servers can be enabled via AWS Direct Connect or AWS VPN.
+
+You mount an AWS EFS file system on your on-premises Linux server using the standard Linux mount command for mounting a file system via the NFS protocol.
+
+The Amazon VPC of the connecting instance must have DNS hostnames enabled.
+
+EFS provides a file system interface, file system access semantics (such as strong consistency and file locking).
+
+Data is stored across multiple AZs within a region.
+
+Read after write consistency.
+
+Need to create mount targets and choose AZs to include (recommended to include all AZ’s).
+
+Instances can be behind an Elastic Load Balancer (ELB).
+
+Amazon EFS is compatible with all Linux-based AMIs for Amazon EC2.
+
+Using the EFS-to-EFS Backup solution, you can schedule automatic incremental backups of your Amazon EFS file system.
+
+The following table provides a comparison of the storage characteristics of EFS vs EBS:
+
+
+|	                        |Amazon EFS	                |Amazon EBS Provisioned IOPS|
+|---------------------------|---------------------------|---------------------------|
+|Availability and durability	|Data is stored redundantly across multiple AZs	|Data is stored redundantly in a single AZ|
+|Access	|Up to thousands of Amazon EC2 instances, from multiple AZs, can connect concurrently to a file system	|A single Amazon EC2 instance in a single AZ can connect to a file system|
+|Use cases	|Big data and analytics, media processing and workflows, content management, web serving and home directories	|Boot volumes, transactional and NoSQL databases, data warehousing and ETL|
+
+
+### Backups and Lifecycle Management
+Automatic backups are enabled by default and use AWS Backup.
+
+Lifecycle management moves files that have not been accessed for a period of time to the EFS Infrequent Access Storage class.
+
+**Amazon EFS Performance**
+
+There are two performance modes:
+
+* “General Purpose” performance mode is appropriate for most file systems.
+* “Max I/O” performance mode is optimized for applications where tens, hundreds, or thousands of EC2 instances are accessing the file system.
+
+Amazon EFS is designed to burst to allow high throughput levels for periods of time.
+
+There are two throughput modes:
+
+* “Bursting” – throughput scales with file system size.
+* “Provisioned” – Throughput is fixed at the specified amount.
+
+Amazon EFS file systems are distributed across an unconstrained number of storage servers, enabling file systems to grow elastically to petabyte scale and allowing massively parallel access from Amazon EC2 instances to your data.
+
+This distributed data storage design means that multithreaded applications and applications that concurrently access data from multiple Amazon EC2 instances can drive substantial levels of aggregate throughput and IOPS.
+
+The table below compares high-level performance and storage characteristics for AWS’s file  (EFS) and block (EBS) cloud storage offerings:
+
+
+
+|                       |Amazon EFS	                |Amazon EBS Provisioned IOPS|
+|-----------------------|---------------------------|---------------------------|
+|Per-operation latency	|Low, consistent latency	|Lowest, consistent latency|
+|Throughput scale	    |10+ GB per second	        |Up to 2 GB per second|
+
+
+### Amazon EFS Encryption
+
+EFS offers the ability to encrypt data at rest and in transit.
+
+Encryption keys are managed by the AWS Key Management Service (KMS).
+
+Encryption in transit:
+
+* Data encryption in transit uses Transport Layer Security (TLS) 1.2 to encrypt data sent between your clients and EFS file systems.
+* Encryption in transit is enabled when mounting the file system.
+
+Encryption at rest:
+
+* Enable encryption at rest in the EFS console or by using the AWS CLI or SDKs.
+* Encryption at rest MUST be enabled at file system creation time.
+* Data encrypted at rest is transparently encrypted while being written, and transparently decrypted while being read.
+
+Encryption of data at rest and of data in transit can be configured together or separately.
+
+### Amazon EFS Access Control
+
+When you create a file system, you create endpoints in your VPC called “mount targets”.
+
+When mounting from an EC2 instance, your file system’s DNS name, which you provide in your mount command, resolves to a mount target’s IP address.
+
+You can control who can administer your file system using IAM (user-based and resource-based policies)
+
+You can control the NFS clients that can access your file systems (resource-based policies).
+
+You can control access to files and directories with POSIX-compliant user and group-level permissions.
+
+POSIX permissions allow you to restrict access from hosts by user and group.
+
+EFS Security Groups act as a firewall, and the rules you add define the traffic flow.
+
+Monitoring and Reporting
+
+The Amazon EFS console shows the following monitoring information for your file systems:
+
+* The current metered size.
+* The number of mount targets.
+* The lifecycle state.
+
+Amazon EFS reports metrics for Amazon CloudWatch.  A few useful metrics are:
+
+* TotalIOBytes – use the daily Sum statistic to determine throughput.
+* ClientConnections – use the daily Sum statistic to track the number of connections from EC2 instances.
+* BurstCreditBalance – monitor the burst credit balance.
+
+
+### Logging and Auditing
+Amazon EFS is integrated with AWS CloudTrail.
+
+CloudTrail captures all API calls for Amazon EFS as events, including calls from the Amazon EFS console and from code calls to Amazon EFS API operations.
+
+![AWS-Training-Amazon-EFS1](../images/extra/AWS-Training-Amazon-EFS1.jpg)
+
+
+**Cheat Sheets**
+
+https://tutorialsdojo.com/amazon-efs/
+
+https://digitalcloud.training/amazon-efs/
+
+https://tutorialsdojo.com/amazon-s3-vs-ebs-vs-efs/
+
+**References:**
+
+**Videos**
+
+https://www.youtube.com/user/AmazonWebServices/search?query=EFS
+
+
+
+
+
+----------------------------------------------------------------------------------------------------
+## <a id="section-6"></a> **6 - AWS Storage Gateway**
 
 The [**AWS Storage Gateway**](https://aws.amazon.com/storagegateway/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc) is a hybrid cloud storage service that gives you virtually unlimited local access to cloud storage.
 
@@ -1543,7 +1728,7 @@ You might need to shut down or reboot your VM for maintenance, such as when appl
 * For volume and tape gateways, stop the gateway, reboot the VM, then start the gateway.
 
 
-## Monitoring AWS Storage Gateway
+### Monitoring AWS Storage Gateway
 
 The following metrics are useful when [monitoring](https://docs.aws.amazon.com/storagegateway/index.html) cache usage for file, cached-volume, and tape gateways.
 
@@ -1580,7 +1765,7 @@ https://www.youtube.com/watch?v=GbFoiMpKctI
 
 
 ----------------------------------------------------------------------------------------------------
-## <a id="section-7" ></a> **7 - Amazon FSx**
+## <a id="section-7"></a> **7 - Amazon FSx**
 
 Amazon FSx provides fully managed third-party file systems.
 
@@ -1650,7 +1835,7 @@ Can optimize costs by removing redundant data with Data Deduplication.
 
 User quotas provide tracking, monitoring, and enforcing of storage consumption to help reduce costs.
 
-## Amazon FSx for Lustre
+### Amazon FSx for Lustre
 
 ### Overview of FSx for Lustre
 
@@ -1745,14 +1930,261 @@ https://digitalcloud.training/amazon-fsx/
 
 **Videos**
 
+----------------------------------------------------------------------------------------
+## <a id="section-8"></a> **8 - Amazon Backup**
+
+A service that enables you to centralize and automate data protection across AWS services and hybrid workloads.
+
+### Concepts
+
+- Backup plan
+
+    - A policy expression that determines when and how you want your AWS resources backed up.
+
+    - Stores periodic backups incrementally.
+
+    - A backup plan can be created using the AWS Backup console, API, CLI, SDK, or an AWS CloudFormation template.
+
+    - Backup plans can be assigned the following:
+
+        - Resource type – every instance or resource.
+
+        - Resource – a single instance of a resource type.
+
+    - Supports multiple backup plans for workloads with different backup requirements.
+
+    - To delete a backup plan, you must first delete all resources associated with it.
+
+    - When you change the retention period in a backup rule, the retention period of backups created before the update remains unchanged.
+
+- Backup vault
+
+    A container to store and organize your backups.
+
+    You can just create multiple backup vaults if you need different encryption keys or access policies for different groups of backups.
+
+    To encrypt the backups placed in the vault, you will need to use an AWS KMS encryption key.
+
+    AWS Backup Vault Lock allows you to enforce retention periods and prevent early deletions.
+
+    You cannot delete the following backup vaults:
+
+    - AWS Backup default backup vault.
+
+    - Amazon EFS automatic backup vault.
+
+- Backup
+
+    The backup or recovery point is the content of a resource at a specific time.
+
+    Recovery points are stored in backup vaults.
+
+    A backup can be restored using the AWS Backup console or API.
+
+    Backups can be created:
+
+    - Automatically with backup plans.
+
+    - Manually by initiating an on-demand backup.
+
+    You can create backup copies across:
+
+    - AWS Regions
+
+    - AWS accounts
+
+    You can configure lifecycle policies and add tags to a backup.
+
+
+- AWS Backup Audit Manager
+    * Audit Frameworks
+        - A framework is a set of controls that allows you to assess your backup practices.
+        - Find backup activity and resources that aren’t yet in compliance with the controls you’ve set up.
+        - Each framework applies to a single account and a maximum of 10 per AWS Region.
+        - Frameworks are classified into two types:
+            - AWS Backup framework
+            - Custom framework
+
+- Audit Reports
+
+    Automatically generate an audit trail of daily and on-demand reports.
+
+    You must first create a report plan from a report template in order to create daily or on-demand reports.
+
+    - Backup report templates
+
+    - Compliance report templates
+
+    Reports can only be in the same region and account as the S3 bucket.
+
+    Each AWS account can only have a maximum of 20 report plans.
+
+### Monitoring
+* AWS Organizations to manage and monitor backup, restore, and copy jobs across multiple AWS accounts.
+    - Amazon EventBridge to view and monitor AWS Backup events.
+    - AWS CloudWatch to track metrics, create alarms, and view dashboards.
+    - AWS CloudTrail to monitor AWS Backup API calls.
+    - Amazon SNS to subscribe and notify you of AWS Backup events.
+
+### Pricing
+* You are charged for the following:
+    - Amount of backup storage you use.
+    - Amount of backup data that has been transferred between AWS Regions.
+    - Amount of backup data you restore.
+    - Number of backup evaluations.
 
 
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-backup/
+
+**References:**
+
+https://aws.amazon.com/backup/
+
+https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html
+
+**Videos**
+
+https://www.youtube.com/watch?v=peUjKlE3dEk
+
+https://www.youtube.com/watch?v=TCvDhG88zeo
+
+-----------------------------------------------------------------------------------------------------------------------------
+## <a id="section-9"></a> **9 - Amazon Snowmobile**
+
+* An exabyte-scale data transfer service used to move extremely large amounts of data to AWS. You can transfer up to 100PB per * Snowmobile.
+* Snowmobile will be returned to your designated AWS region where your data will be uploaded into the AWS storage services you have selected, such as S3 or Glacier.
+* Snowmobile uses multiple layers of security to help protect your data including dedicated security personnel:
+    - GPS tracking, alarm monitoring
+    - 24/7 video surveillance
+    - an optional escort security vehicle while in transit
+    - All data is encrypted with 256-bit encryption keys you manage through the AWS Key Management Service and designed for security and full chain-of-custody of your data.
+    - Snowmobile pricing is based on the amount of data stored on the truck per month.
+
+
+**Cheat Sheets**
+
+https://tutorialsdojo.com/aws-snowmobile/
+
 **References:**
 
 **Videos**
+
+https://www.youtube.com/watch?v=8vQmTZTq7nw
+
+-----------------------------------------------------------------------------------------------------------
+## <a id="section-10"></a> **10 - Amazon Transfer Family**
+
+* AWS Transfer Family is a secure transfer service for moving files into and out of AWS storage services, such as Amazon S3 and Amazon EFS.
+* With Transfer Family, you do not need to run or maintain any server infrastructure of your own.
+* You can provision a Transfer Family server with multiple protocols (SFTP, FTPS, FTP).
+
+![ransfer family](../images/extra/Amazon-Transfer-Family-1200x457.jpg)
+
+### Benefits
+
+1. Fully managed service and scales in real time.
+
+2. You don’t need to modify your applications or run any file transfer protocol infrastructure.
+
+3. Supports up to 3 Availability Zones and is backed by an auto scaling, redundant fleet for your connection and transfer requests.
+
+4. Integration with S3 and EFS lets you capitalize on their features and functionalities as well.
+
+5. Managed File Transfer Workflows (MFTW) is a fully managed, serverless File Transfer Workflow service to set up, run, automate, and monitor processing of files uploaded using Transfer Family.
+
+* Server endpoint types:
+
+1. Publicly accessible
+- Can be changed to a VPC hosted endpoint. Server must be stopped before making the change.
+
+2. VPC hosted
+- Can be optionally set as Internet Facing. Take note that only SFTP and FTPS are supported for the VPC hosted endpoint.
+
+
+### Custom Hostnames
+
+1. Your server host name is the hostname that your users enter in their clients when they connect to your server. You can use a custom domain for this. To redirect traffic from your registered custom domain to your server endpoint, you can use Amazon Route 53 or any DNS provider.
+
+
+### How to delegate access
+* You first associate your hostname with the server endpoint, then add your users and provision them with the right level of access. A server hostname must be unique in the AWS Region where it’s created.
+
+* Your users’ transfer requests are then serviced directly out of your Transfer Family server endpoint.
+
+* If you have multiple protocols enabled for the same server endpoint and want to provide access using the same user name over multiple protocols, you can do so as long as the credentials specific to the protocol have been set up in your identity provider.
+
+
+### Managing Users
+
+* Supported identity provider types:
+    - Service managed using SSH keys
+    - AWS Managed Microsoft AD (does not support Simple AD)
+    - A custom method via a RESTful interface. The custom identity provider method uses Amazon API Gateway and enables you to integrate your directory service to authenticate and authorize your users. The service automatically assigns an identifier that uniquely identifies your server.
+
+* For service managed identities, each user name must be unique on your server.
+
+* You also specify a user’s home directory, or landing directory, and assign an AWS IAM role to the user. 
+    - Optionally, you can provide a session policy to limit user access only to the home directory of your Amazon S3 bucket.
+    - The home directory is your S3 bucket or EFS filesystem. If no path is specified, your users are redirected to the root folder.
+* Amazon S3 vs Amazon EFS access management
+
+
+|Amazon S3      |Amazon EFS|
+|---------------|----------|
+|Supports session policies |Supports POSIX user, group, and secondary group IDs|
+|Both support public/private keys, home directories and logical directories|
+
+
+* Logical directories lets you construct a virtual directory structure that uses user-friendly names so that you can avoid disclosing absolute directory paths, Amazon S3 bucket names, and EFS file system names to your end users.
+
+### Pricing
+
+You are billed on an hourly basis for each of the protocols enabled, from the time you create and configure your server endpoint, until the time you delete it. 
+You are also billed based on the amount of data uploaded and downloaded over SFTP, FTPS, or FTP.
+There is no additional charge for using managed workflows.
+
+
+### AWS Transfer for SFTP     
+
+* SFTP or Secure Shell File Transfer Protocol is a file transfer over SSH.
+* SFTP servers for Transfer Family operate over port 22.  
+* SFTP is a newer protocol and uses a single channel for commands and data, requiring fewer port openings than FTPS.
+
+### AWS Transfer for FTPS 
+
+* FTPS or File Transfer Protocol Secure is a file transfer with TLS encryption.
+* The port range that AWS Transfer Family uses to establish FTPS data connections is 8192–8200. For access connections, use port 21.
+* When creating an FTPS server, you need to provide a server certificate which needs to be uploaded to AWS Certificate Manager.
+
+### AWS Transfer for FTP
+
+* FTP or File Transfer Protocol is an unencrypted file transfer.
+* The port range that AWS Transfer Family uses to establish FTP data connections is 8192–8200. For access connections, use port 21.
+* Only supported for access within a VPC; cannot be public facing.
+
+
+**Cheat Sheets**
+
+https://tutorialsdojo.com/aws-transfer-family/
+
+**References:**
+
+https://docs.aws.amazon.com/transfer/latest/userguide/what-is-aws-transfer-family.html
+
+https://aws.amazon.com/aws-transfer-family/faqs/
+
+**Videos**
+
+https://www.youtube.com/results?search_query=aws-transfer-family
+
+https://www.youtube.com/watch?v=AQtTG2N_QCg
+
+https://www.youtube.com/watch?v=wYaL06kAIxs
+
+https://www.youtube.com/watch?v=ldCos3c66s0
 
 
 

@@ -32,7 +32,7 @@
 25. <a href="#section-99"> How do I report abuse of AWS resources? </a>
 
 ---------------------------------------------------------------------------------------
-## <a id="section-1" ></a> **1 - Amazon Inspector**
+## <a id="section-1"></a> **1 - Amazon Inspector**
 ![Amazon Inspector](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_Amazon-Inspector_48.png)
 
 The AWS Cloud allows for a shared responsibility model.
@@ -76,8 +76,16 @@ Compliance programs include:
 
 **Videos**
 
+https://www.youtube.com/watch?v=Nx8s7lwapoE
+
+https://www.youtube.com/watch?v=05zUYbJ9hC8
+
+https://www.youtube.com/watch?v=F1-hvgZyw80
+
+https://www.youtube.com/results?search_query=aws+inspector
+
 ---------------------------------------------------------------------------------------
-## <a id="section-2" ></a> **2 - Amazon Artifact**
+## <a id="section-2"></a> **2 - Amazon Artifact**
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Artifact_48.png)
 
 [AWS Artifact](https://aws.amazon.com/en/artifact/) is your one-stop resource for compliance-related information that is important to you.
@@ -110,9 +118,16 @@ and certifications from accreditation bodies across geographies and vertical com
 [https://aws.amazon.com/artifact/faq/](https://aws.amazon.com/artifact/faq/)
 
 
+**Videos**
+
+https://www.youtube.com/results?search_query=aws+artifact
+
+https://www.youtube.com/watch?v=u5UV-wr-lIA
+
+https://www.youtube.com/watch?v=lCUATy4emgY
 
 ---------------------------------------------------------------------------------------
-## <a id="section-3" ></a> **3 - Amazon GuardDuty**
+## <a id="section-3"></a> **3 - Amazon GuardDuty**
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Artifact_48.png)
 
 Amazon GuardDuty provides threat detection and continuous security monitoring for malicious or unauthorized behavior to help protect your AWS accounts and workloads.
@@ -146,6 +161,12 @@ Continuous monitoring of events in:
 
 
 **Videos**
+
+https://www.youtube.com/results?search_query=amazon+guardduty
+
+https://www.youtube.com/watch?v=mKJ_ndS8q6M
+
+
 
 ---------------------------------------------------------------------------------------
 ## <a id="section-4"></a> **4 - AWS WAF & AWS Shield**
@@ -200,7 +221,7 @@ AWS KMS allows developers to easily encrypt data, either through one-click encry
 **Videos**
 
 ---------------------------------------------------------------------------------------
-## <a id="section-6" ></a> **6 - AWS CloudHSM**
+## <a id="section-6"></a> **6 - AWS CloudHSM**
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-CloudHSM_48.png)
 
 **AWS CloudHSM** is a cloud-based Hardware Security Module (HSM) that allows you to easily generate and use your own encryption keys in the AWS Cloud.
@@ -211,12 +232,23 @@ CloudHSM gives you the flexibility to integrate with your applications using ind
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-cloudhsm/
+
 [https://digitalcloud.training/aws-cloudhsm/](https://digitalcloud.training/aws-cloudhsm/)
 
 **References**
 
+https://aws.amazon.com/cloudhsm/
+
+https://docs.aws.amazon.com/cloudhsm/latest/userguide/introduction.html
+
 **Videos**
 
+https://www.youtube.com/results?search_query=amazon+cloudsm
+
+https://www.youtube.com/watch?v=BLnuUtjJNLE
+
+https://www.youtube.com/watch?v=5RRDhNZ6cO0
 
 
 ---------------------------------------------------------------------------------------
@@ -239,7 +271,7 @@ AWS Certificate Manager removes the time-consuming manual process of purchasing,
 https://tutorialsdojo.com/aws-certificate-manager/
 
 ---------------------------------------------------------------------------------------
-## <a id="section-8" ></a> **8 - AWS Inspector and AWS Trusted Advisor**
+## <a id="section-8"></a> **8 - AWS Inspector and AWS Trusted Advisor**
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_Amazon-Inspector_48.png)
 
@@ -296,7 +328,7 @@ https://aws.amazon.com/premiumsupport/technology/trusted-advisor/
 **Videos**
 
 ---------------------------------------------------------------------------------------
-## <a id="section-9" ></a> **9 - Penetration Testing**
+## <a id="section-9"></a> **9 - Penetration Testing**
 
 **Penetration Testing** is the practice of testing the security of the application itself for vulnerabilities, simulating an attack.
 
@@ -348,7 +380,7 @@ AWS SSO includes a user portal where your end users can find and access all assi
 
 
 ---------------------------------------------------------------------------------------
-## <a id="section-11" ></a> **11 - Amazon Cognito**
+## <a id="section-11"></a> **11 - Amazon Cognito**
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_Amazon-Cognito_48.png)
 
@@ -364,13 +396,29 @@ You can use identity pools and user pools separately or together.
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/amazon-cognito/
+
+https://digitalcloud.training/amazon-cognito/
+
 **References**
+
+https://aws.amazon.com/cognito/
+
+https://aws.amazon.com/cognito/faqs/
+
+https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html
 
 **Videos**
 
+https://www.youtube.com/results?search_query=amazon+cognito
+
+https://www.youtube.com/watch?v=KWjgiNgDfwI
+
+https://www.youtube.com/watch?v=OAR4ZHP8DEg
+
 
 ---------------------------------------------------------------------------------------
-## <a id="section-12" ></a> **12 - AWS Directory Services**
+## <a id="section-12"></a> **12 - AWS Directory Services**
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Directory-Service_48.png)
 
@@ -396,10 +444,31 @@ The table below summarizes the directory services covered on this page, as well 
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-directory-service/
+
+https://digitalcloud.training/aws-directory-services/
+
 **References**
+
+https://aws.amazon.com/directoryservice/features/?nc=sn&loc=2
+
+https://aws.amazon.com/directoryservice/pricing/?nc=sn&loc=3
+
+https://aws.amazon.com/directoryservice/faqs/?nc=sn&loc=5
+
+https://docs.aws.amazon.com/clouddirectory/latest/developerguide/what_is_cloud_directory.html
+
+https://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html
+
+https://docs.aws.amazon.com/clouddirectory/latest/developerguide/what_is_cloud_directory.html
 
 **Videos**
 
+https://www.youtube.com/results?search_query=aws+Directory+Service
+
+https://www.youtube.com/watch?v=AIdUw0i8rr0&t=2s
+
+https://www.youtube.com/watch?v=AxfAkGDTNRA
 
 ---------------------------------------------------------------------------------------
 ## <a id="section-13"></a> **13 - AWS Systems Manager Parameter Store**
@@ -446,9 +515,21 @@ Central audit for secret rotation.
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-audit-manager/
+
 **References**
 
+https://aws.amazon.com/audit-manager/
+
+https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html
+
 **Videos**
+
+https://www.youtube.com/results?search_query=amazon+audit-manager
+
+https://www.youtube.com/watch?v=G4yRj4nLwFI
+
+https://www.youtube.com/watch?v=UH9sDD9UT38
 
 ---------------------------------------------------------------------------------------
 ## <a id="section-16"></a> **16 - Amazon Certificate Manager**
@@ -468,9 +549,24 @@ Central audit for secret rotation.
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/amazon-detective/
+
 **References**
 
+https://aws.amazon.com/detective/
+
+https://aws.amazon.com/detective/faqs/
+
+https://docs.aws.amazon.com/detective/latest/adminguide/what-is-detective.html
+
+https://docs.aws.amazon.com/detective/latest/userguide/detective-investigation-about.html
+
 **Videos**
+
+https://www.youtube.com/results?search_query=amazon+detective
+
+https://www.youtube.com/watch?v=Rz8MvzPfTZA
+
 
 ---------------------------------------------------------------------------------------
 ## <a id="section-18"></a> **18 - Amazon Firewall Manager**
@@ -479,20 +575,46 @@ Central audit for secret rotation.
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-firewall-manager/
+
 **References**
 
+https://aws.amazon.com/firewall-manager/features/
+
+https://aws.amazon.com/firewall-manager/pricing/
+
+https://aws.amazon.com/firewall-manager/faqs/
+
 **Videos**
+
+https://www.youtube.com/results?search_query=aws+firewall+manager
+
+https://www.youtube.com/watch?v=1nir_Mdy3bQ
 
 ---------------------------------------------------------------------------------------
 ## <a id="section-19"></a> **19 - Amazon Macie**
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_Amazon-Macie_48.png)
 
+
 **Cheat Sheets**
+
+https://tutorialsdojo.com/amazon-macie/
 
 **References**
 
+https://aws.amazon.com/macie/
+
+https://docs.aws.amazon.com/macie/latest/userguide/what-is-macie.html
+
+https://aws.amazon.com/macie/faq/
+
+https://www.youtube.com/watch?v=LCjX2rsQ2wA
+
+
 **Videos**
+
+https://www.youtube.com/watch?v=ogVamzF2Dzk
 
 ---------------------------------------------------------------------------------------
 ## <a id="section-20"></a> **20 - Amazon Network Firewall**
@@ -501,9 +623,19 @@ Central audit for secret rotation.
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-network-firewall/
+
 **References**
 
+https://aws.amazon.com/network-firewall/
+
+
 **Videos**
+
+https://www.youtube.com/results?search_query=Amazon+Network+Firewall
+
+https://www.youtube.com/watch?v=WNFknf9zyZg
+
 
 ---------------------------------------------------------------------------------------
 ## <a id="section-21"></a> **21 - Amazon Resource Access Manager (AWS RAM)**
@@ -550,7 +682,7 @@ Central audit for secret rotation.
 **Videos**
 
 ---------------------------------------------------------------------------------------
-## <a id="section-99" ></a> **25 -  How do I report abuse of AWS resources?**
+## <a id="section-99"></a> **99 - How do I report abuse of AWS resources?**
 
 
 ### **I suspect that AWS resources are used for abusive or illegal purposes. How do I let AWS know?** [here](https://aws.amazon.com/pt/premiumsupport/knowledge-center/report-aws-abuse/)
