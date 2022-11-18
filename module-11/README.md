@@ -2,18 +2,18 @@
 
 [1]: https://github.com/weder96/aws-certification-learning
 
-# Módulo 11: AWS Analytics Services
+# Module 11: AWS Analytics Services
 
-## Conteúdo
-1. <a href="#section-1"> Amazon Elastic Map Reduce (Amazon EMR)</a>
-2. <a href="#section-2"> Amazona Athena</a>
-3. <a href="#section-3"> AWS Glue</a>
-4. <a href="#section-4"> Data Analysis and Query Use Cases</a>
-5. <a href="#section-5"> Amazon Kinesis</a>
-6. <a href="#section-6"> Amazon Kinesis Video Streams</a>
-7. <a href="#section-7"> Amazon Kinesis Data Streams</a>
-8. <a href="#section-8"> Amazon Kinesis Data Firehose</a>
-9. <a href="#section-9"> Amazon Kinesis Data Analytics</a>
+## Contents
+1. <a href="#section-01"> Amazon Elastic Map Reduce (Amazon EMR)</a>
+2. <a href="#section-02"> Amazona Athena</a>
+3. <a href="#section-03"> AWS Glue</a>
+4. <a href="#section-04"> Data Analysis and Query Use Cases</a>
+5. <a href="#section-05"> Amazon Kinesis</a>
+6. <a href="#section-06"> Amazon Kinesis Video Streams</a>
+7. <a href="#section-07"> Amazon Kinesis Data Streams</a>
+8. <a href="#section-08"> Amazon Kinesis Data Firehose</a>
+9. <a href="#section-09"> Amazon Kinesis Data Analytics</a>
 10. <a href="#section-10"> Amazon OpenSearch </a>
 11. <a href="#section-11"> Amazon Data Exchange </a>
 12. <a href="#section-12"> Amazon Data Pipeline </a>
@@ -42,9 +42,9 @@ You may also want to follow the links to the other services and read on to under
 But here we will try to explain each one and its advantages and also its disadvantages, as well as the links
 for you to delve deeper.
 
-------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
 
-## <a id="section-1" ></a> **1 - Amazon Elastic Map Reduce**
+## <a id="section-01"></a> **1 - Amazon Elastic Map Reduce**
 ![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-EMR_48.png)
 
 Amazon EMR is a web service that enables companies, researchers, data analysts, and developers to process large amounts of data easily and cost-effectively.
@@ -74,7 +74,7 @@ You can access Amazon EMR using the AWS Management Console, Command Line Tools, 
 With EMR you have access to the underlying operating system (you can use SSH).
 
 ------------------------------------------------------------------------------------------------------------------------
-## <a id="section-2" ></a> **2 - Amazon Athena**
+## <a id="section-02"></a> **2 - Amazon Athena**
 ![Amazon Athena](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Athena_48.png)
 
 Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL.
@@ -106,7 +106,7 @@ Amazon Athena uses a managed data catalog to store information and schemas about
 [https://aws.amazon.com/athena/faqs](https://aws.amazon.com/athena/faqs)
 
 ------------------------------------------------------------------------------------------------------------------------
-## <a id="section-3"></a> **3 - AWS Glue**
+## <a id="section-03"></a> **3 - AWS Glue**
 ![AWS Glue](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_AWS-Glue_48.png)
 
 AWS Glue is a fully managed, pay-as-you-go, extract, transform, and load (ETL) service that automates the time-consuming steps of preparing data for analysis.
@@ -156,7 +156,7 @@ AWS Glue DataBrew is a new visual data preparation tool that makes it easy for d
 
 
 ------------------------------------------------------------------------------------------------------------------------
-## <a id="section-4"></a> **4 - Data Analysis and Query Use Cases**
+## <a id="section-04"></a> **4 - Data Analysis and Query Use Cases**
 Query services like Amazon Athena, data warehouses like Amazon Redshift, and sophisticated data processing frameworks like Amazon EMR all address different needs and use cases.
 
 Amazon Redshift provides the fastest query performance for enterprise reporting and business intelligence workloads, particularly those involving extremely complex SQL with multiple joins and subqueries.
@@ -175,7 +175,7 @@ Amazon Athena provides the easiest way to run ad-hoc queries for data on S3 with
 |AWS Glue | ETL Service | Transform and move data to multiple destinations. Used to prepare and load data for analysis. The data source can be S3, RedShift or another database. The Glue Data Catalog can be consulted by Athena, EMR and RedShift Spectrum|
 
 ------------------------------------------------------------------------------------------------------------------------
-## <a id="section-5"></a> **5 - Kinesis**
+## <a id="section-05"></a> **5 - Kinesis**
 Amazon Kinesis makes it easy to collect, process, and analyze streaming data in real time so you can gain timely insights and react quickly to new information.
 
 - Collection services for processing streams of various data.
@@ -183,7 +183,7 @@ Amazon Kinesis makes it easy to collect, process, and analyze streaming data in 
 - There are **four types of Kinesis service**, detailed below.
 
 ------------------------------------------------------------------------------------------------------------------------
-## <a id="section-6"></a> **6 - Kinesis Video Streams**
+## <a id="section-06"></a> **6 - Kinesis Video Streams**
 
 ![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Kinesis_48.png)
 
@@ -198,7 +198,7 @@ Durably stores, encrypts and indexes video data streams and allows access to the
 - Supports encryption at rest with server-side encryption (KMS) with a client master key
 
 ------------------------------------------------------------------------------------------------------------------------
-## <a id="section-7"></a> **7 - Kinesis Data Streams**
+## <a id="section-07"></a> **7 - Kinesis Data Streams**
 
 ![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Kinesis-Data-Streams_48.png)
 
@@ -217,7 +217,7 @@ Common use cases include:
 - Complex stream processing.
 
 ------------------------------------------------------------------------------------------------------------------------
-## <a id="section-8"></a> **8 - Kinesis Data Firehose**
+## <a id="section-08"></a> **8 - Kinesis Data Firehose**
 
 ![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Kinesis-Firehose_48.png)
 
@@ -240,7 +240,7 @@ Firehose synchronously replicates data across three AZs as it travels to destina
 Each delivery stream stores data records for up to 24 hours.
 
 ------------------------------------------------------------------------------------------------------------------------
-## <a id="section-9"></a> **9 - Kinesis Data Analytics**
+## <a id="section-09"></a> **9 - Kinesis Data Analytics**
 
 ![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Kinesis-Data-Analytics_48.png)
 
@@ -365,8 +365,7 @@ OpenSearch Service supports authentication through SAML and Amazon Cognito.
 
 
 ------------------------------------------------------------------------------------------------------------------------
-
-## <a id="section-11" ></a> **11 - AWS Data Exchange**
+## <a id="section-11"></a> **11 - AWS Data Exchange**
 
 ![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_AWS-Data-Exchange_48.png)
 
@@ -389,8 +388,7 @@ how you create personalized mobile experiences using data from AWS Data Exchange
 
 
 ------------------------------------------------------------------------------------------------------------------------
-
-## <a id="section-12" ></a> **11 - AWS Data Pipeline**
+## <a id="section-12"></a> **12 - AWS Data Pipeline**
 
 ![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_AWS-Data-Pipeline_48.png)
 
@@ -429,7 +427,7 @@ For example, you can use AWS Data Pipeline to archive your web server's logs to 
 
 
 ------------------------------------------------------------------------------------------------------------------------
-## <a href="#section-13"></a> **13 - Amazon CloudSearch**
+## <a id="#section-13"></a> **13 - Amazon CloudSearch**
 
 ![Amazon CloudSearch](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-CloudSearch_48.png)
 
@@ -471,7 +469,7 @@ A fully-managed service in the AWS Cloud that makes it easy to set up, manage, a
 [https://www.youtube.com/watch?v=mdj8RQhqOEg](https://www.youtube.com/watch?v=mdj8RQhqOEg)
 
 ------------------------------------------------------------------------------------------------------------------------
-## <a href="#section-14"></a> **14 - Amazon Lake Formation**
+## <a id="#section-14"></a> **14 - Amazon Lake Formation**
 
 ![Amazon Lake Formation](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_AWS-Lake-Formation_48.png)
 
@@ -499,7 +497,7 @@ Your users can access a centralized data catalog that describes available datase
 
 
 ------------------------------------------------------------------------------------------------------------------------
-## <a href="#section-15"></a> **Amazon QuickSight**
+## <a id="#section-15"></a> **15 - Amazon QuickSight**
 
 ![Amazon QuickSight](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-QuickSight_48.png)
 
@@ -509,7 +507,7 @@ Your users can access a centralized data catalog that describes available datase
 
 
 ------------------------------------------------------------------------------------------------------------------------
-## <a href="#section-16"></a> **Amazon RedShift**
+## <a id="#section-16"></a> **16 - Amazon RedShift**
 
 ![Amazon RedShift](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Redshift_48.png)
 

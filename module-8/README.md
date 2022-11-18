@@ -5,19 +5,23 @@
 # Module 8: Databases
 
 ## Content
-1. <a href="#section-1"> Casos de uso para diferentes tipos de banco de dados </a>
-2. <a href="#section-2"> Amazon Relational Database Service (RDS) </a>
-3. <a href="#section-3"> Amazon DynamoDB </a>
-4. <a href="#section-4"> Amazon RedShift </a>
-5. <a href="#section-5"> Amazon ElastiCache </a>
-6. <a href="#section-6"> Amazon EMR </a>
-7. <a href="#section-7"> Amazon (RDS) Pricing </a>
-8. <a href="#section-8"> Amazon (RDS) Multiple Availability Zones (A-Z) </a>
-9. <a href="#section-9"> Enable automatic patching for the instances using the Amazon RDS console </a>
+1. <a href="#section-01"> Use Cases For Different Database Types </a>
+2. <a href="#section-02"> Amazon Relational Database Service (RDS) </a>
+3. <a href="#section-03"> Amazon DynamoDB </a>
+4. <a href="#section-04"> Amazon RedShift </a>
+5. <a href="#section-05"> Amazon ElastiCache </a>
+6. <a href="#section-06"> Amazon EMR </a>
+7. <a href="#section-07"> Amazon (RDS) Pricing </a>
+8. <a href="#section-08"> Amazon (RDS) Multiple Availability Zones (A-Z) </a>
+9. <a href="#section-09"> Enable automatic patching for the instances using the Amazon RDS console </a>
 10. <a href="#section-10"> Backups and Restoring a DB instance to a specified time </a>
+11. <a href="#section-11"> Amazon Neptune </a>
+12. <a href="#section-12"> Amazon Aurora </a>
+13. <a href="#section-13"> Amazon DocumentDB </a>
+14. <a href="#section-14"> Amazon QLDB is serverless </a>
 
-***************************************************************************************************************
-## <a id="section-1" ></a> **1 - Use Cases For Different Database Types**
+***********************************************************************************************************
+## <a id="section-01"></a> **1  - Use Cases For Different Database Types**
 
 The table below provides guidance on typical use cases for various AWS database/data storage services:
 
@@ -74,8 +78,8 @@ https://aws.amazon.com/rds/
 
 
 
-****************************************************** ****************************************************** ***********
-## <a id="section-2" ></a> **2 - Amazon Relational Database Service (RDS)**
+**********************************************************************************************************
+## <a id="section-02"></a> **2  - Amazon Relational Database Service (RDS)**
 
 Amazon Relational Database Service (Amazon RDS) is a managed service that makes it easy to set up, operate, and scale a relational database in the cloud.
 
@@ -159,7 +163,7 @@ RDS is a fully managed service and you do not have access to the underlying EC2 
 - Must have automated backups enabled on the primary (retention period > 0).
 
 ****************************************************** ****************************************************** ***********
-## <a id="section-3" ></a> **3 - Amazon DynamoDB**
+## <a id="section-03"></a> **3  - Amazon DynamoDB**
 Amazon DynamoDB is a fully managed NoSQL database service that delivers fast, predictable performance with seamless scalability.
 
 ### **Features and Benefits of Dynamo DB:**
@@ -205,7 +209,7 @@ It provides two reading models.
 Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available in-memory cache for DynamoDB that delivers up to a 10x performance improvement – ​​from milliseconds to microseconds – even at millions of requests per second.
 
 ****************************************************** ****************************************************** ***********
-## <a id="section-4"></a> **4 - Amazon RedShift**
+## <a id="section-04"></a> **4  - Amazon RedShift**
 
 Amazon Redshift is a fast, fully managed data warehouse that makes it simple and cost-effective to analyze all your data using standard SQL and existing Business Intelligence (BI) tools.
 
@@ -248,7 +252,7 @@ RedShift uses replication and continuous backups to increase availability and du
 - AZ/region level disasters.
 
 ***************************************************************************************************************
-## <a id="section-5" ></a> **5 - Amazon ElastiCache**
+## <a id="section-05"></a> **5  - Amazon ElastiCache**
 ElastiCache is a web service that makes it easy to deploy and run server nodes that support the Memcached or Redis protocol in the cloud.
 
 The in-memory cache provided by ElastiCache can be used to significantly improve latency and throughput for many read-intensive application workloads or compute-intensive workloads.
@@ -280,7 +284,7 @@ ElastiCache can be used to store session state.
 - **Redis** – complex model, supports encryption, master/slave replication, cross AZ (HA), automatic failover and backup/restore.
 
 ****************************************************** ****************************************************** ***********
-## <a id="section-6" ></a> **6 - Amazon EMR**
+## <a id="section-06"></a> **6  - Amazon EMR**
 
 **Amazon EMR** is a web service that enables companies, researchers, data analysts, and developers to process large amounts of data easily and cost-effectively.
 
@@ -293,7 +297,7 @@ It also supports **Apache Spark, HBase, Presto and Flink**.
 Most commonly used for log analysis, financial analysis, or extract, translate, and load (ETL) activities.
 
 ****************************************************** ****************************************************** ***********
-## <a id="section-7" ></a> **7 - Amazon (RDS) Pricing**
+## <a id="section-07"></a> **7  - Amazon (RDS) Pricing**
 
 [Amazon (RDS) Pricing](https://aws.amazon.com/rds/pricing/?nc1=h_ls)
 
@@ -315,9 +319,8 @@ As part of the AWS Free Tier, Amazon RDS helps new AWS customers get started for
 
 With Amazon RDS you are charged for the type and size of database, the uptime, any additional storage of backup (above the DB size), requests, deployment type (e.g. you pay for multi AZ), and data transfer outbound.
 
-
 ***************************************************************************************************************
-## <a id="section-8" ></a> **8 - Amazon (RDS) Multiple Availability Zones (A-Z)**
+## <a id="section-08"></a> **8  - Amazon (RDS) Multiple Availability Zones (A-Z)**
 [Amazon (RDS) Multiple Availability Zones](https://aws.amazon.com/rds/features/multi-az/)
 
 
@@ -331,13 +334,18 @@ Multi AZ provides a mechanism to failover the RDS database to another synchronou
 Periodically, Amazon RDS performs maintenance on Amazon RDS resources. Maintenance most often involves updates to the DB instance's underlying hardware, underlying operating system (OS), or database engine version. Updates to the operating system most often occur for security issues and should be done as soon as possible.
 
 Required patching is automatically scheduled only for patches that are related to security and instance reliability. Such patching occurs infrequently (typically once every few months) and seldom requires more than a fraction of your maintenance window.
-## <a id="#section-9"></a> **9 - Enable automatic patching for the instances using the Amazon RDS console**
+
+-----------------------------------------------------------------------------------------------------------------------
+## <a id="section-09"></a> **9  - Enable automatic patching for the instances using the Amazon RDS console**
 
 **Cheat Sheets**
-**References:**
-**Videos**
-## <a id="section-10" ></a> **10 - Backups and Restoring a DB instance to a specified time**
 
+**References:**
+
+**Videos**
+
+-----------------------------------------------------------------------------------------------------------------------
+## <a id="section-10"></a> **10 - Backups and Restoring a DB instance to a specified time**
 [Restoring a DB instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIT.html)
 
 You can restore an Amazon RDS database instance to a specific point in time with a granularity of 5 minutes. Amazon RDS uses transaction logs which it uploads to Amazon S3 to do this.
@@ -366,6 +374,106 @@ https://aws.amazon.com/blogs/aws/new-amazon-dynamodb-continuous-backups-and-poin
 
 https://www.youtube.com/watch?v=YVe9amljgaw&t=45s
 https://www.youtube.com/watch?v=n0KK094sPnQ
+
+-----------------------------------------------------------------------------------------------------------------------
+## <a id="section-11"></a> **11 - Amazon Neptune**
+
+![Neptune](../images/Architecture-Service-Icons_01312022/Arch_Database/48/Arch_Amazon-Neptune_48.png)
+
+**Cheat Sheets**
+
+https://tutorialsdojo.com/amazon-neptune/
+
+
+**References:**
+
+https://aws.amazon.com/neptune/
+
+**Videos**
+
+https://www.youtube.com/results?search_query=aws+neptume
+
+-----------------------------------------------------------------------------------------------------------------------
+## <a id="section-12"></a> **12 - Amazon Aurora**
+
+![Aurora](../images/Architecture-Service-Icons_01312022/Arch_Database/48/Arch_Amazon-Aurora_48.png)
+
+**Cheat Sheets**
+
+https://digitalcloud.training/amazon-aurora/
+
+https://tutorialsdojo.com/amazon-aurora/
+
+
+**References:**
+
+https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/
+
+https://aws.amazon.com/rds/aurora/details/mysql-details/
+
+https://aws.amazon.com/rds/aurora/details/postgresql-details/
+
+https://aws.amazon.com/rds/aurora/global-database/
+
+https://aws.amazon.com/rds/aurora/parallel-query/
+
+https://aws.amazon.com/rds/aurora/serverless/
+
+https://aws.amazon.com/rds/aurora/pricing/
+
+https://aws.amazon.com/rds/aurora/faqs/
+
+**Videos**
+
+https://www.youtube.com/results?search_query=Amazon+Aurora
+
+https://www.youtube.com/watch?v=U42mC_iKSBg
+
+https://www.youtube.com/watch?v=iwS1h7rLNBQ&t=2s
+
+-----------------------------------------------------------------------------------------------------------------------
+## <a id="section-13"></a> **13 - Amazon DocumentDB**
+
+![DocumentDB](../images/Architecture-Service-Icons_01312022/Arch_Database/48/Arch_Amazon-DocumentDB_48.png)
+
+**Cheat Sheets**
+
+https://tutorialsdojo.com/amazon-documentdb/
+
+
+**References:**
+
+https://aws.amazon.com/documentdb/faqs/
+
+https://aws.amazon.com/blogs/database/migrating-to-amazon-documentdb-with-the-online-method/
+
+
+**Videos**
+
+https://www.youtube.com/results?search_query=documentdb+aws
+
+-----------------------------------------------------------------------------------------------------------------------
+## <a id="section-14"></a> **14 - Amazon QLDB Serverless**
+
+![DocumentDB](../images/Architecture-Service-Icons_01312022/Arch_Database/48/Arch_Amazon-Quantum-Ledger-Database_48.png)
+
+**Cheat Sheets**
+
+https://tutorialsdojo.com/amazon-quantum-ledger-database-qldb/
+
+**References:**
+
+https://aws.amazon.com/qldb/faqs/
+
+https://aws.amazon.com/qldb/pricing/
+
+https://aws.amazon.com/blogs/aws/now-available-amazon-quantum-ledger-database-qldb/
+
+
+**Videos**
+
+https://www.youtube.com/results?search_query=Amazon+QLDB
+
 
 
 **Cheat Sheets**

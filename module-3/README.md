@@ -6,10 +6,10 @@
 
 
 ## Contents
-1. <a href="#section-1">AWS Global Infrastructure</a>
+1. <a href="#section-01">AWS Global Infrastructure</a>
 
 ****************************************************** ********************************************
-## <a id="section-1"></a> Section 1 - Global AWS Infrastructure
+## <a id="section-01"></a> **1 - Global AWS Infrastructure**
 An AWS Region is a physical location in the world where AWS has multiple AZs.
 
 AZs consist of one or more discrete data centers, each with redundant power, network, and connectivity, hosted in separate facilities.
@@ -60,11 +60,20 @@ If you need to start a new app, where should you do it?
         - ap-southeast-2b
         - ap-southeast-2c
 
+
+Each AWS region contains multiple distinct locations called Availability Zones (AZs). Each AZ is engineered to be isolated from failures in other AZs. An AZ is a data center, and in some cases, an AZ consists of multiple data centers.
+
+AZs within a region provide inexpensive, low-latency network connectivity to other zones in the same region. This allows you to replicate your data across data centers in a synchronous manner so that failover can be automated and be transparent for your users.
+
+"They provide fault isolation"
+
+"They are connected by low-latency network connections"
+
 <img src="../images/extra/awsPregions.png" alt="aws Regions" width=300>
 
 - Each Availability Zone (AZ) is one or more discrete data centers with redundant power, networking, and connectivity
 - They are separated from each other so that they are isolated from disasters
-- They are connected with high bandwidth, ultra-low latency network
+- They are connected with high bandwidth, ultra-low latency network 
 
 <img src="../images/extra/infra.png" alt="aws" width=80%>
 **AWS Edge Locations**

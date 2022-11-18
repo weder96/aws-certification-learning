@@ -5,20 +5,20 @@
 # Módulo 19: Machine Learning
 
 ## Content
-1. <a href="#section-1"> Amazon Comprehend </a>
-2. <a href="#section-2"> Amazon Forecast </a>
-3. <a href="#section-3"> Amazon Fraud Detector </a>
-4. <a href="#section-4"> Amazon Kendra </a>
-5. <a href="#section-5"> Amazon Lex </a>
-6. <a href="#section-6"> Amazon Polly </a>
-7. <a href="#section-7"> Amazon Rekognition </a>
-8. <a href="#section-8"> Amazon SageMaker </a>
-9. <a href="#section-9"> Amazon Textract </a>
+1. <a href="#section-01"> Amazon Comprehend </a>
+2. <a href="#section-02"> Amazon Forecast </a>
+3. <a href="#section-03"> Amazon Fraud Detector </a>
+4. <a href="#section-04"> Amazon Kendra </a>
+5. <a href="#section-05"> Amazon Lex </a>
+6. <a href="#section-06"> Amazon Polly </a>
+7. <a href="#section-07"> Amazon Rekognition </a>
+8. <a href="#section-08"> Amazon SageMaker </a>
+9. <a href="#section-09"> Amazon Textract </a>
 10. <a href="#section-10"> Amazon Transcribe </a>
 11. <a href="#section-11"> Amazon Translate </a>
 
 ***************************************************************************************************
-## <a id="section-1" ></a> **1 - Amazon Comprehend**
+## <a id="section-01"></a> **1 - Amazon Comprehend**
 
 ![Amazon Comprehend](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Comprehend_48.png "Amazon Comprehend")
 
@@ -29,7 +29,7 @@
 **Videos**
 
 ***************************************************************************************************
-## <a id="section-2" ></a> **2 - Amazon Forecast**
+## <a id="section-02"></a> **2 - Amazon Forecast**
 
 ![Amazon Forecast](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Forecast_48.png "Amazon Forecast")
 
@@ -40,7 +40,7 @@
 **Videos**
 
 ***************************************************************************************************
-## <a id="section-3" ></a> **3 - Amazon Fraud Detector**
+## <a id="section-03"></a> **3 - Amazon Fraud Detector**
 
 ![Amazon Fraud Detector](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Fraud-Detector_48.png "Amazon Fraud Detector")
 
@@ -51,7 +51,7 @@
 **Videos**
 
 ***************************************************************************************************
-## <a id="section-4" ></a> **4 - Amazon Kendra**
+## <a id="section-04"></a> **4 - Amazon Kendra**
 
 ![Amazon Kendra](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Kendra_48.png "Amazon Kendra")
 
@@ -62,7 +62,7 @@
 **Videos**
 
 ***************************************************************************************************
-## <a id="section-5" ></a> **5 - Amazon Lex**
+## <a id="section-05"></a> **5 - Amazon Lex**
 
 ![Amazon Lex](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Lex_48.png "Amazon Lex")
 
@@ -73,7 +73,7 @@
 **Videos**
 
 ***************************************************************************************************
-## <a id="section-6" ></a> **6 - Amazon Polly**
+## <a id="section-06"></a> **6 - Amazon Polly**
 
 ![Amazon Polly](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Polly_48.png "Polly")
 
@@ -84,7 +84,7 @@
 **Videos**
 
 ***************************************************************************************************
-## <a id="section-7" ></a> **7- Amazon Rekognition**
+## <a id="section-07"></a> **7- Amazon Rekognition**
 
 ![Amazon Rekognition](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Rekognition_48.png "Amazon Rekognition")
 
@@ -95,7 +95,7 @@
 **Videos**
 
 ***************************************************************************************************
-## <a id="section-8" ></a> **8 - Amazon Comprehend**
+## <a id="section-08"></a> **8 - Amazon Comprehend**
 
 ![Amazon SageMaker](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-SageMaker_48.png "Amazon SageMaker")
 
@@ -106,7 +106,7 @@
 **Videos**
 
 ***************************************************************************************************
-## <a id="section-9" ></a> **9 - Amazon Textract**
+## <a id="section-09"></a> **9 - Amazon Textract**
 
 ![Amazon Textract](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Textract_48.png "Amazon Textract")
 
@@ -117,7 +117,7 @@
 **Videos**
 
 ***************************************************************************************************
-## <a id="section-10" ></a> **10 - Amazon Transcribe**
+## <a id="section-10"></a> **10 - Amazon Transcribe**
 
 ![Amazon Transcribe](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Transcribe_48.png "Amazon Transcribe")
 
@@ -128,7 +128,7 @@
 **Videos**
 
 ***************************************************************************************************
-## <a id="section-11" ></a> **11 - Amazon Translate**
+## <a id="section-11"></a> **11 - Amazon Translate**
 
 ![Amazon Translate](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Translate_48.png "Amazon Translate")
 

@@ -5,15 +5,15 @@
 # AWS Identity and Access Management (IAM) [IAM](https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/introduction.html)
 
 ## Conteúdo
-1. <a href="#section-1"> GENERAL IAM CONCEPTS </a>
-2. <a href="#section-2"> Using AWS IAM Access Analyzer </a>
-3. <a href="#section-3"> Understanding and getting your AWS credentials</a>
-4. <a href="#section-4"> IAM Users</a>
-5. <a href="#section-5"> IAM Groups</a>
-6. <a href="#section-6"> Verify Permissions</a>
-7. <a href="#section-7"> IAM Roles</a>
-8. <a href="#section-8"> IAM roles with EC2 instances</a>
-9. <a href="#section-9"> Role Delegation</a>
+1. <a href="#section-01"> GENERAL IAM CONCEPTS </a>
+2. <a href="#section-02"> Using AWS IAM Access Analyzer </a>
+3. <a href="#section-03"> Understanding and getting your AWS credentials</a>
+4. <a href="#section-04"> IAM Users</a>
+5. <a href="#section-05"> IAM Groups</a>
+6. <a href="#section-06"> Verify Permissions</a>
+7. <a href="#section-07"> IAM Roles</a>
+8. <a href="#section-08"> IAM roles with EC2 instances</a>
+9. <a href="#section-09"> Role Delegation</a>
 10. <a href="#section-10"> IAM Policies</a>
 11. <a href="#section-11"> IAM Authentication Methods</a>
 12. <a href="#section-12"> IAM Multi-Factor Authentication</a>
@@ -26,7 +26,7 @@
 19. <a href="#section-19"> AWS Config </a>
 
 **********************************************************************************************************
-## <a id="section-1"></a> **1 - GENERAL IAM CONCEPTS**
+## <a id="section-01"></a> **1 - GENERAL IAM CONCEPTS**
 
 ### IAM Overview
 AWS Identity and Access Management (IAM) is a web service that helps you securely control access
@@ -177,7 +177,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
 **Videos**
 
 *************************************************************************************************************
-## <a id="section-2"></a> **2 - Using AWS IAM Access Analyzer**
+## <a id="section-02"></a> **2 - Using AWS IAM Access Analyzer**
 - AWS IAM Access Analyzer helps you identify the resources in your organization and accounts, such as Amazon S3 buckets or IAM roles, shared with an external entity. 
 - This lets you identify unintended access to your resources and data, which is a security risk. 
 - Access Analyzer identifies resources shared with external principals by using logic-based reasoning to analyze the resource-based policies in your AWS environment. 
@@ -202,12 +202,12 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
 The IAM console provides information about when IAM users and roles last attempted to access AWS services. This information is called service last accessed data. This data can help you identify unnecessary permissions so that you can refine your IAM policies to better adhere to the principle of “least privilege.”
 
 That means granting the minimum permissions required to perform a specific task. You can find the data on the Access Advisor tab in the IAM console by examining the detail view for any IAM user, group, role, or managed policy.
-## <a id="section-3"></a> **3 - Understanding and getting your AWS credentials**
+## <a id="section-03"></a> **3 - Understanding and getting your AWS credentials**
 - [secret-keys](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)
 - For Amazon CloudFront, you use key pairs to create signed URLs for private content, such as when you want to distribute restricted content that someone paid for.
 CloudFront Key Pairs - IAM users can't create CloudFront key pairs. You must log in using root credentials to create key pairs.
 To create signed URLs or signed cookies, you need a signer. A signer is either a trusted key group that you create in CloudFront, or an AWS account that contains a CloudFront key pair. AWS recommends that you use trusted key groups with signed URLs and signed cookies instead of using CloudFront key pairs.
-## <a id="section-4"></a> **4 - IAM Users** 
+## <a id="section-04"></a> **4 - IAM Users** 
 - An IAM user is an entity that represents a person or service
 - Can be assigned:
     - An access key ID and secret access key for programmatic access to the AWS API, CLI, SDK, and other development tools
@@ -243,17 +243,17 @@ A password policy can be defined for enforcing password length, complexity etc. 
 You can allow or disallow the ability to change passwords using an IAM policy.
 
 Access keys and passwords should be changed regularly.
-## <a id="section-5"></a> **5 - IAM Groups**
+## <a id="section-05"></a> **5 - IAM Groups**
 - Developers, AWS Admins, Operation
 - Groups are collections of users and have policies attached to them
 - A group is not an identity and cannot be identified as a principal in an IAM policy
 - Use groups to assign permissions to users
 - Use the principal of least privilege when assigning permissions
 - You cannot nest groups (groups within groups)
-## <a id="section-6"></a> **6 - Verify Permissions**
+## <a id="section-06"></a> **6 - Verify Permissions**
   - Use the AWS CLI --dry-run option: The --dry-run option checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation, otherwise, it is UnauthorizedOperation.
   [terminate-instance](https://docs.aws.amazon.com/cli/latest/reference/ec2/terminate-instances.html)
-## <a id="section-7"></a> **7 - IAM Roles**
+## <a id="section-07"></a> **7 - IAM Roles**
 ### [IAM Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html)
 With IAM Roles you can delegate permissions to resources for users and services without using permanent credentials (e.g. username and password). To do so you can create a role and assign an IAM policy to the role that has the permissions required.
 - created & then "assumed" by another entity
@@ -270,13 +270,13 @@ used to make AWS API calls.
 - Temporary credentials are primarily used with IAM roles and automatically expire.
 - Roles can be assumed temporarily through the console or programmatically with the AWS CLI, Tools
   for Windows PowerShell or API.
-## <a id="section-8"></a> **8 - IAM roles with EC2 instances**
+## <a id="section-08"></a> **8 - IAM roles with EC2 instances**
   - IAM roles can be used for granting applications running on EC2 instances permissions to AWS API requests using instance profiles.
   - Only one role can be assigned to an EC2 instance at a time.
   - A role can be assigned at the EC2 instance creation time or at any time afterwards.
   - When using the AWS CLI or API instance profiles must be created manually (it’s automatic and transparent through the console).
   - Applications retrieve temporary security credentials from the instance metadata.
-## <a id="section-9"></a> **9 - Role Delegation**
+## <a id="section-09"></a> **9 - Role Delegation**
 - Create an IAM role with two policies:
   - Permissions policy – grants the user of the role the required permissions on a resource.
   - Trust policy – specifies the trusted accounts that are allowed to assume the role.

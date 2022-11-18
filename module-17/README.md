@@ -5,15 +5,15 @@
 # Additional AWS Services
 
 ## Conteúdo
-1. <a href="#section-1"> Compute </a>
-2. <a href="#section-2"> Database </a>
-3. <a href="#section-3"> Networking & Content Delivery </a>
-4. <a href="#section-4"> Developer Tools </a>
-5. <a href="#section-5"> AWS Managed Services </a>
-6. <a href="#section-6"> Analytics </a>
-7. <a href="#section-7"> Media Services </a>
-8. <a href="#section-8"> Mobile Services </a>
-9. <a href="#section-9"> End User Computing </a>
+1. <a href="#section-01"> Compute </a>
+2. <a href="#section-02"> Database </a>
+3. <a href="#section-03"> Networking & Content Delivery </a>
+4. <a href="#section-04"> Developer Tools </a>
+5. <a href="#section-05"> AWS Managed Services </a>
+6. <a href="#section-06"> Analytics </a>
+7. <a href="#section-07"> Media Services </a>
+8. <a href="#section-08"> Mobile Services </a>
+9. <a href="#section-09"> End User Computing </a>
 10. <a href="#section-10"> Internet of Things (IoT) </a>
 
 
@@ -26,7 +26,7 @@ Exam tip: Before sitting the exam, it would be wise to go through the AWS consol
 Note: If a service starts appearing regularly on the exam it may be moved to the main cheat sheet for the AWS service category.
 
 **************************************************************************************
-## <a id="section-1" ></a> **1 - Compute**
+## <a id="section-01" ></a> **1 - Compute**
 ### [Amazon Elastic Container Service for Kubernetes (EKS)](https://aws.amazon.com/eks/features/)
 
 Amazon Elastic Container Service for Kubernetes (EKS) is a managed Kubernetes service that makes it easy for you to run Kubernetes on AWS without needing to install, operate, and maintain your own Kubernetes control plane.
@@ -41,7 +41,7 @@ Generally available but only in limited regions currently
 
 
 **************************************************************************************
-## <a id="section-2" ></a> **2 - Database**
+## <a id="section-02" ></a> **2 - Database**
 ### [Amazon Neptune](https://aws.amazon.com/neptune/features/)
 
 Amazon Neptune is a fast, reliable, fully managed graph database service that makes it easy to build and run applications that work with highly connected datasets.
@@ -77,7 +77,7 @@ AWS Server Migration Service (SMS) is an agentless service which makes it easier
 AWS SMS allows you to automate, schedule, and track incremental replications of live server volumes, making it easier for you to coordinate large-scale server migrations
 
 **************************************************************************************
-## <a id="section-3" ></a> **3 - Networking & Content Delivery**
+## <a id="section-03" ></a> **3 - Networking & Content Delivery**
 ### [Amazon API Gateway](https://aws.amazon.com/api-gateway/features/)
 Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale.
 
@@ -86,7 +86,7 @@ With a few clicks in the AWS Management Console, you can create an API that acts
 Back-end services may include Amazon Elastic Compute Cloud (Amazon EC2), code running on AWS Lambda, or any web application.
 
 **************************************************************************************
-## <a id="section-4" ></a> **4 - Developer Tools**
+## <a id="section-04" ></a> **4 - Developer Tools**
 ### [AWS CodeStar](https://aws.amazon.com/codestar/features/)
 AWS CodeStar enables you to quickly develop, build, and deploy applications on AWS. AWS CodeStar provides a unified user interface, enabling you to easily manage your software development activities in one place.
 
@@ -141,7 +141,7 @@ X-Ray provides an end-to-end view of requests as they travel through your applic
 You can use X-Ray to analyze both applications in development and in production, from simple three-tier applications to complex microservices applications consisting of thousands of service. [servicecatalog](https://aws.amazon.com/servicecatalog/features/)
 
 **************************************************************************************
-## <a id="section-5" ></a> **5 - AWS Managed Services**
+## <a id="section-05" ></a> **5 - AWS Managed Services**
 
 [AWS Managed Services](https://aws.amazon.com/managed-services/#) provides ongoing management of your AWS infrastructure so you can focus on your applications.
 
@@ -152,7 +152,7 @@ AWS Managed Services automates common activities such as change requests, monito
 AWS Managed Services delivers consistent operations management and predictable results by following ITIL® best practices, and provides tooling and automation to increase efficiency, and reduce your operational overhead and risk.
     
 **************************************************************************************
-## <a id="section-6" ></a> **6 - Analytics**
+## <a id="section-06" ></a> **6 - Analytics**
 ### [Amazon Athena](https://aws.amazon.com/athena/features/)
 Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL.
 
@@ -210,15 +210,15 @@ Once cataloged, your data is immediately searchable, queryable, and available fo
 
 AWS Glue generates the code to execute your data transformations and data loading processes.
 
-
-## <a id="section-7" ></a> **7 - Media Services**
+--------------------------------------------------------------------------------------------------
+## <a id="section-07" ></a> **7 - Media Services**
 ### [Amazon Elastic Transcoder](https://aws.amazon.com/elastictranscoder/)
 Amazon Elastic Transcoder is media transcoding in the cloud.
 
 It is designed to be a highly scalable, easy to use and a cost-effective way for developers and businesses to convert (or “transcode”) media files from their source format into versions that will playback on devices like smartphones, tablets, and PCs.
 
 **************************************************************************************
-## <a id="section-8" ></a> **8 - Mobile Services**
+## <a id="section-08" ></a> **8 - Mobile Services**
 ### [AWS AppSync](https://aws.amazon.com/appsync/product-details/)
 AWS AppSync makes it easy to build data-driven mobile and browser-based apps that deliver responsive, collaborative experiences by keeping the data updated when devices are connected, enabling the app to use local data when offline, and synchronizing the data when the devices reconnect.
 
@@ -230,7 +230,7 @@ AWS Device Farm is an app testing service that lets you test and interact with y
 
 View video, screenshots, logs, and performance data to pinpoint and fix issues and increase quality before shipping your app.
 **************************************************************************************
-## <a id="section-9" ></a> **9 - End User Computing**
+## <a id="section-09" ></a> **9 - End User Computing**
 ### [Amazon Workspaces](https://aws.amazon.com/workspaces/features/)
 
 Amazon WorkSpaces is a managed, secure cloud desktop service. You can use Amazon WorkSpaces to provision either Windows or Linux desktops in just a few minutes and quickly scale to provide thousands of desktops to workers across the globe.

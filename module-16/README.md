@@ -5,10 +5,10 @@
 # AWS Managed Services [managed-services](https://aws.amazon.com/pt/managed-services/)
 
 ## Conteúdo
-1. <a href="#section-1"> AWS Managed Services </a>
-2. <a href="#section-2"> AWS Compliance Programs </a>
+1. <a href="#section-01"> AWS Managed Services </a>
+2. <a href="#section-02"> AWS Compliance Programs </a>
 
-## <a id="section-1" ></a> **1 - AWS Managed Services**
+## <a id="section-01"></a> **1 - AWS Managed Services**
 AWS Managed Services (AMS) helps you adopt AWS at scale and operate more efficiently and securely.
 
 We leverage standard AWS services and offer guidance and execution of operational best practices, with specialized automations, skills, and experience that are contextual to your environment and applications.
@@ -21,7 +21,7 @@ AMS extends your team with operational capabilities including monitoring, incide
 <img src="../images/extra/Product-Diagram-Page_AWS-Managed-Services.png" alt="aws" width=80%  />
 
 
-## **Benefícios**
+###$ **Benefícios**
 
 **Segurança**
 A AMS eleva a excelência operacional com monitoramento e remediação da segurança. 
@@ -69,7 +69,7 @@ Atualmente, os serviços gerenciados da AWS oferecem suporte aos mais de 20 serv
 
 O AWS Managed Services foi projetado para atender às necessidades de empresas que exigem SLAs rigorosos, aderência à conformidade corporativa e integração com seus sistemas e processos baseados em ITIL®.
 
-## **Benefits**
+### **Benefits**
 
 **Safety**
 AMS elevates operational excellence with security monitoring and remediation.
@@ -114,7 +114,8 @@ AWS Managed Services currently support more than 20 of the most critical service
 
 AWS Managed Services are designed to meet the needs of companies that require stringent SLAs, adhere to corporate compliance, and integrate with their ITIL®-based systems and processes.
 
-## <a id="section-2" ></a> **2 - AWS Compliance Programs**
+-------------------------------------------------------------------------------------------------
+## <a id="section-02"></a> **2 - AWS Compliance Programs**
 
 [Programas de conformidade da AWS](https://aws.amazon.com/pt/compliance/programs/)
 

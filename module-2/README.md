@@ -6,13 +6,12 @@
 [aws-cost-optimization](https://aws.amazon.com/pt/aws-cost-management/aws-cost-optimization/)
 
 ## Contents
-1. <a href="#section-1"> Savings and Billing </a>
-2. <a href="#section-2"> AWS budgets </a>
-3. <a href="#section-3"> AWS Pricing Calculator </a>
+1. <a href="#section-01"> Savings and Billing </a>
+2. <a href="#section-02"> AWS budgets </a>
+3. <a href="#section-03"> AWS Pricing Calculator </a>
 
-
-*************************************************************************************************************
-## <a id="section-1" ></a> **1 - Savings and Billing**
+*********************************************************************************************************
+## <a id="section-01"></a> **1 - Savings and Billing**
 
 [six-advantages-of-cloud-computing](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html)
 
@@ -32,7 +31,7 @@ https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.htm
 https://www.youtube.com/watch?v=YiqTBDmn00I
 
 *************************************************************************************************************
-## <a id="section-2" ></a> **2 - AWS budgets**
+## <a id="section-02"></a> **2 - AWS budgets**
 
 [aws-budgets](https://aws.amazon.com/aws-cost-management/aws-budgets/) Orçamento AWS
 
@@ -75,7 +74,7 @@ https://www.youtube.com/results?search_query=aws+budgets
 https://www.youtube.com/watch?v=fvz0cphjHjg
 
 ***********************************************************************************************************
-## <a id="section-3" ></a> **3 - AWS Pricing Calculator**
+## <a id="section-03"></a> **3 - AWS Pricing Calculator**
 [AWS Pricing Calculator](https://aws.amazon.com/tco-calculator/)
 
 To perform a [TCO](https://aws.amazon.com/tco-calculator/) you need to document all of the costs you’re incurring today to run your IT operations. That includes facilities equipment installation and data center security costs. That way you get to compare the full cost of running your IT on-premises today, to running it in the cloud.

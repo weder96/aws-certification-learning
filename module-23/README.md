@@ -5,11 +5,11 @@
 # Module 23: AWS Management Tools (SOA)
 
 ## Content
-1. <a href="#section-1"> AWS CloudFormation </a>
+1. <a href="#section-01"> AWS CloudFormation </a>
 
 
 ***************************************************************************************************
-## <a id="section-1" ></a> **1 - AWS CloudFormation **
+## <a id="section-01" ></a> **1 - AWS CloudFormation **
 
 ![AWS CloudFormation](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-CloudFormation_48.png "AWS CloudFormation")
 
@@ -114,7 +114,7 @@ Resources:
 ```
 
 
-## Parameters
+### Parameters
 Use the optional Parameters section to customize your templates. Parameters enable you to input custom values to your template each time you create or update a stack.
 
 * Provide inputs to your CloudFormation template.
@@ -138,7 +138,7 @@ Parameters:
 ```
 
 
-## Pseudo Parameters
+### Pseudo Parameters
 Pseudo parameters are parameters that are predefined by AWS CloudFormation. You do not declare them in your template. Use them the same way as you would a parameter, as the argument for the Ref function.
 
 
@@ -150,7 +150,7 @@ Examples include:
 * AWS::StackId – Returns the ID of the stack as specified with the aws cloudformation create-stack command.
 
 
-## Mappings
+### Mappings
 
 The optional Mappings section matches a key to a corresponding set of named values.
 
@@ -176,7 +176,7 @@ RegionMap:
 
 **Exam tip:** with mappings you can, for example, set values based on a region. You can create a mapping that uses the region name as a key and contains the values you want to specify for each specific region.
 
-## Outputs
+### Outputs
 The optional Outputs section declares output values that you can import into other stacks (to create cross-stack references), return in response (to describe stack calls), or view on the AWS CloudFormation console.
 
 * Outputs can be imported into other stacks.
@@ -196,7 +196,7 @@ Outputs:
 ```
 
 
-## Conditions
+### Conditions
 The optional Conditions section contains statements that define the circumstances under which entities are created or configured.
 
 * Control the creation of resources based on a condition.
@@ -210,7 +210,7 @@ Conditions:
 ```
 
 
-## Transform
+### Transform
 The optional Transform section specifies one or more macros that AWS CloudFormation uses to process your template.
 
 The transform section can be used to reference additional code stored in S3, such as Lambda code or reusable snippets of CloudFormation code.
@@ -233,7 +233,7 @@ Resources:
 
 
 
-## Intrinsic Functions
+### Intrinsic Functions
 AWS CloudFormation provides several built-in functions that help you manage your stacks. Use intrinsic functions in your templates to assign values to properties that are not available until runtime.
 
 **EXAM TIP:** At a minimum, know the intrinsic functions listed below for the exam. The full list can be found at: 
@@ -365,9 +365,9 @@ Name: !Sub
 ```
 
 
-## Stacks and Stack Sets
+### Stacks and Stack Sets
 
-## Stacks
+### **Stacks**
 
 Deployed resources based on templates.
 

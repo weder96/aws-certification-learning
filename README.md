@@ -41,6 +41,7 @@ To other repositories that will be linked to the same but specific to each Exam.
   - [Module 21: Amazon CloudFront][21]
   - [Module 22: Suggestion of laboratories AWS][22]
   - [Module 23: AWS Management Tools (SOA)][23]
+  - [Module 24: Comparison of AWS Services][24]
   - [Module 99: Concepts‌ ‌and‌‌ Strategies][99]
  
 
@@ -67,4 +68,5 @@ To other repositories that will be linked to the same but specific to each Exam.
 [21]: https://github.com/weder96/aws-certification-learning/tree/main/module-21
 [22]: https://github.com/weder96/aws-certification-learning/tree/main/module-22
 [23]: https://github.com/weder96/aws-certification-learning/tree/main/module-23
+[24]: https://github.com/weder96/aws-certification-learning/tree/main/module-24
 [99]: https://github.com/weder96/aws-certification-learning/tree/main/module-99
