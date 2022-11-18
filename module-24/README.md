@@ -40,7 +40,7 @@
 33. <a href="#section-33">  Step Scaling vs Simple Scaling Policies in Amazon EC2 </a>
 
 ***************************************************************************************************
-## <a id="section-01"></a> **1 - Comparison of AWS Services **
+## <a id="section-01"></a> **1 - Comparison of AWS Services**
 
 In this section, we will compare seemingly similar services and concepts, and highlight their main differences to help you gain a better understanding of these topics. The AWS certification exams are now composed of very tricky and complex scenario questions and going through this section can help you tackle these confusing questions with more confidence. Do note that not every cheat sheet here will be applicable to each AWS certification exam so it’s best to also refer to our study guides when reviewing.
 
@@ -49,7 +49,7 @@ We also recommend that you answer as many AWS practice test questions as you can
 https://tutorialsdojo.com/comparison-of-aws-services/
 
 ***************************************************************************************************
-## <a id="section-02"></a> **2 - Amazon Aurora vs Amazon RDS **
+## <a id="section-02"></a> **2 - Amazon Aurora vs Amazon RDS**
 
 **Cheat Sheets**
 
@@ -63,7 +63,7 @@ https://tutorialsdojo.com/amazon-aurora-vs-amazon-rds/
 
 
 ***************************************************************************************************
-## <a id="section-03"></a> **3 - Amazon Cognito User Pools vs Identity Pools **
+## <a id="section-03"></a> **3 - Amazon Cognito User Pools vs Identity Pools**
 
 **Cheat Sheets**
 
