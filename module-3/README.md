@@ -142,3 +142,28 @@ Regional edge caches are located between CloudFront origin servers and edge loca
 A regional edge cache has a larger cache width than each of the individual edge locations.
 
 The following diagram shows CloudFront Edge locations:
+
+**Cheat Sheets**
+
+https://digitalcloud.training/aws-global-infrastructure/
+
+https://tutorialsdojo.com/aws-global-infrastructure/
+
+
+**References:**
+
+https://aws.amazon.com/about-aws/global-infrastructure/regions_az/
+
+https://aws.amazon.com/about-aws/global-infrastructure/
+
+https://docs.aws.amazon.com/aws-technical-content/latest/aws-overview/global-infrastructure.html
+
+https://www.infrastructure.aws/
+
+**Videos**
+
+https://www.youtube.com/results?search_query=AWS+Global+Infrastructure
+
+https://www.youtube.com/watch?v=RPis5mbM8c8
+
+https://www.youtube.com/watch?v=rno8iNfKChM&feature=emb_imp_woyt

@@ -2,9 +2,9 @@
 
 [1]: https://github.com/weder96/aws-certification-learning
 
-# Módulo 99: Concepts‌ ‌and‌‌ Strategies 
+# Module 99: Concepts‌ ‌and‌‌ Strategies 
 
-## Conteúdo
+## Contents
 1. <a href="#section-1"> Concepts‌ ‌and‌‌ Strategies </a>
 
 *********************************************************************************************

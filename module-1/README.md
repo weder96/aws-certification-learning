@@ -6,15 +6,16 @@
 
 
 ## Contents
-1. <a href="#section-1">Introduction to Cloud Computing</a>
+1. <a href="#section-1"> Introduction to Cloud Computing</a>
 2. <a href="#section-2"> Advantages of Cloud Computing </a>
 3. <a href="#section-3"> Introduction to Amazon Web Services (AWS) </a>
 4. <a href="#section-4"> Moving to the AWS Cloud – AWS Cloud Adoption Framework (AWS CAF)</a>
 5. <a href="#section-5"> AWS Shared Responsibility Model</a>
-6. <a href="#section-6">AWS Support</a>
+6. <a href="#section-6"> AWS Support</a>
+7. <a href="#section-7"> Architecting for the Cloud</a>
 
-****************************************************** ******************************************************
-## <a id="section-1" ></a> Section 1 - Introduction to Cloud Computing
+*******************************************************************************************************
+## <a id="section-1"></a> **1 - Introduction to Cloud Computing**
 
 What is cloud computing?
 
@@ -86,7 +87,13 @@ One thing is clear, however, is that regardless of the definitions - the first p
 
 **High‌ ‌Availability‌** ‌
 
-High‌ ‌availability‌ ‌means‌ ‌having‌ ‌redundant‌ ‌copies‌ ‌of‌ ‌an‌ ‌object‌ ‌or‌ ‌resource‌ ‌to‌ ‌make‌ ‌sure‌ ‌that‌ ‌another‌ ‌can‌‌ take‌ ‌its‌ ‌place‌ ‌when‌ ‌something‌ ‌happens‌ ‌to‌ ‌it.‌ ‌High‌ ‌availability‌ ‌can‌ ‌apply‌ ‌to‌ ‌almost‌ ‌anything:‌ ‌compute‌‌ servers,‌ ‌data‌ ‌storage,‌ ‌databases,‌ ‌networks,‌ ‌etc.‌ ‌High‌ ‌availability‌ ‌is‌ ‌one‌ ‌of‌ ‌the‌ ‌main‌ ‌selling‌ ‌points‌ ‌of‌‌ using‌ ‌the‌ ‌cloud.‌ ‌It‌ ‌might‌ ‌be‌ ‌expensive,‌ ‌but‌ ‌companies‌ ‌that‌ ‌cannot‌ ‌risk‌ ‌having‌ ‌downtime‌ ‌nor‌ ‌data‌ ‌loss‌‌ should‌ ‌build‌ ‌highly‌ ‌available‌ ‌infrastructures‌ ‌in‌ ‌the‌ ‌cloud‌ ‌to‌ ‌protect‌ ‌their‌ ‌assets.‌ ‌Furthermore, ‌ ‌because‌‌ the‌ ‌data‌ ‌centers‌ ‌in‌ ‌the‌ ‌cloud‌ ‌are‌ ‌geographically‌ ‌distributed‌ ‌and‌ ‌are‌ ‌usually‌ ‌far‌ ‌apart‌ ‌from‌ ‌one‌ ‌another,‌‌ in‌ ‌case‌ ‌one‌ ‌of‌ ‌these‌ ‌data‌ ‌centers‌ ‌go‌ ‌offline,‌ ‌other‌ ‌data‌ ‌centers‌ ‌are‌ ‌not‌ ‌affected‌ ‌and‌ ‌can‌  continue‌ serving‌ ‌you.‌ ‌
+High‌ ‌availability‌ ‌means‌ ‌having‌ ‌redundant‌ ‌copies‌ ‌of‌ ‌an‌ ‌object‌ ‌or‌ ‌resource‌ ‌to‌ ‌make‌ ‌sure‌ ‌that‌ ‌another‌ ‌can‌‌ take‌ ‌its‌ ‌place‌ ‌when‌ ‌something‌ ‌happens‌ ‌to‌ ‌it.‌ ‌
+
+High‌ ‌availability‌ ‌can‌ ‌apply‌ ‌to‌ ‌almost‌ ‌anything:‌ ‌compute‌‌ servers,‌ ‌data‌ ‌storage,‌ ‌databases,‌ ‌networks,‌ ‌etc.‌ 
+
+‌High‌ ‌availability‌ ‌is‌ ‌one‌ ‌of‌ ‌the‌ ‌main‌ ‌selling‌ ‌points‌ ‌of‌‌ using‌ ‌the‌ ‌cloud.‌ ‌It‌ ‌might‌ ‌be‌ ‌expensive,‌ ‌but‌ ‌companies‌ ‌that‌ ‌cannot‌ ‌risk‌ ‌having‌ ‌downtime‌ ‌nor‌ ‌data‌ ‌loss‌‌ should‌ ‌build‌ ‌highly‌ ‌available‌ ‌infrastructures‌ ‌in‌ ‌the‌ ‌cloud‌ ‌to‌ ‌protect‌ ‌their‌ ‌assets.‌ ‌
+
+Furthermore, ‌ ‌because‌‌ the‌ ‌data‌ ‌centers‌ ‌in‌ ‌the‌ ‌cloud‌ ‌are‌ ‌geographically‌ ‌distributed‌ ‌and‌ ‌are‌ ‌usually‌ ‌far‌ ‌apart‌ ‌from‌ ‌one‌ ‌another,‌‌ in‌ ‌case‌ ‌one‌ ‌of‌ ‌these‌ ‌data‌ ‌centers‌ ‌go‌ ‌offline,‌ ‌other‌ ‌data‌ ‌centers‌ ‌are‌ ‌not‌ ‌affected‌ ‌and‌ ‌can‌  continue‌ serving‌ ‌you.‌ ‌
 
 
 **Fault‌ ‌Tolerance‌** ‌
@@ -128,8 +135,12 @@ Serverless‌ ‌involves‌ ‌a‌ ‌whole‌ ‌new‌ ‌dynamic‌ ‌of�
 The‌ ‌technology‌ ‌can‌ ‌save‌ ‌you‌ ‌a‌ ‌lot‌ ‌of‌ ‌cost‌ ‌due‌ ‌to‌ ‌its‌ ‌lower‌ ‌pricing‌ ‌than‌ ‌those‌ ‌of‌‌ traditional‌ ‌server‌ ‌models,‌ ‌but‌ ‌it‌ ‌may‌ ‌also‌ ‌introduce‌ ‌additional‌ ‌complexity‌ ‌to‌ ‌your‌ ‌code‌ ‌due‌ ‌to‌ ‌its‌‌ distributed‌ ‌nature.‌ ‌You‌ ‌also‌ ‌lose‌ ‌a‌ ‌lot‌ ‌of‌ ‌control‌ ‌over‌ ‌your‌ ‌environment‌ ‌if‌ ‌you‌ ‌usually‌ ‌manage‌ ‌your‌ ‌own‌‌ runtimes,‌ ‌etc.‌ ‌Serverless‌ ‌functions‌ ‌are‌ ‌also‌ ‌event-driven.‌ ‌If‌ ‌you’re‌ ‌a‌ ‌Node‌ ‌JS‌ ‌developer,‌ ‌get‌ ‌ready‌ ‌for‌ ‌a‌‌ lot‌ ‌of‌ ‌callbacks‌ ‌with‌ ‌this‌ ‌one.‌ ‌
 
 
-***************************************************************************************************************************
-## <a id="section-2" ></a> Section 2 - Advantages of Cloud Computing
+**Cheat Sheets**
+**References:**
+**Videos**
+
+**********************************************************************************************************************
+## <a id="section-2"></a> **2 - Advantages of Cloud Computing**
 - Swap capital expenses for variable expenses
 - Great economy of scale
 - Stop trying to guess the ability
@@ -152,7 +163,7 @@ There are several reasons why the cloud market is growing so fast. Some of them 
 - System administration staff
 - Faster time to market
 
-## The six pillars of a well-architected structure
+### The six pillars of a well-architected structure
 
 <a href="https://aws.amazon.com/blogs/apn/the-6-pillars-of-the-aws-well-architected-framework/" target="_blank"> 
     The six pillars of a well-architected structure
@@ -203,7 +214,7 @@ There are five design principles for operational excellence in the cloud:
 The Security pillar includes the ability to protect data, systems and assets to leverage cloud technologies to improve your security. You can find prescriptive guidance on implementation in the Security Pillar whitepaper.
 
 
-## Design Principles
+### Design Principles
 
 There are seven design principles for cloud security:
 
@@ -349,7 +360,7 @@ Analyze hardware patterns to identify opportunities that reduce workload sustain
 In your development and deployment process, identify opportunities to reduce your sustainability impact by making changes, such as updating systems for performance efficiencies and managing sustainability impacts. Use automation to manage the lifecycle of your development and test environments, and use managed device farms for testing.
 
 
-## GENERAL CONCEPTS OF CLOUD COMPUTING
+### GENERAL CONCEPTS OF CLOUD COMPUTING
 Cloud computing is the on-demand delivery of computing power, database storage, applications, and other IT resources through a cloud services platform over the Internet at pay-as-you-go pricing.
 
 Cloud computing provides a simple way to access servers, storage, databases, and a broad set of application services over the Internet.
@@ -377,8 +388,26 @@ A AWS promove as [seis vantagens](https://docs.aws.amazon.com/whitepapers/latest
 </a>
 <br/><br/><br/>
 
+
+**Cheat Sheets**
+
+https://digitalcloud.training/aws-cloud-computing-concepts/
+
+https://tutorialsdojo.com/aws-well-architected-framework-five-pillars/
+
+https://aws.amazon.com/blogs/apn/the-5-pillars-of-the-aws-well-architected-framework/
+
+
+**References:**
+
+https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html
+
+**Videos**
+
+https://www.youtube.com/results?search_query=aws+cloud+computing+concepts
+
 ***************************************************************************************************************************
-## <a id="section-3" ></a> Section 3 - Introduction to Amazon Web Services (AWS)
+## <a id="section-3"></a> **3 - Introduction to Amazon Web Services (AWS)**
 
 What are web services?
 
@@ -397,8 +426,7 @@ Ways to Interact with AWS
 - AWS Management Console: Easy-to-use graphical interface
 - Command Line Interface (AWS CLI): Access to services by specific commands or scripts
 - Software development kits (SDKs): Access services directly from your code (such as Java, Python and others)
-
-## <a id="section-4" ></a> Section 4 - Moving to the AWS Cloud – AWS Cloud Adoption Framework (AWS CAF)
+## <a id="section-4"></a> **4 - Moving to the AWS Cloud – AWS Cloud Adoption Framework (AWS CAF)**
 
 AWS Cloud Adoption Framework: is a document created to help organizations design and navigate an accelerated path to successful cloud adoption
 
@@ -410,8 +438,7 @@ Outlook:
 
 - Focuses on business resources: business, people and governance
 - Focuses on technical resources: platform, security and operations
-
-## <a id="section-5" ></a> **5 - AWS Shared Responsibility Model**
+## <a id="section-5"></a> **5 - AWS Shared Responsibility Model**
 The [AWS shared responsibility model](https://aws.amazon.com/compliance/shared-responsibility-model/) defines what you (as an AWS account holder/user) and AWS are responsible for when it comes to security and compliance.
 
 Security and Compliance is a shared responsibility between AWS and the customer. This shared model can help relieve customer's operational burdens as AWS operates, manages, and controls the components from the host operating system and virtualization layer down to the physical security of the facilities in which the service operates.
@@ -463,7 +490,7 @@ https://www.youtube.com/watch?v=iODPCcQEPto
 
 
 **********************************************************************************
-## <a id="section-6" ></a> **6 - AWS Support**
+## <a id="section-6"></a> **6 - AWS Support**
 
 [AWS Support Plans](https://aws.amazon.com/premiumsupport/plans/)
 There are four AWS support plans available:
@@ -492,6 +519,33 @@ Business and Enterprise allow unlimited contacts to open unlimited cases.
 *** Plans are subject to a 30 day minimum term.
 
 ****Customers qualify for the regional pricing if all accounts on their billing profile are concentrated in qualified LATAM countries, India, or Mainland China subject to conditions below. 
+## <a id="section-7"></a> **7 - Architecting for the Cloud**
 
+
+What are the benefits of using the AWS Managed Services? 
+
+AWS Managed Services manages the daily operations of your AWS infrastructure in alignment with ITIL processes. AWS Managed Services provides a baseline integration with IT Service Management (ITSM) tools such as the ServiceNow platform.
+
+AWS Managed Services provides ongoing management of your AWS infrastructure so you can focus on your applications. By implementing best practices to maintain your infrastructure, AWS Managed Services helps to reduce your operational overhead and risk.
+
+AWS Managed Services currently supports the 20+ services most critical for Enterprises, and will continue to expand our list of integrated AWS services.
+
+AWS Managed Services is designed to meet the needs of Enterprises that require stringent SLAs, adherence to corporate compliance, and integration with their systems and ITIL®-based processes.
+
+
+**Cheat Sheets**
+
+https://digitalcloud.training/architecting-for-the-cloud/
+
+**References:**
+https://aws.amazon.com/blogs/apn/the-6-pillars-of-the-aws-well-architected-framework/
+
+https://aws.amazon.com/managed-services/
+
+**Videos**
+
+https://www.youtube.com/results?search_query=architecting+for+the+cloud
+
+https://www.youtube.com/watch?v=vJ6XvQ94UnM
 
 

@@ -59,7 +59,22 @@ AWS Budgets gives you the ability to set custom budgets that alert you when your
 
 You can also use AWS Budgets to set reservation utilization or coverage targets and receive alerts when your utilization drops below the threshold you define. Reservation alerts are supported for Amazon EC2, Amazon RDS, Amazon Redshift, Amazon ElastiCache, and Amazon Elasticsearch reservations.
 
-*************************************************************************************************************
+
+**Cheat Sheets**
+
+https://digitalcloud.training/aws-billing-and-pricing/
+
+**References:**
+
+https://aws.amazon.com/aws-cost-management/aws-budgets/
+
+**Videos**
+
+https://www.youtube.com/results?search_query=aws+budgets
+
+https://www.youtube.com/watch?v=fvz0cphjHjg
+
+***********************************************************************************************************
 ## <a id="section-3" ></a> **3 - AWS Pricing Calculator**
 [AWS Pricing Calculator](https://aws.amazon.com/tco-calculator/)
 

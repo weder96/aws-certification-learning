@@ -29,7 +29,9 @@
 22. <a href="#section-22"> Amazon Security Hub  </a>
 23. <a href="#section-23"> Amazon Shield </a>
 24. <a href="#section-24"> Amazon WAF </a>
-25. <a href="#section-99"> How do I report abuse of AWS resources? </a>
+25. <a href="#section-25"> AWS account root user </a>
+26. <a href="#section-26"> Compliance Programs </a>
+99. <a href="#section-99"> How do I report abuse of AWS resources? </a>
 
 ---------------------------------------------------------------------------------------
 ## <a id="section-1"></a> **1 - Amazon Inspector**
@@ -104,10 +106,16 @@ Agreements available on [AWS Artifact](https://aws.amazon.com/en/artifact/) incl
 Reports available in [AWS Artifact](https://aws.amazon.com/en/artifact/) include Service Organization Control [(SOC) reports, Payment Card Industry (PCI) reports](https://aws.amazon. com/blogs/security/tag/aws-soc-reports/),
 and certifications from accreditation bodies across geographies and vertical compliance that validate the implementation and operating effectiveness of AWS security controls.
 
+AWS Artifact, available in the console, is a self-service audit artifact retrieval portal that provides our customers with on-demand access to AWS’ compliance documentation and AWS agreements.
+
+You can use AWS Artifact Reports to download AWS security and compliance documents, such as AWS ISO certifications, Payment Card Industry (PCI), and System and Organization Control (SOC) reports.
+
 
 **Cheat Sheets**
 
 [https://tutorialsdojo.com/aws-artifact/](https://tutorialsdojo.com/aws-artifact/)
+
+https://digitalcloud.training/aws-security-services/
 
 **References**
 
@@ -577,6 +585,8 @@ https://www.youtube.com/watch?v=Rz8MvzPfTZA
 
 https://tutorialsdojo.com/aws-firewall-manager/
 
+https://digitalcloud.training/aws-security-services/
+
 **References**
 
 https://aws.amazon.com/firewall-manager/features/
@@ -584,6 +594,8 @@ https://aws.amazon.com/firewall-manager/features/
 https://aws.amazon.com/firewall-manager/pricing/
 
 https://aws.amazon.com/firewall-manager/faqs/
+
+https://docs.aws.amazon.com/whitepapers/latest/aws-best-practices-ddos-resiliency/mitigation-techniques.html
 
 **Videos**
 
@@ -597,9 +609,17 @@ https://www.youtube.com/watch?v=1nir_Mdy3bQ
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_Amazon-Macie_48.png)
 
 
+Amazon Macie is a fully managed data security and data privacy service that uses machine learning and pattern matching to discover and protect your sensitive data in AWS. Amazon Macie automates the discovery of sensitive data at scale and lowers the cost of protecting your data.
+
+Macie automatically provides an inventory of Amazon S3 buckets including a list of unencrypted buckets, publicly accessible buckets, and buckets shared with AWS accounts outside those you have defined in AWS Organizations.
+
+Then, Macie applies machine learning and pattern matching techniques to the buckets you select to identify and alert you to sensitive data, such as personally identifiable information (PII).
+
 **Cheat Sheets**
 
 https://tutorialsdojo.com/amazon-macie/
+
+https://digitalcloud.training/aws-security-services/
 
 **References**
 
@@ -680,11 +700,48 @@ https://www.youtube.com/watch?v=WNFknf9zyZg
 **References**
 
 **Videos**
+## <a id="section-25"></a> **25 - AWS account root user**
+
+Some tasks can only be performed by the root user of an AWS account. This includes changing the account name and changing AWS support plans. For more information view the AWS article referenced below.
+
+* "Changing the account name" is a correct answer.
+
+* "Changing AWS Support plans" is also a correct answer.
+
+**Cheat Sheets**
+
+https://digitalcloud.training/aws-identity-and-access-management/
+
+**References**
+
+https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html
+
+**Videos**
+
+
+---------------------------------------------------------------------------------------
+## <a id="section-26"></a> **26 - Compliance Programs**
+
+AWS enables covered entities and their business associates subject to the U.S. Health Insurance 
+
+Portability and Accountability Act of 1996 (HIPAA) to use the secure AWS environment to process, maintain, and store protected health information.
+
+**Cheat Sheets**
+
+https://digitalcloud.training/aws-identity-and-access-management/
+
+**References**
+
+https://aws.amazon.com/compliance/programs/
+
+https://aws.amazon.com/compliance/hipaa-compliance/
+
+**Videos**
+
+
 
 ---------------------------------------------------------------------------------------
 ## <a id="section-99"></a> **99 - How do I report abuse of AWS resources?**
-
-
 ### **I suspect that AWS resources are used for abusive or illegal purposes. How do I let AWS know?** [here](https://aws.amazon.com/pt/premiumsupport/knowledge-center/report-aws-abuse/)
 
 **Resolution:**
@@ -704,3 +761,17 @@ Note: AWS Support can't assist with reports of abuse or questions about notifica
 
 If you suspect that AWS resources are used for abusive purposes, contact the AWS Trust & Safety team using the Report Amazon AWS abuse form, or by contacting abuse@amazonaws.com. Provide all the necessary information, including logs in plaintext, email headers, and so on, when you submit your request.
 AWS Trust & Safety team.
+
+If you suspect that AWS resources are used for abusive purposes, contact the AWS Trust & Safety team using the Report Amazon AWS abuse form, or by contacting abuse@amazonaws.com. Provide all the necessary information, including logs in plaintext, email headers, and so on, when you submit your request.
+
+
+**Cheat Sheets**
+
+https://digitalcloud.training/aws-security-services/
+
+**References:**
+
+https://aws.amazon.com/premiumsupport/knowledge-center/report-aws-abuse/
+
+
+**Videos**

@@ -2,9 +2,9 @@
 
 [1]: https://github.com/weder96/aws-certification-learning
 
-# Módulo 8: Bancos de dados
+# Module 8: Databases
 
-## Conteúdo
+## Content
 1. <a href="#section-1"> Casos de uso para diferentes tipos de banco de dados </a>
 2. <a href="#section-2"> Amazon Relational Database Service (RDS) </a>
 3. <a href="#section-3"> Amazon DynamoDB </a>
@@ -55,6 +55,24 @@ The table below provides guidance on typical use cases for various AWS database/
 - static websites
 
 We will now cover several of these database types that may come up on the exam.
+
+With AWS managed services you can reduce your time spent performing common IT tasks. With services such as Amazon RDS, AWS will patch the database host operating system and database software and perform patch management activities.
+
+* "Patching database software" is a correct answer.
+
+* "Taking a backup of a database" is also a correct answer.
+
+**Cheat Sheets**
+
+https://digitalcloud.training/aws-database-services/
+
+**References:**
+
+https://aws.amazon.com/rds/
+
+**Videos**
+
+
 
 ****************************************************** ****************************************************** ***********
 ## <a id="section-2" ></a> **2 - Amazon Relational Database Service (RDS)**
@@ -144,7 +162,7 @@ RDS is a fully managed service and you do not have access to the underlying EC2 
 ## <a id="section-3" ></a> **3 - Amazon DynamoDB**
 Amazon DynamoDB is a fully managed NoSQL database service that delivers fast, predictable performance with seamless scalability.
 
-## **Features and Benefits of Dynamo DB:**
+### **Features and Benefits of Dynamo DB:**
 - NoSQL (non-relational) database type.
 - Fast, highly available and fully managed.
 - Used when data is fluid and can change.
@@ -160,7 +178,7 @@ Amazon DynamoDB stores three geographically distributed replicas of each table t
 
 Data is synchronously replicated across 3 facilities (AZs) in a region.
 
-## **Interregion replication allows you to replicate between regions:**
+### **Interregion replication allows you to replicate between regions:**
 - Amazon DynamoDB Global Tables provides a fully managed solution for deploying a multi-region, multi-master database.
 - When creating a global table, you specify the AWS regions where you want the table to be available.
 - DynamoDB performs all the necessary tasks to create identical tables in these regions and propagate rolling data changes to all of them.
@@ -176,12 +194,12 @@ DynamoDB can be used to store session state.
 
 It provides two reading models.
 
-## **Occasionally consistent readings (Default):**
+### **Occasionally consistent readings (Default):**
 - The eventual consistency option maximizes your read throughput (better read performance).
 - An eventually consistent read may not reflect the results of a recently completed write.
 - Consistency in all copies reached in 1 second.
 
-## **Strongly consistent readings:**
+### **Strongly consistent readings:**
 - A strongly consistent read returns a result that reflects all writes that received a successful response before the read (faster consistency).
 
 Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available in-memory cache for DynamoDB that delivers up to a 10x performance improvement – ​​from milliseconds to microseconds – even at millions of requests per second.
@@ -201,36 +219,35 @@ RedShift is ideal for processing large amounts of data for business intelligence
 
 RedShift is 10x faster than a traditional SQL database.
 
-## **RedShift uses columnar data storage:**
+### **RedShift uses columnar data storage:**
 - Data is stored sequentially in columns instead of rows.
 - Column-based database is ideal for data storage and analysis.
 - Requires less I/Os, which greatly increases performance.
 
-## **RedShift provides advanced compression:**
+### **RedShift provides advanced compression:**
 - Data is stored sequentially in columns, which allows for much better performance and less storage space.
 - RedShift automatically selects the compression scheme.
 
 RedShift uses replication and continuous backups to increase availability and durability and can automatically recover from component and node failures.
 
-## **RedShift always keeps three copies of your data:**
+### **RedShift always keeps three copies of your data:**
 - The original.
 - A replica on compute nodes (within the cluster).
 - A backup copy on S3.
 
-## **RedShift provides continuous/incremental backups:**
+### **RedShift provides continuous/incremental backups:**
 - Multiple copies within a cluster.
 - Continuous and incremental backups to S3.
 - Continuous and incremental backups between regions.
 - Restoration of streaming.
 
-## **RedShift provides fault tolerance for the following faults:**
+### **RedShift provides fault tolerance for the following faults:**
 - Disk failures.
 - Faults from us.
 - Network failures.
 - AZ/region level disasters.
 
 ***************************************************************************************************************
-
 ## <a id="section-5" ></a> **5 - Amazon ElastiCache**
 ElastiCache is a web service that makes it easy to deploy and run server nodes that support the Memcached or Redis protocol in the cloud.
 
@@ -238,7 +255,7 @@ The in-memory cache provided by ElastiCache can be used to significantly improve
 
 Best for scenarios where the database load is based on OLAP (Online Analytics Processing) transactions.
 
-## **The following table describes some typical ElastiCache use cases:**
+### **The following table describes some typical ElastiCache use cases:**
 ### **Web session store**
 - In cases with load balanced web servers, store the web session information in Redis so that if one server is lost, the session information is not lost and another web server can recover it
 
@@ -258,7 +275,7 @@ They can also be On-Demand or Reserved Instances (but not Spot Instances).
 
 ElastiCache can be used to store session state.
 
-## **There are two types of ElastiCache engine:**
+### **There are two types of ElastiCache engine:**
 - **Memcached** – simpler model, can run large nodes with multiple cores/threads, can scale in and out, can cache objects like databases.
 - **Redis** – complex model, supports encryption, master/slave replication, cross AZ (HA), automatic failover and backup/restore.
 
@@ -276,7 +293,6 @@ It also supports **Apache Spark, HBase, Presto and Flink**.
 Most commonly used for log analysis, financial analysis, or extract, translate, and load (ETL) activities.
 
 ****************************************************** ****************************************************** ***********
-
 ## <a id="section-7" ></a> **7 - Amazon (RDS) Pricing**
 
 [Amazon (RDS) Pricing](https://aws.amazon.com/rds/pricing/?nc1=h_ls)
@@ -308,9 +324,6 @@ With Amazon RDS you are charged for the type and size of database, the uptime, a
 Multi AZ provides a mechanism to failover the RDS database to another synchronously replicated copy in the event of the failure of an AZ. The endpoint address for the RDS instances gets remapped to the standby instance as can be seen in the image below:
 
 <img src="../images/extra/rds_multiply_a_z.png" alt="rds_multiply_a_z" width=80% />
-
-
-
 ## <a id="section-9" ></a> **9 - Enable automatic patching for the instances using the Amazon RDS console**
 
 [Enable automatic patching](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html)
@@ -318,9 +331,11 @@ Multi AZ provides a mechanism to failover the RDS database to another synchronou
 Periodically, Amazon RDS performs maintenance on Amazon RDS resources. Maintenance most often involves updates to the DB instance's underlying hardware, underlying operating system (OS), or database engine version. Updates to the operating system most often occur for security issues and should be done as soon as possible.
 
 Required patching is automatically scheduled only for patches that are related to security and instance reliability. Such patching occurs infrequently (typically once every few months) and seldom requires more than a fraction of your maintenance window.
+## <a id="#section-9"></a> **9 - Enable automatic patching for the instances using the Amazon RDS console**
 
-
-
+**Cheat Sheets**
+**References:**
+**Videos**
 ## <a id="section-10" ></a> **10 - Backups and Restoring a DB instance to a specified time**
 
 [Restoring a DB instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIT.html)

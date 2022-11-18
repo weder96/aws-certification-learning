@@ -20,7 +20,7 @@
 13. <a href="#section-13"> AWS Wavelength </a>
 
 ***************************************************************************************************
-## <a id="section-1" ></a> **1 - Amazon [EC2](https://aws.amazon.com/ec2/?nc1=h_ls)**
+## <a id="section-1"></a> **1 - Amazon [EC2](https://aws.amazon.com/ec2/?nc1=h_ls)**
 
 ![Amazon EC2](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_Amazon-EC2_48.png "Amazon EC2")
 
@@ -107,7 +107,7 @@ You can select an existing security group or create a new one.
 You must create or use an existing key pair – this is required if you want to access your instances via SSH. However, you can also attach the ‘AmazonEC2RoleforSSM’ IAM role to your EC2 instance to allow connection to your instance via Systems Manager (Session Manager).
 
 
-## **Amazon Machine Images**
+### **Amazon Machine Images**
 
 An Amazon Machine Image (AMI) provides the information required to launch an instance.
 
@@ -124,14 +124,31 @@ AMIs are regional. You can only launch an AMI from the region in which it is sto
 - Instance store volumes are ephemeral (non-persistent). That means data is lost if the instance is shut down. A template stored on Amazon S3 is used to create the volume.
 
 
+### **Rehost**
+
+A company is planning to move a number of legacy applications to the AWS Cloud. The solution must be cost-effective. Which approach should the company take
+
+The most cost-effective solution that works is to use Amazon EC2 instances that are right-sized with the most optimum instance types. Right-sizing is the process of ensuring that the instance type selected for each application provides the right amount of resources for the application.
+
+
 **Cheat Sheets**
 
+https://digitalcloud.training/aws-compute-services/
+
+https://digitalcloud.training/architecting-for-the-cloud/
+
 **References:**
+
+https://d1.awsstatic.com/whitepapers/cost-optimization-right-sizing.pdf
+
+https://wa.aws.amazon.com/wellarchitected/2020-07-02T19-33-23/wat.concept.horizontal-scaling.en.html
+
+
 
 **Videos**
 
 ***************************************************************************************************
-## <a id="section-2" ></a> **2 - Pricing**
+## <a id="section-2"></a> **2 - Pricing**
 ### **Billing and provisioning**
 
 There are several options for how you consume and pay for Amazon EC2 instances.
@@ -195,7 +212,7 @@ There are several options for how you consume and pay for Amazon EC2 instances.
 - Tenancy – Default (shared) tenancy, or Dedicated tenancy.
 - Availability Zone (optional) – if AZ is selected, RI is reserved, and discount applies to that AZ (Zonal RI). If no AZ is specified, no reservation is created but the discount is applied to any instance in the family in any AZ in the region (Regional RI).
 
-## **Comparing Amazon EC2 Pricing Models**
+### **Comparing Amazon EC2 Pricing Models**
 
 The following table provides a brief comparison of On-demand, Reserved and Spot pricing models:
 |On-Demand	|Reserved	|Spot|
@@ -258,10 +275,28 @@ Regional Data Transfer rates apply if at least one of the following is true, but
 –‌ Allows‌ ‌you‌ ‌to‌ ‌reserve‌ ‌capacity‌ ‌for‌ ‌your‌ ‌EC2‌ ‌instances‌ ‌in‌ ‌a‌ ‌specific‌ ‌Availability‌‌
 - Zone‌ ‌for‌ ‌any‌ ‌duration.‌ ‌No‌ ‌commitment‌ ‌required.‌ ‌
 
-***************************************************************************************************
-## <a id="section-3" ></a> **3 - Instance Types**
+**Cost optimization** can include using Auto Scaling groups to scale the number of EC2 instances according to actual demand. Also, using Amazon EC2 reserved instances for suitable workloads is a good way of optimizing costs over the longer term.
 
-## **EC2 Instance types**
+* "Implement Auto Scaling groups to add and remove instances based on demand" is a correct answer.
+
+* "Purchase Amazon EC2 Reserved Instances" is also a correct answer.
+
+
+**Cheat Sheets**
+
+https://digitalcloud.training/aws-billing-and-pricing/
+
+**References:**
+
+https://aws.amazon.com/aws-cost-management/aws-cost-optimization/
+
+**Videos**
+
+
+***************************************************************************************************
+## <a id="section-3"></a> **3 - Instance Types**
+
+### **EC2 Instance types**
 
 Amazon EC2 provides a wide selection of instance types optimized to fit different use cases.
 Instance types comprise varying combinations of CPU, memory, storage, and networking capacity and give you the flexibility to choose the appropriate mix of resources for your applications.
@@ -272,7 +307,7 @@ Each instance type includes one or more instance sizes, allowing you to scale yo
 
 
 ***************************************************************************************************
-## <a id="section-4" ></a> **4 - Amazon Elastic Container Service (ECS)**
+## <a id="section-4"></a> **4 - Amazon Elastic Container Service (ECS)**
 
 ![Amazon-Elastic-Container-Service](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_Amazon-Elastic-Container-Service_48.png "Amazon-Elastic-Container-Service")
 
@@ -284,7 +319,7 @@ Each instance type includes one or more instance sizes, allowing you to scale yo
 **Videos**
 
 ***************************************************************************************************
-## <a id="section-5" ></a> **5 - AWS Lambda**
+## <a id="section-5"></a> **5 - AWS Lambda**
 
 ![AWS Lambda](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Lambda_48.png "AWS Lambda")
 
@@ -296,7 +331,7 @@ Each instance type includes one or more instance sizes, allowing you to scale yo
 **Videos**
 
 ***************************************************************************************************
-## <a id="section-6" ></a> **6 - Amazon LightSail**
+## <a id="section-6"></a> **6 - Amazon LightSail**
 
 ![Amazon LightSail](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_Amazon-Lightsail_48.png "Amazon Lightsail")
 
@@ -341,9 +376,9 @@ Application templates include WordPress, WordPress Multisite, Drupal, Joomla!, M
 Amazon LightSail currently supports 6 Linux or Unix-like distributions: Amazon Linux, CentOS, Debian, FreeBSD, OpenSUSE, and Ubuntu, as well as 2 Windows Server versions: 2012 R2 and 2016.
 
 ***************************************************************************************************
-## <a id="section-7" ></a> **7 - Amazon LightSail Databases**
+## <a id="section-7"></a> **7 - Amazon LightSail Databases**
 
-## **Amazon LightSail Databases**
+### **Amazon LightSail Databases**
 Amazon LightSail databases are instances that are dedicated to running databases.
 
 An Amazon LightSail database can contain multiple user-created databases, and you can access it by using the same tools and applications that you use with a stand-alone database.
@@ -367,7 +402,7 @@ High Availability plans add redundancy and durability to your database, by autom
 For every **Amazon LightSail** plan you use, we charge you the fixed hourly price, up to the maximum monthly plan cost.
 
 ***************************************************************************************************
-## <a id="section-8" ></a> **8 - AWS Elastic Beanstalk**
+## <a id="section-8"></a> **8 - AWS Elastic Beanstalk**
 [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
 
 AWS Elastic Beanstalk can be used to quickly deploy and manage applications in the AWS Cloud.
@@ -592,7 +627,7 @@ All the parameters set in the UI can be configured in the code.
 
 Resources managed by .ebextensions get deleted if the environment is terminated.
 
-## **Elastic Beanstalk with Amazon Relational Database Service (RDS)**
+### **Elastic Beanstalk with Amazon Relational Database Service (RDS)**
 
 You can deploy Amazon RDS within an Elastic Beanstalk environment as in the diagram below:
 
@@ -686,18 +721,39 @@ The [instance profile](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/co
 You can also create [user policies](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts-roles-user.html) and apply them to IAM users and groups in your account to allow users to create and manage Elastic Beanstalk applications and environments. Elastic Beanstalk provides managed policies for full access and read-only access.
 
 ***************************************************************************************************
-## <a id="section-9" ></a> **9 - AWS Batch**
+## <a id="section-9"></a> **9 - AWS Batch**
 
 ![AWS-Batch](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Batch_48.png "AWS-Batch")
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-batch/
+
 **References:**
+
+https://aws.amazon.com/batch/
+
+https://aws.amazon.com/elasticbeanstalk/
+
+https://docs.aws.amazon.com/batch/latest/userguide/
+
+https://aws.amazon.com/batch/features/
+
+https://aws.amazon.com/batch/pricing/
+
+https://aws.amazon.com/batch/faqs/
 
 **Videos**
 
+https://www.youtube.com/results?search_query=aws+batch+
+
+https://www.youtube.com/watch?v=T4aAWrGHmxQ
+
+https://www.youtube.com/watch?v=H8bmHU_z8Ac
+
+
 ***************************************************************************************************
-## <a id="section-10" ></a> **10 - AWS Outposts**
+## <a id="section-10"></a> **10 - AWS Outposts**
 
 ![AWS Outposts Server](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Outposts-servers_48.png "AWS Outposts Server")
 
@@ -705,15 +761,29 @@ You can also create [user policies](https://docs.aws.amazon.com/elasticbeanstalk
 
 ![AWS Outposts Rack](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Outposts-rack_48.png "AWS Outposts Rack")
 
+
+AWS Outposts is a fully managed service that offers the same AWS infrastructure, AWS services, APIs, and tools to virtually any datacenter, co-location space, or on-premises facility for a truly consistent hybrid experience. With AWS Outposts you can extend your VPC into the on-premises data center as in the following diagram:
+
+![AWS Outposts](../images/extra/AwsOutposts.jpg)
+
+
 **Cheat Sheets**
+
+https://digitalcloud.training/aws-networking-services/
 
 **References:**
 
+https://aws.amazon.com/outposts/
+
 **Videos**
+
+https://www.youtube.com/results?search_query=AWS+Outposts
+
+https://www.youtube.com/watch?v=2cQncaijRoY
 
 
 ***************************************************************************************************
-## <a id="section-11" ></a> **11 - AWS Serverless Application Repository**
+## <a id="section-11"></a> **11 - AWS Serverless Application Repository**
 
 ![AWS-Serverless-Application-Repository](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Serverless-Application-Repository_48.png "AWS-Serverless-Application-Repository")
 
@@ -726,7 +796,7 @@ You can also create [user policies](https://docs.aws.amazon.com/elasticbeanstalk
 
 
 ***************************************************************************************************
-## <a id="section-12" ></a> **12 - VMware Cloud on AWS**
+## <a id="section-12"></a> **12 - VMware Cloud on AWS**
 
 ![VMware-Cloud-on-AWS](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_VMware-Cloud-on-AWS_48.png "VMware-Cloud-on-AWS")
 
@@ -739,7 +809,7 @@ You can also create [user policies](https://docs.aws.amazon.com/elasticbeanstalk
 
 
 ***************************************************************************************************
-## <a id="section-13" ></a> **13 - AWS Wavelength**
+## <a id="section-13"></a> **13 - AWS Wavelength**
 
 ![AWS-Wavelength](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Wavelength_48.png "AWS-Wavelength")
 
