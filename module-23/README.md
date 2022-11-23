@@ -9,7 +9,7 @@
 
 
 ***************************************************************************************************
-## <a id="section-01" ></a> **1 - AWS CloudFormation **
+## <a id="section-01" ></a> **1 - AWS CloudFormation**
 
 ![AWS CloudFormation](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-CloudFormation_48.png "AWS CloudFormation")
 

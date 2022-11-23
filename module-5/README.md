@@ -14,6 +14,7 @@
 7. <a href="#section-7"> AWS Transit Gateway  </a> 
 8. <a href="#section-8"> Amazon VPC </a> 
 9. <a href="#section-9"> AWS VPN </a>
+10. <a href="#section-10"> Amazon API Gateway </a>
 
 
 ***************************************************************************************************
@@ -23,10 +24,23 @@
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/amazon-cloudfront/
+
+https://digitalcloud.training/amazon-cloudfront/
+
 **References:**
+
+https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide
+
+https://aws.amazon.com/cloudfront/features/
+
+https://aws.amazon.com/cloudfront/pricing/
+
+https://aws.amazon.com/cloudfront/faqs/
 
 **Videos**
 
+https://www.youtube.com/user/AmazonWebServices/search?query=CloudFront
 
 
 ***************************************************************************************************
@@ -36,9 +50,21 @@
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-direct-connect/
+
 **References:**
 
+https://docs.aws.amazon.com/directconnect/latest/UserGuide
+
+https://aws.amazon.com/directconnect/features/
+
+https://aws.amazon.com/directconnect/pricing/
+
+https://aws.amazon.com/directconnect/faqs/
+
 **Videos**
+
+https://www.youtube.com/results?search_query=aws+direct+connect
 
 
 ***************************************************************************************************
@@ -48,11 +74,27 @@
 
 **Cheat Sheets**
 
+https://digitalcloud.training/aws-elastic-load-balancing-aws-elb/
+
+https://tutorialsdojo.com/aws-elastic-load-balancing-elb/
+
+https://tutorialsdojo.com/application-load-balancer-vs-network-load-balancer-vs-classic-load-balancer/
+
 **References:**
+
+https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html
+
+https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html
+
+https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/introduction.html
+
+https://aws.amazon.com/elasticloadbalancing/features/
+
+https://aws.amazon.com/elasticloadbalancing/pricing/?nc=sn&loc=3
 
 **Videos**
 
-
+https://www.youtube.com/results?search_query=aws+Elastic+Load+Balancing
 
 ***************************************************************************************************
 ## <a id="section-4"></a> **4 - AWS Global Accelerator**
@@ -61,9 +103,19 @@
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-global-accelerator/
+
 **References:**
 
+https://aws.amazon.com/global-accelerator/
+
+https://aws.amazon.com/global-accelerator/faqs/
+
+https://docs.aws.amazon.com/pt_br/global-accelerator/latest/dg/what-is-global-accelerator.html
+
 **Videos**
+
+https://www.youtube.com/results?search_query=aws+AWS+Global+Accelerator
 
 
 ***************************************************************************************************
@@ -75,9 +127,11 @@
 
 **References:**
 
+https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-services-overview.html
+
 **Videos**
 
-
+https://www.youtube.com/results?search_query=AWS+PrivateLink
 
 ***************************************************************************************************
 ## <a id="section-6"></a> **6 - Amazon Route 53**
@@ -86,9 +140,23 @@
 
 **Cheat Sheets**
 
+https://digitalcloud.training/amazon-route-53/
+
+https://digitalcloud.training/aws-content-delivery-and-dns-services/
+
+https://tutorialsdojo.com/amazon-route-53/
+
 **References:**
 
+https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html
+
+https://aws.amazon.com/route53/features/
+
+https://aws.amazon.com/route53/pricing/
+
 **Videos**
+
+https://www.youtube.com/user/AmazonWebServices/search?query=Route+53
 
 
 
@@ -99,11 +167,15 @@
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-transit-gateway/
+
 **References:**
+
+https://aws.amazon.com/transit-gateway/
 
 **Videos**
 
-
+https://www.youtube.com/results?search_query=AWS+Transit+Gateway
 
 ***************************************************************************************************
 ## <a id="section-8"></a> **8 - Amazon VPC**
@@ -137,9 +209,6 @@ https://www.youtube.com/results?search_query=Amazon+vpc
 
 https://www.youtube.com/watch?v=jZAvKgqlrjY&t=1s
 
-
-
-
 ***************************************************************************************************
 ## <a id="section-9"></a> **9 - AWS VPN**
 
@@ -149,4 +218,34 @@ https://www.youtube.com/watch?v=jZAvKgqlrjY&t=1s
 
 **References:**
 
+https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html
+
 **Videos**
+
+https://www.youtube.com/results?search_query=AWS+Client+VPN
+
+
+
+***************************************************************************************************
+## <a id="section-10"></a> **10 - Amazon API Gateway**
+
+![Amazon CloudFront](../images/Architecture-Service-Icons_01312022/Arch_App-Integration/Arch_48/Arch_%20Amazon-API-Gateway_48.png "AWS VPN")
+
+**Cheat Sheets**
+
+https://tutorialsdojo.com/amazon-api-gateway/
+
+
+**References:**
+
+https://docs.aws.amazon.com/apigateway/latest/developerguide/
+
+https://aws.amazon.com/api-gateway/features/
+
+https://aws.amazon.com/api-gateway/pricing/
+
+https://aws.amazon.com/api-gateway/faqs/
+
+**Videos**
+
+https://www.youtube.com/results?search_query=aws+api+gateway

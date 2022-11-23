@@ -305,9 +305,21 @@ https://docs.aws.amazon.com/cognito/latest/developerguide/switching-identities.h
 ***************************************************************************************************
 ## <a id="section-30"></a> **30 - Security Group vs NACL**
 
+Your VPC has a default security group with the following rules:
+
+Allow inbound traffic from instances assigned to the same security group.
+Allow all outbound IPv4 traffic and IPv6 traffic if you have allocated an IPv6 CIDR block.
+Your VPC has a default network ACL with the following rules:
+
+Allows all inbound and outbound IPv4 traffic and, if applicable, IPv6 traffic.
+Each network ACL also includes a non modifiable and non removable rule whose rule number is an asterisk. This rule ensures that if a packet doesn’t match any of the other numbered rules, it’s denied.
+
 **Cheat Sheets**
-**References:**
-**Videos**
+
+https://tutorialsdojo.com/security-group-vs-nacl/
+
+https://digitalcloud.training/aws-networking-services/
+
 
 ***************************************************************************************************
 ## <a id="section-31"></a> **31 - Service Control Policies vs IAM Policies**

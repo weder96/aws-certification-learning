@@ -21,47 +21,21 @@ Recommend‌ ‌that‌ ‌you‌ ‌read‌ ‌the‌ ‌following‌ ‌whitep
 4. [Using‌ ‌Amazon‌ ‌Web‌ ‌Services‌ ‌for‌ ‌Disaster‌ ‌Recovery‌:‌](https://d1.awsstatic.com/whitepapers/Storage/Backup_and_Recovery_Approaches_Using_AWS.pdf?did=wp_card&trk=wp_card) ‌This‌ ‌paper‌ ‌explains‌ ‌the‌ ‌different‌ ‌types‌ ‌of‌ ‌disaster‌ recovery‌ ‌plans‌ ‌that‌ ‌you‌ ‌can‌ ‌perform‌ ‌in‌ ‌AWS.‌ ‌It‌ ‌is‌ ‌your‌ ‌responsibility‌ ‌as‌ ‌a‌ ‌Solutions‌ ‌Architect‌ ‌to‌ ‌mitigate‌‌ any‌ ‌potential‌ ‌downtime‌ ‌when‌ ‌disaster‌ ‌strikes.‌ ‌Depending‌ ‌on‌ ‌your‌ ‌RPO‌ ‌and‌ ‌RTO,‌ ‌a‌ ‌proper‌ ‌disaster‌‌ recovery‌ ‌plan‌ ‌will‌ ‌be‌ ‌a‌ ‌deciding‌ ‌factor‌ ‌between‌ ‌business‌ ‌continuity‌ ‌and‌ ‌revenue‌ ‌loss.‌ ‌
 
 
+RTO‌‌ ‌is‌ ‌the‌ ‌time‌ ‌it‌ ‌takes‌ ‌after‌ ‌a‌ ‌disruption‌ ‌to‌ ‌restore‌ ‌a‌ ‌business‌ ‌process‌ ‌to‌ ‌its‌ ‌service‌ ‌level.‌ ‌
+RPO‌‌ ‌is‌ ‌the‌ ‌acceptable‌ ‌amount‌ ‌of‌ ‌data‌ ‌loss‌ ‌measured‌ ‌in‌ ‌time‌ ‌before‌ ‌the‌ ‌disaster‌ ‌occurs.‌ ‌ Disaster‌ ‌Recovery‌ ‌With‌ ‌AWS‌ ‌
 
-As‌ ‌mentioned‌ ‌in‌ ‌this‌ ‌review,‌ ‌you‌ ‌should‌ ‌be‌ ‌able‌ ‌to‌ ‌differentiate‌ ‌services‌ ‌that‌ ‌belong‌ ‌in‌ ‌one‌ ‌category‌ ‌with‌ ‌one‌‌ another.‌ ‌
+- **Backup‌ ‌and‌ ‌Restore‌‌** ‌-‌ ‌storing‌ ‌backup‌ ‌data‌ ‌on‌ ‌S3‌ ‌and‌ ‌recovering‌ ‌data‌ ‌quickly‌ ‌and‌ ‌reliably.‌
+ ‌
+- **Pilot‌ ‌Light‌‌** ‌for‌ ‌Quick‌ ‌Recovery‌ ‌into‌ ‌AWS‌ ‌-‌ ‌quicker‌ ‌recovery‌ ‌time‌ ‌than‌ ‌backup‌ ‌and‌ ‌restore‌‌ because‌ ‌core‌ ‌pieces‌ ‌of‌ ‌the‌ ‌system‌ ‌are‌ ‌already‌ ‌running‌ ‌and‌ ‌are‌ ‌continually‌ ‌kept‌ ‌up‌ ‌to‌ ‌date.‌ ‌
 
-**[Common‌ ‌comparisons‌ ‌include:‌](https://tutorialsdojo.com/comparison-of-aws-services/)** ‌
+- **Warm‌ ‌Standby‌‌ ‌Solution‌** ‌-‌ ‌a‌ ‌scaled-down‌ ‌version‌ ‌of‌ ‌a‌ ‌fully‌ ‌functional‌ ‌environment‌ ‌is‌ ‌always‌‌
+running‌ ‌in‌ ‌the‌ ‌cloud‌ ‌
 
-- EC2 Container Services ECS vs Lambda ‌
-- Amazon S3 vs EBS vs EFS ‌
-- SQS‌ ‌vs‌ ‌SNS‌ ‌vs‌ ‌SES‌ ‌vs‌ ‌MQ‌ ‌
-- Security‌ ‌Group‌ ‌vs‌ ‌nACLs‌ ‌
-- The‌ ‌different‌ ‌S3‌ ‌storage‌ ‌types‌ ‌vs‌ ‌Glacier‌ ‌
-- RDS‌ ‌vs‌ ‌DynamoDB‌ ‌vs‌ ‌Elasticache‌ ‌
-- RDS‌ ‌engines‌ ‌vs‌ ‌Aurora‌ ‌
-- Amazon Aurora vs Amazon RDS
-- Amazon Cognito User Pools vs Identity Pools
-- Amazon EFS vs Amazon FSx for Windows vs Amazon FSx for Lustre
-- Amazon Kinesis Data Streams vs Data Firehose vs Data Analytics vs Video Streams
-- Amazon S3 vs Glacier
-- Amazon SWF vs AWS Step Function vs Amazon SQS
-- Application Load Balancer vs Network Load Balancer vs Classic Load Balancer
-- AWS CloudTrail vs Amazon CloudWatch
-- AWS DataSync vs Storage Gateway
-- AWS Global Accelerator vs Amazon CloudFront
-- AWS Secrets Manager vs Systems Manager Parameter Store
-- Backup and Restore vs Pilot Light vs Warm Standby vs Multi – site
-- CloudWatch Agent vs SSM Agent vs Custom Daemon Scripts
-- EBS-SSD vs HDD
-- EC2 Instance Health Check vs ELB Health Check vs Auto Scaling and Custom Health Check
-- Elastic Beanstalk vs CloudFormation vs OpsWorks vs CodeDeploy
-- ELB Health Checks vs Route 53 Health Checks For Target Health Monitoring
-- Global Secondary Index vs Local Secondary Index
-- Interface Endpoint vs Gateway Endpoint vs Gateway Load Balancer Endpoint
-- Latency Routing vs Geoproximity Routing vs Geolocation Routing
-- Redis Append – Only files vs Redis Replication
-- Redis Cluster Mode Enabled vs Disabled vs Memcached
-- S3 Pre-Signed URLS vs CloudFront Signed URLS vs Origin Access Identity
-- S3 Standard vs S3 Standard-IA vs S3OneZone-IA
-- S3 Transfer Acceleration vs Direct Connect vs VPN vs Snowball vs Snowmobile
-- Service Control Policies vs IAM Policies
-- SNI Custom SSL vs Dedicated IP Custom SSL
-- Step Scaling vs Simple Scaling Policies in Amazon EC2
+- **Multi-Site‌‌ ‌Solution‌** ‌-‌ ‌run‌ ‌your‌ ‌infrastructure‌ ‌on‌ ‌another‌ ‌site,‌ ‌in‌ ‌an‌ ‌active-active‌ ‌configuration.‌ ‌
 
+- **AWS‌ ‌Production‌** ‌to‌ ‌an‌ ‌AWS‌ ‌DR‌ ‌Solution‌ Using‌ ‌Multiple‌ ‌AWS‌ ‌Regions‌‌ ‌-‌ ‌take‌ ‌advantage‌ ‌of‌ ‌AWS’‌‌ multiple‌ ‌availability‌ ‌zones‌ ‌
+
+- As‌ ‌mentioned‌ ‌in‌ ‌this‌ ‌review,‌ ‌you‌ ‌should‌ ‌be‌ ‌able‌ ‌to‌ ‌differentiate‌ ‌services‌ ‌that‌ ‌belong‌ ‌in‌ ‌one‌ ‌category‌ ‌with‌ ‌one‌‌ another.‌ ‌
 
 ------------------------------------------------------------------------------------------------
 - S3
@@ -105,8 +79,6 @@ https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and
 http://docs.aws.amazon.com/IAM/latest/UserGuide/cloudtrail-integration.html
 
 https://tutorialsdojo.com/aws-cloudtrail/
-
-
 
 
 - Amazon-MQ

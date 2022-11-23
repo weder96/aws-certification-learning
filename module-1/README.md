@@ -6,16 +6,17 @@
 
 
 ## Contents
-1. <a href="#section-1"> Introduction to Cloud Computing</a>
-2. <a href="#section-2"> Advantages of Cloud Computing </a>
-3. <a href="#section-3"> Introduction to Amazon Web Services (AWS) </a>
-4. <a href="#section-4"> Moving to the AWS Cloud – AWS Cloud Adoption Framework (AWS CAF)</a>
-5. <a href="#section-5"> AWS Shared Responsibility Model</a>
-6. <a href="#section-6"> AWS Support</a>
-7. <a href="#section-7"> Architecting for the Cloud</a>
+1. <a href="#section-01"> Introduction to Cloud Computing</a>
+2. <a href="#section-02"> Advantages of Cloud Computing </a>
+3. <a href="#section-03"> Introduction to Amazon Web Services (AWS) </a>
+4. <a href="#section-04"> Moving to the AWS Cloud – AWS Cloud Adoption Framework (AWS CAF)</a>
+5. <a href="#section-05"> AWS Shared Responsibility Model</a>
+6. <a href="#section-06"> AWS Support</a>
+7. <a href="#section-07"> Architecting for the Cloud</a>
+8. <a href="#section-08"> Architecting for the Cloud</a>
 
 *******************************************************************************************************
-## <a id="section-1"></a> **1 - Introduction to Cloud Computing**
+## <a id="section-01"></a> **1 - Introduction to Cloud Computing**
 
 What is cloud computing?
 
@@ -140,7 +141,7 @@ The‌ ‌technology‌ ‌can‌ ‌save‌ ‌you‌ ‌a‌ ‌lot‌ ‌of�
 **Videos**
 
 **********************************************************************************************************************
-## <a id="section-2"></a> **2 - Advantages of Cloud Computing**
+## <a id="section-02"></a> **2 - Advantages of Cloud Computing**
 - Swap capital expenses for variable expenses
 - Great economy of scale
 - Stop trying to guess the ability
@@ -407,7 +408,7 @@ https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cl
 https://www.youtube.com/results?search_query=aws+cloud+computing+concepts
 
 ***************************************************************************************************************************
-## <a id="section-3"></a> **3 - Introduction to Amazon Web Services (AWS)**
+## <a id="section-03"></a> **3 - Introduction to Amazon Web Services (AWS)**
 
 What are web services?
 
@@ -426,7 +427,7 @@ Ways to Interact with AWS
 - AWS Management Console: Easy-to-use graphical interface
 - Command Line Interface (AWS CLI): Access to services by specific commands or scripts
 - Software development kits (SDKs): Access services directly from your code (such as Java, Python and others)
-## <a id="section-4"></a> **4 - Moving to the AWS Cloud – AWS Cloud Adoption Framework (AWS CAF)**
+## <a id="section-04"></a> **4 - Moving to the AWS Cloud – AWS Cloud Adoption Framework (AWS CAF)**
 
 AWS Cloud Adoption Framework: is a document created to help organizations design and navigate an accelerated path to successful cloud adoption
 
@@ -438,7 +439,7 @@ Outlook:
 
 - Focuses on business resources: business, people and governance
 - Focuses on technical resources: platform, security and operations
-## <a id="section-5"></a> **5 - AWS Shared Responsibility Model**
+## <a id="section-05"></a> **5 - AWS Shared Responsibility Model**
 The [AWS shared responsibility model](https://aws.amazon.com/compliance/shared-responsibility-model/) defines what you (as an AWS account holder/user) and AWS are responsible for when it comes to security and compliance.
 
 Security and Compliance is a shared responsibility between AWS and the customer. This shared model can help relieve customer's operational burdens as AWS operates, manages, and controls the components from the host operating system and virtualization layer down to the physical security of the facilities in which the service operates.
@@ -490,7 +491,7 @@ https://www.youtube.com/watch?v=iODPCcQEPto
 
 
 **********************************************************************************
-## <a id="section-6"></a> **6 - AWS Support**
+## <a id="section-06"></a> **6 - AWS Support**
 
 [AWS Support Plans](https://aws.amazon.com/premiumsupport/plans/)
 There are four AWS support plans available:
@@ -519,7 +520,7 @@ Business and Enterprise allow unlimited contacts to open unlimited cases.
 *** Plans are subject to a 30 day minimum term.
 
 ****Customers qualify for the regional pricing if all accounts on their billing profile are concentrated in qualified LATAM countries, India, or Mainland China subject to conditions below. 
-## <a id="section-7"></a> **7 - Architecting for the Cloud**
+## <a id="section-07"></a> **7 - Architecting for the Cloud**
 
 
 What are the benefits of using the AWS Managed Services? 
@@ -548,4 +549,17 @@ https://www.youtube.com/results?search_query=architecting+for+the+cloud
 
 https://www.youtube.com/watch?v=vJ6XvQ94UnM
 
+--------------------------------------------------------------------------------------------------
+## <a id="section-08"></a> **8 - Common‌ ‌Exam‌ ‌Scenarios**
+
+
+|   Scenario‌ ‌       | Solution‌   |
+|-------------------|------------|
+| ‌Domain‌ 1:‌ Cloud‌ Concepts‌       |
+|A‌ ‌key‌ ‌financial‌ ‌benefit‌ ‌of‌ ‌migrating‌ ‌systems‌ ‌hosted‌‌ on‌ ‌your‌ ‌on-premises‌ ‌data‌ ‌center‌ ‌to‌ ‌AWS.‌ |‌-‌ ‌Replaces‌ ‌upfront‌ ‌capital‌ ‌expenses‌ ‌(CAPEX)‌ ‌with‌ ‌low‌‌ variable‌ ‌operational‌ ‌expenses‌ ‌(OPEX).‌ ‌ -‌ ‌Reduce‌ ‌the‌ ‌Total‌ ‌Cost‌ ‌of‌ ‌Ownership‌ ‌(TCO)‌| ‌
+| 4‌ ‌cloud‌ ‌architectures‌ ‌design‌ ‌principle‌ ‌in‌ ‌AWS‌ ‌ | 1. Design‌ ‌for‌ ‌failure.‌ ‌ 2. Decouple‌ ‌your‌ ‌components‌ ‌3. Implement‌ ‌elasticity‌ ‌ ‌4. Think‌ ‌parallel‌ | ‌
+|A‌ ‌cloud‌ ‌architecture‌ ‌for‌ ‌mission-critical‌ ‌workloads‌ ‌in‌‌ AWS‌ ‌which‌ ‌must‌ ‌be‌ ‌highly-available.‌ ‌| Use‌ multiple‌ ‌Availability‌ ‌Zones‌ |
+| ‌A‌ ‌change‌ ‌or‌ ‌a‌ ‌failure‌ ‌in‌ ‌one‌ ‌component‌ ‌should‌ ‌not‌‌ cascade‌ ‌to‌ ‌other‌ ‌components.‌ | ‌Loose‌ ‌coupling‌ ‌|
+|You‌ ‌need‌ ‌to‌ ‌enable‌ ‌your‌ ‌Amazon‌ ‌EC2‌ ‌instances‌ ‌in‌ ‌the‌‌  ‌public‌ ‌subnet‌ ‌to‌ ‌connect‌ ‌to‌ ‌the‌ ‌public‌ ‌Internet.‌ | Internet‌ ‌Gateway‌ |
+|You‌ ‌need‌ ‌to‌ ‌enable‌ ‌your‌ ‌EC2‌ ‌instances‌ ‌in‌ ‌the‌ ‌private‌‌ subnet‌ ‌to‌ ‌connect‌ ‌to‌ ‌the‌ ‌public‌ ‌Internet.‌ | ‌NAT‌ ‌Gateway‌ ‌|
 
