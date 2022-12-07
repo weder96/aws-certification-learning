@@ -550,6 +550,47 @@ CloudTrail is on a per account basis and per region basis but can be aggregated 
 
 
 **For billing purposes**, the consolidated billing feature of AWS Organizations treats all the accounts in the organization as one account. This means that all accounts in the organization can receive the hourly cost benefit of Reserved Instances that are purchased by any other account.
+
+
+
+### **Service control policies (SCPs)**
+
+https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html
+https://digitalcloud.training/category/aws-cheat-sheets/aws-solutions-architect-professional/security-identity-compliance-sap/
+
+
+
+**Cheat Sheets**
+
+https://tutorialsdojo.com/aws-organizations/
+
+
+**References:**
+
+https://docs.aws.amazon.com/organizations/latest/userguide/
+
+https://aws.amazon.com/organizations/features/
+
+https://aws.amazon.com/organizations/faqs/
+
+https://docs.aws.amazon.com/servicecatalog/latest/adminguide/controlling_access.html
+
+https://docs.aws.amazon.com/organizations/latest/userguide/services-that-can-integrate-servicecatalog.html
+
+https://digitalcloud.training/category/aws-cheat-sheets/aws-solutions-architect-professional/aws-networking-content-delivery-sap/
+
+https://digitalcloud.training/category/aws-cheat-sheets/aws-solutions-architect-professional/security-identity-compliance-sap/
+
+
+**Videos**
+
+https://www.youtube.com/results?search_query=aws+organization
+
+https://www.youtube.com/watch?v=fxo67UeeN1A&t=1s
+
+https://www.youtube.com/watch?v=T4U2YC4PJkY&t=33s
+
+--------------------------------------------------------------------------------------------------------------
 ## <a id="section-19"></a> **19 - AWS Config**
 [gs-console](https://docs.aws.amazon.com/config/latest/developerguide/gs-console.html)
 

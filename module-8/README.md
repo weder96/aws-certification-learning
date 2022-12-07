@@ -208,6 +208,43 @@ It provides two reading models.
 
 Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available in-memory cache for DynamoDB that delivers up to a 10x performance improvement – ​​from milliseconds to microseconds – even at millions of requests per second.
 
+### **Managing throughput capacity automatically with DynamoDB auto scaling**
+
+**How DynamoDB auto scaling works**
+
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/AutoScaling.Console.html
+
+The following diagram provides a high-level overview of how DynamoDB auto scaling manages throughput capacity for a table.
+
+![AutoScallingDynamoDB](../images/extra/auto-scaling.png)
+
+
+###**DAX: How it works**
+
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.html
+
+![DAXDynamoDB](../images/extra/dax_high_level.png)
+
+
+
+**Cheat Sheets**
+
+https://tutorialsdojo.com/amazon-dynamodb/
+
+https://digitalcloud.training/category/aws-cheat-sheets/aws-solutions-architect-professional/aws-database-sap/
+
+**References:**
+
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html?shortFooter=true
+
+https://aws.amazon.com/dynamodb/faqs/
+
+**Videos**
+
+https://www.youtube.com/watch?v=HaEPXoXVf2k
+
+
+
 ****************************************************** ****************************************************** ***********
 ## <a id="section-04"></a> **4  - Amazon RedShift**
 

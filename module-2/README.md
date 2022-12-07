@@ -101,7 +101,11 @@ https://digitalcloud.training/aws-billing-and-pricing/
 
 **References**
 
+https://aws.amazon.com/aws-cost-management/aws-cost-explorer/
+
 **Videos**
+
+https://www.youtube.com/results?search_query=aws+cost+explorer
 
 *********************************************************************************************************
 ## <a id="section-05"></a> **5 - AWS Application Cost Profiler**
@@ -127,9 +131,21 @@ https://digitalcloud.training/aws-billing-and-pricing/
 
 https://digitalcloud.training/aws-billing-and-pricing/
 
+https://tutorialsdojo.com/aws-billing-and-cost-management/
+
 **References**
 
+https://aws.amazon.com/aws-cost-management/aws-cost-explorer/
+
+https://aws.amazon.com/aws-cost-management/aws-cost-and-usage-reporting/
+
+https://aws.amazon.com/aws-cost-management/faqs/
+
+https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2
+
 **Videos**
+
+https://www.youtube.com/results?search_query=AWS+Cost+and+Usage+Report
 
 *********************************************************************************************************
 ## <a id="section-07"></a> **7 - Savings Plans**
@@ -139,10 +155,21 @@ https://digitalcloud.training/aws-billing-and-pricing/
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-support-plans/
+
 https://digitalcloud.training/aws-billing-and-pricing/
 
 **References**
 
+https://d1.awsstatic.com/whitepapers/aws_pricing_overview.pdf
+
+https://aws.amazon.com/pricing/
+
+https://aws.amazon.com/ec2/pricing/reserved-instances/pricing/
+
+
 **Videos**
+
+https://www.youtube.com/results?search_query=aws+saving+plans
 
 *********************************************************************************************************
