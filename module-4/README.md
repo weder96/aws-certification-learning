@@ -5,15 +5,15 @@
 # Module 4: Cloud Security (AWS Security Services)
 
 ## Contents
-1. <a href="#section-1"> Amazon Inspector </a>
-2. <a href="#section-2"> Amazon Artifact </a>
-3. <a href="#section-3"> Amazon GuardDuty</a>
-4. <a href="#section-4"> Amazon WAF & AWS Shield</a>
-5. <a href="#section-5"> Amazon Key Management Service (AWS KMS)</a>
-6. <a href="#section-6"> Amazon CloudHSM</a>
-7. <a href="#section-7"> Amazon Certificate Manager(ACM)</a>
-8. <a href="#section-8"> Amazon Inspector and AWS Trusted Advisor</a>
-9. <a href="#section-9"> Amazon Penetration Testing</a>
+1. <a href="#section-01"> Amazon Inspector </a>
+2. <a href="#section-02"> Amazon Artifact </a>
+3. <a href="#section-03"> Amazon GuardDuty</a>
+4. <a href="#section-04"> Amazon WAF & AWS Shield</a>
+5. <a href="#section-05"> Amazon Key Management Service (AWS KMS)</a>
+6. <a href="#section-06"> Amazon CloudHSM</a>
+7. <a href="#section-07"> Amazon Certificate Manager(ACM)</a>
+8. <a href="#section-08"> Amazon Inspector and AWS Trusted Advisor</a>
+9. <a href="#section-09"> Amazon Penetration Testing</a>
 10. <a href="#section-10"> Amazon Single Sign-On (AWS SSO)</a>
 11. <a href="#section-11"> Amazon Cognito</a>
 12. <a href="#section-12"> Amazon Directory Services </a>
@@ -31,10 +31,11 @@
 24. <a href="#section-24"> Amazon WAF </a>
 25. <a href="#section-25"> AWS account root user </a>
 26. <a href="#section-26"> Compliance Programs </a>
+27. <a href="#section-27"> Encryption and Unencrypted</a>
 99. <a href="#section-99"> How do I report abuse of AWS resources? </a>
 
 ---------------------------------------------------------------------------------------
-## <a id="section-1"></a> **1 - Amazon Inspector**
+## <a id="section-01"></a> **1 - Amazon Inspector**
 ![Amazon Inspector](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_Amazon-Inspector_48.png)
 
 The AWS Cloud allows for a shared responsibility model.
@@ -87,7 +88,7 @@ https://www.youtube.com/watch?v=F1-hvgZyw80
 https://www.youtube.com/results?search_query=aws+inspector
 
 ---------------------------------------------------------------------------------------
-## <a id="section-2"></a> **2 - Amazon Artifact**
+## <a id="section-02"></a> **2 - Amazon Artifact**
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Artifact_48.png)
 
 [AWS Artifact](https://aws.amazon.com/en/artifact/) is your one-stop resource for compliance-related information that is important to you.
@@ -135,7 +136,7 @@ https://www.youtube.com/watch?v=u5UV-wr-lIA
 https://www.youtube.com/watch?v=lCUATy4emgY
 
 ---------------------------------------------------------------------------------------
-## <a id="section-3"></a> **3 - Amazon GuardDuty**
+## <a id="section-03"></a> **3 - Amazon GuardDuty**
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Artifact_48.png)
 
 Amazon GuardDuty provides threat detection and continuous security monitoring for malicious or unauthorized behavior to help protect your AWS accounts and workloads.
@@ -177,7 +178,7 @@ https://www.youtube.com/watch?v=mKJ_ndS8q6M
 
 
 ---------------------------------------------------------------------------------------
-## <a id="section-4"></a> **4 - AWS WAF & AWS Shield**
+## <a id="section-04"></a> **4 - AWS WAF & AWS Shield**
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Shield_48.png)
 
@@ -194,9 +195,54 @@ https://www.youtube.com/watch?v=mKJ_ndS8q6M
 Helps minimize application downtime and latency.
 Two levels – Standard and Advanced.
 
+**AWS Shield Standard:**
+- Free service that is activated for every AWS customer
+- Provides protection from attacks such as SYN/UDP Floods, Reflection attacks and other layer 3/layer 4 attacks
+
+**AWS Shield Advanced:**
+- Optional DDoS mitigation service ($3,000 per month per organization)
+- Protect against more sophisticated attack on: 
+     - Amazon EC2
+     - Elastic Load Balancing (ELB)
+     - Amazon CloudFront
+     - AWS Global Accelerator
+     - Route 53
+
+- 24/7 access to AWS DDoS response team (DRP)
+- Protect against higher fees during usage spikes due to DDoS
+
+**Cheat Sheets**
+
+https://digitalcloud.training/aws-waf-shield/
+
+https://tutorialsdojo.com/aws-shield/
+
+https://tutorialsdojo.com/aws-waf/
+
+**References:**
+
+https://aws.amazon.com/shield/features/
+
+https://aws.amazon.com/shield/pricing/
+
+https://aws.amazon.com/shield/faqs/
+
+https://docs.aws.amazon.com/waf/latest/developerguide
+
+https://aws.amazon.com/waf/features/
+
+https://aws.amazon.com/waf/pricing/
+
+https://aws.amazon.com/waf/faqs/
+
+**Videos**
+
+https://www.youtube.com/results?search_query=aws+Shield
+
+https://www.youtube.com/watch?v=ZeT5_ZfXMPY
 
 ---------------------------------------------------------------------------------------
-## <a id="section-5"></a> **5 - AWS Key Management Service (AWS KMS)**
+## <a id="section-05"></a> **5 - AWS Key Management Service (AWS KMS)**
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Key-Management-Service_48.png)
 
@@ -209,6 +255,37 @@ The AWS Key Management Service is integrated with most other AWS services, makin
 AWS KMS is integrated with AWS CloudTrail, which gives you the ability to audit who used which keys, on which resources, and when.
 
 AWS KMS allows developers to easily encrypt data, either through one-click encryption in the AWS Management Console or using the AWS SDK to easily add encryption to application code.
+
+### **KMS – Customer Master Key (CMK) Types**
+
+- **Symmetric (AES-256 keys)**
+     - First offering of KMS, single encryption key that is used to Encrypt and Decrypt
+     - AWS services that are integrated with KMS use Symmetric CMKs
+     - Necessary for envelope encryption
+     - You never get access to the Key unencrypted (must call KMS API to use)
+
+
+- **Asymmetric (RSA & ECC key pairs)**
+     - Public (Encrypt) and Private Key (Decrypt) pair
+     - Used for Encrypt/Decrypt, or Sign/Verify operations
+     - The public key is downloadable, but you can’t access the Private Key unencrypted
+     - Use case: encryption outside of AWS by users who can’t call the KMS API
+
+- **Able to fully manage the keys & policies:**
+     - Create
+     - Rotation policies
+     - Disable
+     - Enable
+
+
+- **Able to audit key usage (using CloudTrail)**
+- **Three types of Customer Master Keys (CMK):**
+     - AWS Managed Service Default CMK: free
+     - User Keys created in KMS: $1 / month
+     - User Keys imported (must be 256-bit symmetric key): $1 / month
+
+
+- **pay for API call to KMS ($0.03 / 10000 calls)**
 
 **Cheat Sheets**
 
@@ -229,7 +306,7 @@ AWS KMS allows developers to easily encrypt data, either through one-click encry
 **Videos**
 
 ---------------------------------------------------------------------------------------
-## <a id="section-6"></a> **6 - AWS CloudHSM**
+## <a id="section-06"></a> **6 - AWS CloudHSM**
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-CloudHSM_48.png)
 
 **AWS CloudHSM** is a cloud-based Hardware Security Module (HSM) that allows you to easily generate and use your own encryption keys in the AWS Cloud.
@@ -260,7 +337,7 @@ https://www.youtube.com/watch?v=5RRDhNZ6cO0
 
 
 ---------------------------------------------------------------------------------------
-## <a id="section-7"></a> **7 - AWS Certificate Manager**
+## <a id="section-07"></a> **7 - AWS Certificate Manager**
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Certificate-Manager_48.png)
 
@@ -279,7 +356,7 @@ AWS Certificate Manager removes the time-consuming manual process of purchasing,
 https://tutorialsdojo.com/aws-certificate-manager/
 
 ---------------------------------------------------------------------------------------
-## <a id="section-8"></a> **8 - AWS Inspector and AWS Trusted Advisor**
+## <a id="section-08"></a> **8 - AWS Inspector and AWS Trusted Advisor**
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_Amazon-Inspector_48.png)
 
@@ -336,7 +413,7 @@ https://aws.amazon.com/premiumsupport/technology/trusted-advisor/
 **Videos**
 
 ---------------------------------------------------------------------------------------
-## <a id="section-9"></a> **9 - Penetration Testing**
+## <a id="section-09"></a> **9 - Penetration Testing**
 
 **Penetration Testing** is the practice of testing the security of the application itself for vulnerabilities, simulating an attack.
 
@@ -737,6 +814,171 @@ https://aws.amazon.com/compliance/programs/
 https://aws.amazon.com/compliance/hipaa-compliance/
 
 **Videos**
+
+--------------------------------------------------------------------------------------------------------------
+## <a id="section-27"></a> **27 - Encryption and Unencrypted**
+
+AWS enables covered entities and their business associates subject to the U.S. Health Insurance 
+
+Portability and Accountability Act of 1996 (HIPAA) to use the secure AWS environment to process, maintain, and store protected health information.
+
+AWS also provides open-source cryptographic libraries:
+
+AWS [libcrypto (AWS-LC)](https://github.com/awslabs/aws-lc) provides a general-purpose cryptographic library maintained by the AWS Cryptography team for AWS and their customers. It іs based on code from the Google BoringSSL project and the OpenSSL project. AWS-LC contains portable C implementations of algorithms needed for TLS and common applications. For performance critical algorithms, optimized assembly versions are included for x86 and ARM.
+
+[s2n-tls](https://github.com/aws/s2n-tls) provides an implementation of the TLS/SSL protocols that is designed to be simple, small, fast, and with security as a priority.
+
+Using Encryption Services:
+### **Amazon EFS – Elastic File System**
+- Encryption at rest using KMS
+- Compatible with Linux based AMI (not Windows)
+
+### **EBS Encryption**
+- Encryption and decryption are handled transparently (you have nothing todo)
+- ncryption has a minimal impact on latency
+- EBS Encryption leverages keys from KMS (AES-256)
+
+### **RDS Security - Encryption** 
+- At rest encryption
+     - Possibility to encrypt the master & read replicas with AWS KMS - AES-256 encryption
+     - Encryption has to be defined at launch time
+     - If the master is not encrypted, the read replicas cannot be encrypted
+     - Transparent Data Encryption (TDE) available for Oracle and SQL Server
+- In-flight encryption
+     - SSL certificates to encrypt data to RDS in flight
+     - Provide SSL options with trust certificate when connecting to database
+     - To enforce SSL:
+          - PostgreSQL: rds.force_ssl=1 in the AWS RDS Console (Parameter Groups)
+          - MySQL: Within the DB:
+               GRANT USAGE ON *.* TO 'mysqluser'@'%' REQUIRE SSL;
+
+### **Aurora Security**
+- Similar to RDS because uses the same engines
+- Encryption at rest using KMS
+- Automated backups, snapshots and replicas are also encrypted
+- Encryption in flight using SSL (same process as MySQL or Postgres)
+- Possibility to authenticate using IAM token (same method as RDS)
+- You are responsible for protecting the instance with security groups
+- You can’t SSH
+
+### **S3 Security**
+- There are 4 methods of encrypting objects in S3
+     - SSE-S3: encrypts S3 objects using keys handled & managed by AWS
+     - SSE-KMS: leverage AWS Key Management Service to manage encryption keys
+     - SSE-C: when you want to manage your own encryption keys
+     - Client Side Encryption
+
+- It’s important to understand which ones are adapted to which situation for the exam
+
+1. **SSE-S3**
+- SSE-S3: encryption using keys handled & managed by Amazon S3
+- Object is encrypted server side
+- AES-256 encryption type
+- Must set header: “x-amz-server-side-encryption": "AES256"
+
+![sse_s3](../images/extra/sse_s3.png)
+
+2. **SSE-KMS**
+- SSE-KMS: encryption using keys handled & managed by KMS
+- KMS Advantages: user control + audit trail
+- Object is encrypted server side
+- Must set header: “x-amz-server-side-encryption": ”aws:kms"
+
+![sse_kms](../images/extra/sse_kms.png)
+
+3. **SSE-C**
+- SSE-C: server-side encryption using data keys fully managed by the customer outside of AWS
+- Amazon S3 does not store the encryption key you provide
+- HTTPS must be used
+- Encryption key must provided in HTTP headers, for every HTTP request made
+
+
+![sse_c](../images/extra/sse_c.png)
+
+4. **Client Side Encryption**
+- Client library such as the Amazon S3 Encryption Client
+- Clients must encrypt data themselves before sending to S3
+- Clients must decrypt data themselves when retrieving from S3
+- Customer fully manages the keys and encryption cycle
+
+
+![client_side_encription](../images/extra/client_side_encription.png)
+
+### **S3 – KMS Limitation**
+- If you use SSE-KMS, you may be impacted by the KMS limits
+- When you upload, it calls the GenerateDataKey KMS API
+- When you download, it calls the Decrypt KMS API
+- Count towards the KMS quota per second (5500, 10000, 30000 req/s based on region)
+- You can request a quota increase using the Service Quotas Console
+
+![limitation_kms](../images/extra/kms_li%2Citation.png)
+
+
+### **Encryption in transit (SSL/TLS)**
+
+- Amazon S3 exposes:
+     - HTTP endpoint: non encrypted
+     - HTTPS endpoint: encryption in flight
+
+- You’re free to use the endpoint you want, but HTTPS is recommended
+- Most clients would use the HTTPS endpoint by default
+
+- HTTPS is mandatory for SSE-C
+- Encryption in flight is also called SSL / TLS
+
+
+### **Amazon SQS - Security**
+- In-flight encryption using HTTPS API
+- At-rest encryption using KMS keys
+- Client-side encryption if the client wants to perform encryption/decryption itself
+
+### **Amazon SNS – Security**
+- In-flight encryption using HTTPS API
+- At-rest encryption using KMS keys
+- Client-side encryption if the client wants to perform encryption/decryption itself
+
+### **Amazon OpenSearch Service**
+- Security through Cognito & IAM, KMS encryption, SSL & VPC
+
+
+### **Direct Connect – Encryption**
+- Data in transit is not encrypted but is private
+
+### **Redis AUTH**
+- Support SSL in flight encryption
+
+### **CloudFront – Field Level Encryption**
+- Sensitive information encrypted at the edge close to user
+- Uses asymmetric encryption
+
+### **Neptune**
+- Support for KMS encryption at rest + HTTPS
+
+
+### **Links and Documentation** 
+**Cheat Sheets**
+
+https://digitalcloud.training/aws-kms/
+ 
+https://tutorialsdojo.com/aws-key-management-service-aws-kms/
+
+
+**References**
+
+https://aws.amazon.com/what-is/cryptography/
+
+https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingEncryption.html
+
+https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingClientSideEncryption.html
+
+
+
+**Videos**
+
+https://www.youtube.com/results?search_query=aws+KMS
+
+https://www.youtube.com/watch?v=-1S-RdeAmMo
+
 
 
 

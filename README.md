@@ -18,15 +18,15 @@ To other repositories that will be linked to the same but specific to each Exam.
 
 ## Learning Modules
 
-  - [Module 1: Overview of Cloud Concepts][1]
-  - [Module 2: Cloud Savings and Billing][2]
-  - [Module 3: Overview of AWS Global Infrastructure][3]
-  - [Module 4: Cloud Security, Identity and Compliance][4]
-  - [Module 5: Networks and Content Delivery][5]
-  - [Module 6: Compute][6]
-  - [Module 7: Storage][7]
-  - [Module 8: Databases][8]
-  - [Module 9: Cloud Architecture][9]
+  - [Module 01: Overview of Cloud Concepts][1]
+  - [Module 02: Cloud Savings and Billing][2]
+  - [Module 03: Overview of AWS Global Infrastructure][3]
+  - [Module 04: Cloud Security, Identity and Compliance][4]
+  - [Module 05: Networks and Content Delivery][5]
+  - [Module 06: Compute][6]
+  - [Module 07: Storage][7]
+  - [Module 08: Databases][8]
+  - [Module 09: Cloud Architecture][9]
   - [Module 10: Auto Scaling and Monitoring][10]
   - [Module 11: AWS Analytics Services][11]
   - [Module 12: Application Integration][12]
@@ -43,6 +43,7 @@ To other repositories that will be linked to the same but specific to each Exam.
   - [Module 23: AWS Management Tools (SOA)][23]
   - [Module 24: Comparison of AWS Services][24]
   - [Module 25: AWS Reference Architecture][25]
+  - [Module 98: Common‌ ‌Exam‌ ‌Scenarios‌ ‌][98]
   - [Module 99: Concepts‌ ‌and‌‌ Strategies][99]
  
 
@@ -71,4 +72,5 @@ To other repositories that will be linked to the same but specific to each Exam.
 [23]: https://github.com/weder96/aws-certification-learning/tree/main/module-23
 [24]: https://github.com/weder96/aws-certification-learning/tree/main/module-24
 [25]: https://github.com/weder96/aws-certification-learning/tree/main/module-25
+[98]: https://github.com/weder96/aws-certification-learning/tree/main/module-98
 [99]: https://github.com/weder96/aws-certification-learning/tree/main/module-99
