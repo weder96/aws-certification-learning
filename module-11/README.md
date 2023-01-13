@@ -77,17 +77,29 @@ With EMR you have access to the underlying operating system (you can use SSH).
 ## <a id="section-02"></a> **2 - Amazon Athena**
 ![Amazon Athena](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Athena_48.png)
 
+**Definition**
+
 Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL.
 
 Athena is serverless, so there is no infrastructure to manage and you only pay for the queries you run.
 
 Athena is easy to use – just point to your data in Amazon S3, define the schema and start querying using standard SQL.
 
-Amazon Athena uses Presto with full support for standard SQL and works with many standard data formats, including CSV, JSON, ORC, Apache Parquet, and Avro.
+Amazon Athena uses Presto with full support for standard SQL and works with many standard data formats, including CSV, JSON, ORC, Apache Parquet,(built on Presto) and Avro.
 
 While Amazon Athena is ideal for fast, ad-hoc queries and integrates with Amazon QuickSight for easy visualization, it can also handle complex analysis, including large joins, window functions, and arrays.
 
 Amazon Athena uses a managed data catalog to store information and schemas about the databases and tables you create for your data stored in Amazon S3.
+
+Pricing: $5.00 per TB of data scanned
+
+Use compressed or columnar data for cost-savings (less scan)
+
+Use cases: Business intelligence / analytics / reporting, analyze & query VPC Flow Logs, ELB Logs, CloudTrail trails, etc...
+
+Exam Tip: analyze data in S3 using serverless SQL, use Athena
+
+**Cheat Sheets**
 
 [digitalcloud.training](https://digitalcloud.training/amazon-athena/)
 
@@ -104,6 +116,14 @@ Amazon Athena uses a managed data catalog to store information and schemas about
 [https://aws.amazon.com/athena/pricing](https://aws.amazon.com/athena/pricing)
 
 [https://aws.amazon.com/athena/faqs](https://aws.amazon.com/athena/faqs)
+
+**Videos**
+
+[https://www.youtube.com/results?search_query=Amazon+Athena](https://www.youtube.com/results?search_query=Amazon+Athena)
+
+**Hands On**
+
+[https://www.youtube.com/results?search_query=Amazon+Athena+hands+on](https://www.youtube.com/results?search_query=Amazon+Athena+hands+on)
 
 ------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-03"></a> **3 - AWS Glue**
@@ -176,16 +196,84 @@ Amazon Athena provides the easiest way to run ad-hoc queries for data on S3 with
 
 ------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-05"></a> **5 - Kinesis**
+
+![Kinesis](../images/Architecture09172021/Arch_Analytics/Arch_64/Arch_Amazon-Kinesis_64.svg)
+![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Kinesis_48.png)
+![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Kinesis-Data-Streams_48.png)
+![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Kinesis-Firehose_48.png)
+![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Kinesis-Data-Analytics_48.png)
+
+
+**Definition**
+
 Amazon Kinesis makes it easy to collect, process, and analyze streaming data in real time so you can gain timely insights and react quickly to new information.
 
 - Collection services for processing streams of various data.
 - Data is processed in “fragments(Shards)”.
-- There are **four types of Kinesis service**, detailed below.
+
+### There are **four types of Kinesis service**, detailed below.
+
+- **Kinesis Data Streams:** capture, process, and store data streams
+- **Kinesis Data Firehose:** load data streams into AWS data stores
+- **Kinesis Data Analytics:** analyze data streams with SQL or Apache Flink
+- **Kinesis Video Streams:** capture, process, and store video streams
+
+**Cheat Sheets**
+
+https://tutorialsdojo.com/amazon-kinesis/
+
+https://tutorialsdojo.com/kinesis-scaling-resharding-and-parallel-processing/
+
+**References:**
+
+https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html
+
+https://aws.amazon.com/kinesis/
+
+https://docs.aws.amazon.com/kinesisvideostreams/latest/dg
+
+https://aws.amazon.com/kinesis/video-streams/features/
+
+https://aws.amazon.com/kinesis/video-streams/pricing/
+
+https://aws.amazon.com/kinesis/video-streams/faqs/
+
+https://docs.aws.amazon.com/streams/latest/dev/
+
+https://aws.amazon.com/kinesis/data-streams/pricing/
+
+https://aws.amazon.com/kinesis/data-streams/faqs/
+
+https://docs.aws.amazon.com/firehose/latest/dev/
+
+https://aws.amazon.com/kinesis/data-firehose/pricing/
+
+https://aws.amazon.com/kinesis/data-firehose/faqs/
+
+https://docs.aws.amazon.com/kinesisanalytics/latest/dev
+
+https://docs.aws.amazon.com/kinesisanalytics/latest/java
+
+https://aws.amazon.com/kinesis/data-analytics/features/
+
+https://aws.amazon.com/kinesis/data-analytics/pricing/
+
+https://aws.amazon.com/kinesis/data-analytics/faqs/
+
+**Videos**
+
+https://www.youtube.com/results?search_query=Amazon+Kinesis
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=Amazon+Kinesis+hands+on
 
 ------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-06"></a> **6 - Kinesis Video Streams**
 
 ![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Kinesis_48.png)
+
+**Definition**
 
 Kinesis Video Streams makes it easy to securely stream video from device
 those connected to AWS for analytics, machine learning (ML), and other processing.
@@ -201,6 +289,8 @@ Durably stores, encrypts and indexes video data streams and allows access to the
 ## <a id="section-07"></a> **7 - Kinesis Data Streams**
 
 ![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Kinesis-Data-Streams_48.png)
+
+**Definition**
 
 Kinesis Data Streams lets you build custom applications that process or analyze streaming data for specialized needs.
 
@@ -220,6 +310,8 @@ Common use cases include:
 ## <a id="section-08"></a> **8 - Kinesis Data Firehose**
 
 ![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Kinesis-Firehose_48.png)
+
+**Definition**
 
 Kinesis Data Firehose is the easiest way to load streaming data into data stores and analytics tools.
 
@@ -243,6 +335,8 @@ Each delivery stream stores data records for up to 24 hours.
 ## <a id="section-09"></a> **9 - Kinesis Data Analytics**
 
 ![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Kinesis-Data-Analytics_48.png)
+
+**Definition**
 
 Amazon Kinesis Data Analytics is the easiest way to process and analyze streaming data in real time.
 
@@ -501,9 +595,37 @@ Your users can access a centralized data catalog that describes available datase
 
 ![Amazon QuickSight](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-QuickSight_48.png)
 
+**Definition**
+
+- Serverless machine learning-powered business intelligence service to create interactive dashboards
+- Fast, automatically scalable, embeddable, with per-session pricing
+- Use cases:
+    - Business analytics
+    - Building visualizations
+    - Perform ad-hoc analysis
+    - Get business insights using data
+- Integrated with RDS, Aurora,
+- Athena, Redshift, S3...
+
+![quicksight](../images/QuickSight.png)
+
 **Cheat Sheets**
+
+https://tutorialsdojo.com/amazon-quicksight/
+
 **References**
+
+https://aws.amazon.com/quicksight/
+
+https://aws.amazon.com/quicksight/resources/faqs/
+
 **Videos**
+
+https://www.youtube.com/results?search_query=Amazon+quicksight
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=Amazon+quicksight+hands+On
 
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -511,9 +633,12 @@ Your users can access a centralized data catalog that describes available datase
 
 ![Amazon RedShift](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Redshift_48.png)
 
+**Definition**
 **Cheat Sheets**
 **References**
 **Videos**
+**Hands On**
+
 
 
 

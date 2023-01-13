@@ -18,9 +18,10 @@
 11. <a href="#section-11"> AWS Serverless Application Repository </a>
 12. <a href="#section-12"> VMware Cloud on AWS </a>
 13. <a href="#section-13"> AWS Wavelength </a>
+14. <a href="#section-14"> Amazon WorkSpaces Family </a>
 
 ***************************************************************************************************
-## <a id="section-1"></a> **1 - Amazon [EC2](https://aws.amazon.com/ec2/?nc1=h_ls)**
+## <a id="section-1"></a> **1 - Amazon EC2**
 
 ![Amazon EC2](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_Amazon-EC2_48.png "Amazon EC2")
 
@@ -323,12 +324,9 @@ Each instance type includes one or more instance sizes, allowing you to scale yo
 
 ![AWS Lambda](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Lambda_48.png "AWS Lambda")
 
+**References**
 
-**Cheat Sheets**
-
-**References:**
-
-**Videos**
+[AWS Lambda](https://github.com/weder96/aws-certification-learning/tree/main/module-14#section-1)
 
 ***************************************************************************************************
 ## <a id="section-6"></a> **6 - Amazon LightSail**
@@ -822,3 +820,33 @@ https://www.youtube.com/watch?v=2cQncaijRoY
 
 
 https://docs.aws.amazon.com/savingsplans/latest/userguide/what-is-savings-plans.html
+
+
+
+
+***************************************************************************************************
+## <a id="section-14"></a> **14 - Amazon WorkSpaces Family**
+
+![Amazon-WorkSpaces](../images/Architecture-Service-Icons_01312022/Arch_End-User-Computing/64/Arch_Amazon-WorkSpaces_64.svg "Amazon-WorkSpaces")
+
+**Definition**
+
+### Why Amazon WorkSpaces Family?
+
+The Amazon WorkSpaces Family solutions provide the right virtual workspace for varied worker types, from any location. Improve IT agility and maximize user experience, while only paying for the infrastructure that you use.
+
+**Cheat Sheets**
+
+**References:**
+
+https://aws.amazon.com/workspaces/?nc1=h_ls
+
+**Videos**
+
+https://www.youtube.com/results?search_query=amazon+WorkSpaces
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=amazon+WorkSpaces+hands+on
+
+

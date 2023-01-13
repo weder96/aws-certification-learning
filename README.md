@@ -29,7 +29,7 @@ To other repositories that will be linked to the same but specific to each Exam.
   - [Module 09: Cloud Architecture][9]
   - [Module 10: Auto Scaling and Monitoring][10]
   - [Module 11: AWS Analytics Services][11]
-  - [Module 12: Application Integration][12]
+  - [Module 12: AWS Integration & Messaging][12]
   - [Module 13: Migration and Transfer][13]
   - [Module 14: Serverless Design Principles][14]
   - [Module 15: AWS Identity and Access Management (IAM)][15]
