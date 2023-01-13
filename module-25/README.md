@@ -6,9 +6,14 @@
 
 **Reference:**
 
+https://aws.amazon.com/blogs/architecture/
+
+https://aws.amazon.com/architecture/
+
+https://aws.amazon.com/solutions/
+
 https://aws.amazon.com/architecture/reference-architecture-diagrams/
 
-https://aws.amazon.com/blogs/architecture/
 
 
 ## Content

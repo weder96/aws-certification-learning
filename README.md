@@ -43,6 +43,7 @@ To other repositories that will be linked to the same but specific to each Exam.
   - [Module 23: AWS Management Tools (SOA)][23]
   - [Module 24: Comparison of AWS Services][24]
   - [Module 25: AWS Reference Architecture][25]
+  - [Module 26: Developer Tools][26]
   - [Module 98: Common‌ ‌Exam‌ ‌Scenarios‌ ‌][98]
   - [Module 99: Concepts‌ ‌and‌‌ Strategies][99]
  
@@ -72,5 +73,6 @@ To other repositories that will be linked to the same but specific to each Exam.
 [23]: https://github.com/weder96/aws-certification-learning/tree/main/module-23
 [24]: https://github.com/weder96/aws-certification-learning/tree/main/module-24
 [25]: https://github.com/weder96/aws-certification-learning/tree/main/module-25
+[26]: https://github.com/weder96/aws-certification-learning/tree/main/module-26
 [98]: https://github.com/weder96/aws-certification-learning/tree/main/module-98
 [99]: https://github.com/weder96/aws-certification-learning/tree/main/module-99
