@@ -521,7 +521,7 @@ For example, you can use AWS Data Pipeline to archive your web server's logs to 
 
 
 ------------------------------------------------------------------------------------------------------------------------
-## <a id="#section-13"></a> **13 - Amazon CloudSearch**
+## <a id="section-13"></a> **13 - Amazon CloudSearch**
 
 ![Amazon CloudSearch](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-CloudSearch_48.png)
 
@@ -563,7 +563,7 @@ A fully-managed service in the AWS Cloud that makes it easy to set up, manage, a
 [https://www.youtube.com/watch?v=mdj8RQhqOEg](https://www.youtube.com/watch?v=mdj8RQhqOEg)
 
 ------------------------------------------------------------------------------------------------------------------------
-## <a id="#section-14"></a> **14 - Amazon Lake Formation**
+## <a id="section-14"></a> **14 - Amazon Lake Formation**
 
 ![Amazon Lake Formation](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_AWS-Lake-Formation_48.png)
 
@@ -591,7 +591,7 @@ Your users can access a centralized data catalog that describes available datase
 
 
 ------------------------------------------------------------------------------------------------------------------------
-## <a id="#section-15"></a> **15 - Amazon QuickSight**
+## <a id="section-15"></a> **15 - Amazon QuickSight**
 
 ![Amazon QuickSight](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-QuickSight_48.png)
 
