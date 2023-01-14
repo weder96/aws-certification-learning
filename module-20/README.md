@@ -30,7 +30,13 @@
 
 ![AWS Auto Scaling](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Auto-Scaling_48.png "AWS Auto Scaling")
 
+**References:**
+
 [https://github.com/weder96/aws-certification-learning/tree/main/module-10](https://github.com/weder96/aws-certification-learning/tree/main/module-10)
+
+
+
+
 
 ***************************************************************************************************
 ## <a id="section-2"></a> **2 - AWS CloudFormation**
@@ -207,11 +213,37 @@ https://aws.amazon.com/cloudwatch/features/
 
 ![AWS License Manager](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-License-Manager_48.png "AWS License Manager")
 
+**Definitions**
+
+- A service for centrally managing software licenses across AWS and on-premises environments.
+- It gives you control and visibility into license usage, allowing you to limit licensing overages and reduce the risk of noncompliance and misreporting.
+- Supports a variety of licensing models:
+    - **Perpetual** – lifetime license with no expiration date.
+    - **Floating** – shareable licenses.
+    - **Subscription** – license with expiration date.
+    - **Usage-based** – license with specific terms based on usage.
+
+### **Pricing**
+    - You are charged for AWS resources that you create to run your application.
+
+
 **Cheat Sheets**
+
+https://tutorialsdojo.com/aws-license-manager/
 
 **References:**
 
+https://aws.amazon.com/license-manager/
+
+https://docs.aws.amazon.com/license-manager/latest/userguide/license-manager.html
+
 **Videos**
+
+https://www.youtube.com/results?search_query=AWS+License+Manager
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=AWS+License+Manager+hands+On
 
 ***************************************************************************************************
 ## <a id="section-10"></a> **10 - Amazon Managed Grafana**
@@ -293,32 +325,155 @@ https://aws.amazon.com/cloudwatch/features/
 ***************************************************************************************************
 ## <a id="section-17"></a> **17 - AWS Systems Manager**
 
-![AWS Auto Scaling](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Systems-Manager_48.png "AWS Systems Manager")
+![AWS Systems Manager](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Systems-Manager_48.png "AWS Systems Manager")
+
+
+**Definitions**
+
+Allows you to centralize operational data from multiple AWS services and automate tasks across your AWS resources.
+
+### **Features**
+
+- Create logical groups of resources such as applications, different layers of an application stack, or production versus development environments.
+
+- You can select a resource group and view its recent API activity, resource configuration changes, related notifications, operational alerts, software inventory, and patch compliance status.
+
+- Collects information about your instances and the software installed on them.
+Allows you to safely automate common and repetitive IT operations and management tasks across AWS resources.
+
+- Provides a browser-based interactive shell and CLI for managing Windows and Linux EC2 instances, without the need to open inbound ports, manage SSH keys, or use bastion hosts. Administrators can grant and revoke access to instances through a central location by using IAM policies.
+
+- Helps ensure that your software is up-to-date and meets your compliance policies.
+- Lets you schedule windows of time to run administrative and maintenance tasks across your instances.
+
+**SSM Agent** is the tool that processes Systems Manager requests and configures your machine as specified in the request. SSM Agent must be installed on each instance you want to use with Systems Manager. On newer AMIs and instance types, SSM Agent is installed by default. On older versions, you must install it manually.
+
+### **Security**
+- Systems Managers is linked directly to IAM for access controls.
+
+### **Pricing**
+
+- For your own packages, you pay only for what you use. Upon transferring a package into Distributor, you will be charged based on the size and duration of storage for that package, the number of Get and Describe API calls made, and the amount of out-of-Region and on-premises data transfer out of Distributor for those packages.
+- You are charged based on the following:
+    - Number and type of Automation steps.
+    - Number of OpsItems, change requests, and API requests.
+    - OpsItems created and runbook steps executed.
+    - Number of configuration requests and received.
+    - Number of advanced parameters stored and instances activated.
+
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-systems-manager/
+
+https://digitalcloud.training/aws-systems-manager/
+
 **References:**
 
+https://docs.aws.amazon.com/systems-manager/latest/userguide
+
+https://aws.amazon.com/systems-manager/features/
+
+https://aws.amazon.com/systems-manager/pricing/
+
+https://aws.amazon.com/systems-manager/faq/
+
 **Videos**
+
+https://youtu.be/nzjTIjFLiow
+
+https://www.youtube.com/results?search_query=AWS+Systems+Manager+
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=AWS+Systems+Manager++Hands+on
 
 ***************************************************************************************************
 ## <a id="section-18"></a> **18 - AWS Trusted Advisor**
 
-![AWS Auto Scaling](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Trusted-Advisor_48.png "AWS Trusted Advisor")
+![AWS Trusted Advisor](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Trusted-Advisor_48.png "AWS Trusted Advisor")
+
+
+**Definitions**
+
+- Trusted Advisor analyzes your AWS environment and provides best practice recommendations in five categories:
+    - Cost Optimization
+    - Performance
+    - Security
+    - Fault Tolerance
+    - Service Limits
+
+- Access to the full set of Trusted Advisor checks is available to Business, Enterprise On-Ramp, and Enterprise Support plans.
+
+### **Concepts**
+- The AWS Support API gives you access to some of the AWS Support Center’s features and provides two different groups of operations:
+- Support case management – operations to manage your AWS support cases throughout their entire life cycle, from creation to resolution.
+- Trusted Advisor – operations to access AWS Trusted Advisor checks.
+- The endpoint to access the AWS Support API: https://support.us-east-1.amazonaws.com
+- If you have a Business, Enterprise On-Ramp, or Enterprise Support plan, you can access all checks via the AWS Support API and the AWS CLI.
+- For the Basic and Developer Support plan, use the Trusted Advisor console to access core security checks and checks for service limits.
+- You can use the Trusted Advisor console or the AWS Support API to perform operations on the following Trusted Advisor checks:
+- Cost Optimization – identify unused resources and opportunities to lower your bill.
+- Performance – improve the speed and responsiveness of your applications.
+- Security – recommends settings that can improve the security of your AWS solution.
+- Fault Tolerance – highlight redundancy shortfalls, current service limits, and overused resources.
+- Service Limits – shows the current usage limit for AWS services and resources.
+- The summary checks are displayed on the Trusted Advisor dashboard.
+- Action recommended (red) – recommends an action for the check.
+- Investigation recommended (yellow) – detects a potential problem with the check.
+- No problems detected (green) – no issue identified for the check.
+- Excluded items (gray) – resources that you want a check to disregard.
+
+
+### **Security**
+- You can use IAM policies to grant users or roles in your account access to AWS Trusted Advisor’s organizational view.
+- With AWS Security Hub, you can view the Trusted Advisor check’s status, the list of affected resources, and then follow recommendations to address security issues.
+
+### **Monitoring**
+- You can use Amazon EventBridge to detect when the status of your Trusted Advisor checks changes. Then, based on the rules you define, it performs one or more target actions whenever the status changes to a value specified in a rule.
+- To create a rule for Trusted Advisor checks, you must have an AWS Support plan.
+- You can also create alarms in Amazon CloudWatch to detect changes in the status of Trusted Advisor metrics.
+- Supports logging a subset of the Trusted Advisor console actions and API operations as events in AWS CloudTrail.
+
+**Pricing**
+- By default, the Basic support plan is already included in your account.
+- You only pay for the Developer, Business, Enterprise On-Ramp, and Enterprise Support plans
+
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-trusted-advisor/
+
+https://digitalcloud.training/aws-trusted-advisor/
+
 **References:**
 
+https://aws.amazon.com/premiumsupport/trustedadvisor/
+
+https://aws.amazon.com/premiumsupport/ta-faqs/
+
 **Videos**
+
+https://www.youtube.com/watch?v=PQtM_sPA0M4
+
+https://www.youtube.com/results?search_query=AWS+Trusted+Advisor+
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=AWS+Trusted+Advisor++hands+on
 
 ***************************************************************************************************
 ## <a id="section-19"></a> **19 - AWS Well-Architected Tool**
 
-![AWS Auto Scaling](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Well-Architected-Tool_48.png "AWS Well-Architected Tool")
+![AWS Well-Architected Tool](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Well-Architected-Tool_48.png "AWS Well-Architected Tool")
+
+
+**Definitions**
 
 **Cheat Sheets**
 
 **References:**
 
 **Videos**
+
+**Hands On**

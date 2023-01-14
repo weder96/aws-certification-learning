@@ -41,9 +41,7 @@ https://www.youtube.com/results?search_query=auto+scaling+aws+ec2
 https://www.youtube.com/watch?v=EUaFB0Nh1v0
 
 
-
-
-**Cheat Sheets**
-**References:**
 **Videos**
+
+https://www.youtube.com/results?search_query=Auto+scalling+aws++hands+on
 

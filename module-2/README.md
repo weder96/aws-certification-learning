@@ -37,9 +37,11 @@ https://www.youtube.com/watch?v=YiqTBDmn00I
 
 *************************************************************************************************************
 ## <a id="section-02"></a> **2 - AWS budgets**
-![AWS budgets](../images/Architecture-Service-Icons_01312022/Arch_AWS-Cost-Management/48/Arch_AWS-Budgets_48.png)
+
+![AWS budgets](../images/Architecture-Service-Icons_01312022/Arch_AWS-Cost-Management/64/Arch_AWS-Budgets_64.svg)
 
 [AWS budgets](https://aws.amazon.com/aws-cost-management/aws-budgets/?nc1=h_ls)
+
 
 **Benefits**
 Custom budgets that meet your needs:
@@ -78,6 +80,10 @@ https://aws.amazon.com/aws-cost-management/aws-budgets/
 https://www.youtube.com/results?search_query=aws+budgets
 
 https://www.youtube.com/watch?v=fvz0cphjHjg
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=Aws+budgets+hands+on
 
 ***********************************************************************************************************
 ## <a id="section-03"></a> **3 - AWS Pricing Calculator**

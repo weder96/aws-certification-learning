@@ -143,6 +143,10 @@ You can use X-Ray to analyze both applications in development and in production,
 **************************************************************************************
 ## <a id="section-05" ></a> **5 - AWS Managed Services**
 
+![AWS Managed Services](../images/Architecture-Service-Icons_01312022/Arch_Customer-Enablement/64/Arch_AWS-Managed-Services_64.svg)
+
+**Definition**
+
 [AWS Managed Services](https://aws.amazon.com/managed-services/#) provides ongoing management of your AWS infrastructure so you can focus on your applications.
 
 By implementing best practices to maintain your infrastructure, AWS Managed Services helps to reduce your operational overhead and risk.
@@ -150,6 +154,32 @@ By implementing best practices to maintain your infrastructure, AWS Managed Serv
 AWS Managed Services automates common activities such as change requests, monitoring, patch management, security, and backup services, and provides full-lifecycle services to provision, run, and support your infrastructure.
 
 AWS Managed Services delivers consistent operations management and predictable results by following ITIL® best practices, and provides tooling and automation to increase efficiency, and reduce your operational overhead and risk.
+
+**Security** : 150+ managed guardrails and security checks
+**Incident management** : 80% of incidents proactively detected and notified
+**Automation** : 1.35M SSM docs executed per month, up to 97% automated
+**Cost savings** : 10-15% annual operational and AWS cost savings, on average 
+**AWS expertise** : 24x7 global coverage with tier 1 response and remediation
+
+**Cheat Sheets**
+
+https://digitalcloud.training/aws-cloud-management-services/
+
+**References**
+
+https://aws.amazon.com/managed-services/
+
+**Videos**
+
+https://youtu.be/OCK8GCImWZw
+
+https://www.youtube.com/results?search_query=AWS+Managed+Services
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=AWS+Managed+Services+hands+on
+
+
     
 **************************************************************************************
 ## <a id="section-06" ></a> **6 - Analytics**

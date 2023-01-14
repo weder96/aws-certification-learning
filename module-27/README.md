@@ -41,7 +41,7 @@
 
 **Definitions**
 
-### What is Amazon Connect?
+### **What is Amazon Connect?**
 
 Amazon Connect is an omnichannel (p. 1466) cloud contact center. You can set up a contact
 center (p. 15) in a few steps, add agents who are located anywhere, and start engaging with your
@@ -60,7 +60,7 @@ Important
 If you found this page because you need to contact Amazon for support, see Amazon Customer
 Service (Amazon orders and deliveries) or AWS Support (Amazon Web Services) instead.
 
-Amazon Connect concepts
+### **Amazon Connect concepts**
 
 Amazon Connect enables you to create an omnichannel contact center: a contact center that provides a unified experience across multiple channels, such as voice, chat, and tasks.
 - You use the same routing profiles, queues, flows, metrics, and reports for all channels.

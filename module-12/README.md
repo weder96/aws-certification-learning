@@ -303,14 +303,52 @@ https://www.youtube.com/results?search_query=aws+SQS+hands+On
 
 **Definition**
 
+### What Is Amazon EventBridge?
+
+EventBridge is a serverless service that uses events to connect application components together, making it easier for you to build scalable event-driven applications. 
+Use it to route events from sources such as home-grown applications, AWS services, and third- party software to consumer applications across your organization. EventBridge provides a simple and consistent way to ingest, filter, transform, and deliver events so you can build new applications quickly.
+
+EventBridge event buses are well suited for many-to-many routing of events between eventdriven services. 
+
+EventBridge Pipes (p. 90) is intended for point-to-point integrations between
+
+### **Amazon EventBridge Pipes**
+
+Amazon EventBridge Pipes connects sources to targets. It reduces the need for specialized knowledge and integration code when developing event driven architectures, fostering consistency across your company’s applications. To set up a pipe, you choose the source, add optional filtering, define optional enrichment, and choose the target for the event data.
+
+EventBridge Pipes could be used to create an ecommerce system. Imagine that you have an API that contains customer metadata, such as shipping addresses. The source might be an Amazon SQS order received message. 
+
+The pipe then sends that data to an Amazon API Gateway API enrichment that returns the customer information for that order. Final
 
 **Cheat Sheets**
 
+
 **References**
+
+https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-tutorial.html
+
+https://aws.amazon.com/eventbridge/?nc1=h_ls
+
+https://aws.amazon.com/eventbridge/features/
+
+https://docs.aws.amazon.com/eventbridge/index.html
+
+https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html
+
+https://docs.aws.amazon.com/pdfs/eventbridge/latest/userguide/user-guide.pdf#eb-what-is
 
 **Videos**
 
+https://www.youtube.com/watch?v=gCyOPHlp5Ic
+
+https://www.youtube.com/watch?v=e3sevLjtIQg
+
+https://www.youtube.com/results?search_query=Amazon+EventBridge
+
+
 **Hands On**
+
+https://www.youtube.com/results?search_query=Amazon+EventBridge+hands+On
 
 
 -------------------------------------------------------------------------------------------------

@@ -576,22 +576,60 @@ You can then reference values ​​using the unique name you specified when you
 ---------------------------------------------------------------------------------------
 ## <a id="section-14"></a> **14 - AWS Secrets Manager**
 
-![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Secrets-Manager_48.png)
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/64/Arch_AWS-Secrets-Manager_64.svg)
 
-As Parameter Store.
+**Definitions**
 
-Allows native and automatic key rotation.
+- A **secret management service** that enables you to easily rotate, manage, and retrieve database credentials, API keys, and other secrets throughout their lifecycle.
 
-Fine-grained permissions.
+#### **Features**
 
-Central audit for secret rotation.
+- **AWS Secrets Manager** encrypts secrets at rest using encryption keys that you own and store in AWS Key Management Service [customer managed keys]. When you retrieve a secret, Secrets Manager decrypts the secret and transmits it securely over TLS to your local environment.
 
+You can rotate secrets on a schedule or on demand by using the Secrets Manager console, AWS SDK, or AWS CLI.
+
+Secrets Manager natively supports rotating credentials for databases hosted on Amazon RDS and Amazon DocumentDB and clusters hosted on Amazon Redshift.
+You can extend Secrets Manager to rotate other secrets, such as credentials for Oracle databases hosted on EC2 or OAuth refresh tokens, by using custom AWS 
+
+**Lambda functions.**
+
+A secret consists of a set of credentials (user name and password), and the connection details used to access a secured service.
+
+**Security**
+
+- By default, Secrets Manager does not write or cache the secret to persistent storage.
+- By default, Secrets Manager only accepts requests from hosts that use the open standard Transport Layer Security (TLS) and Perfect Forward Secrecy.
+- You can control access to the secret using AWS Identity and Access Management (IAM) policies. 
+- You can tag secrets individually and apply tag-based access controls.
+- You can configure VPC endpoints to keep traffic between your VPC and Secrets Manager within the AWS network.
+- Secrets Manager does not immediately delete secrets. Instead, Secrets Manager immediately makes the secrets inaccessible and scheduled for deletion after a recovery window of a minimum of seven days. Until the recovery window ends, you can recover a secret you previously deleted. 
+- By using the CLI, you can delete a secret without a recovery window.
+Compliance
+
+Secrets Manager is HIPAA, PCI DSS and ISO, SOC, FedRAMP, DoD SRG, IRAP, and OSPAR compliant.
+
+**Pricing**
+- You pay based on the number of secrets stored and API calls made per month.
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-secrets-manager/
+
 **References**
 
+https://aws.amazon.com/secrets-manager/
+
+https://aws.amazon.com/secrets-manager/faqs/
+
+https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html
+
 **Videos**
+
+https://www.youtube.com/results?search_query=AWS+Secrets+Manager
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=AWS+Secrets+Manager+Hands+on
 
 ---------------------------------------------------------------------------------------
 ## <a id="section-15"></a> **15 - Amazon Audit Manager**
@@ -761,11 +799,53 @@ https://www.youtube.com/watch?v=WNFknf9zyZg
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Shield_48.png)
 
+**Definitions**
+
+Shield Tiers and Features
+
+**Standard**
+
+- All AWS customers benefit from the automatic protections of Shield Standard.
+- Shield Standard provides always-on network flow monitoring which inspects incoming traffic to AWS and detect malicious traffic in real-time.
+- Uses several techniques like deterministic packet filtering, and priority based traffic shaping to automatically mitigate attacks without impact to your applications.
+- When you use Shield Standard with CloudFront and Route 53, you receive comprehensive availability protection against all known infrastructure attacks.
+- You can also view all the events detected and mitigated by AWS Shield in your account.
+
+**Advanced**
+
+- Shield Advanced provides enhanced detection, inspecting network flows and also monitoring application layer traffic to your Elastic IP address, Elastic Load Balancing, CloudFront, or Route 53 resources.
+- It handles the majority of DDoS protection and mitigation responsibilities for layer 3, layer 4, and layer 7 attacks.
+- You have 24×7 access to the AWS DDoS Response Team. To contact the DDoS Response Team, customers will need the  Enterprise or Business Support levels of AWS Premium Support.
+- It automatically provides additional mitigation capacity to protect against larger DDoS attacks. The DDoS Response Team also applies manual mitigations for more complex and sophisticated DDoS attacks.
+- It gives you complete visibility into DDoS attacks with near real-time notification via CloudWatch and detailed diagnostics on the “AWS WAF and AWS Shield” Management Console.
+- Shield Advanced comes with “DDoS cost protection”, a safeguard from scaling charges as a result of a DDoS attack that cause usage spikes on your AWS services. It does so by providing service credits for charges due to usage spikes.
+- It is available globally on all CloudFront and Route 53 edge locations. 
+- With Shield Advanced you will be able to see the history of all incidents in the trailing 13 months.
+
+### **Pricing**
+- Shield Standard provides protection at no additional charge.
+- Shield Advanced, however, is a paid service. It requires a 1-year subscription commitment and charges a monthly fee, plus a usage fee based on data transfer out from CloudFront, ELB, EC2, and AWS Global Accelerator.
+
 **Cheat Sheets**
 
+https://digitalcloud.training/aws-waf-shield/
+
+https://tutorialsdojo.com/aws-shield/
+
 **References**
+https://aws.amazon.com/shield/features/
+
+https://aws.amazon.com/shield/pricing/
+
+https://aws.amazon.com/shield/faqs/
 
 **Videos**
+
+https://www.youtube.com/results?search_query=Amazon+Shield
+
+**Hands on**
+
+https://www.youtube.com/results?search_query=Amazon+Shield+hands+On
 
 ---------------------------------------------------------------------------------------
 ## <a id="section-24"></a> **24 - Amazon WAF**
