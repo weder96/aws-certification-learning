@@ -21,6 +21,7 @@
 14. <a href="#section-14"> Amazon Lake Formation </a>
 15. <a href="#section-15"> Amazon QuickSight </a>
 16. <a href="#section-16"> Amazon RedShift </a>
+17. <a href="#section-17"> Amazon Managed Streaming for Apache Kafka(MSK)</a>
 ------------------------------------------------------------------------------------------------------------------------
 
 There are several AWS Analytics services and they include:
@@ -45,7 +46,10 @@ for you to delve deeper.
 ------------------------------------------------------------------------------------------------------------------
 
 ## <a id="section-01"></a> **1 - Amazon Elastic Map Reduce**
-![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-EMR_48.png)
+
+![EMR](/images/Architecture-Service-Icons_01312022/Arch_Analytics/Arch_64/Arch_Amazon-EMR_64.svg)
+
+**Definitions**
 
 Amazon EMR is a web service that enables companies, researchers, data analysts, and developers to process large amounts of data easily and cost-effectively.
 
@@ -72,6 +76,32 @@ EMR starts all nodes in a given cluster in the same Amazon EC2 Availability Zone
 You can access Amazon EMR using the AWS Management Console, Command Line Tools, SDKS, or the EMR API.
 
 With EMR you have access to the underlying operating system (you can use SSH).
+
+**Cheat Sheets**
+
+https://digitalcloud.training/amazon-emr/
+
+https://tutorialsdojo.com/amazon-emr/
+
+**References**
+
+https://docs.aws.amazon.com/emr/latest/ManagementGuide
+
+https://aws.amazon.com/emr/features
+
+https://aws.amazon.com/emr/pricing
+
+https://aws.amazon.com/emr/faqs
+
+**Videos**
+
+https://www.youtube.com/results?search_query=Amazon+EMR
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=Amazon+EMR+Hands+on
+
+
 
 ------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-02"></a> **2 - Amazon Athena**
@@ -462,8 +492,8 @@ OpenSearch Service supports authentication through SAML and Amazon Cognito.
 ## <a id="section-11"></a> **11 - AWS Data Exchange**
 
 ![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_AWS-Data-Exchange_48.png)
-
-**AWS Data Exchange advantage**
+**Definitions**
+### **AWS Data Exchange advantage**
 
 AWS Data Exchange is on a mission to increase speed to value for third-party data sets in the cloud.
 
@@ -473,12 +503,31 @@ Create personalized mobile experiences with third-party data
 90% of consumers believe that a brand’s ability to personalize their shopping experience impacts the amount they spend/shop with that brand. Read our latest article and learn
 how you create personalized mobile experiences using data from AWS Data Exchange.
 
+Magnifying glass searching for data
 
-[https://aws.amazon.com/data-exchange/?nc1=h_ls](https://aws.amazon.com/data-exchange/?nc1=h_ls)
+### Extensive Data Set Selection
+- 3,500+ data sets from 300+ data providers
+- Over 1,000 free data products and custom data products
+- Automatic access to new data
 
-[https://www.youtube.com/watch?v=Lu9QVJ0Rml4](https://www.youtube.com/watch?v=Lu9QVJ0Rml4)
 
-[https://www.youtube.com/watch?v=VpIdwc3zLlo&list=PLhr1KZpdzukeyNGiv3gE8m3_jMNNbxNkJ](https://www.youtube.com/watch?v=VpIdwc3zLlo&list=PLhr1KZpdzukeyNGiv3gE8m3_jMNNbxNkJ)
+**Cheat Sheets**
+
+**References**
+
+https://aws.amazon.com/data-exchange/?nc1=h_ls
+
+https://aws.amazon.com/data-exchange/why-aws-data-exchange/?ref_=adx_hp_mp_why&trk=adx_hp_mp_why
+
+**Videos**
+
+https://www.youtube.com/watch?v=Lu9QVJ0Rml4
+
+https://www.youtube.com/watch?v=VpIdwc3zLlo&list=PLhr1KZpdzukeyNGiv3gE8m3_jMNNbxNkJ
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=aws+Data+Exchange+hands+On
 
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -565,9 +614,11 @@ A fully-managed service in the AWS Cloud that makes it easy to set up, manage, a
 ------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-14"></a> **14 - Amazon Lake Formation**
 
-![Amazon Lake Formation](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_AWS-Lake-Formation_48.png)
+![Amazon Lake Formation](/images/Architecture09172021/Arch_Analytics/Arch_64/Arch_AWS-Lake-Formation_64.svg)
 
-AWS Lake Formation is a service that makes it easy to set up a secure data lake in days. A data lake is a centralized, curated, and secured repository that stores all your data, both in its original form and prepared for analysis. A data lake lets you break down data silos and combine different types of analytics to gain insights and guide better business decisions.
+**Definitions**
+
+**AWS Lake Formation** is a service that makes it easy to set up a secure data lake in days. A data lake is a centralized, curated, and secured repository that stores all your data, both in its original form and prepared for analysis. A data lake lets you break down data silos and combine different types of analytics to gain insights and guide better business decisions.
 
 Setting up and managing data lakes today involves a lot of manual, complicated, and time-consuming tasks. This work includes loading data from diverse sources, monitoring those data flows, setting up partitions, turning on encryption and managing keys, defining transformation jobs and monitoring their operation, reorganizing data into a columnar format, deduplicating redundant data, and matching linked records. 
 
@@ -579,16 +630,28 @@ Your users can access a centralized data catalog that describes available datase
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-lake-formation/
+
+https://digitalcloud.training/aws-analytics-services/
 
 **References**
 
-[https://aws.amazon.com/lake-formation/?nc1=h_ls&whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc](https://aws.amazon.com/lake-formation/?nc1=h_ls&whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc)
+https://aws.amazon.com/lake-formation/
+
+https://docs.aws.amazon.com/lake-formation/latest/dg/what-is-lake-formation.html
+
+https://aws.amazon.com/lake-formation/?nc1=h_ls&whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc
 
 
 **Videos**
 
-[https://www.youtube.com/watch?v=Aj5T5fcZZr0](https://www.youtube.com/watch?v=Aj5T5fcZZr0)
+https://www.youtube.com/watch?v=Aj5T5fcZZr0
 
+https://www.youtube.com/results?search_query=AWS+Lake+Formation
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=AWS+Lake+Formation+Hands+on
 
 ------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-15"></a> **15 - Amazon QuickSight**
@@ -629,16 +692,69 @@ https://www.youtube.com/results?search_query=Amazon+quicksight+hands+On
 
 
 ------------------------------------------------------------------------------------------------------------------------
-## <a id="#section-16"></a> **16 - Amazon RedShift**
+## <a id="section-16"></a> **16 - Amazon RedShift**
 
 ![Amazon RedShift](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-Redshift_48.png)
 
 **Definition**
+
 **Cheat Sheets**
+
 **References**
+
 **Videos**
+
 **Hands On**
 
+--------------------------------------------------------------------------------------------------------
+## <a id="section-17"></a> **17 - Amazon Managed Streaming for Apache Kafka(MSK)**
+
+![Amazon Managed Streaming for Apache Kafka](/images/Architecture09172021/Arch_Analytics/Arch_64/Arch_Amazon-Managed-Streaming-for-Apache-Kafka_64.svg)
+
+**Definition**
+
+A service that uses fully managed Apache Kafka to ingest and process streaming data in real time.
+
+### **Concepts**
+
+**Configuration**
+
+If you do not specify a custom MSK configuration, a default configuration will be assigned to a cluster.
+
+You can use the custom configuration to new or existing MSK clusters.
+
+MSK configurations allow you to specify the properties to be set as well as the values to be assigned to them.
+
+**Pricing**
+
+You are charged for the following:
+
+Every Apache Kafka broker instance.
+
+The amount of storage you provide in your cluster.
+
+MSK Serverless charges you for cluster, partition, and storage.
+
+For MSK Connect, you are charged for the number and size (MCUs) of each Kafka Connect worker.
+
+
+**Cheat Sheets**
+
+https://tutorialsdojo.com/amazon-managed-streaming-for-apache-kafka-amazon-msk/
+
+**References**
+
+https://aws.amazon.com/msk/
+
+https://docs.aws.amazon.com/msk/latest/developerguide/what-is-msk.html
+
+**Videos**
+
+https://www.youtube.com/results?search_query=AWS+MSK
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=AWS+MSK+hands+on
 
 
 
