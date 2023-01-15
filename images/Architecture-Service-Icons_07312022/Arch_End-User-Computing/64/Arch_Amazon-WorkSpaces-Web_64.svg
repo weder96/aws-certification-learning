@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon-Architecture/64/Arch_Amazon-WorkSpaces-Web_64</title>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#055F4E" offset="0%"></stop>
+            <stop stop-color="#56C0A7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Icon-Architecture/64/Arch_Amazon-WorkSpaces-Web_64" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-Architecture-BG/64/End-User-Computing" fill="url(#linearGradient-1)">
+            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+        </g>
+        <g id="Icon-Service/64/Amazon-WorkSpaces-Web_64" transform="translate(12.000000, 13.000000)" fill="#FFFFFF">
+            <path d="M29,51.29 L29,35.585 L43,27.71 L43,43.415 L29,51.29 Z M13,27.71 L27,35.585 L27,51.29 L13,43.415 L13,27.71 Z M28.001,18.148 L41.96,26 L28,33.853 L14.061,26.012 L28.001,18.148 Z M44.49,25.128 L28.49,16.128 C28.186,15.957 27.813,15.957 27.509,16.129 L11.707,25.044 C11.298,25.169 11,25.55 11,26 L11,44 C11,44.361 11.195,44.694 11.51,44.872 L27.51,53.872 C27.662,53.957 27.831,54 28,54 C28.169,54 28.338,53.957 28.49,53.872 L44.49,44.872 C44.805,44.694 45,44.361 45,44 L45,26 C45,25.639 44.805,25.306 44.49,25.128 L44.49,25.128 Z M16.5,5 C16.5,5.828 15.828,6.5 15,6.5 C14.172,6.5 13.5,5.828 13.5,5 C13.5,4.172 14.172,3.5 15,3.5 C15.828,3.5 16.5,4.172 16.5,5 L16.5,5 Z M11.5,5 C11.5,5.828 10.828,6.5 10,6.5 C9.172,6.5 8.5,5.828 8.5,5 C8.5,4.172 9.172,3.5 10,3.5 C10.828,3.5 11.5,4.172 11.5,5 L11.5,5 Z M6.5,5 C6.5,5.828 5.828,6.5 5,6.5 C4.172,6.5 3.5,5.828 3.5,5 C3.5,4.172 4.172,3.5 5,3.5 C5.828,3.5 6.5,4.172 6.5,5 L6.5,5 Z M49,37 L51,37 L51,13 L49,13 L49,37 Z M2,8 L2,2 L54,2 L54,8 L2,8 Z M55,0 L1,0 C0.734,0 0.48,0.105 0.293,0.293 C0.105,0.48 0,0.735 0,1 L0.002,41 C0.002,41.552 0.449,42 1.002,42 L9,42 L9,40 L2,40 L2,10 L54,10 L54,40 L47,40 L47,42 L55,42 C55.553,42 56,41.552 56,41 L56,1 C56,0.448 55.553,0 55,0 L55,0 Z" id="Fill-8"></path>
+        </g>
+    </g>
+</svg>

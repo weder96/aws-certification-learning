@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon-Architecture/16/Arch_NICE-EnginFrame_16</title>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#C8511B" offset="0%"></stop>
+            <stop stop-color="#FF9900" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Icon-Architecture/16/Arch_NICE-EnginFrame_16" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle" fill="url(#linearGradient-1)">
+            <rect x="0" y="0" width="24" height="24"></rect>
+        </g>
+        <g id="Icon-Service/16/NICE-EnginFrame_16" transform="translate(4.000000, 4.000000)" fill="#FFFFFF">
+            <path d="M4.051,10 C4.906,10.924 6.311,11.5 7.845,11.5 C10.412,11.5 12.5,9.93 12.5,8 C12.5,6.07 10.412,4.5 7.845,4.5 C6.311,4.5 4.906,5.076 4.051,6 L7.845,6 C8.974,6 9.892,6.897 9.892,8 C9.892,9.103 8.974,10 7.845,10 L4.051,10 Z M7.845,12.5 C5.48,12.5 3.35,11.305 2.545,9.525 C2.457,9.332 2.501,9.104 2.655,8.957 C2.811,8.811 3.038,8.777 3.23,8.875 C3.39,8.958 3.556,9 3.721,9 L7.845,9 C8.422,9 8.892,8.551 8.892,8 C8.892,7.449 8.422,7 7.845,7 L3.721,7 C3.556,7 3.39,7.042 3.23,7.125 C3.038,7.222 2.811,7.189 2.655,7.043 C2.501,6.896 2.457,6.668 2.545,6.475 C3.35,4.695 5.48,3.5 7.845,3.5 C10.963,3.5 13.5,5.519 13.5,8 C13.5,10.481 10.963,12.5 7.845,12.5 L7.845,12.5 Z M8,2 C4.141,2 1,4.691 1,8 C1,11.309 4.141,14 8,14 C11.86,14 15,11.309 15,8 C15,4.691 11.86,2 8,2 L8,2 Z M8,15 C3.589,15 0,11.86 0,8 C0,4.14 3.589,1 8,1 C12.411,1 16,4.14 16,8 C16,11.86 12.411,15 8,15 L8,15 Z" id="Fill-1"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon-Architecture-Category/32/Database_32</title>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#2E27AD" offset="0%"></stop>
+            <stop stop-color="#527FFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Icon-Architecture-Category/32/Database_32" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="url(#linearGradient-1)" x="4" y="4" width="40" height="40"></rect>
+        <rect id="#879196-Border-Copy-9" stroke="#879196" stroke-width="2" x="1" y="1" width="46" height="46"></rect>
+        <g id="Icon-Category/32/Database_32" transform="translate(8.000000, 8.000000)" fill="#FFFFFF">
+            <path d="M16,15.991 C10.696,15.991 7,14.411 7,12.993 L7,7.81 C8.729,9.239 12.442,9.996 16,9.996 C19.558,9.996 23.271,9.239 25,7.81 L25,12.993 C25,14.411 21.304,15.991 16,15.991 M16,22.864 C10.696,22.864 7,21.284 7,19.866 L7,14.806 C8.729,16.234 12.442,16.991 16,16.991 C19.558,16.991 23.271,16.234 25,14.806 L25,19.866 C25,21.284 21.304,22.864 16,22.864 M16,29 C10.696,29 7,27.421 7,26.003 L7,21.678 C8.729,23.107 12.442,23.864 16,23.864 C19.558,23.864 23.271,23.107 25,21.678 L25,26.003 C25,27.421 21.304,29 16,29 M16,3 C21.304,3 25,4.58 25,5.998 C25,7.416 21.304,8.996 16,8.996 C10.696,8.996 7,7.416 7,5.998 C7,4.58 10.696,3 16,3 M16,2 C11.152,2 6,3.401 6,5.998 L6,26.003 C6,28.599 11.152,30 16,30 C20.848,30 26,28.599 26,26.003 L26,5.998 C26,3.401 20.848,2 16,2" id="Database_Category-Icon_32_Squid--"></path>
+        </g>
+    </g>
+</svg>

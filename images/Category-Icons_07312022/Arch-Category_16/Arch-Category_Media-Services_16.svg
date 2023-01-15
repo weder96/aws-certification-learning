@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon-Architecture-Category/16/Media-Services_16</title>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#C8511B" offset="0%"></stop>
+            <stop stop-color="#FF9900" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Icon-Architecture-Category/16/Media-Services_16" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="url(#linearGradient-1)" x="4" y="4" width="24" height="24"></rect>
+        <rect id="#879196-Border-Copy-16" stroke="#879196" stroke-width="2" x="1" y="1" width="30" height="30"></rect>
+        <g id="Icon-Category/16/Media-Services_16" transform="translate(8.000000, 8.000000)" fill="#FFFFFF">
+            <path d="M4,9.917 L4,6.073 L7.361,7.896 L4,9.917 Z M4.351,5.127 C4.084,4.95 3.741,4.934 3.458,5.084 C3.176,5.236 3,5.529 3,5.85 L3,10.149 C3,10.47 3.176,10.763 3.458,10.915 C3.59,10.985 3.733,11.019 3.874,11.019 C4.038,11.019 4.198,10.973 4.331,10.884 L8.107,8.613 C8.35,8.451 8.494,8.181 8.494,7.89 C8.494,7.599 8.35,7.329 8.068,7.144 L4.351,5.127 Z M15,11 L14.101,11 L12.768,9 L10,9 L10,12.763 C10,12.893 9.894,13 9.763,13 L1.237,13 C1.106,13 1,12.893 1,12.763 L1,3.236 C1,3.106 1.106,3 1.237,3 L9.763,3 C9.894,3 10,3.106 10,3.236 L10,7 L12.768,7 L14.101,5 L15,5 L15,11 Z M15.132,4 L13.565,4 L12.232,6 L11,6 L11,3.236 C11,2.554 10.445,2 9.763,2 L1.237,2 C0.555,2 0,2.554 0,3.236 L0,12.763 C0,13.445 0.555,14 1.237,14 L9.763,14 C10.445,14 11,13.445 11,12.763 L11,10 L12.232,10 L13.565,12 L15.132,12 C15.61,12 16,11.61 16,11.131 L16,4.868 C16,4.389 15.61,4 15.132,4 L15.132,4 Z" id="Media-Services_Category-Icon_16_Squid"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon-Architecture-Category/16/Security-Identity-Compliance_16</title>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#BD0816" offset="0%"></stop>
+            <stop stop-color="#FF5252" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Icon-Architecture-Category/16/Security-Identity-Compliance_16" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="url(#linearGradient-1)" x="4" y="4" width="24" height="24"></rect>
+        <rect id="#879196-Border-Copy-23" stroke="#879196" stroke-width="2" x="1" y="1" width="30" height="30"></rect>
+        <g id="Icon-Category/16/Security-Identity-Compliance_16" transform="translate(8.000000, 8.000000)" fill="#FFFFFF">
+            <path d="M7,13 L8,13 L8,3 L7,3 L7,13 Z M2,2.95594776 L2,9.37034945 C2.01499864,9.53836922 2.43996,14.3378044 7.49950005,15 C12.5590401,14.3378044 12.9840015,9.53836922 13,9.33378044 L12.9990001,2.95594776 L7.49950005,1 L2,2.95594776 Z M7.5,16 C7.479,16 7.459,15.9990124 7.438,15.9960494 C1.495,15.2642089 1.006,9.47664388 1.001,9.41738553 L1,2.62539158 C1,2.41699974 1.132,2.23132359 1.331,2.16021358 L7.331,0.0288884431 C7.44,-0.00962948103 7.56,-0.00962948103 7.669,0.0288884431 L13.669,2.16021358 C13.868,2.23132359 14,2.41699974 14,2.62539158 L14,9.38281817 C13.994,9.47664388 13.505,15.2642089 7.562,15.9960494 C7.541,15.9990124 7.521,16 7.5,16 L7.5,16 Z" id="Security-Identity-Compliance_Category-Icon_16_Squid"></path>
+        </g>
+    </g>
+</svg>

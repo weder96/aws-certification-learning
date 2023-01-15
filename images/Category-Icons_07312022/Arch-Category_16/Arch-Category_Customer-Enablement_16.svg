@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon-Architecture-Category/16/Customer-Enablement_16</title>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#2E27AD" offset="0%"></stop>
+            <stop stop-color="#527FFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Icon-Architecture-Category/16/Customer-Enablement_16" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="url(#linearGradient-1)" x="4" y="4" width="24" height="24"></rect>
+        <rect id="#879196-Border-Copy-8" stroke="#879196" stroke-width="2" x="1" y="1" width="30" height="30"></rect>
+        <g id="Icon-Category/16/Customer-Enablement_16" transform="translate(8.000000, 8.000000)" fill="#FFFFFF">
+            <path d="M14,11.444 L12.226,12.377 C11.796,10.715 10.836,9.424 9.621,8.801 C10.448,8.266 11,7.34 11,6.284 C11,4.63 9.654,3.284 8,3.284 C6.346,3.284 5,4.63 5,6.284 C5,7.328 5.537,8.247 6.349,8.784 C5.124,9.398 4.155,10.69 3.721,12.349 L2,11.444 L2,4.531 L8,1.148 L14,4.531 L14,11.444 Z M6,6.284 C6,5.181 6.897,4.284 8,4.284 C9.103,4.284 10,5.181 10,6.284 C10,7.387 9.103,8.284 8,8.284 C6.897,8.284 6,7.387 6,6.284 L6,6.284 Z M8,14.599 L4.64,12.832 C5.089,10.808 6.419,9.389 7.97,9.389 C9.502,9.389 10.852,10.844 11.302,12.863 L8,14.599 Z M15,3.947 L8,-1.0658141e-14 L1,3.947 L1,12.048 L8,15.729 L12.375,13.428 L12.419,13.423 C12.418,13.418 12.416,13.413 12.416,13.407 L15,12.048 L15,3.947 Z" id="Fill-8"></path>
+        </g>
+    </g>
+</svg>

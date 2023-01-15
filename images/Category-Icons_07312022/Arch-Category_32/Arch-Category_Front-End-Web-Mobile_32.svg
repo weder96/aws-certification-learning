@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon-Architecture-Category/32/Mobile_32</title>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#BD0816" offset="0%"></stop>
+            <stop stop-color="#FF5252" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Icon-Architecture-Category/32/Mobile_32" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="url(#linearGradient-1)" x="4" y="4" width="40" height="40"></rect>
+        <rect id="#879196-Border-Copy-18" stroke="#879196" stroke-width="2" x="1" y="1" width="46" height="46"></rect>
+        <g id="Icon-Category/32/Mobile_32" transform="translate(8.000000, 8.000000)" fill="#FFFFFF">
+            <path d="M22,27 L25,27 L25,26 L22,26 L22,27 Z M29,28.5 L29,25 L18,25 L18,28.5 C18,28.776 18.225,29 18.5,29 L28.5,29 C28.775,29 29,28.776 29,28.5 L29,28.5 Z M18,10.5 L18,24 L29,24 L29,10.5 C29,10.224 28.775,10 28.5,10 L18.5,10 C18.225,10 18,10.224 18,10.5 L18,10.5 Z M30,10.5 L30,28.5 C30,29.327 29.327,30 28.5,30 L18.5,30 C17.673,30 17,29.327 17,28.5 L17,10.5 C17,9.673 17.673,9 18.5,9 L28.5,9 C29.327,9 30,9.673 30,10.5 L30,10.5 Z M6,6 L18,6 L18,8 L19,8 L19,5.5 C19,5.224 18.776,5 18.5,5 L5.5,5 C5.224,5 5,5.224 5,5.5 L5,24.5 C5,24.776 5.224,25 5.5,25 L16,25 L16,24 L6,24 L6,6 Z M3.907,27 L16,27 L16,28 L3.907,28 C2.855,28 2,27.121 2,26.041 L2,3.959 C2,2.879 2.855,2 3.907,2 L20.093,2 C21.145,2 22,2.879 22,3.959 L22,8 L21,8 L21,3.959 C21,3.43 20.593,3 20.093,3 L3.907,3 C3.407,3 3,3.43 3,3.959 L3,26.041 C3,26.57 3.407,27 3.907,27 L3.907,27 Z" id="Fill-3"></path>
+        </g>
+    </g>
+</svg>

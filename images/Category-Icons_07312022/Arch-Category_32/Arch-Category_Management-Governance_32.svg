@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon-Architecture-Category/32/Management-Governance_32</title>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#B0084D" offset="0%"></stop>
+            <stop stop-color="#FF4F8B" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Icon-Architecture-Category/32/Management-Governance_32" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="url(#linearGradient-1)" x="4" y="4" width="40" height="40"></rect>
+        <rect id="#879196-Border-Copy-15" stroke="#879196" stroke-width="2" x="1" y="1" width="46" height="46"></rect>
+        <g id="Icon-Category/32/Management-Governance_32" transform="translate(8.000000, 8.000000)" fill="#FFFFFF">
+            <path d="M15,5 L22,5 L22,3 L15,3 L15,5 Z M27.5,3 L23,3 L23,2.5 C23,2.224 22.776,2 22.5,2 L14.5,2 C14.224,2 14,2.224 14,2.5 L14,3 L10.5,3 C9.121,3 8,4.122 8,5.5 L8,8 L9,8 L9,5.5 C9,4.673 9.673,4 10.5,4 L14,4 L14,5.5 C14,5.776 14.224,6 14.5,6 L22.5,6 C22.776,6 23,5.776 23,5.5 L23,4 L27.5,4 C28.327,4 29,4.673 29,5.5 L29,27.5 C29,28.327 28.327,29 27.5,29 L10.5,29 C9.673,29 9,28.327 9,27.5 L9,26 L8,26 L8,27.5 C8,28.878 9.121,30 10.5,30 L27.5,30 C28.879,30 30,28.878 30,27.5 L30,5.5 C30,4.122 28.879,3 27.5,3 L27.5,3 Z M16,20 L6,20 L6,19 L16,19 L16,18 L17,18 L17,19 L19,19 L19,20 L17,20 L17,21 L16,21 L16,20 Z M9,15 L6,15 L6,14 L9,14 L9,13 L10,13 L10,14 L19,14 L19,15 L10,15 L10,16 L9,16 L9,15 Z M3,24 L22,24 L22,10 L3,10 L3,24 Z M23,24.5 L23,9.5 C23,9.224 22.776,9 22.5,9 L2.5,9 C2.224,9 2,9.224 2,9.5 L2,24.5 C2,24.776 2.224,25 2.5,25 L22.5,25 C22.776,25 23,24.776 23,24.5 L23,24.5 Z" id="Management-Governance_Category-Icon_32_Squid"></path>
+        </g>
+    </g>
+</svg>

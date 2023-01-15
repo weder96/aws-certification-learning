@@ -388,7 +388,10 @@ It sits on top of Kinesis Data Streams and Kinesis Data Firehose.
 ------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-10"></a> **10 - Amazon OpenSearch**
 
-![EMR](/images/Architecture09172021/Arch_Analytics/Arch_48/Arch_Amazon-OpenSearch-Service_48.png)
+![EMR](/images/Architecture09172021/Arch_Analytics/Arch_64/Arch_Amazon-OpenSearch-Service_64.svg)
+
+
+**Definitions**
 
 Amazon OpenSearch Service is the successor to Amazon Elasticsearch Service.
 
@@ -487,6 +490,14 @@ Fine-grained access control provides additional features in Amazon OpenSearch Se
 
 OpenSearch Service supports authentication through SAML and Amazon Cognito.
 
+
+**Cheat Sheets**
+
+**References:**
+
+**Videos**
+
+**Hands On**
 
 ------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-11"></a> **11 - AWS Data Exchange**

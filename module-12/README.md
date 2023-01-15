@@ -19,7 +19,7 @@
 
 
 
-## <a id="section-1" ></a> **1 - Amazon Simple Notification Service (Amazon SNS)**
+## <a id="section-1" > </a> **1 - Amazon Simple Notification Service (Amazon SNS)**
 
 ![SNS](../images/Architecture09172021/Arch_App-Integration/Arch_64/Arch_Amazon-Simple-Notification-Service_64.svg)
 
@@ -130,7 +130,7 @@ https://www.youtube.com/results?search_query=aws+SNS
 https://www.youtube.com/results?search_query=aws+SNS+hands+on
 
 -------------------------------------------------------------------------------------------------
-## <a id="section-2" ></a> **2 - Amazon Simple Queue Service (Amazon SQS)**
+## <a id="section-2" > </a> **2 - Amazon Simple Queue Service (Amazon SQS)**
 
 ![SNS](../images/Architecture09172021/Arch_App-Integration/Arch_64/Arch_Amazon-Simple-Queue-Service_64.svg)
 
@@ -238,50 +238,178 @@ https://www.youtube.com/results?search_query=aws+SQS
 https://www.youtube.com/results?search_query=aws+SQS+hands+On
 
 -------------------------------------------------------------------------------------------------
-## <a id="section-3" ></a> **3 - Amazon-MQ**
+## <a id="section-3" > </a> **3 - Amazon-MQ**
 
 ![SNS](../images/Architecture09172021/Arch_App-Integration/Arch_64/Arch_Amazon-MQ_64.svg)
 
 **Definition**
+- SQS, SNS are “cloud-native” services: proprietary protocols from AWS
+- Traditional applications running from on-premises may use open protocols such as: MQTT, AMQP, STOMP, Openwire, WSS
+- When migrating to the cloud, instead of re-engineering the application to use SQS and SNS, we can use Amazon MQ
+- Amazon MQ is a managed message broker service for
+- Amazon MQ doesn’t “scale” as much as SQS / SNS
+- Amazon MQ runs on servers, can run in Multi-AZ with failover
+- Amazon MQ has both queue feature (~SQS) and topic features (~SNS)
+
+AWS offering for a managed message broker service for Apache ActiveMQ. Message brokers allow different software systems–often using different programming languages, and on different platforms–to communicate and exchange information.
+Amazon MQ also supports RabbitMQ, a popular open-source message broker. Migrate your existing RabbitMQ message brokers to AWS without having to rewrite code.
+
+
+### **Features**
+
+Amazon MQ uses industry-standard APIs and protocols for messaging, including Java Message Service (JMS), .NET Message Service (NMS), AMQP, STOMP, MQTT, OpenWire, and WebSocket.
+Amazon MQ manages administrative tasks such as hardware provisioning, broker setup, software upgrades, and failure detection and recovery.
+Amazon MQ stores your messages redundantly across multiple Availability Zones (AZs).
+Amazon MQ supports both single-instance brokers, suitable for evaluation and testing, and active/standby brokers for high availability in production. In the event of a failure of the broker, or even a full AZ outage, Amazon MQ automatically fails over to the standby broker.
+
+
+
 **Cheat Sheets**
+
+https://tutorialsdojo.com/amazon-mq/
+
 **References**
+
+https://aws.amazon.com/amazon-mq/features/
+
+https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/welcome.html
+
+https://aws.amazon.com/amazon-mq/pricing/
+
+https://aws.amazon.com/amazon-mq/faqs/
+
+https://aws.amazon.com/quickstart/architecture/ibm-mq/
+
+https://aws-quickstart.s3.amazonaws.com/quickstart-ibm-mq/doc/ibm-mq-on-the-aws-cloud.pdf
+
 **Videos**
+
+https://www.youtube.com/results?search_query=aws+Amazon+MQ
+
 **Hands On**
+
+https://www.youtube.com/results?search_query=aws+Amazon+MQ+Hands+ON
 
 
 -------------------------------------------------------------------------------------------------
-## <a id="section-4" ></a> **4 - AWS-AppSync**
+## <a id="section-4" > </a> **4 - AWS-AppSync**
 
-![SNS](../images/Architecture09172021/Arch_App-Integration/Arch_64/Arch_AWS-AppSync_64.svg)
+![AppSync](../images/Architecture09172021/Arch_App-Integration/Arch_64/Arch_AWS-AppSync_64.svg)
 
 **Definition**
 
+A serverless GraphQL and Pub/Sub API service that streamlines the development of modern web and mobile applications
+
+AppSync GraphQL APIs – provides a unified endpoint for securely querying and updating data from multiple databases, microservices, and APIs
+
+AppSync Pub/Sub APIs – data updates are automatically published to subscribed API clients via serverless WebSockets connections.
+
+
+### **Monitoring**
+
+Use Amazon CloudWatch Logs to monitor your AWS AppSync GraphQL API and debug request issues.
+You can use AWS X-Ray to trace GraphQL requests in AWS AppSync.
+With AWS CloudTrail, you can log AWS AppSync API calls.
+
+
+### **Security**
+
+- In your API or CLI call, you can specify which authorization type you want:
+    - API_KEY
+    - AWS_LAMBDA
+    - AWS_IAM
+    - OPENID_CONNECT
+    - AMAZON_COGNITO_USER_POOLS
+
+- Using schema directives, you can specify additional authorization modes at the schema level.
+- You can use AWS WAF to configure a set of rules to protect your web applications and APIs from attacks
+
+### **Pricing**
+- You are charged for the following:
+    - Query and data modification operations.
+    - Performing real-time updates on your data.
+    - Minutes of connection to AppSync.
+    - Dedicated cache instance.
+
 **Cheat Sheets**
+
+https://tutorialsdojo.com/aws-appsync/
 
 **References**
 
+https://aws.amazon.com/appsync/
+
+https://docs.aws.amazon.com/appsync/latest/devguide/what-is-appsync.html
+
 **Videos**
+
+https://www.youtube.com/results?search_query=aws+appsync
 
 **Hands On**
 
--------------------------------------------------------------------------------------------------
-## <a id="section-5" ></a> **5 - Amazon-AppFlow**
+https://www.youtube.com/results?search_query=aws+appsync+hands+on
 
-![SNS](../images/Architecture09172021/Arch_App-Integration/Arch_64/Arch_Amazon-AppFlow_64.svg)
+-------------------------------------------------------------------------------------------------
+## <a id="section-5" > </a> **5 - Amazon-AppFlow**
+
+![AppFlow](../images/Architecture09172021/Arch_App-Integration/Arch_64/Arch_Amazon-AppFlow_64.svg)
 
 **Definition**
 
+An integration service that automates data flows by securely integrating third-party applications and AWS services without writing any code.
+
+### **Features**
+
+- Run flows on-demand or on a schedule to keep data in sync across SaaS applications and AWS services.
+- Aggregate data from multiple sources to train analytics tools more effectively and save money.
+- Use flow management tools to track where and when data has moved.
+- Data is encrypted at rest and in transit.
+- Integrates with AWS PrivateLink to allow private data transfer over AWS rather than public data transfer over the internet.
+- Use custom connectors to transfer data between private APIs, on-premise systems, and cloud services.
+- Publish events related to the status of a flow using Amazon Event Bridge.
+
+### **How it works**
+- With Amazon AppFlow automate bi-directional data flows between SaaS applications and AWS services in just a few clicks. 
+- Run the data flows at the frequency you choose, whether on a schedule, in response to a business event, or on demand. 
+- Simplify data preparation with transformations, partitioning, and aggregation. 
+- Automate preparation and registration of your schema with the AWS Glue Data Catalog so you can discover and share data with AWS analytics and machine learning services.
+
+### **Pricing**
+
+- You are charged per flow run and the maximum number of flow runs.
+- You are charged for data processing for flows whose destinations are:
+    - Hosted on AWS
+    - Integrated with AWS PrivateLink
+- You are charged per standard request and storage to read and write from AWS services.
+- You are charged for the use of AWS KMS CMKs to encrypt access tokens and data in transit.
+
+
+
 **Cheat Sheets**
+
+https://tutorialsdojo.com/amazon-appflow/
 
 **References**
 
+https://aws.amazon.com/appflow/
+
+https://docs.aws.amazon.com/appflow/index.html
+
+https://docs.aws.amazon.com/pdfs/appflow/latest/userguide/appflow.pdf
+
 **Videos**
+
+https://www.youtube.com/results?search_query=aws+AppFlow
+
+https://youtu.be/6NSxo5syl40
+
 
 **Hands On**
 
+https://www.youtube.com/results?search_query=aws+AppFlow+hands+on
 
 -------------------------------------------------------------------------------------------------
-## <a id="section-6" ></a> **6 - Amazon-API-Gateway**
+## <a id="section-6" > </a> **6 - Amazon-API-Gateway**
 
 ![SNS](../images/Architecture09172021/Arch_App-Integration/Arch_64/Arch_Amazon-API-Gateway_64.svg)
 
@@ -297,7 +425,7 @@ https://www.youtube.com/results?search_query=aws+SQS+hands+On
 
 
 -------------------------------------------------------------------------------------------------
-## <a id="section-7" ></a> **7 - Amazon-EventBridge**
+## <a id="section-7" > </a> **7 - Amazon-EventBridge**
 
 ![SNS](../images/Architecture09172021/Arch_App-Integration/Arch_64/Arch_Amazon-EventBridge_64.svg)
 
@@ -352,21 +480,57 @@ https://www.youtube.com/results?search_query=Amazon+EventBridge+hands+On
 
 
 -------------------------------------------------------------------------------------------------
-## <a id="section-8" ></a> **8 - AWS-Step-Functions**
+## <a id="section-8" > </a> **8 - AWS-Step-Functions**
 
 ![SNS](../images/Architecture09172021/Arch_App-Integration/Arch_64/Arch_AWS-Step-Functions_64.svg)
 
 **Definition**
 
+AWS Step Functions 
+• Build serverless visual workflow to orchestrate your Lambda functions
+• Features: sequence, parallel, conditions, timeouts, error handling, …
+• Can integrate with EC2, ECS, On -premises servers, API Gateway, SQS queues
+• Possibility of implementing human approval feature
+• Use cases: order fulfillment, data processing, web applications, any workflow
+
+
+AWS Step Functions is a web service that provides serverless orchestration for modern applications. It enables you to coordinate the components of distributed applications and microservices using visual workflows.
+
+### **Pricing**
+
+- Step Functions counts a state transition each time a step of your workflow is executed. You are charged for the total number of state transitions across all your state machines, including retries.
+Common Use Cases
+
+- Step Functions can help ensure that long-running, multiple ETL jobs execute in order and complete successfully, instead of manually orchestrating those jobs or maintaining a separate application.
+- By using Step Functions to handle a few tasks in your codebase, you can approach the transformation of monolithic applications into microservices as a series of small steps.
+- You can use Step Functions to easily automate recurring tasks such as patch management, infrastructure selection, and data synchronization, and Step Functions will automatically scale, respond to timeouts, and retry failed tasks.
+- Use Step Functions to combine multiple AWS Lambda functions into responsive serverless applications and microservices, without having to - write code for workflow logic, parallel processes, error handling, timeouts or retries.
+- You can also orchestrate data and services that run on Amazon EC2 instances, containers, or on-premises servers.
+
 **Cheat Sheets**
+
+https://tutorialsdojo.com/aws-step-functions/
 
 **References**
 
+https://aws.amazon.com/step-functions/features/
+
+https://aws.amazon.com/step-functions/pricing/
+
+https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html
+
+https://aws.amazon.com/step-functions/faqs/
+
 **Videos**
+
+https://www.youtube.com/results?search_query=+AWS+Step+Functions
 
 **Hands On**
 
-## <a id="section-9" ></a> **9 - AWS-Express-Workflows**
+https://www.youtube.com/results?search_query=+AWS+Step+Functions+hands+on
+
+--------------------------------------------------------------------------------------------------------------------
+## <a id="section-9" > </a> **9 - AWS-Express-Workflows**
 
 ![SNS](../images/Architecture09172021/Arch_App-Integration/Arch_64/Arch_AWS-Express-Workflows_64.svg)
 
@@ -381,7 +545,7 @@ https://www.youtube.com/results?search_query=Amazon+EventBridge+hands+On
 **Hands On**
 
 -------------------------------------------------------------------------------------------------
-## <a id="section-10" ></a> **10 - AWS-Console-Mobile-Application**
+## <a id="section-10"></a> **10 - AWS-Console-Mobile-Application**
 
 ![SNS](../images/Architecture09172021/Arch_App-Integration/Arch_64/Arch_AWS-Console-Mobile-Application_64.svg)
 
@@ -396,7 +560,7 @@ https://www.youtube.com/results?search_query=Amazon+EventBridge+hands+On
 **Hands On**
 
 -------------------------------------------------------------------------------------------------
-## <a id="section-11" ></a> **11 - Amazon-Managed-Workflows-for-Apache-Airflow**
+## <a id="section-11"></a> **11 - Amazon-Managed-Workflows-for-Apache-Airflow**
 
 ![SNS](../images/Architecture09172021/Arch_App-Integration/Arch_64/Arch_Amazon-Managed-Workflows-for-Apache-Airflow_64.svg)
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon-Architecture/32/Arch_Amazon-Genomics-CLI_32</title>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#C8511B" offset="0%"></stop>
+            <stop stop-color="#FF9900" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Icon-Architecture/32/Arch_Amazon-Genomics-CLI_32" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle" fill="url(#linearGradient-1)">
+            <rect x="0" y="0" width="40" height="40"></rect>
+        </g>
+        <g id="Icon-Service/32/Amazon-Genomics-CLI_32" transform="translate(4.000000, 4.000000)" fill="#FFFFFF">
+            <path d="M24,6 L26,6 L26,5 L24,5 L24,6 Z M23,4 L27,4 L27,3 L23,3 L23,4 Z M24,16 L26,16 L26,15 L24,15 L24,16 Z M23,18 L27,18 L27,17 L23,17 L23,18 Z M13.825,18.879 C13.937,18.785 14,18.646 14,18.5 C14,18.354 13.937,18.215 13.825,18.121 L6.825,12.121 L6.175,12.879 L12.731,18.5 L6.175,24.121 L6.825,24.879 L13.825,18.879 Z M13,24 L23,24 L23,23 L13,23 L13,24 Z M30,28.5 L30,23 L29,23 L29,28.5 C29,28.776 28.775,29 28.5,29 L3.5,29 C3.225,29 3,28.776 3,28.5 L3,3.5 C3,3.224 3.225,3 3.5,3 L16,3 L16,2 L3.5,2 C2.673,2 2,2.673 2,3.5 L2,28.5 C2,29.327 2.673,30 3.5,30 L28.5,30 C29.327,30 30,29.327 30,28.5 L30,28.5 Z M21,17.113 C21,15.969 21.43,14.878 22.21,14.042 L28.521,7.283 C29.475,6.261 30,4.928 30,3.53 L30,2 L29,2 L29,3.53 C29,4.674 28.57,5.765 27.79,6.601 L21.479,13.36 C20.525,14.382 20,15.714 20,17.113 L20,19 L21,19 L21,17.113 Z M27.052,11.787 L26.368,12.519 L27.79,14.042 C28.57,14.878 29,15.969 29,17.113 L29,19 L30,19 L30,17.113 C30,15.714 29.475,14.382 28.521,13.36 L27.052,11.787 Z M21.479,7.283 C20.525,6.261 20,4.928 20,3.53 L20,2 L21,2 L21,3.53 C21,4.674 21.43,5.765 22.21,6.601 L23.632,8.124 L22.948,8.856 L21.479,7.283 Z" id="Fill-3"></path>
+        </g>
+    </g>
+</svg>
