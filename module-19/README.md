@@ -1,4 +1,4 @@
-<img src="../images/extra/banner_aws.png" alt="aws" width=80 height=50 /> [General Content AWS Cloud][1]
+<img src="../images/extra/banner_aws.svg" alt="aws" width=80 height=50 /> [General Content AWS Cloud][1]
 
 [1]: https://github.com/weder96/aws-certification-learning
 
@@ -17,21 +17,28 @@
 10. <a href="#section-10"> Amazon Transcribe </a>
 11. <a href="#section-11"> Amazon Translate </a>
 
+
 ***************************************************************************************************
 ## <a id="section-01"></a> **1 - Amazon Comprehend**
 
-![Amazon Comprehend](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Comprehend_48.png "Amazon Comprehend")
+![Amazon Comprehend](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Comprehend_64.svg "Amazon Comprehend")
+
+**Definitions**
 
 **Cheat Sheets**
 
 **References:**
 
 **Videos**
+
+**Hands On**
 
 ***************************************************************************************************
 ## <a id="section-02"></a> **2 - Amazon Forecast**
 
-![Amazon Forecast](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Forecast_48.png "Amazon Forecast")
+![Amazon Forecast](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Forecast_64.svg "Amazon Forecast")
+
+**Definitions**
 
 **Cheat Sheets**
 
@@ -39,32 +46,43 @@
 
 **Videos**
 
+**Hands On**
 ***************************************************************************************************
 ## <a id="section-03"></a> **3 - Amazon Fraud Detector**
 
-![Amazon Fraud Detector](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Fraud-Detector_48.png "Amazon Fraud Detector")
+![Amazon Fraud Detector](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Fraud-Detector_64.svg "Amazon Fraud Detector")
+
+**Definitions**
 
 **Cheat Sheets**
 
 **References:**
 
 **Videos**
+
+**Hands On**
 
 ***************************************************************************************************
 ## <a id="section-04"></a> **4 - Amazon Kendra**
 
-![Amazon Kendra](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Kendra_48.png "Amazon Kendra")
+![Amazon Kendra](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Kendra_64.svg "Amazon Kendra")
+
+**Definitions**
 
 **Cheat Sheets**
 
 **References:**
 
 **Videos**
+
+**Hands On**
 
 ***************************************************************************************************
 ## <a id="section-05"></a> **5 - Amazon Lex**
 
-![Amazon Lex](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Lex_48.png "Amazon Lex")
+![Amazon Lex](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Lex_64.svg "Amazon Lex")
+
+**Definitions**
 
 **Cheat Sheets**
 
@@ -72,32 +90,43 @@
 
 **Videos**
 
+**Hands On**
 ***************************************************************************************************
 ## <a id="section-06"></a> **6 - Amazon Polly**
 
-![Amazon Polly](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Polly_48.png "Polly")
+![Amazon Polly](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Polly_64.svg "Polly")
+
+**Definitions**
 
 **Cheat Sheets**
 
 **References:**
 
 **Videos**
+
+**Hands On**
 
 ***************************************************************************************************
 ## <a id="section-07"></a> **7- Amazon Rekognition**
 
-![Amazon Rekognition](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Rekognition_48.png "Amazon Rekognition")
+![Amazon Rekognition](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Rekognition_64.svg "Amazon Rekognition")
+
+**Definitions**
 
 **Cheat Sheets**
 
 **References:**
 
 **Videos**
+
+**Hands On**
 
 ***************************************************************************************************
 ## <a id="section-08"></a> **8 - Amazon Comprehend**
 
-![Amazon SageMaker](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-SageMaker_48.png "Amazon SageMaker")
+![Amazon SageMaker](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-SageMaker_64.svg "Amazon SageMaker")
+
+**Definitions**
 
 **Cheat Sheets**
 
@@ -105,10 +134,13 @@
 
 **Videos**
 
+**Hands On**
 ***************************************************************************************************
 ## <a id="section-09"></a> **9 - Amazon Textract**
 
-![Amazon Textract](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Textract_48.png "Amazon Textract")
+![Amazon Textract](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Textract_64.svg "Amazon Textract")
+
+**Definitions**
 
 **Cheat Sheets**
 
@@ -116,10 +148,13 @@
 
 **Videos**
 
+**Hands On**
 ***************************************************************************************************
 ## <a id="section-10"></a> **10 - Amazon Transcribe**
 
-![Amazon Transcribe](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Transcribe_48.png "Amazon Transcribe")
+![Amazon Transcribe](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Transcribe_64.svg "Amazon Transcribe")
+
+**Definitions**
 
 **Cheat Sheets**
 
@@ -127,13 +162,18 @@
 
 **Videos**
 
+**Hands On**
 ***************************************************************************************************
 ## <a id="section-11"></a> **11 - Amazon Translate**
 
-![Amazon Translate](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/48/Arch_Amazon-Translate_48.png "Amazon Translate")
+![Amazon Translate](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Translate_64.svg "Amazon Translate")
+
+**Definitions**
 
 **Cheat Sheets**
 
 **References:**
 
 **Videos**
+
+**Hands On**
