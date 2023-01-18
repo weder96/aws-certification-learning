@@ -3,7 +3,7 @@
 
 [1]: https://github.com/weder96/aws-certification-learning
 
-# Módulo 19: Machine Learning
+# Module 19: Machine Learning
 
 ## Content
 1.  <a href="#section-01"> Amazon Comprehend </a>
