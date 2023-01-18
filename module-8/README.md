@@ -5,20 +5,23 @@
 # Module 8: Databases
 
 ## Content
-1. <a href="#section-01"> Use Cases For Different Database Types </a>
-2. <a href="#section-02"> Amazon Relational Database Service (RDS) </a>
-3. <a href="#section-03"> Amazon DynamoDB </a>
-4. <a href="#section-04"> Amazon RedShift </a>
-5. <a href="#section-05"> Amazon ElastiCache </a>
-6. <a href="#section-06"> Amazon EMR </a>
-7. <a href="#section-07"> Amazon (RDS) Pricing </a>
-8. <a href="#section-08"> Amazon (RDS) Multiple Availability Zones (A-Z) </a>
-9. <a href="#section-09"> Enable automatic patching for the instances using the Amazon RDS console </a>
+1.  <a href="#section-01"> Use Cases For Different Database Types </a>
+2.  <a href="#section-02"> Amazon Relational Database Service (RDS) </a>
+3.  <a href="#section-03"> Amazon DynamoDB </a>
+4.  <a href="#section-04"> Amazon RedShift </a>
+5.  <a href="#section-05"> Amazon ElastiCache </a>
+6.  <a href="#section-06"> Amazon EMR </a>
+7.  <a href="#section-07"> Amazon (RDS) Pricing </a>
+8.  <a href="#section-08"> Amazon (RDS) Multiple Availability Zones (A-Z) </a>
+9.  <a href="#section-09"> Enable automatic patching for the instances using the Amazon RDS console </a>
 10. <a href="#section-10"> Backups and Restoring a DB instance to a specified time </a>
 11. <a href="#section-11"> Amazon Neptune </a>
 12. <a href="#section-12"> Amazon Aurora </a>
 13. <a href="#section-13"> Amazon DocumentDB </a>
 14. <a href="#section-14"> Amazon QLDB is serverless </a>
+15. <a href="#section-15"> Amazon Aurora Serverless </a>
+16. <a href="#section-16"> Amazon Keyspaces (for Apache Cassandra) </a>
+17. <a href="#section-17"> Amazon Timestream  </a>
 
 ***********************************************************************************************************
 ## <a id="section-01"></a> **1  - Use Cases For Different Database Types**
@@ -415,7 +418,31 @@ https://www.youtube.com/watch?v=n0KK094sPnQ
 -----------------------------------------------------------------------------------------------------------------------
 ## <a id="section-11"></a> **11 - Amazon Neptune**
 
-![Neptune](../images/Architecture-Service-Icons_01312022/Arch_Database/48/Arch_Amazon-Neptune_48.png)
+![Neptune](../images/Architecture-Service-Icons_01312022/Arch_Database/64/Arch_Amazon-Neptune_64.svg)
+
+**Definitions**
+
+Amazon Neptune is a fully managed graph database service used for building applications that work with highly connected datasets.
+Optimized for storing billions of relationships between pieces of information.
+Provide milliseconds latency when querying the graph.
+Neptune supports graph query languages like Apache TinkerPop Gremlin and W3C’s SPARQL.
+
+
+### **Pricing**
+- You are billed based on the DB instance hours, I/O requests, storage, and Data transfer.
+- Storage rate and I/O rate is billed in per GB-month increments and per million request increments respectively.
+
+
+### **Monitoring**
+- Visualize your graph using the Neptune Workbench.
+- You can receive event notifications on your Amazon Neptune DB clusters, DB instances, DB cluster snapshots, parameter groups, or security groups through Amazon SNS.
+
+
+### **Limitations**
+- It does not support cross-region replicas.
+- Encryption of an existing Neptune instance is not supported.
+- Sharing of automatic DB snapshots to other accounts is not allowed. A workaround for this is to manually copy the snapshot from the automatic snapshot, then, copy the manual snapshot to another account.
+
 
 **Cheat Sheets**
 
@@ -430,10 +457,39 @@ https://aws.amazon.com/neptune/
 
 https://www.youtube.com/results?search_query=aws+neptume
 
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=Amazon+Neptune++hands+on
+
 -----------------------------------------------------------------------------------------------------------------------
 ## <a id="section-12"></a> **12 - Amazon Aurora**
 
 ![Aurora](../images/Architecture-Service-Icons_01312022/Arch_Database/48/Arch_Amazon-Aurora_48.png)
+
+**Definitions**
+
+- With some workloads, Aurora can deliver up to five times the throughput of MySQL and up to three times the throughput of PostgreSQL.
+- Aurora includes a high-performance storage subsystem. The underlying storage grows automatically as needed, up to 128 terabytes. The minimum storage is 10GB.
+- Aurora will keep your database up-to-date with the latest patches.
+- Aurora supports quick, efficient cloning operations.
+- You can share your Amazon Aurora DB clusters with other AWS accounts for quick and efficient database cloning.
+- Aurora is fault-tolerant and self-healing.
+
+### **Monitoring**
+- Subscribe to Amazon RDS events to be notified when changes occur with a DB instance, DB cluster, DB cluster snapshot, DB parameter group, or DB security group.
+- Database log files
+- RDS Enhanced Monitoring — Look at metrics in real time for the operating system.
+- RDS Performance Insights monitors your Amazon RDS DB instance load so that you can analyze and troubleshoot your database performance.
+- Use CloudWatch Metrics, Alarms and Logs
+
+
+### **Pricing**
+- You are charged for DB instance hours, I/O requests, Backup storage and Data transfer.
+- You can purchase On-Demand Instances and pay by the hour for the DB instance hours that you use, or Reserved Instances to reserve a DB instance for a one-year or three-year term and receive a significant discount compared to the on-demand DB instance pricing.
+- Aurora PostgreSQL support for Kerberos and Microsoft Active Directory provides the benefits of single sign-on and centralized authentication of Aurora PostgreSQL database users. In addition to password-based and IAM-based authentication methods, you can also authenticate using AWS Managed Microsoft AD Service
+
+
 
 **Cheat Sheets**
 
@@ -468,10 +524,38 @@ https://www.youtube.com/watch?v=U42mC_iKSBg
 
 https://www.youtube.com/watch?v=iwS1h7rLNBQ&t=2s
 
+**Hands On**
+
+https://www.youtube.com/results?search_query=Amazon+Aurora+Hans+on
+
 -----------------------------------------------------------------------------------------------------------------------
 ## <a id="section-13"></a> **13 - Amazon DocumentDB**
 
 ![DocumentDB](../images/Architecture-Service-Icons_01312022/Arch_Database/48/Arch_Amazon-DocumentDB_48.png)
+
+**Definitions**
+- Fully managed document database service designed to be fast, scalable, and highly available.
+- Data is stored in JSON-like documents.
+- Compatible with MongoDb.
+- Flexible schema and indexing.
+- Commonly used for content management, user profiles, and real-time big data.
+
+### **Pricing**
+- You are billed based on four categories
+    - On-demand instances
+        - Pricing per second with a 10-minute minimum
+    - Database I/O
+        - Pricing per million I/Os
+    - Database Storage
+        - Pricing per GB/month
+    - Backup Storage
+        - Pricing per GB/month
+
+### **Limitations**
+- Amazon DocumentDB supports the Global Clusters feature which allows you to launch up to five read-only replicas.
+- Encryption of an existing DocumentDB instance is not supported.
+- Sharing of automatic DB snapshots to other accounts is not allowed. A workaround for this is to manually copy the snapshot from the automatic snapshot, then, copy the manual snapshot to another account.
+
 
 **Cheat Sheets**
 
@@ -489,10 +573,44 @@ https://aws.amazon.com/blogs/database/migrating-to-amazon-documentdb-with-the-on
 
 https://www.youtube.com/results?search_query=documentdb+aws
 
+**Hands on**
+
+https://www.youtube.com/results?search_query=Amazon+DocumentDB+hands+on++
+
 -----------------------------------------------------------------------------------------------------------------------
 ## <a id="section-14"></a> **14 - Amazon QLDB Serverless**
 
 ![DocumentDB](../images/Architecture-Service-Icons_01312022/Arch_Database/48/Arch_Amazon-Quantum-Ledger-Database_48.png)
+
+**Definitions**
+
+Amazon Quantum Ledger Database (QLDB):
+
+- Fully managed ledger database that provides a transparent, immutable, and cryptographically verifiable transaction log owned by a central trusted authority.
+- Used to track all application data changes, and maintain a complete and verifiable history of changes over time
+- **Amazon QLDB is serverless**.  No capacity provisioning required or setting read/write limits.
+- QLDB transactions are ACID (atomicity, consistency, isolation, and durability) compliant.
+- Amazon QLDB uses PartiQL as its query language.
+
+### **Pricing**
+
+- You are billed based on five categories
+    - Write I/Os
+        - Pricing per 1 million requests
+    - Read I/Os
+        - Pricing per 1 million requests
+    - Journal Storage Rate
+        - Pricing per GB-month
+    - Indexed Storage Rate
+        - Pricing per GB-month
+    - Data Transfer OUT From Amazon QLDB To Internet
+        -  You are charged based on the amount of data transferred per month. The rate varies for different regions.
+
+### **Limitations**
+- Amazon QLDB does not support Backup and Restore. But you can export your data from QLDB to S3.
+- Does not support Point-in-time restore feature.
+- Does  not support cross-region replication.
+- Does not support the use of customer managed CMKs (Customer Managed Keys).
 
 **Cheat Sheets**
 
@@ -511,8 +629,160 @@ https://aws.amazon.com/blogs/aws/now-available-amazon-quantum-ledger-database-ql
 
 https://www.youtube.com/results?search_query=Amazon+QLDB
 
+**Hands on**
+
+https://www.youtube.com/results?search_query=Amazon+QLDB+hands+on++
+
+------------------------------------------------------------------------------------------------------------------------
+## <a id="section-15"></a> **15 - Amazon Aurora Serverless**
+
+![DocumentDB](../images/Architecture-Service-Icons_07312022/Arch_Database/64/Arch_Amazon-Aurora_64.svg)
+
+**Definitions**
+
+Check <a href="#section-12"> Amazon Aurora </a>
+
+### **Aurora Serverless**
+- Amazon Aurora Serverless is an on-demand, autoscaling configuration for the MySQL-compatible and PostgreSQL-compatible editions of Aurora.
+- An Aurora Serverless DB cluster automatically starts up, shuts down, and scales capacity up or down based on the application’s needs. 
+- Enables running database in the cloud without managing any database instances.
+- Provides a relatively simple, cost-effective option for infrequent, intermittent, or unpredictable workloads.
+- use Cases include
+    - Infrequently-Used Applications
+    - New Applications – where the needs and instance size is yet to be determined.
+    - Variable and Unpredictable Workloads – scale as per the needs
+    - Development and Test Databases
+    - Multi-tenant Applications
+- DB cluster does not have a public IP address and can be accessed only from within a VPC based on the VPC service.
+
+
+### **Aurora Serverless and Failover**
+- Aurora Serverless compute layer is placed in a Single AZ
+- Separates computation capacity and storage, and the storage volume for the cluster is spread across multiple AZs. The data remains available even if outages affect the DB instance or the associated AZ.
+- Supports automatic multi-AZ failover where if the DB instance for a DB cluster becomes unavailable or the Availability Zone (AZ) it is in fails, Aurora recreates the DB instance in a different AZ.
+- Failover mechanism takes longer than for an Aurora Provisioned cluster.
+- Failover time is currently undefined because it depends on demand and capacity available in other AZs within the given AWS Region
+
+### **Aurora Serverless Auto Scaling**
+- Aurora Serverless automatically scales based on the active database workload ( CPU or connections), in some cases, capacity might not scale fast enough to meet a sudden workload change, such as a large number of new transactions.
+- Once a scaling operation is initiated, Aurora Serverless attempts to find a scaling point, which is a point in time at which the database can safely complete scaling.
+- Might not be able to find a scaling point and will not scale if there are:
+    - long-running queries or transactions in progress, or
+    - temporary tables or table locks in use.
+- Supports cooldown period
+- After Scale up, it has a 15 minutes cooldown period for subsequent scale down
+- After Scale down, it has a 310 secs cooldown period for subsequent scale down
+- Has no cooldown period for scaling up activities and scales as and when necessary
+
+**Cheat Sheets**
+
+https://jayendrapatil.com/aws-rds-aurora-serverless/
+
+**References:**
+
+https://aws.amazon.com/rds/aurora/serverless/
+
+**Videos**
+
+https://youtu.be/xKFA6PJgp0o
+
+https://www.youtube.com/results?search_query=Amazon+Aurora+Serverless
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=Amazon+Aurora+Serverless+Hans+on
+
+------------------------------------------------------------------------------------------------------------------------
+## <a id="section-16"></a> **16 - Amazon Keyspaces (for Apache Cassandra)**
+
+![DocumentDB](../images/Architecture-Service-Icons_07312022/Arch_Database/64/Arch_Amazon-Keyspaces_64.svg)
+
+**Definitions**
+
+Amazon Keyspaces (for Apache Cassandra) is a scalable, highly available, and managed Apache Cassandra–compatible database service. With Amazon Keyspaces, you can run your Cassandra workloads on 
+
+AWS using the same Cassandra application code and developer tools that you use today. You don’t have to provision, patch, or manage servers, and you don’t have to install, maintain, or operate software. 
+
+Amazon Keyspaces is serverless, so you pay for only the resources you use and the service can automatically scale tables up and down in response to application traffic. 
+
+You can build applications that serve thousands of requests per second with virtually unlimited throughput and storage. Data is encrypted by default and Amazon Keyspaces enables you to back up your table data continuously using point-in-time recovery. 
+
+Amazon Keyspaces gives you the performance, elasticity, and enterprise features you need to operate business-critical Cassandra workloads at scale.
+
+**Cheat Sheets**
+
+https://tutorialsdojo.com/aws-cheat-sheets-database-services/
+
+**References:**
+
+https://aws.amazon.com/keyspaces/?nc1=h_ls
+
+https://aws.amazon.com/keyspaces/features/
+
+https://aws.amazon.com/keyspaces/pricing/
+
+https://aws.amazon.com/keyspaces/scaling-data/
+
+https://aws.amazon.com/keyspaces/resources/?blog-items.sort-by=item.additionalFields.createdDate&blog-items.sort-order=desc
+
+https://aws.amazon.com/keyspaces/getting-started/
+
+https://aws.amazon.com/keyspaces/faqs/
+
+https://aws.amazon.com/keyspaces/what-is-cassandra/
+
+**Videos**
+
+https://www.youtube.com/watch?v=PYdLIvBHe2E
+
+https://www.youtube.com/results?search_query=Amazon+Keyspaces
+
+**Hands On**
+https://www.youtube.com/results?search_query=Amazon+Keyspaces+hands+on
+
+------------------------------------------------------------------------------------------------------------------------
+## <a id="section-17"></a> **17 - Amazon Timestream**
+
+![DocumentDB](../images/Architecture-Service-Icons_07312022/Arch_Database/64/Arch_Amazon-Timestream_64.svg)
+
+**Definitions**
+
+### **Amazon Timestream**
+
+- Fast, scalable, and serverless time-series database
+- Quickly analyze time-series data using SQL, with built-in analytic functions for smoothing, approximation, and interpolation.
+- Serverless database processes millions of queries per day and automatically scales as needed.
+- Simplify data lifecycle management with storage tiers, including a memory store for recent data and a magnetic store for historical data.
+- Derive faster insights from your data and make business decisions at a fraction of the cost of existing time-series solutions.
+
+
+### **How it works**
+- Amazon Timestream is a fast, scalable, and serverless time-series database service that makes it easier to store and analyze trillions of events per day up to 1,000 times faster. 
+- Amazon Timestream automatically scales up or down to adjust capacity and performance, so that you don’t have to manage the underlying infrastructure.
 
 
 **Cheat Sheets**
+
 **References:**
+
+https://aws.amazon.com/timestream/?nc1=h_ls
+
+https://aws.amazon.com/timestream/features/?nc=sn&loc=2
+
+https://aws.amazon.com/timestream/pricing/?nc=sn&loc=3
+
+https://aws.amazon.com/timestream/getting-started/?nc=sn&loc=4
+
+https://aws.amazon.com/timestream/faq/?nc=sn&loc=5
+
+https://aws.amazon.com/timestream/customers/?nc=sn&loc=6
+
 **Videos**
+
+https://www.youtube.com/results?search_query=Amazon+Timestream
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=Amazon+Timestream+hands+on
+
+------------------------------------------------------------------------------------------------------------------------

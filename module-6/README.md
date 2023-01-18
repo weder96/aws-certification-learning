@@ -2,9 +2,9 @@
 
 [1]: https://github.com/weder96/aws-certification-learning
 
-# [Módulo 6: Computação](https://aws.amazon.com/what-is/compute/)
+# [Module 6: Compute](https://aws.amazon.com/what-is/compute/)
 
-## Conteúdo
+## Contents
 1. <a href="#section-1"> Amazon [EC2](https://aws.amazon.com/ec2/?nc1=h_ls) </a>
 2. <a href="#section-2"> Pricing </a>
 3. <a href="#section-3"> Instance Types</a>
@@ -753,25 +753,48 @@ https://www.youtube.com/watch?v=H8bmHU_z8Ac
 ***************************************************************************************************
 ## <a id="section-10"></a> **10 - AWS Outposts**
 
+
 ![AWS Outposts Server](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Outposts-servers_48.png "AWS Outposts Server")
-
 ![AWS Outposts Family](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Outposts-family_48.png "AWS Outposts Family")
-
 ![AWS Outposts Rack](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Outposts-rack_48.png "AWS Outposts Rack")
 
+**Definitions**
 
 AWS Outposts is a fully managed service that offers the same AWS infrastructure, AWS services, APIs, and tools to virtually any datacenter, co-location space, or on-premises facility for a truly consistent hybrid experience. With AWS Outposts you can extend your VPC into the on-premises data center as in the following diagram:
 
 ![AWS Outposts](../images/extra/AwsOutposts.jpg)
 
+#### **Monitoring**
+- You can use Amazon Cloudwatch to retrieve Outposts metrics.
+- To capture API actions from services on an Outpost, you can use AWS CloudTrail.
+- Use VPC Flow Logs to get detailed information about traffic to and from your Outpost, as well as traffic within your Outpost.
+- You can also use Traffic Mirroring for content inspection, threat monitoring, troubleshooting, or copying and forwarding network traffic.
+- To see changes in the health of AWS resources, you can use AWS Health Dashboard.
+
+#### **Pricing**
+- You are charged for Outposts rack capacity for a 3-year term: All, Partial, or No Upfront.
+- You are charged for the following:
+   - AWS services running on Outposts
+   - AWS Marketplace AMIs
+   - Outposts and Outpost resources that you share
+   - Data transfer associated with Outpost’s service link VPN traffic from AWS Region
+- You are not charged for data transfers from Outpost to the parent AWS Region.
+
 
 **Cheat Sheets**
+
+https://tutorialsdojo.com/aws-outposts/
 
 https://digitalcloud.training/aws-networking-services/
 
 **References:**
 
 https://aws.amazon.com/outposts/
+
+https://aws.amazon.com/outposts/
+
+https://docs.aws.amazon.com/outposts/latest/userguide/what-is-outposts.html
+
 
 **Videos**
 
@@ -780,48 +803,154 @@ https://www.youtube.com/results?search_query=AWS+Outposts
 https://www.youtube.com/watch?v=2cQncaijRoY
 
 
+**Hands On**
+
+https://www.youtube.com/results?search_query=AWS+Outposts+hands+on
+
 ***************************************************************************************************
 ## <a id="section-11"></a> **11 - AWS Serverless Application Repository**
 
 ![AWS-Serverless-Application-Repository](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Serverless-Application-Repository_48.png "AWS-Serverless-Application-Repository")
 
+**Definitions**
+
+- The AWS Serverless Application Repository is a managed repository for deploying and publishing serverless applications.
+- You can also use pre-built applications instead of cloning, building, packaging, and publishing source code to AWS before deploying it.
+- Each application includes an AWS SAM template that specifies the AWS resources that will be used.
+
+
+### **AWS Serverless Application Repository Monitoring**
+
+Create a trail in AWS CloudTrail to capture all API calls.
+
+Even if you haven’t configured a trail, you can still view the most recent events in the CloudTrail console’s Event history.
+
+### **Pricing**
+You are charged for AWS resources used in the applications you deploy.
+
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-serverless-application-repository/
+
 **References:**
+
+https://aws.amazon.com/serverless/serverlessrepo/
+
+https://docs.aws.amazon.com/serverlessrepo/latest/devguide/what-is-serverlessrepo.html
 
 **Videos**
 
+https://www.youtube.com/results?search_query=AWS+Serverless+Application+Repository
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=AWS+Serverless+Application+Repository+hands+on
 
 ***************************************************************************************************
 ## <a id="section-12"></a> **12 - VMware Cloud on AWS**
 
 ![VMware-Cloud-on-AWS](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_VMware-Cloud-on-AWS_48.png "VMware-Cloud-on-AWS")
 
+**Definitions**
+
+VMware Cloud on AWS provides dedicated, single-tenant cloud infrastructure with support multiple SDDC per organization, with up to 16 hosts per cluster, delivered on the next-generation bare metal AWS infrastructure based on the latest Amazon EC2 Storage Optimized high I/O instances and featuring low-latency Non-Volatile Memory Express (NVMe) based SSDs.
+
+You can quickly create new VMware SDDC clusters on AWS Cloud through a web-based console or by utilizing a RESTful API. VMware manages and operates the service including VMware SDDC software components and the modern web-based console. 
+
+VMware delivers service status with notifications, enterprise-grade 24x7 service support & site reliability operations, and support center with FAQs, forums & chat support. VMware delivers scheduled SDDC software updates and emergency software patches with notifications, and auto-remediation of hardware failures. 
 
 **Cheat Sheets**
 
 **References:**
 
+https://aws.amazon.com/vmware/features/?nc1=h_ls
+
+https://aws.amazon.com/vmware/faqs/
+
+https://aws.amazon.com/vmware/resources/?blog-posts-cards.sort-by=item.additionalFields.modifiedDate&blog-posts-cards.sort-order=desc
+
 **Videos**
 
+https://www.youtube.com/results?search_query=VMware+Cloud+on+AWS
 
+**Hands On**
+
+https://www.youtube.com/results?search_query=VMware+Cloud+on+AWS+hands+ON
 ***************************************************************************************************
 ## <a id="section-13"></a> **13 - AWS Wavelength**
 
 ![AWS-Wavelength](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Wavelength_48.png "AWS-Wavelength")
 
+**Definitons**
+
+- A service that allows developers to create applications with ultra-low latencies for mobile devices and end users.
+- Wavelength Zones can be used to extend an Amazon VPC in order to run ultra-low latency applications that use the same AWS services, APIs, tools, and functionalities.
+
+### **Features**
+- Wavelength Zones support a wide range of compute instances for general purpose, gaming, and machine learning inference.
+- Supports persistent block storage to provide a snapshot, encryption, and restore capabilities without any performance impact.
+- Connectivity to 5G networks using VPC and Carrier Gateway.
+- Various AWS management and monitoring tools to run and manage workloads in Wavelength Zones.
+
+**Use cases:**
+- Create and distribute augmented/virtual reality (AR/VR) apps, as well as HD live video streaming.
+- Use AI and ML-powered video and image analytics at the edge to accelerate 5G applications in medical diagnostics, retail, and smart manufacturing settings.
+- With near-real-time communication between automobiles and the cloud, you’ll be able to create advanced driver assistance, autonomous driving, and in-vehicle entertainment experiences.
+
+### **Concepts**
+
+- Wavelength is the AWS infrastructure used to run workloads that require ultra-low latencies over mobile networks.
+
+**Wavelength Zone (WZ)** 
+- A logical extension of the Region. It is where the Wavelength infrastructure is deployed and is managed by the Region’s control plane.
+- Use WZs for application components that require ultra-low latency, enhanced bandwidth, or improved service quality across 5G mobile networks.
+- To give the most scalable, robust, and cost-effective alternatives for components, AWS recommends that you design the edge applications in a hub and spoke model with the Region.
+- For latency-sensitive applications, you need to have multiple WZs.
+- To discover the closest WZ endpoint, you must register the EC2 instance with a discovery service such as AWS Cloud Map.
+- For data and app replication, AWS recommends you use an AZ in a different Region as a failover zone.
+- Apps running on 4G/LTE mobile phones and devices connected to 4G/LTE networks can also connect to Wavelength Zones’ application servers.
+
+An application that you run on an AWS resource in a WZ is called **Wavelength Application**.
+
+
+**Carrier Gateway**
+- Provides connectivity between WZ and telecommunication carrier.
+- Enables inbound traffic from a carrier network in a specific location, as well as outbound traffic to the carrier network and the internet.
+- Supports IPv4 traffic.
+- Only available for VPCs with WZ subnets.
+- To assign a network interface, use a carrier IP address from the network border group.
+
+- You can create AWS compute, storage services, and carrier gateways in WZs.
+- You’ll also need VPC, Subnet, and Network Border Group to be able to leverage the 5G edge computing infrastructure of AWS Wavelength.
+
+To manage your resources and WZs, you can use the following interfaces:
+- AWS Management Console
+- AWS CLI
+- AWS SDKs
+
+### **Pricing**
+- Prices for AWS resources in WZs will differ from those in the parent region.
+- In WZs, EC2 instances are only available on demand.
+- Wavelength Zones can be used with your Instance Savings Plan.
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-wavelength/
+
 **References:**
+
+https://aws.amazon.com/wavelength/
+
+https://docs.aws.amazon.com/wavelength/latest/developerguide/what-is-wavelength.html
 
 **Videos**
 
+https://www.youtube.com/results?search_query=AWS+Wavelength
 
-https://docs.aws.amazon.com/savingsplans/latest/userguide/what-is-savings-plans.html
+**Hands On**
 
-
+https://www.youtube.com/results?search_query=AWS+Wavelength+hands+on
 
 
 ***************************************************************************************************

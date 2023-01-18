@@ -17,11 +17,48 @@ https://tutorialsdojo.com/aws-fargate/
 
 ![Elastic-Container-Registry](../images/Architecture-Service-Icons_01312022/Arch_Containers/48/Arch_Amazon-Elastic-Container-Registry_48.png "Elastic-Container-Registry")
 
+**Definitions**
+
+- A managed AWS Docker registry service.
+- Amazon ECR is a regional service.
+
+### **Features**
+- ECR supports Docker Registry HTTP API V2 allowing you to use Docker CLI commands or your preferred Docker tools in maintaining your existing development workflow.
+- ECR stores both the containers you create and any container software you buy through AWS Marketplace.
+- ECR stores your container images in Amazon S3.
+- ECR supports the ability to define and organize repositories in your registry using namespaces.
+- You can transfer your container images to and from Amazon ECR via HTTPS.
+
+### **Security**
+- By default, IAM users don’t have permission to create or modify Amazon ECR resources, or perform tasks using the Amazon ECR API.
+- Use IAM policies to grant or deny permission to use ECR resources and operations.
+- ECR partially supports resource-level permissions.
+- ECR supports the use of customer master keys (CMK) managed by AWS Key Management Service (KMS) to encrypt container images stored in your - ECR repositories.
+
+### **Pricing**
+- You pay only for the amount of data you store in your repositories and data transferred to the Internet.
+
 **Cheat Sheets**
+
+https://tutorialsdojo.com/amazon-elastic-container-registry-amazon-ecr/
 
 **References:**
 
+https://docs.aws.amazon.com/AmazonECR/latest/userguide/
+
+https://aws.amazon.com/ecr/features/
+
+https://aws.amazon.com/ecr/pricing/
+
+https://aws.amazon.com/ecr/faqs/
+
 **Videos**
+
+https://www.youtube.com/results?search_query=Elastic+Container+Registry
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=Elastic+Container+Registry+Hans+on
 
 ***************************************************************************************************
 ## <a id="section-02"></a> **2 - Amazon Elastic Container Service (Amazon ECS)**

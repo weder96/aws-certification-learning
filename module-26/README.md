@@ -24,13 +24,38 @@
 ## <a id="section_01"></a> **1 - AWS X-Ray**
 ![01](../images/Architecture09172021/Arch_Developer-Tools/64/Arch_AWS-X-Ray_64.svg)
 
+**Definitions**
+
+- AWS X-Ray analyzes and debugs production, distributed applications, such as those built using a microservices architecture. With X-Ray, you can identify performance bottlenecks, edge case errors, and other hard to detect issues.
+
+### **Pricing**
+- You pay based on the number of traces recorded, retrieved, and scanned. A trace represents a request to your application and may include multiple data points, such as for calls to other services and database access.
+- The maximum size of a trace is 500 KB.
+- Trace data is retained for 30 days from the time it is recorded at no additional cost.
+
 **Cheat Sheets**
+
+https://tutorialsdojo.com/aws-x-ray/
 
 **References:**
 
+https://aws.amazon.com/xray/features/
+
+https://aws.amazon.com/xray/pricing/
+
+https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html
+
+https://aws.amazon.com/xray/faqs/
+
 **Videos**
 
+https://youtu.be/5MQkX57eTh8
+
+https://www.youtube.com/results?search_query=AWS+x-ray
+
 **Hands On**
+
+https://www.youtube.com/results?search_query=AWS+x-ray+hands+on++
 
 ***************************************************************************************************
 ## <a id="section_02"></a> **2 - AWS Cloud9**
