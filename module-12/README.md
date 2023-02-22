@@ -228,6 +228,8 @@ https://aws.amazon.com/sqs/pricing/
 
 https://aws.amazon.com/sqs/faqs/
 
+https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html
+
 
 **Videos**
 
@@ -411,17 +413,42 @@ https://www.youtube.com/results?search_query=aws+AppFlow+hands+on
 -------------------------------------------------------------------------------------------------
 ## <a id="section-6" > </a> **6 - Amazon-API-Gateway**
 
-![SNS](../images/Architecture09172021/Arch_App-Integration/Arch_64/Arch_Amazon-API-Gateway_64.svg)
+![API-Gateway](../images/Architecture09172021/Arch_App-Integration/Arch_64/Arch_Amazon-API-Gateway_64.svg)
 
 **Definition**
+
+Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. APIs act as the "front door" for applications to access data, business logic, or functionality from your backend services. Using API Gateway, you can create RESTful APIs and WebSocket APIs that enable real-time two-way communication applications. API Gateway supports containerized and serverless workloads, as well as web applications.
+
+API Gateway handles all the tasks involved in accepting and processing up to hundreds of thousands of concurrent API calls, including traffic management, CORS support, authorization and access control, throttling, monitoring, and API version management. API Gateway has no minimum fees or startup costs. You pay for the API calls you receive and the amount of data transferred out and, with the API Gateway tiered pricing model, you can reduce your cost as your API usage scales.
+
+1 million API calls received free
+
+per month for 12 months with the AWS Free Tier
+
 
 **Cheat Sheets**
 
 **References**
 
+https://aws.amazon.com/api-gateway/?nc1=h_ls
+
+https://aws.amazon.com/api-gateway/features/
+
+https://aws.amazon.com/api-gateway/pricing/
+
+https://aws.amazon.com/api-gateway/getting-started/
+
+https://aws.amazon.com/api-gateway/resources/
+
+https://aws.amazon.com/api-gateway/faqs/
+
 **Videos**
 
+https://www.youtube.com/results?search_query=amazon+api-gateway
+
 **Hands On**
+
+https://www.youtube.com/results?search_query=amazon+api+gateway+hands+on
 
 
 -------------------------------------------------------------------------------------------------

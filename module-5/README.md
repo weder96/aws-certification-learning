@@ -101,6 +101,32 @@ https://www.youtube.com/results?search_query=aws+Elastic+Load+Balancing
 
 ![AWS Global Accelerator](../images/Architecture-Service-Icons_01312022/Arch_Networking-Content-Delivery/48/Arch_AWS-Global-Accelerator_48.png "AWS Global Accelerator")
 
+
+**Definitions**
+
+A service that uses the AWS Global Network to improve the availability and performance of your applications to your local and global users. 
+It provides static IP addresses that act as a fixed entry point to your application endpoints in a single or multiple AWS Regions, such as your Application Load Balancers, Network Load Balancers or Amazon EC2 instances.
+AWS Global Accelerator continually monitors the health of your application endpoints and will detect an unhealthy endpoint and redirect traffic to healthy endpoints in less than 1 minute.
+
+
+### **Concepts**
+
+An accelerator is the resource you create to direct traffic to optimal endpoints over the AWS global network.
+
+Network zones are isolated units with their own set of physical infrastructure and service IP addresses from a unique IP subnet.
+
+AWS Global Accelerator provides you with a set of two static IP addresses that are anycast from the AWS edge network. It also assigns a default Domain 
+Name System (DNS) name to your accelerator, similar to a1234567890abcdef.awsglobalaccelerator.com, that points to the static IP addresses.
+
+A listener processes inbound connections from clients to Global Accelerator, based on the port (or port range) and protocol that you configure. Global 
+Accelerator supports both TCP and UDP protocols.
+
+Each endpoint group is associated with a specific AWS Region. Endpoint groups include one or more endpoints in the Region.
+
+Endpoints can be Network Load Balancers, Application Load Balancers, EC2 instances, or Elastic IP addresses.
+
+
+
 **Cheat Sheets**
 
 https://tutorialsdojo.com/aws-global-accelerator/
@@ -122,6 +148,8 @@ https://www.youtube.com/results?search_query=aws+AWS+Global+Accelerator
 ## <a id="section-5"></a> **5 - AWS PrivateLink**
 
 ![](../images/Architecture-Service-Icons_01312022/Arch_Networking-Content-Delivery/48/Arch_AWS-PrivateLink_48.png "AWS PrivateLink")
+
+**Definitions**
 
 **Cheat Sheets**
 

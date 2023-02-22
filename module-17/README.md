@@ -2,9 +2,10 @@
 
 [1]: https://github.com/weder96/aws-certification-learning
 
-# Additional AWS Services
+# Module 17: Additional AWS Services
 
-## Conteúdo
+## Content
+
 1. <a href="#section-01"> Compute </a>
 2. <a href="#section-02"> Database </a>
 3. <a href="#section-03"> Networking & Content Delivery </a>
@@ -242,10 +243,32 @@ AWS Glue generates the code to execute your data transformations and data loadin
 
 --------------------------------------------------------------------------------------------------
 ## <a id="section-07" ></a> **7 - Media Services**
+
+![Amazon Elastic Transcoder](../images/Architecture-Service-Icons_07312022/Arch_Media-Services/64/Arch_Amazon-Elastic-Transcoder_64.svg)
+
 ### [Amazon Elastic Transcoder](https://aws.amazon.com/elastictranscoder/)
+
+
+**Definitions**
 Amazon Elastic Transcoder is media transcoding in the cloud.
 
 It is designed to be a highly scalable, easy to use and a cost-effective way for developers and businesses to convert (or “transcode”) media files from their source format into versions that will playback on devices like smartphones, tablets, and PCs.
+
+
+Amazon Elastic Transcoder manages all aspects of the media transcoding process for you transparently and automatically. There’s no need to administer software, scale hardware, tune performance, or otherwise manage transcoding infrastructure. You simply create a transcoding “job” specifying the location of your source media file and how you want it transcoded. Amazon Elastic Transcoder also provides transcoding presets for popular output formats, which means that you don’t need to guess about which settings work best on particular devices. All these features are available via service API, AWS SDKs and the AWS Management Console.
+
+Like other Amazon Web Services products, there are no contracts or monthly commitments for using Amazon Elastic Transcoder — you simply pay based on the minutes you need to transcode, and resolution of the content transcoded.
+
+**Cheat Sheets**
+
+**References:**
+
+**Videos**
+
+https://youtu.be/wSYHdt1TJVQ
+
+**Hands On**
+
 
 **************************************************************************************
 ## <a id="section-08" ></a> **8 - Mobile Services**
