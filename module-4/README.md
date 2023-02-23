@@ -6,27 +6,27 @@
 
 ## Contents
 1. <a href="#section-01"> Amazon Inspector </a>
-2. <a href="#section-02"> Amazon Artifact </a>
+2. <a href="#section-02"> AWS Artifact </a>
 3. <a href="#section-03"> Amazon GuardDuty</a>
 4. <a href="#section-04"> Amazon WAF & AWS Shield</a>
 5. <a href="#section-05"> Amazon Key Management Service (AWS KMS)</a>
-6. <a href="#section-06"> Amazon CloudHSM</a>
-7. <a href="#section-07"> Amazon Certificate Manager(ACM)</a>
+6. <a href="#section-06"> AWS CloudHSM</a>
+7. <a href="#section-07"> AWS Certificate Manager(ACM)</a>
 8. <a href="#section-08"> Amazon Inspector and AWS Trusted Advisor</a>
 9. <a href="#section-09"> Amazon Penetration Testing</a>
-10. <a href="#section-10"> Amazon Single Sign-On (AWS SSO)</a>
+10. <a href="#section-10"> AWS IAM Identity Center (Sucesor Single Sign-On (AWS SSO))</a>
 11. <a href="#section-11"> Amazon Cognito</a>
-12. <a href="#section-12"> Amazon Directory Services </a>
-13. <a href="#section-13"> Amazon Systems Manager Parameter Store </a>
-14. <a href="#section-14"> Amazon Secrets Manager </a>
-15. <a href="#section-15"> Amazon Audit Manager </a>
-16. <a href="#section-16"> Amazon Certificate Manager</a>   
+12. <a href="#section-12"> AWS Directory Services </a>
+13. <a href="#section-13"> AWS Systems Manager Parameter Store </a>
+14. <a href="#section-14"> AWS Secrets Manager </a>
+15. <a href="#section-15"> AWS Audit Manager </a>
+16. <a href="#section-16"> AWS Certificate Manager</a>   
 17. <a href="#section-17"> Amazon Detective </a>
-18. <a href="#section-18"> Amazon Firewall Manager </a>
+18. <a href="#section-18"> Aws Firewall Manager </a>
 19. <a href="#section-19"> Amazon Macie </a>
 20. <a href="#section-20"> Amazon Network Firewall</a> 
-21. <a href="#section-21"> Amazon Resource Access Manager (AWS RAM)</a> 
-22. <a href="#section-22"> Amazon Security Hub  </a>
+21. <a href="#section-21"> AWS Resource Access Manager (AWS RAM)</a> 
+22. <a href="#section-22"> AWS Security Hub  </a>
 23. <a href="#section-23"> Amazon Shield </a>
 24. <a href="#section-24"> Amazon WAF </a>
 25. <a href="#section-25"> AWS account root user </a>
@@ -35,7 +35,7 @@
 99. <a href="#section-99"> How do I report abuse of AWS resources? </a>
 
 ---------------------------------------------------------------------------------------
-## <a id="section-01"></a> **1 - Amazon Inspector**
+## <a id="section-01"> </a> **1 - Amazon Inspector**
 ![Amazon Inspector](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_Amazon-Inspector_48.png)
 
 The AWS Cloud allows for a shared responsibility model.
@@ -88,7 +88,7 @@ https://www.youtube.com/watch?v=F1-hvgZyw80
 https://www.youtube.com/results?search_query=aws+inspector
 
 ---------------------------------------------------------------------------------------
-## <a id="section-02"></a> **2 - Amazon Artifact**
+## <a id="section-02"> </a> **2 - Amazon Artifact**
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Artifact_48.png)
 
 [AWS Artifact](https://aws.amazon.com/en/artifact/) is your one-stop resource for compliance-related information that is important to you.
@@ -136,7 +136,7 @@ https://www.youtube.com/watch?v=u5UV-wr-lIA
 https://www.youtube.com/watch?v=lCUATy4emgY
 
 ---------------------------------------------------------------------------------------
-## <a id="section-03"></a> **3 - Amazon GuardDuty**
+## <a id="section-03"> </a> **3 - Amazon GuardDuty**
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Artifact_48.png)
 
 Amazon GuardDuty provides threat detection and continuous security monitoring for malicious or unauthorized behavior to help protect your AWS accounts and workloads.
@@ -178,7 +178,7 @@ https://www.youtube.com/watch?v=mKJ_ndS8q6M
 
 
 ---------------------------------------------------------------------------------------
-## <a id="section-04"></a> **4 - AWS WAF & AWS Shield**
+## <a id="section-04"> </a> **4 - AWS WAF & AWS Shield**
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Shield_48.png)
 
@@ -242,7 +242,7 @@ https://www.youtube.com/results?search_query=aws+Shield
 https://www.youtube.com/watch?v=ZeT5_ZfXMPY
 
 ---------------------------------------------------------------------------------------
-## <a id="section-05"></a> **5 - AWS Key Management Service (AWS KMS)**
+## <a id="section-05"> </a> **5 - AWS Key Management Service (AWS KMS)**
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Key-Management-Service_48.png)
 
@@ -306,7 +306,7 @@ AWS KMS allows developers to easily encrypt data, either through one-click encry
 **Videos**
 
 ---------------------------------------------------------------------------------------
-## <a id="section-06"></a> **6 - AWS CloudHSM**
+## <a id="section-06"> </a> **6 - AWS CloudHSM**
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-CloudHSM_48.png)
 
 **AWS CloudHSM** is a cloud-based Hardware Security Module (HSM) that allows you to easily generate and use your own encryption keys in the AWS Cloud.
@@ -337,7 +337,7 @@ https://www.youtube.com/watch?v=5RRDhNZ6cO0
 
 
 ---------------------------------------------------------------------------------------
-## <a id="section-07"></a> **7 - AWS Certificate Manager**
+## <a id="section-07"> </a> **7 - AWS Certificate Manager**
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Certificate-Manager_48.png)
 
@@ -356,7 +356,7 @@ AWS Certificate Manager removes the time-consuming manual process of purchasing,
 https://tutorialsdojo.com/aws-certificate-manager/
 
 ---------------------------------------------------------------------------------------
-## <a id="section-08"></a> **8 - AWS Inspector and AWS Trusted Advisor**
+## <a id="section-08"> </a> **8 - AWS Inspector and AWS Trusted Advisor**
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_Amazon-Inspector_48.png)
 
@@ -413,7 +413,7 @@ https://aws.amazon.com/premiumsupport/technology/trusted-advisor/
 **Videos**
 
 ---------------------------------------------------------------------------------------
-## <a id="section-09"></a> **9 - Penetration Testing**
+## <a id="section-09"> </a> **9 - Penetration Testing**
 
 **Penetration Testing** is the practice of testing the security of the application itself for vulnerabilities, simulating an attack.
 
@@ -445,9 +445,11 @@ If an account is or could be compromised, AWS recommends that the following step
 **Videos**
 
 ---------------------------------------------------------------------------------------
-## <a id="section-10"></a> **10 - AWS Single Sign-On (AWS SSO)**
+## <a id="section-10"></a> **10 - AWS IAM Identity Center (Sucesor Single Sign-On (AWS SSO))**
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Single-Sign-On_48.png)
+
+**Definitions**
 
 **AWS Single Sign-On (AWS SSO)** is a cloud-based single sign-on (SSO) service that makes it easy to centrally manage SSO access to all your AWS accounts and cloud applications.
 
@@ -457,12 +459,40 @@ AWS SSO also helps you manage access and permissions for commonly used third-par
 
 AWS SSO includes a user portal where your end users can find and access all assigned AWS accounts, cloud applications, and custom applications in one place.
 
+### **AWS IAM Identity Center (Successor to AWS Single Sign-On)**
+
+Centrally manage workforce access to multiple AWS accounts and applications
+Create or connect your workforce identities only once for use across AWS.
+
+Centrally manage your workforce access to multiple AWS accounts.
+Assign user permissions based on common job functions or user attributes.
+
+Provide your workforce single sign-on access to cloud applications.
+How it works
+AWS IAM Identity Center (successor to AWS Single Sign-On) helps you securely create or connect your workforce identities and manage their access centrally across AWS accounts and applications. IAM Identity Center is the recommended approach for workforce authentication and authorization on AWS for organizations of any size and type.
+
+
 **Cheat Sheets**
+
 
 **References**
 
+https://aws.amazon.com/iam/identity-center/?nc1=h_ls
+
+https://aws.amazon.com/iam/identity-center/features/
+
+https://aws.amazon.com/iam/identity-center/faqs/
+
+https://aws.amazon.com/iam/identity-center/resources/
+
+
 **Videos**
 
+https://www.youtube.com/results?search_query=AWS+IAM+Identity+Center
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=AWS+IAM+Identity+Center+hands+on
 
 ---------------------------------------------------------------------------------------
 ## <a id="section-11"></a> **11 - Amazon Cognito**
@@ -636,6 +666,24 @@ https://www.youtube.com/results?search_query=AWS+Secrets+Manager+Hands+on
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Audit-Manager_48.png)
 
+**Definitions**
+
+A service that will help you audit your AWS usage on a regular basis in order to simplify risk management and compliance with regulations and industry standards.
+
+Automates evidence collection for policies, procedures, and activities, as well as the creation of audit reports.
+
+### **Features**
+
+Centrally manage and upload evidence from on-premises or multi-cloud environments.
+
+View analytics data for active assessments on the Audit Manager dashboard and quickly identify non-compliant evidence that needs to be remedied.
+
+Creation of frameworks with standard or custom controls based on your specific internal audit requirements.
+
+Custom frameworks can also be shared with another AWS account or replicated into another AWS Region under your own account.
+
+Supports control set delegation to team members to assist you in reviewing related evidence, adding comments, and updating the status of each control.
+
 **Cheat Sheets**
 
 https://tutorialsdojo.com/aws-audit-manager/
@@ -773,26 +821,74 @@ https://www.youtube.com/watch?v=WNFknf9zyZg
 
 
 ---------------------------------------------------------------------------------------
-## <a id="section-21"></a> **21 - Amazon Resource Access Manager (AWS RAM)**
+## <a id="section-21"></a> **21 - AWS Resource Access Manager (AWS RAM)**
 
-![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Resource-Access-Manager_48.png)
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/64/Arch_AWS-Resource-Access-Manager_64.svg)
+
+**Definitions**
+
+Simply and securely share your AWS resources across multiple accounts
+
+Simplify your security and access controls across shared resources.
+
+Streamline management of AWS resources within your organization from a central account.
+
+Reduce overhead and costs by creating resources once and sharing them across multiple accounts.
+
+**How it works**
+
+AWS RAM helps you securely share your resources across AWS accounts, within your organization or organizational units (OUs), and with IAM roles and users for supported resource types.
 
 **Cheat Sheets**
 
 **References**
 
+https://aws.amazon.com/ram/
+
+https://aws.amazon.com/ram/faqs/
+
 **Videos**
+
+https://www.youtube.com/results?search_query=AWS+Resource+Access+Manager
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=AWS+Resource+Access+Manager+hands+on
 
 ---------------------------------------------------------------------------------------
-## <a id="section-22"></a> **22 - Amazon Security Hub**
+## <a id="section-22"></a> **22 - AWS Security Hub**
 
-![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Security-Hub_48.png)
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/64/Arch_AWS-Security-Hub_64.svg)
+
+**Definitions**
+
+How it works
+
+AWS Security Hub is a cloud security posture management service that performs security best practice checks, aggregates alerts, and enables automated remediation.
 
 **Cheat Sheets**
 
 **References**
 
+https://aws.amazon.com/security-hub/?nc1=h_ls
+
+https://aws.amazon.com/security-hub/features/?nc=sn&loc=2
+
+https://aws.amazon.com/security-hub/pricing/?nc=sn&loc=3
+
+https://aws.amazon.com/security-hub/getting-started/?nc=sn&loc=4
+
+https://aws.amazon.com/security-hub/resources/?nc=sn&loc=5&dn=1
+
+https://aws.amazon.com/security-hub/faqs/?nc=sn&loc=5&dn=2
+
 **Videos**
+
+https://www.youtube.com/results?search_query=AWS+Security+Hub
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=AWS+Security+Hub+hands+on
 
 ---------------------------------------------------------------------------------------
 ## <a id="section-23"></a> **23 - Amazon Shield**
