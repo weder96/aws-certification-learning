@@ -16,6 +16,8 @@
 8. <a href="#section-08"> Mobile Services </a>
 9. <a href="#section-09"> End User Computing </a>
 10. <a href="#section-10"> Internet of Things (IoT) </a>
+11. <a href="#section-11"> AWS Marketplace </a>
+12. <a href="#section-12"> AWS software development kits (SDKs) </a>
 
 
 There are Additional AWS Services & Tools that may feature on the exam. Often you do not need to know these at a deep level but do need to understand what they are and what they are used for.
@@ -327,3 +329,65 @@ Allows you to connect IoT devices to the AWS cloud without the need to provision
 
 Can support billions of devices and trillions of messages.
 
+-------------------------------------------------------------------------------------------
+## <a id="section-11" ></a> **11 - AWS Marketplace**
+
+**Definitions**
+
+AWS Marketplace is a curated digital catalog that customers can use to find, buy, deploy, and manage third-party software, data, and services to build solutions and run their businesses. AWS Marketplace includes thousands of software listings from popular categories such as security, business applications, machine learning, and data products across specific industries, such as healthcare, financial services, and telecommunications. Customers can quickly launch preconfigured software, and choose software solutions in Amazon Machine Images (AMIs), software as a service (SaaS), and other formats. Professional services are also available to help customers configure, deploy, and manage third-party software. For a complete list of delivery methods, see Product delivery.
+
+You can use AWS Marketplace as a buyer (subscriber), seller (provider), or both. Anyone with an AWS account can use AWS Marketplace as a buyer, and can register to become a seller. A seller can be an independent software vendor (ISV), channel partner, managed services provider (MSP), or individual who has something to offer that works with AWS products and services.
+
+### Using AWS Marketplace as a seller
+
+The following diagram shows the process for selling a software product on AWS Marketplace.
+
+![seller](../images/seller.png)
+
+
+**Pricing**
+
+Products can be free to use or can have associated charges. The charge becomes part of the buyer's AWS bill, and after the buyer pays, AWS pays the seller. Products can take many forms. For example, a product can be oﬀered as an Amazon Machine Image (AMI) that is instantiated using a buyer's AWS account. Products can also be conﬁgured to use CloudFormation templates for delivery to the buyer. Products can also be SaaS oﬀerings from an ISV, web access control lists (web ACL), sets of rules, or conditions for AWS WAF. Products can also be professional services from an ISV, channel partners, or MSP.
+
+Flexible pricing options include free trial, hourly, monthly, annual, multi-year, and Bring Your Own License model (BYOL), and being billed from one source. AWS handles billing and payments, and charges appear on customers’ AWS bill.
+
+Software products can be purchased at the listed price using the ISV’s standard end user license agreement (EULA). In addition, software products can be oﬀered with custom pricing and EULA through private oﬀers. Products can also be purchased under a contract with speciﬁed time or usage boundaries. After subscribing to a product, the buyer can copy the product to their Service Catalog to manage how the product is accessed and used in the buyer's organization. For more information about pricing, see Product pricing.
+
+**Cheat Sheets**
+
+**References:**
+
+https://docs.aws.amazon.com/marketplace/latest/userguide/what-is-marketplace.html
+
+**Videos**
+
+https://youtu.be/UjD-kMiVs0c
+
+**Hands On**
+
+-------------------------------------------------------------------------------------------------------------
+## <a id="section-12" ></a> **12 - AWS software development kits (SDKs)**
+
+
+**Definitions**
+
+- AWS Software Development Kit (AWS SDK)
+- Language-specific APIs (set of libraries)
+- Enables you to access and manage AWS services programmatically
+- Embedded within your application
+- Supports
+- SDKs (JavaScript, Python, PHP, .NET, Ruby, Java, Go, Node.js, C++)
+- Mobile SDKs (Android, iOS, ...)
+- IoT Device SDKs (Embedded C, Arduino, ...)
+- Example: AWS CLI is built on AWS SDK for Python
+
+
+**Cheat Sheets**
+
+**References:**
+
+https://aws.amazon.com/developer/tools/?nc1=h_ls
+
+**Videos**
+
+**Hands On**

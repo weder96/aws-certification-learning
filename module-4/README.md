@@ -1156,7 +1156,119 @@ https://www.youtube.com/results?search_query=aws+KMS
 https://www.youtube.com/watch?v=-1S-RdeAmMo
 
 
+---------------------------------------------------------------------------------------
+## <a id="section-28"></a> **28 - Security Groups**
 
+Security Groups are the fundamental of network security in AWS
+
+• They control how traffic is allowed into or out of our EC2 Instances.
+
+![securityGroup](../images/securityGroup.png)
+
+• Security groups only contain rules
+
+• Security groups rules can reference by IP or by security group
+
+### Deeper Dive
+
+Security groups are acting as a “firewall” on EC2 instances
+- They regulate:
+     - Access to Ports
+     - Authorised IP ranges – IPv4 and IPv6
+     - Control of inbound network (from other to the instance)
+     - Control of outbound network (from the instance to other)
+
+![](../images/firewallSecurityGroup.png)
+
+### Diagram
+![](../images/diagramaSecurityGroup.png)
+
+### Good to Know
+
+Can be attached to multiple instances
+
+Locked down to a region / VPC combination
+
+Does live “outside” the EC2 – if traffic is blocked the EC2 instance won’t see it
+
+It’s good to maintain one separate security group for SSH access
+
+If your application is not accessible (time out), then it’s a security group issue
+
+If your application gives a “connection refused“ error, then it’s an application error or it’s not launched
+
+All inbound traffic is blocked by default
+
+All outbound traffic is authorise
+
+### Referencing other security groups
+
+![reference Security Group](../images/referenceSecurityGroup.png)
+
+### Classic ports to Know
+
+- 22 = SSH (Secure Shell) - log into a Linux instance
+- 21 = FTP (File Transfer Protocol) – upload files into a file share
+- 22 = SFTP (Secure File Transfer Protocol) – upload files using SSH
+- 80 = HTTP – access unsecured websites
+- 443 = HTTPS – access secured websites
+- 3389 = RDP (Remote Desktop Protocol) – log into a Windows instance
+
+
+### Summary Tables
+
+![](../images/summarySecurityGroup.png)
+
+### Which Lectures to watch
+
+Mac / Linux:
+- SSH on Mac/Linux lecture
+
+Windows:
+- Putty Lecture
+- If Windows 10: SSH on Windows 10 lecture
+
+All:
+- EC2 Instance Connect lecture
+
+### SSH troubleshooting
+
+- Students have the most problems with SSH
+- If things don’t work...
+
+1. Re-watch the lecture. You may have missed something
+2. Read the troubleshooting guide
+3. Try EC2 Instance Connect
+
+- If one method works (SSH, Putty or EC2 Instance Connect) you’re good
+- If no method works, that’s okay, the course won’t use SSH much
+
+### How to SSH into your EC2 Instance Linux / Mac OS X
+
+- We’ll learn how to SSH into your EC2 instance using Linux / Mac
+-  SSH is one of the most important function. It allows you to control a remote machine, all using the command line.
+
+![](../images/ec2SSH.png)
+
+- We will see how we can configure **OpenSSH ~/.ssh/config** to facilitate the SSH into our EC2 instances
+
+### How to SSH into your EC2 Instance Windows
+
+- We’ll learn how to SSH into your EC2 instance using Linux / Mac
+-  SSH is one of the most important function. It allows you to control a remote machine, all using the command line.
+
+![](../images/ec2SSH.png)
+
+• We will configure all the required parameters necessary for doing SSH
+on Windows using the free tool **Putty**.
+
+### EC2 Instance Connect
+
+- Connect to your EC2 instance within your browser
+- No need to use your key file that was downloaded
+- The “magic” is that a temporary key is uploaded onto EC2 by AWS
+- Works only out-of-the-box with Amazon Linux 2
+- Need to make sure the **port 22 is still opened!**
 
 ---------------------------------------------------------------------------------------
 ## <a id="section-99"></a> **99 - How do I report abuse of AWS resources?**

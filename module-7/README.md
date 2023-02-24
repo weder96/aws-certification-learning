@@ -17,7 +17,7 @@
 10. <a href="#section-7"> AWS Transfer Family </a>
 
 ----------------------------------------------------------------------------------------------------
-## <a id="section-1"></a> **1 - Amazon Simple Storage Service (S3)**
+## <a id="section-1"> </a> **1 - Amazon Simple Storage Service (S3)**
 
 Amazon S3 is an object store built to store and retrieve any amount of data from anywhere – websites and mobile apps, enterprise applications, and data from sensors or IoT devices.
 
@@ -1293,7 +1293,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-bucket-user-policy-spec
 
 
 ----------------------------------------------------------------------------------------------------
-## <a id="section-2"></a> **2 - AWS Snowball Edge**
+## <a id="section-2"> </a> **2 - AWS Snowball Edge**
 
 AWS Snowball (Snowball), you can transfer hundreds of terabytes or petabytes of data between your on-premises data centers and Amazon Simple Storage Service (Amazon S3).
 
@@ -1322,7 +1322,7 @@ Snowball must be ordered and returned in the same region.
 To speed up data transfer, it is recommended that you run simultaneous instances of the AWS Snowball Client on multiple endpoints and transfer small files in batches.
 
 ----------------------------------------------------------------------------------------------------
-## <a id="section-3"></a> **3 - Amazon Elastic Block Store (EBS)**
+## <a id="section-3"> </a> **3 - Amazon Elastic Block Store (EBS)**
 
 **EBS Pricing**
 [EBS Pricing](https://aws.amazon.com/ebs/pricing/)
@@ -1397,7 +1397,7 @@ https://www.youtube.com/watch?v=LW7x8wyLFvw
 
 
 ----------------------------------------------------------------------------------------------------
-## <a id="section-4"></a> **4 - Instance Store Volumes**
+## <a id="section-4"> </a> **4 - Instance Store Volumes**
 
 **Instance Store Volumes** are high-performance local disks that are physically connected to the host computer on which an EC2 instance runs.
 
@@ -1410,7 +1410,7 @@ https://www.youtube.com/watch?v=LW7x8wyLFvw
 **Instance Store Volumes** cannot be detached/reattached.
 
 -------------------------------------------------- --------------------------------------------------
-## <a id="section-5"></a> **5 - Amazon Elastic File System (EFS)**
+## <a id="section-5"> </a> **5 - Amazon Elastic File System (EFS)**
 
 EFS is a fully managed service that makes it easy to configure and scale your file storage on the Amazon Cloud.
 
@@ -1622,7 +1622,7 @@ https://www.youtube.com/user/AmazonWebServices/search?query=EFS
 
 
 ----------------------------------------------------------------------------------------------------
-## <a id="section-6"></a> **6 - AWS Storage Gateway**
+## <a id="section-6"> </a> **6 - AWS Storage Gateway**
 
 The [**AWS Storage Gateway**](https://aws.amazon.com/storagegateway/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc) is a hybrid cloud storage service that gives you virtually unlimited local access to cloud storage.
 
@@ -1765,7 +1765,7 @@ https://www.youtube.com/watch?v=GbFoiMpKctI
 
 
 ----------------------------------------------------------------------------------------------------
-## <a id="section-7"></a> **7 - Amazon FSx**
+## <a id="section-7"> </a> **7 - Amazon FSx**
 
 Amazon FSx provides fully managed third-party file systems.
 
@@ -1931,7 +1931,7 @@ https://digitalcloud.training/amazon-fsx/
 **Videos**
 
 ----------------------------------------------------------------------------------------
-## <a id="section-8"></a> **8 - Amazon Backup**
+## <a id="section-8"> </a> **8 - Amazon Backup**
 
 A service that enables you to centralize and automate data protection across AWS services and hybrid workloads.
 
@@ -2052,7 +2052,7 @@ https://www.youtube.com/watch?v=peUjKlE3dEk
 https://www.youtube.com/watch?v=TCvDhG88zeo
 
 -----------------------------------------------------------------------------------------------------------------------------
-## <a id="section-9"></a> **9 - Amazon Snowmobile**
+## <a id="section-9"> </a> **9 - Amazon Snowmobile**
 
 * An exabyte-scale data transfer service used to move extremely large amounts of data to AWS. You can transfer up to 100PB per * Snowmobile.
 * Snowmobile will be returned to your designated AWS region where your data will be uploaded into the AWS storage services you have selected, such as S3 or Glacier.

@@ -19,6 +19,8 @@
 12. <a href="#section-12"> VMware Cloud on AWS </a>
 13. <a href="#section-13"> AWS Wavelength </a>
 14. <a href="#section-14"> Amazon WorkSpaces Family </a>
+15. <a href="#section-15"> Amazon Machine Images (AMIs) </a>
+
 
 ***************************************************************************************************
 ## <a id="section-1"></a> **1 - Amazon EC2**
@@ -977,5 +979,73 @@ https://www.youtube.com/results?search_query=amazon+WorkSpaces
 **Hands On**
 
 https://www.youtube.com/results?search_query=amazon+WorkSpaces+hands+on
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+## <a id="section-15"></a> **15 - Amazon Machine Images (AMIs)**
+
+![EC2-Image-Builder](../images/Architecture-Service-Icons_01312022/Arch_Compute/64/Arch_Amazon-EC2-Image-Builder_64.svg "EC2-Image-Builder")
+
+**Definition**
+
+-  AMI = Amazon Machine Image
+-  AMI are a customization of an EC2 instance
+    -  You add your own software, configuration, operating system, monitoring...
+    -  Faster boot / configuration time because all your software is pre-packaged
+
+-  AMI are built for a specific region (and can be copied across regions)
+-  You can launch EC2 instances from:
+    - A Public AMI: AWS provided
+    - Your own AMI: you make and maintain them yourself
+    - An AWS Marketplace AMI: an AMI someone else made (and potentially sells)
+
+### AMI Process (from an EC2 instance)
+
+- Start an EC2 instance and customize it
+- Stop the instance (for data integrity)
+- Build an AMI – this will also create EBS snapshots
+- Launch instances from other AMIs
+
+![](../images/amiEc2.png)
+
+### EC2 Image Builder
+
+Used to automate the creation of Virtual Machines or container images
+=> Automate the creation, maintain, validate and test EC2 AMIs
+Can be run on a schedule (weekly, whenever packages are updated, etc...)
+Free service (only pay for the underlying resources)
+
+![](../images/builderAmiEc2.png)
+
+**Cheat Sheets**
+
+**References:**
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/virtualization_types.html
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-lifecycle.html
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instances-and-amis.html
+
+**Videos**
+
+https://www.youtube.com/results?search_query=Amazon+Machine+Images
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=Amazon+Machine+Images+hands+on
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
