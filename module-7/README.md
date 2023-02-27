@@ -12,12 +12,16 @@
 5. <a href="#section-5"> Amazon Elastic File System (EFS) </a>
 6. <a href="#section-6"> Amazon Storage Gateway </a>
 7. <a href="#section-7"> Amazon FSx </a>
-8. <a href="#section-7"> AWS Backup  </a>
-9. <a href="#section-7"> AWS Snowmobile </a>
-10. <a href="#section-7"> AWS Transfer Family </a>
+8. <a href="#section-8"> AWS Backup  </a>
+9. <a href="#section-9"> AWS Snowmobile </a>
+10. <a href="#section-10"> AWS Transfer Family </a>
+11. <a href="#section-11"> AWS SnowBall </a>
+12. <a href="#section-12"> AWS Snowcone </a>
 
 ----------------------------------------------------------------------------------------------------
-## <a id="section-1"> </a> **1 - Amazon Simple Storage Service (S3)**
+## <a id="section-1"> </a> **01 - Amazon Simple Storage Service (S3)**
+
+**Definitions**
 
 Amazon S3 is an object store built to store and retrieve any amount of data from anywhere – websites and mobile apps, enterprise applications, and data from sensors or IoT devices.
 
@@ -30,6 +34,7 @@ S3 offers comprehensive security and compliance features that meet even the most
 S3 gives customers flexibility in how they manage data for cost optimization, access control and compliance.
 
 Typical use cases include:
+
 - **Backup and Storage** – Provides data backup and storage services to others.
 - **App Hosting** – Provides services that deploy, install and manage web applications.
 - **Media Hosting** – Create a redundant, scalable, highly available infrastructure that hosts video, photo or music uploads and downloads.
@@ -218,11 +223,11 @@ HTTP 200 code indicates a successful write to S3.
 
 S3 data is made up of:
 
-* Key (name).
-*Value (data).
-*Version ID.
-*Metadata.
-* Access Control Lists.
+- Key (name).
+- Value (data).
+- Version ID.
+- Metadata.
+- Access Control Lists.
 
 
 Amazon S3 automatically scales to high request rates.
@@ -240,15 +245,15 @@ Additional capabilities offered by Amazon S3 include:
 
 |Additional S3 Capability	| How it works|
 |---------------------------|-------------|
-|Transfer Acceleration	|Speeds up data uploads using CloudFront in reverse|
-|Requester |Pays	The requester rather than the bucket owner pays for requests and data transfer|
-|Tags	|Assign tags to objects to use in hosting, billing, security etc.|
-|Events	|Trigger notifications to SNS, SQS, or Lambda when certain events happen in your bucket|
-|Static Web Hosting	|Simple and massively scalable static web hosting|
-|BitTorrent	|Use the BitTorrent protocol to retrieve any publicly available object by automatically generating a .torrent file.|
-|Storage Class |Analysis	Analyzes storage access patterns to help you decide when to transition the right data to the right storage class.|
-|Storage Lens	|Delivers organization-wide visibility into object storage usage, activity trends, and makes actionable recommendations to improve cost-efficiency and apply data protection best practices.|
-|S3 Object Lambda	| Add your own code to S3 GET requests to modify and process data as it is returned to an application.|
+|Transfer Acceleration	    |Speeds up data uploads using CloudFront in reverse|
+|Requester                  |Pays	The requester rather than the bucket owner pays for requests and data transfer|
+|Tags	                    |Assign tags to objects to use in hosting, billing, security etc.|
+|Events	                    |Trigger notifications to SNS, SQS, or Lambda when certain events happen in your bucket|
+|Static Web Hosting	        |Simple and massively scalable static web hosting|
+|BitTorrent	                |Use the BitTorrent protocol to retrieve any publicly available object by automatically generating a .torrent file.|
+|Storage Class              |Analysis	Analyzes storage access patterns to help you decide when to transition the right data to the right storage class.|
+|Storage Lens	            |Delivers organization-wide visibility into object storage usage, activity trends, and makes actionable recommendations to improve cost-efficiency and apply data protection best practices.|
+|S3 Object Lambda	        | Add your own code to S3 GET requests to modify and process data as it is returned to an application.|
 
 
 ### **Use Cases**
@@ -271,8 +276,8 @@ The following table provides a description of persistent, transient, and ephemer
 
 
 
-|Storage Type	        |Description	            |Examples|
-|-----------------------|---------------------------|--------|
+|Storage Type	        |Description	                                                            |Examples|
+|-----------------------|---------------------------------------------------------------------------|-------------|
 |Persistent data store	|Data is durable and sticks around after reboots, restarts, or power cycles	|S3, Glacier, EBS, EFS|
 |Transient Data Store	|Data is just temporarily stored and passed along to another process or persistent store	|SQS, SNS|
 |Ephemeral Data Store	|Data is lost when the system is stopped	|EC2 Instance Store, Memcached (Elasticache)|
@@ -791,6 +796,7 @@ Objects that existed before enabling versioning will have a version ID of NULL.
 
 
 ### Object Lifecycle Management
+
 Used to optimize storage costs, adhere to data retention policies and to keep S3 volumes well-maintained.
 
 A lifecycle configuration is a set of rules that define actions that Amazon S3 applies to a group of objects. There are two types of actions:
@@ -949,7 +955,6 @@ When downloading an object—The client downloads the encrypted object from Amaz
 
 The following diagram depicts the options for enabling encryption and shows you where the encryption is applied and where the keys are managed:
 
-![]()
 ![Amazon encrypted](../images/extra/amazon-s3-encryption-types.jpeg "Amazon encrypted")
 
 
@@ -1287,13 +1292,13 @@ https://digitalcloud.training/aws-storage-services/
 https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-bucket-user-policy-specifying-principal-intro.html
 
 
-
 **Videos**
 
 
-
 ----------------------------------------------------------------------------------------------------
-## <a id="section-2"> </a> **2 - AWS Snowball Edge**
+## <a id="section-2"> </a> **02 - AWS Snowball Edge**
+
+**Definitions**
 
 AWS Snowball (Snowball), you can transfer hundreds of terabytes or petabytes of data between your on-premises data centers and Amazon Simple Storage Service (Amazon S3).
 
@@ -1306,11 +1311,11 @@ Uses 256-bit encryption (managed with AWS KMS) and tamper-proof enclosures with 
 The table below describes high-level AWS Snow offerings:
 
 
-|Service |What it Is|
-|-----------|----------|
-|AWS Snowball |Bulk data transfer, edge storage, and edge compute|
-|AWS Snowmobile |A literal shipping container full of storage (up to 100PB) and a truck to transport it|
-|AWS Snowcone |The smallest device in the range that is best suited for outside the data center|
+|Service                |What it Is|
+|-----------------------|----------|
+|AWS Snowball           |Bulk data transfer, edge storage, and edge compute|
+|AWS Snowmobile         |A literal shipping container full of storage (up to 100PB) and a truck to transport it|
+|AWS Snowcone           |The smallest device in the range that is best suited for outside the data center|
 
 
 Snowball can import to S3 or export from S3.
@@ -1321,8 +1326,53 @@ Snowball must be ordered and returned in the same region.
 
 To speed up data transfer, it is recommended that you run simultaneous instances of the AWS Snowball Client on multiple endpoints and transfer small files in batches.
 
+
+### **Snowball Edge (for data transfers)**
+
+- Physical data transport solution: move TBs or PBs of data in or out of AWS
+- Alternative to moving data over the network (and paying network fees)
+- Pay per data transfer job
+- Provide block storage and Amazon S3-compatible object storage
+- **Snowball Edge Storage Optimized**
+    - 80 TB of HDD capacity for block volume and S3 compatible object storage
+- **Snowball Edge Compute Optimized**
+    - 42 TB of HDD capacity for block volume and S3 compatible object storage
+- Use cases: large data cloud migrations, DC decommission, disaster recovery
+
+
+**Device**
+
+https://docs.aws.amazon.com/snowball/latest/developer-guide/using-device.html
+
+![Snowball-Edge](../images/Snowball-Edge-Image.png "Snowball-Edge")
+
+**Cheat Sheets**
+
+https://tutorialsdojo.com/aws-snowball-edge/
+
+**References**
+
+https://docs.aws.amazon.com/pt_br/snowball/latest/developer-guide/using-device.html
+
+https://docs.aws.amazon.com/snowball/latest/developer-guide/whatisedge.html
+
+https://docs.aws.amazon.com/snowball/latest/developer-guide/getting-started.html
+
+https://aws.amazon.com/snowball-edge/features/
+
+https://aws.amazon.com/snowball-edge/pricing/
+
+https://aws.amazon.com/snowball-edge/faqs/
+
+**Videos**
+
+
+**Hands On**
+
+
+
 ----------------------------------------------------------------------------------------------------
-## <a id="section-3"> </a> **3 - Amazon Elastic Block Store (EBS)**
+## <a id="section-3"> </a> **03 - Amazon Elastic Block Store (EBS)**
 
 **EBS Pricing**
 [EBS Pricing](https://aws.amazon.com/ebs/pricing/)
@@ -1397,7 +1447,7 @@ https://www.youtube.com/watch?v=LW7x8wyLFvw
 
 
 ----------------------------------------------------------------------------------------------------
-## <a id="section-4"> </a> **4 - Instance Store Volumes**
+## <a id="section-4"> </a> **04 - Instance Store Volumes**
 
 **Instance Store Volumes** are high-performance local disks that are physically connected to the host computer on which an EC2 instance runs.
 
@@ -1410,7 +1460,7 @@ https://www.youtube.com/watch?v=LW7x8wyLFvw
 **Instance Store Volumes** cannot be detached/reattached.
 
 -------------------------------------------------- --------------------------------------------------
-## <a id="section-5"> </a> **5 - Amazon Elastic File System (EFS)**
+## <a id="section-5"> </a> **05 - Amazon Elastic File System (EFS)**
 
 EFS is a fully managed service that makes it easy to configure and scale your file storage on the Amazon Cloud.
 
@@ -1622,7 +1672,7 @@ https://www.youtube.com/user/AmazonWebServices/search?query=EFS
 
 
 ----------------------------------------------------------------------------------------------------
-## <a id="section-6"> </a> **6 - AWS Storage Gateway**
+## <a id="section-6"> </a> **06 - AWS Storage Gateway**
 
 The [**AWS Storage Gateway**](https://aws.amazon.com/storagegateway/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc) is a hybrid cloud storage service that gives you virtually unlimited local access to cloud storage.
 
@@ -1765,7 +1815,7 @@ https://www.youtube.com/watch?v=GbFoiMpKctI
 
 
 ----------------------------------------------------------------------------------------------------
-## <a id="section-7"> </a> **7 - Amazon FSx**
+## <a id="section-7"> </a> **07 - Amazon FSx**
 
 Amazon FSx provides fully managed third-party file systems.
 
@@ -1931,7 +1981,7 @@ https://digitalcloud.training/amazon-fsx/
 **Videos**
 
 ----------------------------------------------------------------------------------------
-## <a id="section-8"> </a> **8 - Amazon Backup**
+## <a id="section-8"> </a> **08 - Amazon Backup**
 
 A service that enables you to centralize and automate data protection across AWS services and hybrid workloads.
 
@@ -2052,23 +2102,39 @@ https://www.youtube.com/watch?v=peUjKlE3dEk
 https://www.youtube.com/watch?v=TCvDhG88zeo
 
 -----------------------------------------------------------------------------------------------------------------------------
-## <a id="section-9"> </a> **9 - Amazon Snowmobile**
+## <a id="section-9"> </a> **09 - AWS Snowmobile**
 
-* An exabyte-scale data transfer service used to move extremely large amounts of data to AWS. You can transfer up to 100PB per * Snowmobile.
-* Snowmobile will be returned to your designated AWS region where your data will be uploaded into the AWS storage services you have selected, such as S3 or Glacier.
-* Snowmobile uses multiple layers of security to help protect your data including dedicated security personnel:
+![](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowmobile_64.svg "AWS Snowmobile")
+
+**Definitions**
+
+- An exabyte-scale data transfer service used to move extremely large amounts of data to AWS. You can transfer up to 100PB per * Snowmobile.
+- Snowmobile will be returned to your designated AWS region where your data will be uploaded into the AWS storage services you have selected, such as S3 or Glacier.
+- Snowmobile uses multiple layers of security to help protect your data including dedicated security personnel:
     - GPS tracking, alarm monitoring
     - 24/7 video surveillance
     - an optional escort security vehicle while in transit
     - All data is encrypted with 256-bit encryption keys you manage through the AWS Key Management Service and designed for security and full chain-of-custody of your data.
     - Snowmobile pricing is based on the amount of data stored on the truck per month.
+- Better than Snowball if you transfer more than 10 PB
 
+
+![snowMobile](../images/snowMobile.jpeg "snowMobile")
 
 **Cheat Sheets**
 
 https://tutorialsdojo.com/aws-snowmobile/
 
+https://www.cloudmanagementinsider.com/what-is-aws-snowmobile/
+
+https://www.theguardian.com/technology/2016/dec/05/amazon-snowmobile-upload-truckload
+
+
 **References:**
+
+https://aws.amazon.com/snowmobile/faqs/
+
+https://aws.amazon.com/snowmobile/pricing/
 
 **Videos**
 
@@ -2187,4 +2253,143 @@ https://www.youtube.com/watch?v=wYaL06kAIxs
 https://www.youtube.com/watch?v=ldCos3c66s0
 
 
+------------------------------------------------------------------------------------------
+## <a id="section-11"></a> **11 - AWS Snow Family**
 
+
+Highly-secure, portable devices to collect and process data at the edge, and migrate data into and out of AWS
+
+- **Data migration:**
+
+![Arch_AWS-Snowball](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowball_64.svg "Arch_AWS-Snowball")
+![Arch_AWS-Snowcone](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowcone_64.svg "Arch_AWS-Snowcone")
+![AWS-Snowball-Edge](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowball-Edge_64.svg "AWS-Snowball-Edge")
+![Arch_AWS-Snowmobile](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowmobile_64.svg "AWS-Snowmobile")
+
+
+- **Edge computing:**
+
+![Arch_AWS-Snowcone](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowcone_64.svg "Arch_AWS-Snowcone")
+![AWS-Snowball-Edge](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowball-Edge_64.svg "AWS-Snowball-Edge")
+
+
+**Definitions**
+
+Accelerate moving offline data or remote storage to the cloud
+
+Easily migrate terabytes of data to the cloud without limits in storage capacity or compute power.
+
+Accelerate application performance in disconnected, austere edge environments and run compute workloads with little or no connectivity.
+
+Protect your data in transit with Snowball’s ruggedized chassis, integrated logistics, and tamper-evident box, and get data to the right place quickly.
+
+### **How it works**
+
+In the AWS Snow Family console, select your preferred device, either Snowball Edge Compute Optimized or Snowball Edge Storage Optimized. Create a job with an Amazon S3 bucket, select Amazon Simple Notification Service (Amazon SNS) for tracking, and configure options like Amazon EC2 AMIs and a GPU. 
+
+AWS prepares and ships the device to you, and you receive it in approximately 4-6 days. 
+
+Once the device arrives, power it up and use AWS OpsHub to unlock it. Connect to your LAN. Use AWS OpsHub to manage the device, transfer data, or launch EC2 instances. 
+
+When done, shut down and return the device to AWS. The shipping label automatically appears on the E Ink screen. When the device arrives at the AWS Region, any data stored in your on-board bucket(s) is moved to your S3 bucket and verified in about the same time it took you to load the device. All data is then securely erased from the device, and it is sanitized of any customer 
+information.
+
+
+### Data Migrations with AWS Snow Family
+
+
+Challenges:
+
+- Limited connectivity
+- Limited bandwidth
+- High network cost
+- Shared bandwidth (can’t maximize the line)
+- Connection stability
+
+### **Time to Transfer**
+
+|           |100 Mbps   |1Gbps      |10Gbps     |
+|-----------|-----------|-----------|-----------|
+|**10 TB**  |12 days    |30 hours   |3 hours    |
+|**100 TB** |124 days   |12 days    |30 hours   |
+|**1 PB**   |3 years    |124 days   |12 days    |
+
+
+**AWS Snow Family: offline devices to perform data migrations**
+    - If it takes more than a week to transfer over the network, use Snowball devices!
+
+
+### Example: 
+
+
+- **Direct upload to S3:**
+
+![Normal Transfer](../images/snowDiagram.png  "Normal Transfer")
+
+- **With Snow Family:**
+
+![snowFamily](../images/snowFamilyExample.png "snow Family Transfer")
+
+
+
+**Cheat Sheets**
+
+https://digitalcloud.training/aws-storage-services/
+
+**References:**
+
+https://aws.amazon.com/snowball/?nc1=h_ls
+
+https://aws.amazon.com/snowball/features/
+
+https://aws.amazon.com/snowball/pricing/
+
+https://aws.amazon.com/snowball/getting-started/
+
+https://aws.amazon.com/snowball/resources/
+
+https://aws.amazon.com/snowball/faqs/
+
+**Videos**
+
+https://www.youtube.com/results?search_query=AWS+SnowBall
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=AWS+SnowBall+hands+On
+
+
+-------------------------------------------------------------------------------------------------------------
+## <a id="section-12"></a> **12 - AWS Snowcone**
+
+
+**Definitions**
+
+-  Small, portable computing, anywhere, rugged & secure, withstands harsh environments
+-  Light (4.5 pounds, 2.1 kg)
+-  Device used for edge computing, storage, and data transfer
+-  8 TBs of usable storage
+-  Use Snowcone where Snowball does not fit (space-constrained environment)
+-  Must provide your own battery / cables
+-  Can be sent back to AWS offline, or connect it to internet and use AWS DataSync to send data
+
+**Device**
+
+https://aws.amazon.com/blogs/aws/introducing-aws-snowcone-small-lightweight-edge-storage-and-processing/
+
+![snowcone](../images/snowcone_jb_sticker_1.jpg "snowcone")
+
+
+**Cheat Sheets**
+
+**References:**
+
+https://aws.amazon.com/blogs/aws/introducing-aws-snowcone-small-lightweight-edge-storage-and-processing/
+
+**Videos**
+
+https://www.youtube.com/results?search_query=AWS+Snowcone
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=AWS+Snowcone+hands+On
