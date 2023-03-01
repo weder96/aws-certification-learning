@@ -2,7 +2,9 @@
 
 [1]: https://github.com/weder96/aws-certification-learning
 
-# Module 7: Storege
+# Module 7: Storage
+
+[https://aws.amazon.com/products/storage/](https://aws.amazon.com/products/storage/)
 
 ## Content
 1. <a href="#section-1"> Amazon Simple Storage Service (S3) </a>
@@ -21,11 +23,14 @@
 ----------------------------------------------------------------------------------------------------
 ## <a id="section-1"> </a> **01 - Amazon Simple Storage Service (S3)**
 
+
+![Amazon-Simple-Storage-Service-S3_Bucket_dark-bg](../images/Amazon-Simple-Storage-Service-S3_Bucket_dark-bg.png "Amazon-Simple-Storage-Service-S3_Bucket_dark-bg")
+
 **Definitions**
 
 Amazon S3 is an object store built to store and retrieve any amount of data from anywhere – websites and mobile apps, enterprise applications, and data from sensors or IoT devices.
 
-You can store any type of file on S3.
+You can store any type of file on **S3**.
 
 The S3 is designed to deliver 99.999999999% durability and stores data from millions of applications used by market leaders across all industries.
 
@@ -1297,6 +1302,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-bucket-user-policy-spec
 
 ----------------------------------------------------------------------------------------------------
 ## <a id="section-2"> </a> **02 - AWS Snowball Edge**
+![](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowball-Edge_64.svg)
 
 **Definitions**
 
@@ -1374,8 +1380,9 @@ https://aws.amazon.com/snowball-edge/faqs/
 ----------------------------------------------------------------------------------------------------
 ## <a id="section-3"> </a> **03 - Amazon Elastic Block Store (EBS)**
 
-**EBS Pricing**
-[EBS Pricing](https://aws.amazon.com/ebs/pricing/)
+![Amazon Elastic Block Store](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-Elastic-Block-Store_64.svg "Amazon Elastic Block Store")
+
+**Definitions**
 
 With Amazon Elastic Block Store (EBS), you pay only for what you provision. Volume storage for all EBS volume types is charged by the amount of GB you provision per month until you release the storage. Costs increase for EBS volumes that support additional input/output operations per second (IOPS) and throughput beyond baseline performance.
 
@@ -1401,25 +1408,36 @@ The following EBS volumes appear most frequently in AWS exams:
 |EBS Multi-attach |Supported |Not Supported |Not Supported |Not Supported|
 
 
-EBS volume data persists regardless of the lifetime of the instance.
+### Features
 
-EBS volumes do not need to be attached to an instance.
+- EBS volume data persists regardless of the **lifetime of the instance**.
+- EBS volumes **do not need to be attached** to an instance.
+- You can **attach multiple EBS volumes to an instance**.
+- You **cannot** attach an EBS volume **to multiple instances** **(use Elastic File Store instead)**.
+- EBS volumes must be in the same AZ as the instances to which they are attached.
+- Termination protection is off by default and must be manually enabled (keeps volume/data when instance is terminated).
+- EBS root volumes are deleted on shutdown by default.
+- Extra non-boot volumes are not deleted on shutdown by default.
+- The behavior can be changed by changing the “DeleteOnTermination” attribute.
+- An EBS (Elastic Block Store) Volume is a network drive you can attach to your instances while they run
+- It allows your instances to persist data, even after their termination
+- They can only be mounted to one instance at a time (at the CCP level)
+- They are bound to a specific availability zone
+- Analogy: Think of them as a “network USB stick”
+- Free tier: 30 GB of free EBS storage of type General Purpose (SSD) or Magnetic per month
+- It’s a network drive (i.e. not a physical drive)
+    - It uses the network to communicate the instance, which means there might be a bit of latency
+    - It can be detached from an EC2 instance and attached to another one quickly
+- It’s locked to an Availability Zone (AZ)
+    - An EBS Volume in us-east-1a cannot be attached to us-east-1b
+    - To move a volume across, you first need to snapshot it
+- Have a provisioned capacity **(size in GBs, and IOPS)**
+    - You get billed for all the provisioned capacity
+    - You can increase the capacity of the drive over time
 
-You can attach multiple EBS volumes to an instance.
 
-You cannot attach an EBS volume to multiple instances (use Elastic File Store instead).
 
-EBS volumes must be in the same AZ as the instances to which they are attached.
-
-Termination protection is off by default and must be manually enabled (keeps volume/data when instance is terminated).
-
-EBS root volumes are deleted on shutdown by default.
-
-Extra non-boot volumes are not deleted on shutdown by default.
-
-The behavior can be changed by changing the “DeleteOnTermination” attribute.
-
-EBS Snapshots:
+### **EBS Snapshots:**
 - Snapshots capture a point-in-time state of an instance.
 - Snapshots are stored on S3.
 - Does not provide granular backup (does not replace backup software).
@@ -1427,7 +1445,44 @@ EBS Snapshots:
 - Although snapshots are saved incrementally, the snapshot deletion process is designed so that you only need to retain the most recent snapshot to restore the volume.
 - Snapshots can only be accessed through EC2 APIs.
 - EBS volumes are AZ specific, but Snapshots are region specific.
+- Not necessary to detach volume to do snapshot, but recommended
+- Can copy snapshots across AZ or Region
 
+-------------------------------------------------------------------------------------------------------
+![EBSSnapshots](../images/EBSSnapshots.png "EBS Snapshots")
+
+
+-------------------------------------------------------------------------------------------------------
+### **EBS Volume - Example**
+
+![EBS Volume](../images/ebsVOlume.png "EBS Volume")
+
+
+-------------------------------------------------------------------------------------------------------
+### **EBS – Delete on Termination attribute**
+
+![EBS Termination](../images/ebsTermination.png "EBS Termination")
+
+- Controls the EBS behaviour when an EC2 instance terminates
+    - By default, the root EBS volume is deleted (attribute enabled)
+    - By default, any other attached EBS volume is not deleted (attribute disabled)
+- This can be controlled by the AWS console / AWS CLI
+- Use case: preserve root volume when instance is terminated
+
+
+### **EBS Snapshots Features**
+
+- **EBS Snapshot Archive**
+    - Move a Snapshot to an ”archive tier” that is 75% cheaper
+    - Takes within 24 to 72 hours for restoring the archive
+
+- **Recycle Bin for EBS Snapshots**
+    - Setup rules to retain deleted snapshots so you can recover them after an accidental deletion
+    - Specify retention (from 1 day to 1 year)
+
+![EBS Archive](../images/EBSArchive.png "EBS Archive")
+
+-------------------------------------------------------------------------------------------------------
 
 **Cheat Sheets**
 
@@ -1441,6 +1496,8 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html
 
 https://aws.amazon.com/ebs/faqs/
 
+https://aws.amazon.com/ebs/pricing/
+
 **Videos**
 
 https://www.youtube.com/watch?v=LW7x8wyLFvw
@@ -1449,114 +1506,131 @@ https://www.youtube.com/watch?v=LW7x8wyLFvw
 ----------------------------------------------------------------------------------------------------
 ## <a id="section-4"> </a> **04 - Instance Store Volumes**
 
-**Instance Store Volumes** are high-performance local disks that are physically connected to the host computer on which an EC2 instance runs.
+<img src="../images/instanceStore.png" title="instance Store" width="64px"></img>
 
-**Instance Store Volumes** are ephemeral, which means data is lost when powered off (non-persistent).
+**Definitions**
 
-**Instance Store Volumes** are ideal for temporary storage of information that changes frequently, such as buffers, caches or temporary data.
+An instance store provides temporary block-level storage for your instance. This storage is located on disks that are physically attached to the host computer. Instance store is ideal for temporary storage of information that changes frequently, such as buffers, caches, scratch data, and other temporary content, or for data that is replicated across a fleet of instances, such as a load-balanced pool of web servers.
 
-**Instance Store Volumes** root devices are created from AMI templates stored in S3.
+An instance store consists of one or more instance store volumes exposed as block devices. The size of an instance store as well as the number of devices available varies by instance type.
 
-**Instance Store Volumes** cannot be detached/reattached.
+The virtual devices for instance store volumes are ephemeral[0-23]. Instance types that support one instance store volume have ephemeral0. Instance types that support two instance store volumes have ephemeral0 and ephemeral1, and so on.
+
+
+- EBS volumes are network drives with good but “limited” performance
+- If you need a high-performance hardware disk, use EC2 Instance Store
+- Better I/O performance
+- EC2 Instance Store lose their storage if they’re stopped (ephemeral)
+- Good for buffer / cache / scratch data / temporary content
+- Risk of data loss if hardware fails
+- Backups and Replication are your responsibility
+
+
+- **Instance Store Volumes** are high-performance local disks that are physically connected to the host computer on which an EC2 instance runs.
+- **Instance Store Volumes** are ephemeral, which means data is lost when powered off (non-persistent).
+- **Instance Store Volumes** are ideal for temporary storage of information that changes frequently, such as buffers, caches or temporary data.
+- **Instance Store Volumes** root devices are created from AMI templates stored in S3.
+- **Instance Store Volumes** cannot be detached/reattached.
+
+![instance Store Aws Example](../images/extra/instanceStoreAwsExample.png "instance Store Aws Example")
+
+
+### **Instance Store Lifetime**
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-lifetime
+
+
+**Cheat Sheets**
+
+**References**
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/add-instance-store-volumes.html
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html
+
+
+**Videos**
+
+https://www.youtube.com/results?search_query=EC2+instance+store
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=EC2+instance+store+Hands+On
 
 -------------------------------------------------- --------------------------------------------------
 ## <a id="section-5"> </a> **05 - Amazon Elastic File System (EFS)**
 
-EFS is a fully managed service that makes it easy to configure and scale your file storage on the Amazon Cloud.
+![Arch_Amazon-EFS](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-EFS_64.svg)
 
-Good for big data and analytics, media processing workflows, content management, web service, home directories, etc.
+**Definitions**
 
-EFS uses the NFS protocol.
+- EFS is a fully managed service that makes it easy to configure and scale your file storage on the Amazon Cloud.
+- Good for big data and analytics, media processing workflows, content management, web service, home directories, etc.
+- EFS uses the NFS protocol.
+- Pay for what you use (no pre-provisioning required).
+- It can scale up to petabytes.
+- EFS is elastic and grows and shrinks as you add and remove data.
+- Can simultaneously connect 1 to 1000 EC2 instances from multiple AZs.
+- A file system can be accessed simultaneously from all AZs in the region where it is located.
+- By default, you can create up to 10 file systems per account.
+- Local access can be enabled via Direct Connect or AWS VPN.
+- You can choose General Purpose or Max I/O (both SSD).
+- The connecting instance's VPC must have DNS hostnames enabled.
+- EFS provides a file system interface, file system access semantics (such as strong consistency and file locking).
+- Data is stored in multiple AZs within a region.
+- Read after write consistency.
+- Need to create mount targets and choose AZs to include (recommended to include all AZs).
+- Instances can be behind an ELB.
+- Managed NFS (network file system) that can be mounted on 100s of EC2
+- EFS works with Linux EC2 instances in multi-AZ
+- Highly available, scalable, expensive (3x gp2), pay per use, no capacity planning
 
-Pay for what you use (no pre-provisioning required).
 
-It can scale up to petabytes.
-
-EFS is elastic and grows and shrinks as you add and remove data.
-
-Can simultaneously connect 1 to 1000 EC2 instances from multiple AZs.
-
-A file system can be accessed simultaneously from all AZs in the region where it is located.
-
-By default, you can create up to 10 file systems per account.
-
-Local access can be enabled via Direct Connect or AWS VPN.
-
-You can choose General Purpose or Max I/O (both SSD).
-
-The connecting instance's VPC must have DNS hostnames enabled.
-
-EFS provides a file system interface, file system access semantics (such as strong consistency and file locking).
-
-Data is stored in multiple AZs within a region.
-
-Read after write consistency.
-
-Need to create mount targets and choose AZs to include (recommended to include all AZs).
-
-Instances can be behind an ELB.
+![EFS Instances](../images/EFSInstances.png)
 
 **There are two performance modes:**
 - “General Purpose” performance mode is suitable for most file systems.
 - “Max I/O” performance mode is optimized for applications where tens, hundreds or thousands of EC2 instances are accessing the file system.
 
-Amazon EFS is designed for bursting to allow for high levels of throughput over periods of time.
 
+- Amazon EFS is designed for bursting to allow for high levels of throughput over periods of time.
+- Amazon EFS is a fully managed service for hosting Network File System (NFS) filesystems in the cloud.
+- It is an implementation of a NFS file share and is accessed using the NFS protocol.
+- It provides elastic storage capacity and pay for what you use (in contrast to Amazon EBS with which you pay for what you provision).
+- You can configure mount-points in one, or many, AZs.
+- You can mount an AWS EFS filesystem from on-premises systems ONLY if you are using AWS Direct Connect or a VPN connection.
+- Typical use cases include big data and analytics, media processing workflows, content management, web serving, home directories etc.
+- Uses a pay for what you use model with no pre-provisioning required.
+- AWS EFS can scale up to petabytes.
+- AWS EFS is elastic and grows and shrinks as you add and remove data.
+- You can concurrently connect up to thousands of Amazon EC2 instances, from multiple AZs.
+- A file system can be accessed concurrently from all AZs in the region where it is located.
 
-Amazon EFS is a fully managed service for hosting Network File System (NFS) filesystems in the cloud.
-
-It is an implementation of a NFS file share and is accessed using the NFS protocol.
-
-It provides elastic storage capacity and pay for what you use (in contrast to Amazon EBS with which you pay for what you provision).
-
-You can configure mount-points in one, or many, AZs.
-
-You can mount an AWS EFS filesystem from on-premises systems ONLY if you are using AWS Direct Connect or a VPN connection.
-
-Typical use cases include big data and analytics, media processing workflows, content management, web serving, home directories etc.
-
-Uses a pay for what you use model with no pre-provisioning required.
-
-AWS EFS can scale up to petabytes.
-
-AWS EFS is elastic and grows and shrinks as you add and remove data.
-
-You can concurrently connect up to thousands of Amazon EC2 instances, from multiple AZs.
-
-A file system can be accessed concurrently from all AZs in the region where it is located.
 
 The following diagram depicts the various options for mounting an EFS filesystem:
 
 
-![EFS filesystem](../images/extra//amazon-efs-file-system.jpeg)
+![EFS filesystem](../images/extra/amazon-efs-file-system.jpeg)
 
 
 
-Access to AWS EFS file systems from on-premises servers can be enabled via AWS Direct Connect or AWS VPN.
-
-You mount an AWS EFS file system on your on-premises Linux server using the standard Linux mount command for mounting a file system via the NFS protocol.
-
-The Amazon VPC of the connecting instance must have DNS hostnames enabled.
-
-EFS provides a file system interface, file system access semantics (such as strong consistency and file locking).
-
-Data is stored across multiple AZs within a region.
-
-Read after write consistency.
-
-Need to create mount targets and choose AZs to include (recommended to include all AZ’s).
-
-Instances can be behind an Elastic Load Balancer (ELB).
-
-Amazon EFS is compatible with all Linux-based AMIs for Amazon EC2.
-
-Using the EFS-to-EFS Backup solution, you can schedule automatic incremental backups of your Amazon EFS file system.
-
-The following table provides a comparison of the storage characteristics of EFS vs EBS:
+- Access to AWS EFS file systems from on-premises servers can be enabled via AWS Direct Connect or AWS VPN.
+- You mount an AWS EFS file system on your on-premises Linux server using the standard Linux mount command for mounting a file system via the NFS protocol.
+- The Amazon VPC of the connecting instance must have DNS hostnames enabled.
+- EFS provides a file system interface, file system access semantics (such as strong consistency and file locking).
+- Data is stored across multiple AZs within a region.
+- Read after write consistency.
+- Need to create mount targets and choose AZs to include (recommended to include all AZ’s).
+- Instances can be behind an Elastic Load Balancer (ELB).
+- Amazon EFS is compatible with all Linux-based AMIs for Amazon EC2.
+- Using the EFS-to-EFS Backup solution, you can schedule automatic incremental backups of your Amazon EFS file system.
+- The following table provides a comparison of the storage characteristics of EFS vs EBS:
 
 
-|	                        |Amazon EFS	                |Amazon EBS Provisioned IOPS|
-|---------------------------|---------------------------|---------------------------|
+|	                            |Amazon EFS	                                    |Amazon EBS Provisioned IOPS|
+|-------------------------------|-----------------------------------------------|---------------------------|
 |Availability and durability	|Data is stored redundantly across multiple AZs	|Data is stored redundantly in a single AZ|
 |Access	|Up to thousands of Amazon EC2 instances, from multiple AZs, can connect concurrently to a file system	|A single Amazon EC2 instance in a single AZ can connect to a file system|
 |Use cases	|Big data and analytics, media processing and workflows, content management, web serving and home directories	|Boot volumes, transactional and NoSQL databases, data warehousing and ETL|
@@ -1571,15 +1645,16 @@ Lifecycle management moves files that have not been accessed for a period of tim
 
 There are two performance modes:
 
-* “General Purpose” performance mode is appropriate for most file systems.
-* “Max I/O” performance mode is optimized for applications where tens, hundreds, or thousands of EC2 instances are accessing the file system.
+- **“General Purpose”** performance mode is appropriate for most file systems.
+- **“Max I/O”** performance mode is optimized for applications where tens, hundreds, or thousands of EC2 instances are accessing the file system.
+
 
 Amazon EFS is designed to burst to allow high throughput levels for periods of time.
 
 There are two throughput modes:
 
-* “Bursting” – throughput scales with file system size.
-* “Provisioned” – Throughput is fixed at the specified amount.
+- **“Bursting”** – throughput scales with file system size.
+- **“Provisioned”** – Throughput is fixed at the specified amount.
 
 Amazon EFS file systems are distributed across an unconstrained number of storage servers, enabling file systems to grow elastically to petabyte scale and allowing massively parallel access from Amazon EC2 instances to your data.
 
@@ -1653,6 +1728,20 @@ CloudTrail captures all API calls for Amazon EFS as events, including calls from
 ![AWS-Training-Amazon-EFS1](../images/extra/AWS-Training-Amazon-EFS1.jpg)
 
 
+### **EFS Infrequent Access (EFS-IA)**
+
+- Storage class that is cost-optimized for files not accessed every day
+- Up to 92% lower cost compared to EFS Standard
+- EFS will automatically move your files to EFS-IA based on the last time they were accessed
+- Enable EFS-IA with a Lifecycle Policy
+- Example: move files that are not accessed for 60 days to EFS-IA
+- Transparent to the applications accessing EFS
+
+![EFS_IA](../images/extra/EFS_IA.png "EFS_IA")
+
+
+
+
 **Cheat Sheets**
 
 https://tutorialsdojo.com/amazon-efs/
@@ -1674,6 +1763,10 @@ https://www.youtube.com/user/AmazonWebServices/search?query=EFS
 ----------------------------------------------------------------------------------------------------
 ## <a id="section-6"> </a> **06 - AWS Storage Gateway**
 
+![AWS Storage Gateway](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Storage-Gateway_64.svg "AWS Storage Gateway")
+
+**Definitions**
+
 The [**AWS Storage Gateway**](https://aws.amazon.com/storagegateway/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc) is a hybrid cloud storage service that gives you virtually unlimited local access to cloud storage.
 
 Customers use Storage Gateway to simplify storage management and reduce costs for key hybrid cloud storage use cases.
@@ -1686,88 +1779,66 @@ To support these use cases, Storage Gateway offers three different types of gate
 - **Tape Gateway** – provides a virtual tape library compatible with common backup software (block and file interfaces).
 
 
-how it works
+### **how it works**
 
 AWS Storage Gateway is a set of hybrid cloud storage services that provide on-premises access to virtually unlimited cloud storage.
 
 <img src="../images/extra/product-page-diagram_AWS-Storage-Gateway_HIW@2x.6.png" alt="product-page-diagram_AWS-Storage-Gateway_HIW@2x.6" width=80% />
 
 
-The AWS Storage Gateway service enables hybrid storage between on-premises environments and the AWS Cloud.
+- The AWS Storage Gateway service enables hybrid storage between on-premises environments and the AWS Cloud.
+- It provides low-latency performance by caching frequently accessed data on premises, while storing data securely and durably in Amazon cloud storage services.
+- Implemented using a virtual machine that you run on-premises (VMware or Hyper-V virtual appliance).
+- Provides local storage resources backed by Amazon S3 and Glacier.
+- Often used in disaster recovery preparedness to sync data to AWS.
+- AWS Storage Gateway supports three storage interfaces: file, volume, and tape.
 
-It provides low-latency performance by caching frequently accessed data on premises, while storing data securely and durably in Amazon cloud storage services.
-
-Implemented using a virtual machine that you run on-premises (VMware or Hyper-V virtual appliance).
-
-Provides local storage resources backed by Amazon S3 and Glacier.
-
-Often used in disaster recovery preparedness to sync data to AWS.
-
-AWS Storage Gateway supports three storage interfaces: file, volume, and tape.
 
 The table below shows the different gateways available and the interfaces and use cases:
 
-|New Name	                |Old Name	        |Interface	    |Use Case|
-|---------------------------|-------------------|---------------|--------|
-|File Gateway	            |None	            |NFS, SMB	    |Allow on-prem or EC2 instances to store objects in S3 via NFS or SMB mount points|
-|Volume Gateway Stored Mode	|Gateway-Stored Volumes	|iSCSI	|Asynchronous replication of on-prem data to S3|
-|Volume Gateway Cached Mode	|Gateway-Cached Volumes	|iSCSI	|Primary data stored in S3 with frequently accessed data cached locally on-prem|
-|Tape Gateway	            |Gateway-Virtual Tape Library	|ISCSI	|Virtual media changer and tape library for use with existing backup software|
+|New Name	                |Old Name	                   |Interface |Use Case|
+|---------------------------|------------------------------|----------|--------|
+|File Gateway	            |None	                       |NFS, SMB  |Allow on-prem or EC2 instances to store objects in S3 via NFS or SMB mount points|
+|Volume Gateway Stored Mode	|Gateway-Stored Volumes	       |iSCSI	  |Asynchronous replication of on-prem data to S3|
+|Volume Gateway Cached Mode	|Gateway-Cached Volumes	       |iSCSI	  |Primary data stored in S3 with frequently accessed data cached locally on-prem|
+|Tape Gateway	            |Gateway-Virtual Tape Library  |ISCSI	  |Virtual media changer and tape library for use with existing backup software|
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+- Each gateway you have can provide one type of interface.
+- All data transferred between any type of gateway appliance and AWS storage is encrypted using SSL.
+- By default, all data stored by AWS Storage Gateway in S3 is encrypted server-side with Amazon S3-Managed Encryption Keys (SSE-S3).
+- When using the file gateway, you can optionally configure each file share to have your objects encrypted with AWS KMS-Managed Keys using SSE-KMS.
+
+### **File Gateway**
+
+- File gateway provides a virtual on-premises file server, which enables you to store and retrieve files as objects in Amazon S3.
+- Can be used for on-premises applications, and for Amazon EC2-resident applications that need file storage in S3 for object-based workloads.
+- Used for flat files only, stored directly on S3.
+- File gateway offers SMB or NFS-based access to data in Amazon S3 with local caching.
+- File gateway supports Amazon S3 Standard, S3 Standard – Infrequent Access (S3 Standard – IA) and S3 One Zone – IA.
+- File gateway supports clients connecting to the gateway using NFS v3 and v4.1.
+- Microsoft Windows clients that support SMB can connect to file gateway.
+- The maximum size of an individual file is 5 TB.
 
 
-Each gateway you have can provide one type of interface.
+### **Volume Gateway**
 
-All data transferred between any type of gateway appliance and AWS storage is encrypted using SSL.
-
-By default, all data stored by AWS Storage Gateway in S3 is encrypted server-side with Amazon S3-Managed Encryption Keys (SSE-S3).
-
-When using the file gateway, you can optionally configure each file share to have your objects encrypted with AWS KMS-Managed Keys using SSE-KMS.
-
-### File Gateway
-
-File gateway provides a virtual on-premises file server, which enables you to store and retrieve files as objects in Amazon S3.
-
-Can be used for on-premises applications, and for Amazon EC2-resident applications that need file storage in S3 for object-based workloads.
-
-Used for flat files only, stored directly on S3.
-
-File gateway offers SMB or NFS-based access to data in Amazon S3 with local caching.
-
-File gateway supports Amazon S3 Standard, S3 Standard – Infrequent Access (S3 Standard – IA) and S3 One Zone – IA.
-
-File gateway supports clients connecting to the gateway using NFS v3 and v4.1.
-
-Microsoft Windows clients that support SMB can connect to file gateway.
-
-The maximum size of an individual file is 5 TB.
+- The volume gateway represents the family of gateways that support block-based volumes, previously referred to as gateway-cached and gateway-stored modes.
+- Block storage – iSCSI based.
+- Cached Volume mode – the entire dataset is stored on S3, and a cache of the most frequently accessed data is cached on-site.
+- Stored Volume mode – the entire dataset is stored on-site and is asynchronously backed up to S3 (EBS point-in-time snapshots). Snapshots are incremental and compressed.
+- Each volume gateway can support up to 32 volumes.
+- In cached mode, each volume can be up to 32 TB for a maximum of 1 PB of data per gateway (32 volumes, each 32 TB in size).
+- In stored mode, each volume can be up to 16 TB for a maximum of 512 TB of data per gateway (32 volumes, each 16 TB in size).
 
 
-### Volume Gateway
+### **Gateway Virtual Tape Library**
 
-The volume gateway represents the family of gateways that support block-based volumes, previously referred to as gateway-cached and gateway-stored modes.
-
-Block storage – iSCSI based.
-
-Cached Volume mode – the entire dataset is stored on S3, and a cache of the most frequently accessed data is cached on-site.
-
-Stored Volume mode – the entire dataset is stored on-site and is asynchronously backed up to S3 (EBS point-in-time snapshots). Snapshots are incremental and compressed.
-
-Each volume gateway can support up to 32 volumes.
-
-In cached mode, each volume can be up to 32 TB for a maximum of 1 PB of data per gateway (32 volumes, each 32 TB in size).
-
-In stored mode, each volume can be up to 16 TB for a maximum of 512 TB of data per gateway (32 volumes, each 16 TB in size).
-
-
-### Gateway Virtual Tape Library
-
-Used for backup with popular backup software.
-
-Each gateway is preconfigured with a media changer and tape drives. Supported by NetBackup, Backup Exec, Veeam etc.
-
-When creating virtual tapes, you select one of the following sizes: 100 GB, 200 GB, 400 GB, 800 GB, 1.5 TB, and 2.5 TB.
-
-A tape gateway can have up to 1,500 virtual tapes with a maximum aggregate capacity of 1 PB.
+- Used for backup with popular backup software.
+- Each gateway is preconfigured with a media changer and tape drives. Supported by NetBackup, Backup Exec, Veeam etc.
+- When creating virtual tapes, you select one of the following sizes: 100 GB, 200 GB, 400 GB, 800 GB, 1.5 TB, and 2.5 TB.
+- A tape gateway can have up to 1,500 virtual tapes with a maximum aggregate capacity of 1 PB.
 
 
 ### Managing AWS Storage Gateway
@@ -1810,45 +1881,56 @@ https://www.youtube.com/watch?v=ASMqf1t01bk
 https://www.youtube.com/watch?v=GbFoiMpKctI
 
 
+**Hands On**
 
-
+https://www.youtube.com/results?search_query=AWS+Storage+Gateway+hands+on
 
 
 ----------------------------------------------------------------------------------------------------
 ## <a id="section-7"> </a> **07 - Amazon FSx**
 
-Amazon FSx provides fully managed third-party file systems.
+**Definitions**
 
-Amazon FSx provides you with the native compatibility of third-party file systems with feature sets for workloads such as Windows-based storage, high-performance computing (HPC), machine learning, and electronic design automation (EDA).
+![](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx_64.svg)
 
-You don’t have to worry about managing file servers and storage, as Amazon FSx automates the time-consuming administration tasks such as hardware provisioning, software configuration, patching, and backups.
-
-Amazon FSx integrates the file systems with cloud-native AWS services, making them even more useful for a broader set of workloads.
+- Amazon FSx provides fully managed third-party file systems.
+- Amazon FSx provides you with the native compatibility of third-party file systems with feature sets for workloads such as Windows-based storage, high-performance computing (HPC), machine learning, and electronic design automation (EDA).
+- You don’t have to worry about managing file servers and storage, as Amazon FSx automates the time-consuming administration tasks such as hardware provisioning, software configuration, patching, and backups.
+- Amazon FSx integrates the file systems with cloud-native AWS services, making them even more useful for a broader set of workloads.
 
 **Amazon FSx provides you with four file systems to choose from:**
 
-* Amazon FSx for Windows File Server for Windows-based applications
-* Amazon FSx for Lustre for compute-intensive workloads.
-* Amazon FSx for NetApp ONTAP.
-* Amazon FSX for OpenZFS.
+- **Amazon FSx for Windows File Server** for Windows-based applications
+- **Amazon FSx for Lustre** for compute-intensive workloads.
+- **Amazon FSx for NetApp ONTAP**.
+- **Amazon FSX for OpenZFS**.
 
-This article concentrates on FSx for Windows File Server and FSx for Lustre as these are the only file systems currently featuring on exams.
+![Amazon-FSx-for-WFS](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx-for-WFS_64.svg "Amazon-FSx-for-WFS")
+![Amazon-FSx-for-Lustre](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx-for-Lustre_64.svg "Amazon-FSx-for-Lustre")
+![Amazon-FSx-for-NetApp-ONTAP](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx-for-NetApp-ONTAP_64.svg "Amazon-FSx-for-NetApp-ONTAP")
+![Amazon-FSx-for-OpenZFS](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx-for-OpenZFS_64.svg "Amazon-FSx-for-OpenZFS")
 
-### Amazon FSx for Windows File Server
+----------------------------------------------------------------------------------------------------------------------------------------------
+This concentrates on FSx for Windows File Server and FSx for Lustre as these are the only file systems currently featuring on exams.
+
+### **Amazon FSx for Windows File Server**
+
+
+![Amazon-FSx-for-WFS](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx-for-WFS_64.svg "Amazon-FSx-for-WFS")
+
 
 **Overview of FSx for Windows File Server**
 
-Amazon FSx for Windows File Server provides a fully managed native Microsoft Windows file system so you can easily move your Windows-based applications that require shared file storage to AWS.
+- Amazon FSx for Windows File Server provides a fully managed native Microsoft Windows file system so you can easily move your Windows-based applications that require shared file storage to AWS.
+- Built on Windows Server, Amazon FSx provides the compatibility and features that your Microsoft applications rely on, including full support for the SMB protocol, Windows NTFS, and Microsoft Active Directory (AD) integration.
+- Amazon FSx uses SSD storage to provide fast performance with low latency.
+- This compatibility, performance, and scalability enables business-critical workloads such as home directories, media workflows, and business applications.
+- Amazon FSx helps you optimize TCO with Data Deduplication, reducing costs by 50-60% for general-purpose file shares.
+- User quotas give you the option to better monitor and control costs. You pay for only the resources used, with no upfront costs, or licensing fees.
 
-Built on Windows Server, Amazon FSx provides the compatibility and features that your Microsoft applications rely on, including full support for the SMB protocol, Windows NTFS, and Microsoft Active Directory (AD) integration.
 
-Amazon FSx uses SSD storage to provide fast performance with low latency.
+![FSx for Windows File Server](../images/extra/FSX_WFS.png "FSx for Windows File Server")
 
-This compatibility, performance, and scalability enables business-critical workloads such as home directories, media workflows, and business applications.
-
-Amazon FSx helps you optimize TCO with Data Deduplication, reducing costs by 50-60% for general-purpose file shares.
-
-User quotas give you the option to better monitor and control costs. You pay for only the resources used, with no upfront costs, or licensing fees.
 
 **Details and Benefits**
 
@@ -1861,69 +1943,94 @@ User quotas give you the option to better monitor and control costs. You pay for
 * Access Control Lists (ACLs), shadow copies, and user quotas.
 * NTFS file systems that can be accessed from up to thousands of compute instances using the SMB protocol.
 
-Works with Microsoft Active Directory (AD) to easily integrate file systems with Windows environments.
+- Works with Microsoft Active Directory (AD) to easily integrate file systems with Windows environments.
+- Built on SSD-storage, Amazon FSx provides fast performance with up to 2 GB/second throughput per file system, hundreds of thousands of IOPS, and consistent sub-millisecond latencies.
+- Can choose a throughput level that is independent of your file system size.
+- Using DFS Namespaces, you can scale performance up to tens of gigabytes per second of throughput, with millions of IOPS, across hundreds of petabytes of data.
+- Amazon FSx can connect file systems to Amazon EC2, VMware Cloud on AWS, Amazon WorkSpaces, and Amazon AppStream 2.0 instances.
+- Amazon FSx also supports on-premises access via AWS Direct Connect or AWS VPN, and access from multiple VPCs, accounts, and regions using VPC Peering or AWS Transit Gateway.
+- Amazon FSx automatically encrypts your data at-rest and in-transit.
+- Assessed to comply with ISO, PCI-DSS, and SOC certifications, and is HIPAA eligible.
+- Integration with AWS CloudTrail monitors and logs your API calls letting you see actions taken by users on Amazon FSx resources.
+- Pay only for the resources you use, with no minimum commitments or up-front fees.
+- Can optimize costs by removing redundant data with Data Deduplication.
+- User quotas provide tracking, monitoring, and enforcing of storage consumption to help reduce costs.
 
-Built on SSD-storage, Amazon FSx provides fast performance with up to 2 GB/second throughput per file system, hundreds of thousands of IOPS, and consistent sub-millisecond latencies.
 
-Can choose a throughput level that is independent of your file system size.
+----------------------------------------------------------------------------------------------------------------------------------------------
+### **Amazon FSx for Lustre**
 
-Using DFS Namespaces, you can scale performance up to tens of gigabytes per second of throughput, with millions of IOPS, across hundreds of petabytes of data.
-
-Amazon FSx can connect file systems to Amazon EC2, VMware Cloud on AWS, Amazon WorkSpaces, and Amazon AppStream 2.0 instances.
-
-Amazon FSx also supports on-premises access via AWS Direct Connect or AWS VPN, and access from multiple VPCs, accounts, and regions using VPC Peering or AWS Transit Gateway.
-
-Amazon FSx automatically encrypts your data at-rest and in-transit.
-
-Assessed to comply with ISO, PCI-DSS, and SOC certifications, and is HIPAA eligible.
-
-Integration with AWS CloudTrail monitors and logs your API calls letting you see actions taken by users on Amazon FSx resources.
-
-Pay only for the resources you use, with no minimum commitments or up-front fees.
-
-Can optimize costs by removing redundant data with Data Deduplication.
-
-User quotas provide tracking, monitoring, and enforcing of storage consumption to help reduce costs.
-
-### Amazon FSx for Lustre
+![Amazon-FSx-for-Lustre](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx-for-Lustre_64.svg "Amazon-FSx-for-Lustre")
 
 ### Overview of FSx for Lustre
 
-Amazon FSx for Lustre provides a high-performance file system optimized for fast processing of workloads such as machine learning, high performance computing (HPC), video processing, financial modeling, and electronic design automation (EDA).
-
-These workloads commonly require data to be presented via a fast and scalable file system interface, and typically have data sets stored on long-term data stores like Amazon S3.
-
-Amazon FSx for Lustre provides a fully managed high-performance Lustre file system that allows file-based applications to access data with hundreds of gigabytes per second of data, millions of IOPS, and sub millisecond latencies.
-
-Amazon FSx works natively with Amazon S3, letting you transparently access your S3 objects as files on Amazon FSx to run analyses for hours to months.
-
+- Amazon FSx for Lustre provides a high-performance file system optimized for fast processing of workloads such as machine learning, high performance computing (HPC), video processing, financial modeling, and electronic design automation (EDA).
+- These workloads commonly require data to be presented via a fast and scalable file system interface, and typically have data sets stored on long-term data stores like Amazon S3.
+- Amazon FSx for Lustre provides a fully managed high-performance Lustre file system that allows file-based applications to access data with hundreds of gigabytes per second of data, millions of IOPS, and sub millisecond latencies.
+- Amazon FSx works natively with Amazon S3, letting you transparently access your S3 objects as files on Amazon FSx to run analyses for hours to months.
 You can then write results back to S3, and simply delete your file system. FSx for Lustre also enables you to burst your data processing workloads from on-premises to AWS, by allowing you to access your FSx file system over AWS Direct Connect or VPN.
+- You can also use FSx for Lustre as a standalone high-performance file system to burst your workloads from on-premises to the cloud.
+- By copying on-premises data to an FSx for Lustre file system, you can make that data available for fast processing by compute instances running on AWS.
+- Metadata stored on Metadata Targets (MST).
+- Performance is based on the size of the filesystem.
+- The name Lustre is derived from “Linux” and “cluster”
+- Machine Learning, Analytics, Video Processing, Financial Modeling, ...
+- Scales up to 100s GB/s, millions of IOPS, sub-ms latencies
 
-You can also use FSx for Lustre as a standalone high-performance file system to burst your workloads from on-premises to the cloud.
 
-By copying on-premises data to an FSx for Lustre file system, you can make that data available for fast processing by compute instances running on AWS.
-
-Metadata stored on Metadata Targets (MST).
-
-Performance is based on the size of the filesystem.
+![Amazon-FSx-for-Lustre](../images/extra/FSX_Lustre.png "Amazon-FSx-for-Lustre")
 
 **Details and Benefits**
 
-Lustre is a popular open-source parallel file system that is designed for high-performance workloads. These workloads include HPC, machine learning, analytics, and media processing.
+- Lustre is a popular open-source parallel file system that is designed for high-performance workloads. These workloads include HPC, machine learning, analytics, and media processing.
+- A parallel file system provides high throughput for processing large amounts of data and performs operations with consistently low latencies.
+- It does so by storing data across multiple networked servers that thousands of compute instances can interact with concurrently.
+- The Lustre file system provides a POSIX-compliant file system interface.
+- Amazon FSx can scale up to hundreds of gigabytes per second of throughput, and millions of IOPS.
+- Amazon FSx provides high throughput for processing large amounts of data and performs operations with consistent, sub-millisecond latencies.
+- Amazon FSx for Lustre supports file access to thousands of EC2 instances, enabling you to provide file storage for your high-performance workloads, like genomics, seismic exploration, and video rendering.
 
-A parallel file system provides high throughput for processing large amounts of data and performs operations with consistently low latencies.
 
-It does so by storing data across multiple networked servers that thousands of compute instances can interact with concurrently.
 
-The Lustre file system provides a POSIX-compliant file system interface.
+----------------------------------------------------------------------------------------------------------------------------------------------
 
-Amazon FSx can scale up to hundreds of gigabytes per second of throughput, and millions of IOPS.
+### **Amazon FSx for NetApp ONTAP**
 
-Amazon FSx provides high throughput for processing large amounts of data and performs operations with consistent, sub-millisecond latencies.
+![Amazon-FSx-for-NetApp-ONTAP](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx-for-NetApp-ONTAP_64.svg "Amazon-FSx-for-NetApp-ONTAP")
 
-Amazon FSx for Lustre supports file access to thousands of EC2 instances, enabling you to provide file storage for your high-performance workloads, like genomics, seismic exploration, and video rendering.
 
-### Amazon S3:
+- Fully managed shared storage built on NetApp’s popular ONTAP file system
+- Migrate and build applications quicker with ONTAP's data access and data management capabilities on AWS.
+- Make your data available to a broad set of workloads and users via industry-standard NFS, SMB, and iSCSI protocols.
+- Support your growing data sets with storage capacity that grows and shrinks automatically.
+- Take advantage of SSD performance at a fraction of the cost with built-in storage efficiency and tiering technologies.
+
+
+**More**
+
+https://aws.amazon.com/fsx/netapp-ontap/
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+### **Amazon FSx for NetApp OpenZFS**
+
+![Amazon-FSx-for-OpenZFS](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx-for-OpenZFS_64.svg "Amazon-FSx-for-OpenZFS")
+
+
+- Fully managed shared storage built on the popular OpenZFS file system
+- Easily migrate Linux file servers to AWS with file storage that matches or exceeds capabilities you rely on today and is accessible via the NFS protocol.
+- Simplify building and testing applications using OpenZFS instant data snapshots and data cloning.
+- Accelerate workloads with high-performance storage delivering over 1 million IOPs and latencies of a few hundred microseconds.
+- Optimize costs with a few clicks by scaling throughput levels and enabling storage efficiency capabilities such as data compression.
+
+
+**More**
+
+https://aws.amazon.com/fsx/openzfs/
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+### FSX With Amazon S3:
 
 * Amazon FSx works natively with Amazon S3, making it easy to access your S3 data to run data processing workloads.
 * Your S3 objects are presented as files in your file system, and you can write your results back to S3.
@@ -1963,13 +2070,10 @@ Min size is 1.2 TiB with increments of 2.4 TiB.
 
 ### Persistent
 
-Longer term use cases.
-
-Provides HA in one AZ and self-healing.
-
-50 MB/s, 100 MB/s, and 200 MB/s per TiB of storage.
-
-Burst up to 1,300 Mb/s per TiB (uses a credit system).
+- Longer term use cases.
+- Provides HA in one AZ and self-healing.
+- 50 MB/s, 100 MB/s, and 200 MB/s per TiB of storage.
+- Burst up to 1,300 Mb/s per TiB (uses a credit system).
 
 
 **Cheat Sheets**
@@ -1978,76 +2082,63 @@ https://digitalcloud.training/amazon-fsx/
 
 **References:**
 
+https://aws.amazon.com/fsx/netapp-ontap/
+
 **Videos**
 
 ----------------------------------------------------------------------------------------
-## <a id="section-8"> </a> **08 - Amazon Backup**
+## <a id="section-8"> </a> **08 - AWS Backup**
+
+![](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Backup_64.svg)
+
+**Definitions**
 
 A service that enables you to centralize and automate data protection across AWS services and hybrid workloads.
 
 ### Concepts
 
 - Backup plan
-
     - A policy expression that determines when and how you want your AWS resources backed up.
-
     - Stores periodic backups incrementally.
-
     - A backup plan can be created using the AWS Backup console, API, CLI, SDK, or an AWS CloudFormation template.
-
     - Backup plans can be assigned the following:
-
         - Resource type – every instance or resource.
-
         - Resource – a single instance of a resource type.
-
     - Supports multiple backup plans for workloads with different backup requirements.
-
     - To delete a backup plan, you must first delete all resources associated with it.
-
     - When you change the retention period in a backup rule, the retention period of backups created before the update remains unchanged.
 
 - Backup vault
-
-    A container to store and organize your backups.
-
-    You can just create multiple backup vaults if you need different encryption keys or access policies for different groups of backups.
-
-    To encrypt the backups placed in the vault, you will need to use an AWS KMS encryption key.
-
-    AWS Backup Vault Lock allows you to enforce retention periods and prevent early deletions.
-
-    You cannot delete the following backup vaults:
-
-    - AWS Backup default backup vault.
-
-    - Amazon EFS automatic backup vault.
+    - A container to store and organize your backups.
+    - You can just create multiple backup vaults if you need different encryption keys or access policies for different groups of backups.
+    - To encrypt the backups placed in the vault, you will need to use an AWS KMS encryption key.
+    - AWS Backup Vault Lock allows you to enforce retention periods and prevent early deletions.
+    - You cannot delete the following backup vaults:
+        - AWS Backup default backup vault.
+        - Amazon EFS automatic backup vault.
 
 - Backup
 
-    The backup or recovery point is the content of a resource at a specific time.
+    - The backup or recovery point is the content of a resource at a specific time.
+    - Recovery points are stored in backup vaults.
+    - A backup can be restored using the AWS Backup console or API.
 
-    Recovery points are stored in backup vaults.
-
-    A backup can be restored using the AWS Backup console or API.
 
     Backups can be created:
 
     - Automatically with backup plans.
-
     - Manually by initiating an on-demand backup.
 
     You can create backup copies across:
 
     - AWS Regions
-
     - AWS accounts
 
     You can configure lifecycle policies and add tags to a backup.
 
 
 - AWS Backup Audit Manager
-    * Audit Frameworks
+    - Audit Frameworks
         - A framework is a set of controls that allows you to assess your backup practices.
         - Find backup activity and resources that aren’t yet in compliance with the controls you’ve set up.
         - Each framework applies to a single account and a maximum of 10 per AWS Region.
@@ -2059,11 +2150,9 @@ A service that enables you to centralize and automate data protection across AWS
 
     Automatically generate an audit trail of daily and on-demand reports.
 
-    You must first create a report plan from a report template in order to create daily or on-demand reports.
-
-    - Backup report templates
-
-    - Compliance report templates
+    - You must first create a report plan from a report template in order to create daily or on-demand reports.
+        - Backup report templates
+        - Compliance report templates
 
     Reports can only be in the same region and account as the S3 bucket.
 
@@ -2093,6 +2182,16 @@ https://tutorialsdojo.com/aws-backup/
 
 https://aws.amazon.com/backup/
 
+https://aws.amazon.com/backup/features/
+
+https://aws.amazon.com/backup/features/vmware/
+
+https://aws.amazon.com/backup/pricing/?nc=sn&loc=3
+
+https://aws.amazon.com/backup/getting-started/?nc=sn&loc=4
+
+https://aws.amazon.com/backup/resources/?nc=sn&loc=5&backup-blogs.sort-by=item.additionalFields.createdDate&backup-blogs.sort-order=desc
+
 https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html
 
 **Videos**
@@ -2100,6 +2199,10 @@ https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html
 https://www.youtube.com/watch?v=peUjKlE3dEk
 
 https://www.youtube.com/watch?v=TCvDhG88zeo
+
+**Hands On**
+
+https://www.youtube.com/results?search_query=AWS+Backup+Hands+On
 
 -----------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-9"> </a> **09 - AWS Snowmobile**
@@ -2143,22 +2246,20 @@ https://www.youtube.com/watch?v=8vQmTZTq7nw
 -----------------------------------------------------------------------------------------------------------
 ## <a id="section-10"></a> **10 - Amazon Transfer Family**
 
+**Definitions**
+
 * AWS Transfer Family is a secure transfer service for moving files into and out of AWS storage services, such as Amazon S3 and Amazon EFS.
 * With Transfer Family, you do not need to run or maintain any server infrastructure of your own.
 * You can provision a Transfer Family server with multiple protocols (SFTP, FTPS, FTP).
 
 ![ransfer family](../images/extra/Amazon-Transfer-Family-1200x457.jpg)
 
-### Benefits
+### **Benefits**
 
 1. Fully managed service and scales in real time.
-
 2. You don’t need to modify your applications or run any file transfer protocol infrastructure.
-
 3. Supports up to 3 Availability Zones and is backed by an auto scaling, redundant fleet for your connection and transfer requests.
-
 4. Integration with S3 and EFS lets you capitalize on their features and functionalities as well.
-
 5. Managed File Transfer Workflows (MFTW) is a fully managed, serverless File Transfer Workflow service to set up, run, automate, and monitor processing of files uploaded using Transfer Family.
 
 * Server endpoint types:

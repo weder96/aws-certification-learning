@@ -18,15 +18,15 @@ To other repositories that will be linked to the same but specific to each Exam.
 
 ## Learning Modules
 
-  - [Module 01: Overview of Cloud Concepts][1]
-  - [Module 02: Cloud Savings and Billing][2]
-  - [Module 03: Overview of AWS Global Infrastructure][3]
-  - [Module 04: Cloud Security, Identity and Compliance][4]
-  - [Module 05: Networks and Content Delivery][5]
-  - [Module 06: Compute][6]
-  - [Module 07: Storage][7]
-  - [Module 08: Databases][8]
-  - [Module 09: Cloud Architecture][9]
+  - [Module 01: Overview of Cloud Concepts][01]
+  - [Module 02: Cloud Savings and Billing][02]
+  - [Module 03: Overview of AWS Global Infrastructure][03]
+  - [Module 04: Cloud Security, Identity and Compliance][04]
+  - [Module 05: Networks and Content Delivery][05]
+  - [Module 06: Compute][06]
+  - [Module 07: Storage][07]
+  - [Module 08: Databases][08]
+  - [Module 09: Cloud Architecture][09]
   - [Module 10: Auto Scaling and Monitoring][10]
   - [Module 11: AWS Analytics Services][11]
   - [Module 12: AWS Integration & Messaging][12]
@@ -50,15 +50,15 @@ To other repositories that will be linked to the same but specific to each Exam.
   - [Module 99: Concepts‌ ‌and‌‌ Strategies][99]
  
 
-[1]: https://github.com/weder96/aws-certification-learning/tree/main/module-1
-[2]: https://github.com/weder96/aws-certification-learning/tree/main/module-2
-[3]: https://github.com/weder96/aws-certification-learning/tree/main/module-3
-[4]: https://github.com/weder96/aws-certification-learning/tree/main/module-4
-[5]: https://github.com/weder96/aws-certification-learning/tree/main/module-5
-[6]: https://github.com/weder96/aws-certification-learning/tree/main/module-6
-[7]: https://github.com/weder96/aws-certification-learning/tree/main/module-7
-[8]: https://github.com/weder96/aws-certification-learning/tree/main/module-8
-[9]: https://github.com/weder96/aws-certification-learning/tree/main/module-9
+[01]: https://github.com/weder96/aws-certification-learning/tree/main/module-1
+[02]: https://github.com/weder96/aws-certification-learning/tree/main/module-2
+[03]: https://github.com/weder96/aws-certification-learning/tree/main/module-3
+[04]: https://github.com/weder96/aws-certification-learning/tree/main/module-4
+[05]: https://github.com/weder96/aws-certification-learning/tree/main/module-5
+[06]: https://github.com/weder96/aws-certification-learning/tree/main/module-6
+[07]: https://github.com/weder96/aws-certification-learning/tree/main/module-7
+[08]: https://github.com/weder96/aws-certification-learning/tree/main/module-8
+[09]: https://github.com/weder96/aws-certification-learning/tree/main/module-9
 [10]: https://github.com/weder96/aws-certification-learning/tree/main/module-10
 [11]: https://github.com/weder96/aws-certification-learning/tree/main/module-11
 [12]: https://github.com/weder96/aws-certification-learning/tree/main/module-12
