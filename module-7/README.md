@@ -19,6 +19,7 @@
 10. <a href="#section-10"> AWS Transfer Family </a>
 11. <a href="#section-11"> AWS SnowBall </a>
 12. <a href="#section-12"> AWS Snowcone </a>
+13. <a href="#section-13"> Storage Comparison</a>
 
 ----------------------------------------------------------------------------------------------------
 ## <a id="section-1"> </a> **01 - Amazon Simple Storage Service (S3)**
@@ -2360,6 +2361,8 @@ https://www.youtube.com/watch?v=ldCos3c66s0
 
 Highly-secure, portable devices to collect and process data at the edge, and migrate data into and out of AWS
 
+<a href="https://github.com/weder96/aws-certification-learning/tree/main/module-13#section-05" target="_blank"> AWS Snow Family </a>
+
 - **Data migration:**
 
 ![Arch_AWS-Snowball](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowball_64.svg "Arch_AWS-Snowball")
@@ -2494,3 +2497,24 @@ https://www.youtube.com/results?search_query=AWS+Snowcone
 **Hands On**
 
 https://www.youtube.com/results?search_query=AWS+Snowcone+hands+On
+
+
+-------------------------------------------------------------------------------------------------------------
+## <a id="section-13"></a> **13 - Storage Comparison**
+
+**Storage Comparison**
+
+-  **S3:** Object Storage
+-  **S3 Glacier:** Object Archival
+-  **EBS volumes:** Network storage for one EC2 instance at a time
+-  **Instance Storage:** Physical storage for your EC2 instance (high IOPS)
+-  **EFS:** Network File System for Linux instances, POSIX filesystem
+-  **FSx for Windows:** Network File System for Windows servers
+-  **FSx for Lustre:** High Performance Computing Linux file system
+-  **FSx for NetApp ONTAP:** High OS Compatibility
+-  **FSx for OpenZFS:** Managed ZFS file system
+-  **Storage Gateway:** S3 & FSx File Gateway, Volume Gateway (cache & stored), Tape Gateway
+-  **Transfer Family:** FTP, FTPS, SFTP interface on top of Amazon S3 or Amazon EFS
+-  **DataSync:** Schedule data sync from on-premises to AWS, or AWS to AWS
+-  **Snowcone / Snowball / Snowmobile:** to move large amount of data to the cloud, physically
+-  **Database:** for specific workloads, usually with indexing and querying

@@ -39,6 +39,66 @@ Supports wildcard SSL certificates, Dedicated IP, Custom SSL and SNI Custom SSL 
 Supports Perfect Forward Secrecy which creates a new private key for each SSL session.
 
 
+
+### **Global users for our application**
+
+- You have deployed an application and have global users who want to access it directly.
+- They go over the publicinternet, which can add a lot of latency due to many hops
+- We wish to go as fast as possible through AWS network to minimize latency
+
+![global](../images/global.png)
+
+### **Unicast IP vs Anycast IP**
+
+- Unicast IP: one server holds one IP address
+- Anycast IP: all servers hold the same IP address and the client is routed to the nearest one
+
+![anyCast](../images/anyCast.png)
+
+
+### **AWS Global Accelerator**
+
+- Leverage the AWS internal network to route to your application
+- 2 Anycast IP are created for your application
+- The Anycast IP send traffic directly to Edge Locations
+- The Edge locations send the traffic to your application
+
+![GlobalAcelerator](../images/GlobalAcelerator.png)
+
+-  Works with Elastic IP, EC2 instances, ALB, NLB, public or private
+-  Consistent Performance
+-  Intelligent routing to lowest latency and fast regional failover
+-  No issue with client cache (because the IP doesn’t change)
+-  Internal AWS network
+-  Health Checks
+-  Global Accelerator performs a health check of your applications
+-  Helps make your application global (failover less than 1 minute for unhealthy)
+-  Great for disaster recovery (thanks to the health checks)
+-  Security
+-  only 2 external IP need to be whitelisted
+-  DDoS protection thanks to AWS Shield
+
+
+### **AWS Global Accelerator vs CloudFront**
+
+- They both use the AWS global network and its edge locations around the world
+- Both services integrate with AWS Shield for DDoS protection.
+
+-  CloudFront
+    -  Improves performance for both cacheable content (such as images and videos)
+    -  Dynamic content (such as API acceleration and dynamic site delivery)
+    -  Content is served at the edge
+
+-  Global Accelerator
+    -  Improves performance for a wide range of applications over TCP or UDP
+    -  Proxying packets at the edge to applications running in one or more AWS Regions.
+    -  Good fit for non-HTTP use cases, such as gaming (UDP), IoT (MQTT), or Voice over IP
+    -  Good for HTTP use cases that require static IP addresses
+    -  Good for HTTP use cases that required deterministic, fast regional failover
+
+
+
+
 ### **Edge Locations and Regional Edge Caches**
 
 An edge location is the location where content is cached (separate to AWS regions/AZs).
@@ -73,6 +133,8 @@ An origin is the origin of the files that the CDN will distribute.
 Origins can be either an S3 bucket, an EC2 instance, an Elastic Load Balancer, or Route 53 – can also be external (non-AWS).
 
 When using Amazon S3 as an origin you place all your objects within the bucket.
+
+![cloudfrontOrigin](../images/cloudfornt.png)
 
 You can use an existing bucket and the bucket is not modified in any way.
 
@@ -255,6 +317,18 @@ Invalidation can be used to immediately revoke cached objects – chargeable.
 
 Deletions propagate.
 
+
+Cache Invalidations:
+
+- In case you update the back-end origin, CloudFront doesn’t know about it and will only get the refreshed content after the TTL has expired
+- However, you can force an entire or partial cache refresh (thus bypassing the TTL) by performing a CloudFront Invalidation
+- You can invalidate all files (*) or a special path (/images/*) 
+
+![cacheInvalidations](../images/cacheInvalidations.png)
+
+
+
+
 ### **Cache Hit Ratio**
 
 A good cache hit ratio means more requests are served from the cache.
@@ -275,6 +349,13 @@ There are two options available for geo-restriction (geo-blocking):
 
 - Use the CloudFront geo-restriction feature (use for restricting access to all files in a distribution and at the country level).
 - Use a 3rd party geo-location service (use for restricting access to a subset of the files in a distribution and for finer granularity at the country level).
+
+You can restrict who can access your distribution
+    - Allowlist: Allow your users to access your content only if they're in one of the countries on a list of approved countries.
+    - Blocklist: Prevent your users from accessing your content if they're in one of the countries on a list of banned countries.
+
+- The “country” is determined using a 3rd party Geo-IP database
+- Use case: Copyright Laws to control access to content
 
 ### **Lambda@Edge**
 
@@ -461,7 +542,7 @@ You do not pay for:
 - Shared CloudFront certificates.
 
 
-S3‌ ‌Transfer‌ ‌Acceleration‌ ‌
+### **S3‌ ‌Transfer‌ ‌Acceleration‌ ‌**
 
 When‌ ‌catering‌ ‌to‌ ‌a‌ ‌global‌ ‌audience,‌ ‌the‌ ‌distance‌ ‌between‌ ‌you‌ ‌and‌ ‌your‌ ‌client‌ ‌is‌ ‌undoubtedly‌ ‌an‌ ‌issue.‌ ‌This‌ ‌is‌‌ also‌ ‌applicable‌ ‌for‌ ‌the‌ ‌S3‌ ‌service,‌ ‌especially‌ ‌when‌ ‌uploading‌ ‌large‌ ‌objects‌ ‌across‌ ‌the‌ ‌regions.‌ ‌It‌ ‌will‌ ‌surely‌ ‌take‌‌
 a‌ ‌long‌ ‌time‌ ‌to‌ ‌upload‌ ‌hundreds‌ ‌of‌ ‌gigabytes‌ ‌of‌ ‌things‌ ‌to‌ ‌an‌ ‌S3‌ ‌bucket‌ ‌located‌ ‌on‌ ‌the‌ ‌other‌ ‌side‌ ‌of‌ ‌the‌ ‌globe.‌‌
@@ -473,6 +554,33 @@ your‌ ‌users.‌ ‌Data‌ ‌will‌ ‌be‌ ‌uploaded‌ ‌on‌ ‌a
 internal‌ ‌network.‌
 
 https://docs.aws.amazon.com/AmazonS3/latest/userguide/transfer-acceleration.html‌
+
+
+### **CloudFront Pricing ‌**
+
+CloudFront Edge locations are all around the world
+The cost of data out per edge location varies
+
+![cloudforntPrice](../images/cloudforntPrice.png)
+
+### **CloudFront – Price Classes**
+    -  You can reduce the number of edge locations for cost reduction
+
+    -  Three price classes:
+
+1. Price Class All: all regions – best performance
+
+2. Price Class 200: most regions, but excludes the most expensive regions
+
+3. Price Class 100: only the least expensive regions
+
+![cloudforntPriceClass](../images/cloudforntPriceClass.png)
+
+
+### **Prices Class Visual**
+
+![cloudforntPriceClass](../images/cloudFrontPriceClassEdgeLocations.png)
+
 
 
 
@@ -490,21 +598,23 @@ https://digitalcloud.training/category/aws-cheat-sheets/aws-solutions-architect-
 
 **References:**
 
-https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html
-
-https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide
-
 https://aws.amazon.com/cloudfront/features/
 
 https://aws.amazon.com/cloudfront/pricing/
 
 https://aws.amazon.com/cloudfront/faqs/
 
+https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide
+
+https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html
+
+https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/high_availability_origin_failover.html
+
+https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html
+
 https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-overview.html#forward-custom-headers-restrict-access
 
 https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html
-
-https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html
 
 https://docs.aws.amazon.com/AmazonS3/latest/dev/ShareObjectPreSignedURL.html
 

@@ -38,6 +38,78 @@ Migrate a terabyte-sized database at a low cost, paying only for the compute res
 AWS Database Migration Service (AWS DMS) is a managed migration and replication service that helps move your database and analytics workloads to AWS quickly, securely, and with minimal downtime and zero data loss. AWS DMS supports migration between 20-plus database and analytics engines, such as Oracle to Amazon Aurora MySQL-Compatible Edition, MySQL to Amazon Relational Database (RDS) for MySQL, Microsoft SQL Server to Amazon Aurora PostgreSQL-Compatible Edition, MongoDB to Amazon DocumentDB (with MongoDB compatibility), Oracle to Amazon Redshift, and Amazon Simple Storage Service (S3).
 
 
+**DMS – Database Migration Service**
+
+-  Quickly and securely migrate databases to AWS, resilient, self healing
+
+-  The source database remains available during the migration
+
+-  Supports:
+    -  Homogeneous migrations: ex Oracle to Oracle
+
+    -  Heterogeneous migrations: ex Microsoft SQL Server to Aurora
+
+-  Continuous Data Replication using CDC
+
+-  You must create an EC2 instance to perform the replication tasks
+
+
+![DMS_source_target](../images/DMS_source_target.png)
+
+
+#### DMS Sources and Targets
+
+**SOURCES:**
+
+-  On-Premises and EC2 instances databases: Oracle, MS SQL Server, MySQL, MariaDB, PostgreSQL, MongoDB, SAP, DB2
+
+-  Azure: Azure SQL Database
+
+-  Amazon RDS: all including Aurora
+
+-  Amazon S3
+
+-  DocumentDB
+
+**TARGETS:**
+
+-  On-Premises and EC2 instances databases: Oracle, MS SQL Server, MySQL, MariaDB, PostgreSQL, SAP
+
+-  Amazon RDS
+
+-  Redshift, DynamoDB, S3
+
+-  OpenSearch Service
+
+-  Kinesis Data Streams
+
+-  Apache Kafka
+
+-  DocumentDB & Amazon Neptune
+
+-  Redis & Babelfish
+
+### AWS Schema Conversion Tool (SCT)
+
+-  Convert your Database’s Schema from one engine to another
+
+-  Example OLTP: (SQL Server or Oracle) to MySQL, PostgreSQL, Aurora
+
+-  Example OLAP: (Teradata or Oracle) to Amazon Redshift
+
+-  Prefer compute-intensive instances to optimize data conversions
+
+![SCT.png](../images/SCT.png)
+
+-  You do not need to use SCT if you are migrating the same DB engine
+
+-  Ex: On-Premise PostgreSQL => RDS PostgreSQL
+
+-  The DB engine is still PostgreSQL (RDS is the platform)
+
+
+
+
 **Cheat Sheets**
 
 **References:**
@@ -72,15 +144,32 @@ https://www.youtube.com/results?search_query=AWS+Database+Migration+Service+hand
 
 **Definitions**
 
-Simplify and accelerate secure data migrations
+-  Simplify and accelerate secure data migrations
+-  Securely discover and migrate your data to AWS with end-to-end security, including data encryption and data integrity validation.
+-  Simplify migration planning and reduce expensive on-premises data movement costs with a fully managed service that seamlessly scales as data loads increase.
+-  Easily manage data movement workloads with bandwidth throttling, migration scheduling, and task filtering.
+-  Rapidly migrate file and object data to the cloud for data replication or archival.
+-  Move large amount of data to and from
+-  On-premises / other cloud to AWS (NFS, SMB, HDFS, S3 API…) – needs agent
+-  AWS to AWS (different storage services) – no agent needed
+-  Can synchronize to:
+-  Amazon S3 (any storage classes – including Glacier)
+-  Amazon EFS
+-  Amazon FSx (Windows, Lustre, NetApp, OpenZFS...)
+-  Replication tasks can be scheduled hourly, daily, weekly
+-  File permissions and metadata are preserved (NFS POSIX, SMB…)
+-  One agent task can use 10 Gbps, can setup a bandwidth limit
 
-Securely discover and migrate your data to AWS with end-to-end security, including data encryption and data integrity validation.
+**NFS / SMB to AWS (S3, EFS, FSx…)**
 
-Simplify migration planning and reduce expensive on-premises data movement costs with a fully managed service that seamlessly scales as data loads increase.
+![dataSync](../images/storage/dataSync.png)
 
-Easily manage data movement workloads with bandwidth throttling, migration scheduling, and task filtering.
 
-Rapidly migrate file and object data to the cloud for data replication or archival.
+**Transfer between AWS storage services**
+
+![dataSyncInside](../images/storage/dataSyncInside.png)
+
+
 
 ### How it works
 
@@ -201,17 +290,74 @@ https://www.youtube.com/results?search_query=AWS+Migration+Hub+hands+on
 
 AWS Snow Family
 
-Move petabytes of data to and from AWS, or process data at the edge
+- Move petabytes of data to and from AWS, or process data at the edge
+- Purpose-built devices to cost effectively move petabytes of data, offline. Lease a Snow device to move your data to the cloud.
+- Field-tested for the most extreme conditions, delivering high security and ruggedization into compute and storage-compatible devices.
+- Device options range to optimize for space- or weight-constrained environments, portability, and flexible networking options.
+- Highly-secure, portable devices to collect and process data at the edge, and migrate data into and out of AWS
 
-Purpose-built devices to cost effectively move petabytes of data, offline. Lease a Snow device to move your data to the cloud.
 
-Field-tested for the most extreme conditions, delivering high security and ruggedization into compute and storage-compatible devices.
 
-Device options range to optimize for space- or weight-constrained environments, portability, and flexible networking options.
+![snowFamily](../images/snowFamily.png)
+
+
 
 **AWS Snow Family key features**
 
 Each feature listed below are standard features across each device type. To learn more about AWS Snowcone or AWS Snowball device specifications unique to each device type, visit their feature pages.
+
+
+**Data Migrations with AWS Snow Family**
+
+- Challenges:
+    - Limited connectivity
+    - Limited bandwidth
+    - High network cost
+    - Shared bandwidth (can’t maximize the line)
+    - Connection stability
+
+    ![timeToTransfer](../images/timeToTransfer.png)
+
+
+AWS Snow Family: offline devices to perform data migrations If it takes more than a week to transfer over the network, use Snowball devices!
+
+
+- Direct upload to S3:
+  
+  ![directS3](../images/directS3.png)
+
+- With Snow Family:
+
+  ![snowFamilyS3](../images/snowFamilyS3.png)
+
+
+- Snow Family – Usage Process
+    1. Request Snowball devices from the AWS console for delivery
+    2. Install the snowball client / AWS OpsHub on your servers
+    3. Connect the snowball to your servers and copy files using the client
+    4. Ship back the device when you’re done (goes to the right AWS facility)
+    5. Data will be loaded into an S3 bucket
+    6. Snowball is completely wiped
+
+
+### **What is Edge Computing?**
+
+    -  Process data while it’s being created on an edge location
+    -  A truck on the road, a ship on the sea, a mining station underground...
+    -  These locations may have limited internet and no access to computing power
+    -  We setup a Snowball Edge / Snowcone device to do edge computing
+    -  Snowcone: 2 CPUs, 4 GB of memory, wired or wireless access
+    -  Snowball Edge Compute Optimized (dedicated for that use case) & Storage Optimized
+    -  Run EC2 Instances or Lambda functions at the edge
+    -  Use cases: preprocess data, machine learning, transcoding media
+
+
+### **Solution Architecture: Snowball into Glacier**
+
+- Snowball cannot import to Glacier directly
+- You must use Amazon S3 first, in combination with an S3 lifecycle policy
+
+  ![s3toGacier](../images/s3toGacier.png)
 
 
 **Cheat Sheets**

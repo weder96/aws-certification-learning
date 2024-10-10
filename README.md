@@ -45,6 +45,8 @@ To other repositories that will be linked to the same but specific to each Exam.
   - [Module 25: AWS Reference Architecture][25]
   - [Module 26: Developer Tools][26]
   - [Module 27: Business Applications ][27]
+  - [Module 28: Module 28: Front-End Web and Mobile ][28]
+  - [Module 29: Disaster recovery and Migrations ][29]
   - [Module 97: Which key tools, technologies, and concepts might be covered on the exam ][97]
   - [Module 98: Common‌ ‌Exam‌ ‌Scenarios‌ ‌][98]
   - [Module 99: Concepts‌ ‌and‌‌ Strategies][99]
@@ -77,6 +79,8 @@ To other repositories that will be linked to the same but specific to each Exam.
 [25]: https://github.com/weder96/aws-certification-learning/tree/main/module-25
 [26]: https://github.com/weder96/aws-certification-learning/tree/main/module-26
 [27]: https://github.com/weder96/aws-certification-learning/tree/main/module-27
+[28]: https://github.com/weder96/aws-certification-learning/tree/main/module-28
+[29]: https://github.com/weder96/aws-certification-learning/tree/main/module-29
 [97]: https://github.com/weder96/aws-certification-learning/tree/main/module-97
 [98]: https://github.com/weder96/aws-certification-learning/tree/main/module-98
 [99]: https://github.com/weder96/aws-certification-learning/tree/main/module-99
