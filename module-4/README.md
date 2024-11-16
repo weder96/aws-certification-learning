@@ -969,6 +969,9 @@ https://digitalcloud.training/aws-identity-and-access-management/
 
 https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html
 
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html#root-user-tasks
+
+
 **Videos**
 
 

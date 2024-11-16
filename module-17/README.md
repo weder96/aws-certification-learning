@@ -146,7 +146,7 @@ You can use X-Ray to analyze both applications in development and in production,
 **************************************************************************************
 ## <a id="section-05" ></a> **5 - AWS Managed Services**
 
-![AWS Managed Services](../images/Architecture-Service-Icons_01312022/Arch_Customer-Enablement/64/Arch_AWS-Managed-Services_64.svg)
+![AWS Managed Services](../images/Architecture-Service-Icons_07312022/Arch_Customer-Enablement/64/Arch_AWS-Managed-Services_64.svg)
 
 **Definition**
 

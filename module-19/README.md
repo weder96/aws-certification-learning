@@ -18,23 +18,23 @@
 10. <a href="#section-10"> Amazon Transcribe </a>
 11. <a href="#section-11"> Amazon Translate </a>
 
-![Amazon Comprehend](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Comprehend_64.svg "Amazon Comprehend")
-![Amazon Forecast](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Forecast_64.svg "Amazon Forecast")
-![Amazon Fraud Detector](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Fraud-Detector_64.svg "Amazon Fraud Detector")
-![Amazon Kendra](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Kendra_64.svg "Amazon Kendra")
-![Amazon Lex](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Lex_64.svg "Amazon Lex")
-![Amazon Polly](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Polly_64.svg "Polly")
-![Amazon Rekognition](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Rekognition_64.svg "Amazon Rekognition")
-![Amazon SageMaker](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-SageMaker_64.svg "Amazon SageMaker")
-![Amazon Textract](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Textract_64.svg "Amazon Textract")
-![Amazon Transcribe](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Transcribe_64.svg "Amazon Transcribe")
-![Amazon Translate](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Translate_64.svg "Amazon Translate")
+![Amazon Comprehend](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Comprehend_64.svg "Amazon Comprehend")
+![Amazon Forecast](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Forecast_64.svg "Amazon Forecast")
+![Amazon Fraud Detector](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Fraud-Detector_64.svg "Amazon Fraud Detector")
+![Amazon Kendra](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Kendra_64.svg "Amazon Kendra")
+![Amazon Lex](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Lex_64.svg "Amazon Lex")
+![Amazon Polly](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Polly_64.svg "Polly")
+![Amazon Rekognition](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Rekognition_64.svg "Amazon Rekognition")
+![Amazon SageMaker](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-SageMaker_64.svg "Amazon SageMaker")
+![Amazon Textract](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Textract_64.svg "Amazon Textract")
+![Amazon Transcribe](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Transcribe_64.svg "Amazon Transcribe")
+![Amazon Translate](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Translate_64.svg "Amazon Translate")
 
 
 ***************************************************************************************************
 ## <a id="section-01"> </a> **1 - Amazon Comprehend**
 
-![Amazon Comprehend](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Comprehend_64.svg "Amazon Comprehend")
+![Amazon Comprehend](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Comprehend_64.svg "Amazon Comprehend")
 
 **Definitions**
 
@@ -103,7 +103,7 @@ https://www.youtube.com/results?search_query=Amazon+Comprehend++hands+on
 ***************************************************************************************************
 ## <a id="section-02"> </a> **2 - Amazon Forecast**
 
-![Amazon Forecast](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Forecast_64.svg "Amazon Forecast")
+![Amazon Forecast](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Forecast_64.svg "Amazon Forecast")
 
 **Definitions**
 
@@ -143,7 +143,7 @@ https://www.youtube.com/results?search_query=Amazon+Forecast++hands+on
 ***************************************************************************************************
 ## <a id="section-03"> </a> **3 - Amazon Fraud Detector**
 
-![Amazon Fraud Detector](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Fraud-Detector_64.svg "Amazon Fraud Detector")
+![Amazon Fraud Detector](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Fraud-Detector_64.svg "Amazon Fraud Detector")
 
 **Definitions**
 
@@ -194,7 +194,7 @@ https://www.youtube.com/results?search_query=Amazon+Fraud+Detector+hands+on
 ***************************************************************************************************
 ## <a id="section-04"> </a> **4 - Amazon Kendra**
 
-![Amazon Kendra](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Kendra_64.svg "Amazon Kendra")
+![Amazon Kendra](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Kendra_64.svg "Amazon Kendra")
 
 **Definitions**
 
@@ -272,7 +272,7 @@ https://youtu.be/Xj_d2eX4nTY
 ***************************************************************************************************
 ## <a id="section-05"> </a> **5 - Amazon Lex**
 
-![Amazon Lex](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Lex_64.svg "Amazon Lex")
+![Amazon Lex](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Lex_64.svg "Amazon Lex")
 
 **Definitions**
 
@@ -342,7 +342,7 @@ https://www.youtube.com/results?search_query=Amazon+Lex+hands+on
 ***************************************************************************************************
 ## <a id="section-06"> </a> **6 - Amazon Polly**
 
-![Amazon Polly](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Polly_64.svg "Polly")
+![Amazon Polly](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Polly_64.svg "Polly")
 
 **Definitions**
 
@@ -428,7 +428,7 @@ https://www.youtube.com/results?search_query=Amazon+Polly+hands+on
 ***************************************************************************************************
 ## <a id="section-07"> </a> **7 - Amazon Rekognition**
 
-![Amazon Rekognition](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Rekognition_64.svg "Amazon Rekognition")
+![Amazon Rekognition](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Rekognition_64.svg "Amazon Rekognition")
 
 **Definitions**
 
@@ -488,7 +488,7 @@ https://www.youtube.com/results?search_query=Amazon+Rekognition+hands+on
 ***************************************************************************************************
 ## <a id="section-08"> </a> **8 - Amazon SageMaker**
 
-![Amazon SageMaker](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-SageMaker_64.svg "Amazon SageMaker")
+![Amazon SageMaker](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-SageMaker_64.svg "Amazon SageMaker")
 
 **Definitions**
 
@@ -589,7 +589,7 @@ https://www.youtube.com/results?search_query=Amazon+SageMaker+hands+on
 ***************************************************************************************************
 ## <a id="section-09"> </a> **9 - Amazon Textract**
 
-![Amazon Textract](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Textract_64.svg "Amazon Textract")
+![Amazon Textract](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Textract_64.svg "Amazon Textract")
 
 **Definitions**
 
@@ -644,7 +644,7 @@ https://www.youtube.com/results?search_query=Amazon+Textract+hands+on
 ***************************************************************************************************
 ## <a id="section-10"></a> **10 - Amazon Transcribe**
 
-![Amazon Transcribe](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Transcribe_64.svg "Amazon Transcribe")
+![Amazon Transcribe](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Transcribe_64.svg "Amazon Transcribe")
 
 **Definitions**
 
@@ -710,7 +710,7 @@ https://aws.amazon.com/transcribe/pricing/
 ***************************************************************************************************
 ## <a id="section-11"></a> **11 - Amazon Translate**
 
-![Amazon Translate](../images/Architecture-Service-Icons_01312022/Arch_Machine-Learning/64/Arch_Amazon-Translate_64.svg "Amazon Translate")
+![Amazon Translate](../images/Architecture-Service-Icons_07312022/Arch_Machine-Learning/64/Arch_Amazon-Translate_64.svg "Amazon Translate")
 
 **Definitions**
 

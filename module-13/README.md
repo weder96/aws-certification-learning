@@ -17,7 +17,7 @@
 ----------------------------------------------------------------------------------------------
 ## <a id="section-01" ></a> **1 - AWS Database Migration Service (AWS DMS)**
 
-![AWS Database Migration Service (AWS DMS)](../images/Architecture-Service-Icons_01312022/Arch_Migration-Transfer/64/Arch_AWS-Server-Migration-Service_64.svg)
+![AWS Database Migration Service (AWS DMS)](../images/Architecture-Service-Icons_07312022/Arch_Migration-Transfer/64/Arch_AWS-Server-Migration-Service_64.svg)
 
 
 **Definitions**
@@ -139,7 +139,7 @@ https://www.youtube.com/results?search_query=AWS+Database+Migration+Service+hand
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-02" ></a> **2 - AWS DataSync**
 
-![AWS DataSync](../images/Architecture-Service-Icons_01312022/Arch_Migration-Transfer/64/Arch_AWS-DataSync_64.svg)
+![AWS DataSync](../images/Architecture-Service-Icons_07312022/Arch_Migration-Transfer/64/Arch_AWS-DataSync_64.svg)
 
 
 **Definitions**
@@ -215,7 +215,7 @@ https://www.youtube.com/results?search_query=+AWS+DataSync+hands+on
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-03" ></a> **3 - AWS Migration Hub**
 
-![AWS Migration Hub](../images/Architecture-Service-Icons_01312022/Arch_Migration-Transfer/64/Arch_AWS-Migration-Hub_64.svg)
+![AWS Migration Hub](../images/Architecture-Service-Icons_07312022/Arch_Migration-Transfer/64/Arch_AWS-Migration-Hub_64.svg)
 
 
 **Definitions**
@@ -266,7 +266,7 @@ https://www.youtube.com/results?search_query=AWS+Migration+Hub+hands+on
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-04" ></a> **4 - AWS Server Migration Service (AWS SMS)**
 
-![AWS Migration Hub](../images/Architecture-Service-Icons_01312022/Arch_Migration-Transfer/64/Arch_AWS-Migration-Hub_64.svg)
+![AWS Migration Hub](../images/Architecture-Service-Icons_07312022/Arch_Migration-Transfer/64/Arch_AWS-Migration-Hub_64.svg)
 
 
 **Definitions**
@@ -283,7 +283,7 @@ https://www.youtube.com/results?search_query=AWS+Migration+Hub+hands+on
 ## <a id="section-05" ></a> **5 - AWS Snowball**
 
 
-![AWS Snowball](../images/Architecture-Service-Icons_01312022/Arch_Storage/64/Arch_AWS-Snowball_64.svg)
+![AWS Snowball](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowball_64.svg)
 
 
 **Definitions**
@@ -386,7 +386,7 @@ https://www.youtube.com/results?search_query=AWS+Snowball+hands+on
 ## <a id="section-06" ></a> **6 - AWS Transfer Family**
 
 
-![AWS Transfer Family](../images/Architecture-Service-Icons_01312022/Arch_Migration-Transfer/64/Arch_AWS-Transfer-Family_64.svg)
+![AWS Transfer Family](../images/Architecture-Service-Icons_07312022/Arch_Migration-Transfer/64/Arch_AWS-Transfer-Family_64.svg)
 
 
 **Definitions**

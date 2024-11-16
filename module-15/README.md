@@ -202,11 +202,15 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
 The IAM console provides information about when IAM users and roles last attempted to access AWS services. This information is called service last accessed data. This data can help you identify unnecessary permissions so that you can refine your IAM policies to better adhere to the principle of “least privilege.”
 
 That means granting the minimum permissions required to perform a specific task. You can find the data on the Access Advisor tab in the IAM console by examining the detail view for any IAM user, group, role, or managed policy.
+
+
 ## <a id="section-03"></a> **3 - Understanding and getting your AWS credentials**
 - [secret-keys](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)
 - For Amazon CloudFront, you use key pairs to create signed URLs for private content, such as when you want to distribute restricted content that someone paid for.
 CloudFront Key Pairs - IAM users can't create CloudFront key pairs. You must log in using root credentials to create key pairs.
 To create signed URLs or signed cookies, you need a signer. A signer is either a trusted key group that you create in CloudFront, or an AWS account that contains a CloudFront key pair. AWS recommends that you use trusted key groups with signed URLs and signed cookies instead of using CloudFront key pairs.
+
+
 ## <a id="section-04"></a> **4 - IAM Users** 
 - An IAM user is an entity that represents a person or service
 - Can be assigned:
@@ -243,6 +247,8 @@ A password policy can be defined for enforcing password length, complexity etc. 
 You can allow or disallow the ability to change passwords using an IAM policy.
 
 Access keys and passwords should be changed regularly.
+
+
 ## <a id="section-05"></a> **5 - IAM Groups**
 - Developers, AWS Admins, Operation
 - Groups are collections of users and have policies attached to them
@@ -250,9 +256,14 @@ Access keys and passwords should be changed regularly.
 - Use groups to assign permissions to users
 - Use the principal of least privilege when assigning permissions
 - You cannot nest groups (groups within groups)
+
+
 ## <a id="section-06"></a> **6 - Verify Permissions**
   - Use the AWS CLI --dry-run option: The --dry-run option checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation, otherwise, it is UnauthorizedOperation.
   [terminate-instance](https://docs.aws.amazon.com/cli/latest/reference/ec2/terminate-instances.html)
+
+
+
 ## <a id="section-07"></a> **7 - IAM Roles**
 ### [IAM Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html)
 With IAM Roles you can delegate permissions to resources for users and services without using permanent credentials (e.g. username and password). To do so you can create a role and assign an IAM policy to the role that has the permissions required.
@@ -270,18 +281,24 @@ used to make AWS API calls.
 - Temporary credentials are primarily used with IAM roles and automatically expire.
 - Roles can be assumed temporarily through the console or programmatically with the AWS CLI, Tools
   for Windows PowerShell or API.
+
+
 ## <a id="section-08"></a> **8 - IAM roles with EC2 instances**
   - IAM roles can be used for granting applications running on EC2 instances permissions to AWS API requests using instance profiles.
   - Only one role can be assigned to an EC2 instance at a time.
   - A role can be assigned at the EC2 instance creation time or at any time afterwards.
   - When using the AWS CLI or API instance profiles must be created manually (it’s automatic and transparent through the console).
   - Applications retrieve temporary security credentials from the instance metadata.
+
+
 ## <a id="section-09"></a> **9 - Role Delegation**
 - Create an IAM role with two policies:
   - Permissions policy – grants the user of the role the required permissions on a resource.
   - Trust policy – specifies the trusted accounts that are allowed to assume the role.
 - Wildcards (*) cannot be specified as a principal.
 - A permissions policy must also be attached to the user in the trusted account.
+
+
 ## <a id="section-10"></a> **10 - IAM Policies**
 - example, "full access" to S3, "read only" to DynamoDB
 - Policies are documents that define permissions and can be applied to users, groups and roles
@@ -343,6 +360,8 @@ used to make AWS API calls.
 - **IAM policy resource** - The Resource element specifies the object or objects that the statement covers. You specify a resource using an ARN. This can not be used to address the requirements of the given use-case.
 
 - [grant-access-to-user-specific-folders](https://aws.amazon.com/blogs/security/writing-iam-policies-grant-access-to-user-specific-folders-in-an-amazon-s3-bucket/)
+
+
 ## <a id="section-11"></a> **11 - IAM Authentication Methods**
 - external, eg, MS Active Directory
 - API : need an access key id & secret access key, eg, command line, SDKs
@@ -353,6 +372,8 @@ used to make AWS API calls.
   - A combination of an access key ID and a secret access key
   - Used to make programmatic calls to AWS using the API or CLI
   - The secret access is returned only at creation time
+
+
 ## <a id="section-12"></a> **12 - IAM Multi-Factor Authentication**
 
 - adding additional security
@@ -369,6 +390,8 @@ used to make AWS API calls.
   - You can allow users to change their own passwords.
   - You can allow selected IAM users to change their passwords by disabling the option for all
   users and using an IAM policy to grant permissions for the selected users.
+
+
 ## <a id="section-13"></a> **13 - IAM Security Token Service {STS}**
 The AWS Security Token Service (STS) is a web service that enables you to request temporary, limited-
 privilege credentials for IAM users or for users that you authenticate (federated users).
@@ -424,6 +447,8 @@ Temporary security credentials work almost identically to long-term access key c
 
 AWS recommends using Cognito for identity federation with Internet identity providers.
 Users can come from three sources.
+
+
 ## <a id="section-14"></a> **14 - Federation (typically AD)**
   - Uses SAML 2.0.
   - Grants temporary access based on the users AD credentials.
@@ -450,6 +475,9 @@ Users can come from three sources.
     - Identity Broker authenticates with LDAP first, then gets an IAM role associated with the user.
     - Application then authenticates with STS and assumes that IAM role.
     - Application uses that IAM role to interact with the service.
+
+
+
 ## <a id="section-15"></a> **15 - Access Keys**
   - A combination of an access key ID and a secret access key.
   - You can assign two active access keys to a user at a time.
@@ -483,6 +511,8 @@ The following diagram shows the different methods of authentication available wi
 ### Access Advisor feature 
 - <b><i>Access Advisor feature on IAM console </i></b> - To help identify the unused roles, IAM reports the last-used timestamp that represents when a role was last used to  make an AWS request. Your security team can use this information to identify, analyze, and then confidently remove unused roles. This helps improve the security posture of your AWS environments. Additionally, by removing unused roles, you can simplify your monitoring and auditing efforts by focusing only on roles that are in use.
 - [access_policies_access-advisor](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor-view-data.html)
+
+
 ## <a id="section-16"></a> **16 - IAM Best Practices**
 - Lock away the AWS root user access keys
 - Create individual IAM users
@@ -498,13 +528,20 @@ The following diagram shows the different methods of authentication available wi
 - Remove unnecessary credentials
 - Use policy conditions for extra security
 - Monitor activity in your AWS account
+
+
+
 ## <a id="section-17"></a> **17 - Generate a public SSH**
 - Generate a public SSH key from a private SSH key. Then, import the key into each of your AWS Regions
   - Here is the correct way of reusing SSH keys in your AWS Regions:
     - Generate a public SSH key (.pub) file from the private SSH key (.pem) file.
     - Set the AWS Region you wish to import to.
     - Import the public SSH key into the new Region.
+
+
+
 ## <a id="section-18"></a> **18 - AWS Organizations**
+
 [AWS Organizations](https://aws.amazon.com/organizations/) and Consolidated Billing
 
 AWS organizations allows you to consolidate multiple AWS accounts into an organization that you create and centrally manage.
@@ -527,13 +564,10 @@ Consolidated billing includes:
 - Combined usage – You can combine the usage across all accounts in the organization to share the volume pricing discounts and Reserved Instance discounts. This can result in a lower charge for your project, department, or company than with individual standalone accounts.
 - No extra fee – Consolidated billing is offered at no additional cost.
 
-Limit of 20 linked accounts (by default).
-
-One bill for multiple AWS accounts.
-
-Easy to track charges and allocate costs.
-
-Volume pricing discounts can be applied to resources.
+- Limit of 20 linked accounts (by default).
+- One bill for multiple AWS accounts.
+- Easy to track charges and allocate costs.
+- Volume pricing discounts can be applied to resources.
 
 Billing alerts enabled on the Paying account include data for all Linked accounts (or can be created per Linked account).
 
@@ -555,6 +589,10 @@ CloudTrail is on a per account basis and per region basis but can be aggregated 
 
 ### **Service control policies (SCPs)**
 
+![SCP_Policy](../images/IAM/SCP_Policy.png)
+
+
+
 https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html
 https://digitalcloud.training/category/aws-cheat-sheets/aws-solutions-architect-professional/security-identity-compliance-sap/
 
@@ -563,6 +601,8 @@ https://digitalcloud.training/category/aws-cheat-sheets/aws-solutions-architect-
 **Cheat Sheets**
 
 https://tutorialsdojo.com/aws-organizations/
+
+https://digitalcloud.training/aws-organizations/
 
 
 **References:**
@@ -580,6 +620,8 @@ https://docs.aws.amazon.com/organizations/latest/userguide/services-that-can-int
 https://digitalcloud.training/category/aws-cheat-sheets/aws-solutions-architect-professional/aws-networking-content-delivery-sap/
 
 https://digitalcloud.training/category/aws-cheat-sheets/aws-solutions-architect-professional/security-identity-compliance-sap/
+
+https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_example-scps.html#example-ec2-instances
 
 
 **Videos**

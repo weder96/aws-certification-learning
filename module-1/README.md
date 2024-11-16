@@ -185,7 +185,17 @@ We provide an overview of the six pillars of the Well-Architected Framework and 
 <a href="https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html" target="_blank"> 
     Whitepaper - overview of the six pillars of the Well-Architected Framework
 </a>
-<br/><br/><br/>
+<br/><br/>
+
+<a href="https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf" target="_blank"> 
+    AWS_Well-Architected_Framework
+</a>
+<br/><br/>
+
+<a href="https://d1.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf" target="_blank"> 
+    AWS_Cloud_Best_Practices
+</a>
+<br/><br/>
 
 **1. Operational Excellence**
 

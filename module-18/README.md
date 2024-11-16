@@ -15,7 +15,7 @@ https://tutorialsdojo.com/aws-fargate/
 ***************************************************************************************************
 ## <a id="section-01"></a> **1 - Amazon Elastic Container Registry (Amazon ECR)**
 
-![Elastic-Container-Registry](../images/Architecture-Service-Icons_01312022/Arch_Containers/48/Arch_Amazon-Elastic-Container-Registry_48.png "Elastic-Container-Registry")
+![Elastic-Container-Registry](../images/Architecture-Service-Icons_07312022/Arch_Containers/48/Arch_Amazon-Elastic-Container-Registry_48.png "Elastic-Container-Registry")
 
 **Definitions**
 
@@ -63,7 +63,7 @@ https://www.youtube.com/results?search_query=Elastic+Container+Registry+Hans+on
 ***************************************************************************************************
 ## <a id="section-02"></a> **2 - Amazon Elastic Container Service (Amazon ECS)**
 
-![Elastic-Container-Service](../images/Architecture-Service-Icons_01312022/Arch_Containers/64/Arch_Amazon-Elastic-Container-Service_64.svg "Elastic-Container-Service")
+![Elastic-Container-Service](../images/Architecture-Service-Icons_07312022/Arch_Containers/64/Arch_Amazon-Elastic-Container-Service_64.svg "Elastic-Container-Service")
 
 **Definition**
 
@@ -118,7 +118,7 @@ https://www.youtube.com/results?search_query=Amazon+ECS+hands+on
 ***************************************************************************************************
 ## <a id="section-03"></a> **3 - Amazon Elastic Kubernetes Service (Amazon EKS)**
 
-![Amazon-EKS-Cloud](../images/Architecture-Service-Icons_01312022/Arch_Containers/64/Arch_Amazon-Elastic-Kubernetes-Service_64.svg "Amazon-EKS-Cloud")
+![Amazon-EKS-Cloud](../images/Architecture-Service-Icons_07312022/Arch_Containers/64/Arch_Amazon-Elastic-Kubernetes-Service_64.svg "Amazon-EKS-Cloud")
 
 **Definition**
 
@@ -138,7 +138,7 @@ Amazon VPC for isolation
 
 ### **Amazon EKS Anywhere**
 
-![Amazon-EKS-Cloud](../images/Architecture-Service-Icons_01312022/Arch_Containers/64/Arch_Amazon-EKS-Anywhere_64.svg "Amazon-EKS-Cloud")
+![Amazon-EKS-Cloud](../images/Architecture-Service-Icons_07312022/Arch_Containers/64/Arch_Amazon-EKS-Anywhere_64.svg "Amazon-EKS-Cloud")
 
 Using Amazon EKS Anywhere is another way to deploy your containers on-premises. 
 
@@ -149,7 +149,7 @@ This means that the hardware, app deployment location, control plane, and data p
 This gives you extensive control over all the components of your containerized application suite while maintaining official support from AWS.
 
 ### **Amazon EKS Distro**
-![Amazon EKS Distro](../images/Architecture-Service-Icons_01312022/Arch_Containers/64/Arch_Amazon-EKS-Distro_64.svg "Amazon EKS Distro")
+![Amazon EKS Distro](../images/Architecture-Service-Icons_07312022/Arch_Containers/64/Arch_Amazon-EKS-Distro_64.svg "Amazon EKS Distro")
 
 The other deployment option that you can choose is Amazon EKS Distro. 
 
@@ -198,7 +198,7 @@ https://www.youtube.com/watch?v=p6xDCz00TxU
 ***************************************************************************************************
 ## <a id="section-04"></a> **4 - AWS Fargate**
 
-![AWS Fargate](../images/Architecture-Service-Icons_01312022/Arch_Containers/64/Arch_AWS-Fargate_64.svg "AWS Fargate")
+![AWS Fargate](../images/Architecture-Service-Icons_07312022/Arch_Containers/64/Arch_AWS-Fargate_64.svg "AWS Fargate")
 
 **Definitions**
 

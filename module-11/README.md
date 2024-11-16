@@ -47,7 +47,7 @@ for you to delve deeper.
 
 ## <a id="section-01"></a> **1 - Amazon Elastic Map Reduce**
 
-![EMR](/images/Architecture-Service-Icons_01312022/Arch_Analytics/Arch_64/Arch_Amazon-EMR_64.svg)
+![EMR](/images/Architecture-Service-Icons_07312022/Arch_Analytics/Arch_64/Arch_Amazon-EMR_64.svg)
 
 **Definitions**
 

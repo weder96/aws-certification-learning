@@ -11,7 +11,7 @@
 ***************************************************************************************************
 ## <a id="section-01" ></a> **1 - AWS CloudFormation**
 
-![AWS CloudFormation](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-CloudFormation_48.png "AWS CloudFormation")
+![AWS CloudFormation](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_AWS-CloudFormation_48.png "AWS CloudFormation")
 
 AWS CloudFormation is a service that allows you to manage, configure and provision your AWS infrastructure as code.
 

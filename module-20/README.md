@@ -28,7 +28,7 @@
 ***************************************************************************************************
 ## <a id="section-1"></a> **1 - AWS Auto Scaling**
 
-![AWS Auto Scaling](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Auto-Scaling_48.png "AWS Auto Scaling")
+![AWS Auto Scaling](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_AWS-Auto-Scaling_48.png "AWS Auto Scaling")
 
 **References:**
 
@@ -41,7 +41,7 @@
 ***************************************************************************************************
 ## <a id="section-2"></a> **2 - AWS CloudFormation**
 
-![AWS CloudFormation](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-CloudFormation_48.png "AWS CloudFormation")
+![AWS CloudFormation](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_AWS-CloudFormation_48.png "AWS CloudFormation")
 
 **Cheat Sheets**
 
@@ -52,7 +52,7 @@
 ***************************************************************************************************
 ## <a id="section-3"></a> **3 - AWS CloudTrail**
 
-![AWS CloudTrail](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-CloudTrail_48.png "AWS CloudTrail")
+![AWS CloudTrail](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_AWS-CloudTrail_48.png "AWS CloudTrail")
 
 AWS CloudTrail is an auditing service that monitors API activity in your account. Whenever you perform any operation in the account this results in an API action and this information is recorded to create an audit trail.
 
@@ -75,7 +75,7 @@ https://aws.amazon.com/cloudtrail/
 ***************************************************************************************************
 ## <a id="section-4"></a> **4 - Amazon CloudWatch**
 
-![Amazon CloudWatch](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_Amazon-CloudWatch_48.png "Amazon CloudWatch")
+![Amazon CloudWatch](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_Amazon-CloudWatch_48.png "Amazon CloudWatch")
 
 Amazon CloudWatch is a performance monitoring service. AWS services send metrics about their utilization to CloudWatch which collects the metrics. You can then view the results in CloudWatch and configure alarms.
 
@@ -296,7 +296,7 @@ https://aws.amazon.com/cloudwatch/features/
 ***************************************************************************************************
 ## <a id="section-5"></a> **5 - AWS Command Line Interface (AWS CLI)**
 
-![AWS Command Line Interface (AWS CLI)](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Management-Console_48.png "AWS Command Line Interface (AWS CLI)")
+![AWS Command Line Interface (AWS CLI)](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_AWS-Management-Console_48.png "AWS Command Line Interface (AWS CLI)")
 
 **Cheat Sheets**
 
@@ -333,7 +333,7 @@ https://www.youtube.com/results?search_query=AWS+Compute+Optimizer+hands+on
 ***************************************************************************************************
 ## <a id="section-7"></a> **7 - AWS Config**
 
-![AWS Config](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Config_48.png "AWS Config")
+![AWS Config](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_AWS-Config_48.png "AWS Config")
 
 **Cheat Sheets**
 
@@ -344,7 +344,7 @@ https://www.youtube.com/results?search_query=AWS+Compute+Optimizer+hands+on
 ***************************************************************************************************
 ## <a id="section-8"></a> **8 - AWS Control Tower**
 
-![AWS Control Tower](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Control-Tower_48.png "AWS Control Tower")
+![AWS Control Tower](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_AWS-Control-Tower_48.png "AWS Control Tower")
 
 **Cheat Sheets**
 
@@ -355,7 +355,7 @@ https://www.youtube.com/results?search_query=AWS+Compute+Optimizer+hands+on
 ***************************************************************************************************
 ## <a id="section-9"></a> **9 - AWS License Manager**
 
-![AWS License Manager](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-License-Manager_48.png "AWS License Manager")
+![AWS License Manager](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_AWS-License-Manager_48.png "AWS License Manager")
 
 **Definitions**
 
@@ -392,7 +392,7 @@ https://www.youtube.com/results?search_query=AWS+License+Manager+hands+On
 ***************************************************************************************************
 ## <a id="section-10"></a> **10 - Amazon Managed Grafana**
 
-![Amazon Managed Grafana](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_Amazon-Managed-Service-for-Grafana_48.png "Amazon Managed Grafana")
+![Amazon Managed Grafana](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_Amazon-Managed-Service-for-Grafana_48.png "Amazon Managed Grafana")
 
 **Definitions**
 
@@ -436,7 +436,7 @@ https://www.youtube.com/results?search_query=Amazon+Managed+Grafana+hands+on
 ***************************************************************************************************
 ## <a id="section-11"></a> **11 - • Amazon Managed Service for Prometheus**
 
-![• Amazon Managed Service for Prometheus](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_Amazon-Managed-Service-for-Prometheus_48.png "• Amazon Managed Service for Prometheus")
+![• Amazon Managed Service for Prometheus](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_Amazon-Managed-Service-for-Prometheus_48.png "• Amazon Managed Service for Prometheus")
 
 
 **Definitions**
@@ -480,7 +480,7 @@ https://www.youtube.com/watch?v=fW2LOqHDUNM
 ***************************************************************************************************
 ## <a id="section-12"></a> **12 - AWS Management Console**
 
-![AWS Management Console](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Management-Console_48.png "AWS Management Console")
+![AWS Management Console](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_AWS-Management-Console_48.png "AWS Management Console")
 
 
 **Definitions**
@@ -505,13 +505,13 @@ https://aws.amazon.com/console/
 ***************************************************************************************************
 ## <a id="section-12"></a> **13 - AWS Organizations**
 
-![AWS Organizations](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Organizations_48.png "AWS Organizations")
+![AWS Organizations](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_AWS-Organizations_48.png "AWS Organizations")
 
 [Check](https://github.com/weder96/aws-certification-learning/tree/main/module-15#section-18)
 ***************************************************************************************************
 ## <a id="section-14"></a> **14 - AWS Personal Health Dashboard**
 
-![AWS Personal Health Dashboard](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Personal-Health-Dashboard_48.png "AWS Personal Health Dashboard")
+![AWS Personal Health Dashboard](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_AWS-Personal-Health-Dashboard_48.png "AWS Personal Health Dashboard")
 
 **Definitions**
 
@@ -567,7 +567,7 @@ https://www.youtube.com/results?search_query=AWS+Health+Dashboard+hands+on
 ***************************************************************************************************
 ## <a id="section-15"></a> **15 - AWS Proton**
 
-![AWS Proton](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/64/Arch_AWS-Proton_64.svg"AWS Proton")
+![AWS Proton](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/64/Arch_AWS-Proton_64.svg"AWS Proton")
 
 **Definitions**
 
@@ -609,7 +609,7 @@ https://www.youtube.com/results?search_query=AWS+Proton+hands+on
 ***************************************************************************************************
 ## <a id="section-16"></a> **16 - AWS Service Catalog**
 
-![AWS Service Catalog](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Service-Catalog_48.png "AWS Service Catalog")
+![AWS Service Catalog](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_AWS-Service-Catalog_48.png "AWS Service Catalog")
 
 
 **Definitions**
@@ -660,7 +660,7 @@ https://www.youtube.com/results?search_query=AWS+Service+Catalog+hands+on
 ***************************************************************************************************
 ## <a id="section-17"></a> **17 - AWS Systems Manager**
 
-![AWS Systems Manager](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Systems-Manager_48.png "AWS Systems Manager")
+![AWS Systems Manager](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_AWS-Systems-Manager_48.png "AWS Systems Manager")
 
 
 **Definitions**
@@ -726,7 +726,7 @@ https://www.youtube.com/results?search_query=AWS+Systems+Manager++Hands+on
 ***************************************************************************************************
 ## <a id="section-18"></a> **18 - AWS Trusted Advisor**
 
-![AWS Trusted Advisor](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Trusted-Advisor_48.png "AWS Trusted Advisor")
+![AWS Trusted Advisor](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_AWS-Trusted-Advisor_48.png "AWS Trusted Advisor")
 
 
 **Definitions**
@@ -800,7 +800,7 @@ https://www.youtube.com/results?search_query=AWS+Trusted+Advisor++hands+on
 ***************************************************************************************************
 ## <a id="section-19"></a> **19 - AWS Well-Architected Tool**
 
-![AWS Well-Architected Tool](../images/Architecture-Service-Icons_01312022/Arch_Management-Governance/48/Arch_AWS-Well-Architected-Tool_48.png "AWS Well-Architected Tool")
+![AWS Well-Architected Tool](../images/Architecture-Service-Icons_07312022/Arch_Management-Governance/48/Arch_AWS-Well-Architected-Tool_48.png "AWS Well-Architected Tool")
 
 
 **Definitions**

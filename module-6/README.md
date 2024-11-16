@@ -20,12 +20,14 @@
 13. <a href="#section-13"> AWS Wavelength </a>
 14. <a href="#section-14"> Amazon WorkSpaces Family </a>
 15. <a href="#section-15"> Amazon Machine Images (AMIs) </a>
+16. <a href="#section-16"> Placement groups for your Amazon EC2</a>
+17. <a href="#section-17"> Private access to public services, Amazon S3 creating a VPC</a>
 
 
 ***************************************************************************************************
 ## <a id="section-1"></a> **1 - Amazon EC2**
 
-![Amazon EC2](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_Amazon-EC2_48.png "Amazon EC2")
+![Amazon EC2](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_Amazon-EC2_48.png "Amazon EC2")
 
 Amazon Elastic Compute Cloud (Amazon [EC2](https://aws.amazon.com/ec2/?nc1=h_ls)) is a web service that provides resizable compute capacity in the cloud.
 
@@ -312,7 +314,7 @@ Each instance type includes one or more instance sizes, allowing you to scale yo
 ***************************************************************************************************
 ## <a id="section-4"></a> **4 - Amazon Elastic Container Service (ECS)**
 
-![Amazon-Elastic-Container-Service](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_Amazon-Elastic-Container-Service_48.png "Amazon-Elastic-Container-Service")
+![Amazon-Elastic-Container-Service](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_Amazon-Elastic-Container-Service_48.png "Amazon-Elastic-Container-Service")
 
 
 **Cheat Sheets**
@@ -324,7 +326,7 @@ Each instance type includes one or more instance sizes, allowing you to scale yo
 ***************************************************************************************************
 ## <a id="section-5"></a> **5 - AWS Lambda**
 
-![AWS Lambda](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Lambda_48.png "AWS Lambda")
+![AWS Lambda](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_AWS-Lambda_48.png "AWS Lambda")
 
 **References**
 
@@ -333,7 +335,7 @@ Each instance type includes one or more instance sizes, allowing you to scale yo
 ***************************************************************************************************
 ## <a id="section-6"></a> **6 - Amazon LightSail**
 
-![Amazon LightSail](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_Amazon-Lightsail_48.png "Amazon Lightsail")
+![Amazon LightSail](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_Amazon-Lightsail_48.png "Amazon Lightsail")
 
 [Amazon LightSail](https://aws.amazon.com/lightsail/features/)
 
@@ -723,7 +725,7 @@ You can also create [user policies](https://docs.aws.amazon.com/elasticbeanstalk
 ***************************************************************************************************
 ## <a id="section-9"></a> **9 - AWS Batch**
 
-![AWS-Batch](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Batch_48.png "AWS-Batch")
+![AWS-Batch](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_AWS-Batch_48.png "AWS-Batch")
 
 **Cheat Sheets**
 
@@ -756,9 +758,9 @@ https://www.youtube.com/watch?v=H8bmHU_z8Ac
 ## <a id="section-10"></a> **10 - AWS Outposts**
 
 
-![AWS Outposts Server](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Outposts-servers_48.png "AWS Outposts Server")
-![AWS Outposts Family](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Outposts-family_48.png "AWS Outposts Family")
-![AWS Outposts Rack](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Outposts-rack_48.png "AWS Outposts Rack")
+![AWS Outposts Server](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_AWS-Outposts-servers_48.png "AWS Outposts Server")
+![AWS Outposts Family](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_AWS-Outposts-family_48.png "AWS Outposts Family")
+![AWS Outposts Rack](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_AWS-Outposts-rack_48.png "AWS Outposts Rack")
 
 **Definitions**
 
@@ -812,7 +814,7 @@ https://www.youtube.com/results?search_query=AWS+Outposts+hands+on
 ***************************************************************************************************
 ## <a id="section-11"></a> **11 - AWS Serverless Application Repository**
 
-![AWS-Serverless-Application-Repository](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Serverless-Application-Repository_48.png "AWS-Serverless-Application-Repository")
+![AWS-Serverless-Application-Repository](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_AWS-Serverless-Application-Repository_48.png "AWS-Serverless-Application-Repository")
 
 **Definitions**
 
@@ -852,7 +854,7 @@ https://www.youtube.com/results?search_query=AWS+Serverless+Application+Reposito
 ***************************************************************************************************
 ## <a id="section-12"></a> **12 - VMware Cloud on AWS**
 
-![VMware-Cloud-on-AWS](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_VMware-Cloud-on-AWS_48.png "VMware-Cloud-on-AWS")
+![VMware-Cloud-on-AWS](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_VMware-Cloud-on-AWS_48.png "VMware-Cloud-on-AWS")
 
 **Definitions**
 
@@ -882,7 +884,7 @@ https://www.youtube.com/results?search_query=VMware+Cloud+on+AWS+hands+ON
 ***************************************************************************************************
 ## <a id="section-13"></a> **13 - AWS Wavelength**
 
-![AWS-Wavelength](../images/Architecture-Service-Icons_01312022/Arch_Compute/48/Arch_AWS-Wavelength_48.png "AWS-Wavelength")
+![AWS-Wavelength](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_AWS-Wavelength_48.png "AWS-Wavelength")
 
 **Definitons**
 
@@ -958,7 +960,7 @@ https://www.youtube.com/results?search_query=AWS+Wavelength+hands+on
 ***************************************************************************************************
 ## <a id="section-14"></a> **14 - Amazon WorkSpaces Family**
 
-![Amazon-WorkSpaces](../images/Architecture-Service-Icons_01312022/Arch_End-User-Computing/64/Arch_Amazon-WorkSpaces_64.svg "Amazon-WorkSpaces")
+![Amazon-WorkSpaces](../images/Architecture-Service-Icons_07312022/Arch_End-User-Computing/64/Arch_Amazon-WorkSpaces_64.svg "Amazon-WorkSpaces")
 
 **Definition**
 
@@ -984,7 +986,7 @@ https://www.youtube.com/results?search_query=amazon+WorkSpaces+hands+on
 --------------------------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-15"></a> **15 - Amazon Machine Images (AMIs)**
 
-![EC2-Image-Builder](../images/Architecture-Service-Icons_01312022/Arch_Compute/64/Arch_Amazon-EC2-Image-Builder_64.svg "EC2-Image-Builder")
+![EC2-Image-Builder](../images/Architecture-Service-Icons_07312022/Arch_Compute/64/Arch_Amazon-EC2-Image-Builder_64.svg "EC2-Image-Builder")
 
 **Definition**
 
@@ -1047,5 +1049,49 @@ https://www.youtube.com/results?search_query=Amazon+Machine+Images+hands+on
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
+## <a id="section-16"></a> **16 -Placement groups for your Amazon EC2**
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html
+
+To meet the needs of your workload, you can launch a group of interdependent EC2 instances into a placement group to influence their placement.
+Depending on the type of workload, you can create a placement group using one of the following placement strategies:
+
+**Cluster** – Packs instances close together inside an Availability Zone. This strategy enables workloads to achieve the low-latency network performance necessary for tightly-coupled node-to-node communication that is typical of high-performance computing (HPC) applications.
+
+**Partition** – Spreads your instances across logical partitions such that groups of instances in one partition do not share the underlying hardware with groups of instances in different partitions. This strategy is typically used by large distributed and replicated workloads, such as Hadoop, Cassandra, and Kafka.
+
+**Spread** – Strictly places a small group of instances across distinct underlying hardware to reduce correlated failures.
+
+Placement groups are optional. If you don't launch your instances into a placement group, EC2 tries to place the instances in such a way that all of your instances are spread out across the underlying hardware to minimize correlated failures.
+
+**Pricing**
+
+There is no charge for creating a placement group.
+
+**Rules and limitations**
+
+Before you use placement groups, be aware of the following rules:
+
+- An instance can be placed in one placement group at a time; you can't place an instance in multiple placement groups.
+- You can't merge placement groups.
+- On-Demand Capacity Reservations and zonal Reserved Instances allow you to reserve capacity for EC2 instances in Availability Zones. When you launch an instance, if the instance attributes match those specified by an On-Demand Capacity Reservation or a zonal Reserved Instance, then the reserved capacity is automatically used by the instance. This is also true if you launch the instance into a placement group.
+- You can't launch Dedicated Hosts in placement groups.
+- You can't launch a Spot Instance that is configured to stop or hibernate on interruption in a placement group.
 
 
+***************************************************************************************************
+
+## <a id="section-17"></a> **17 - Private access to public services, Amazon S3 creating a VPC**
+
+Private access to public services such as Amazon S3 can be achieved by creating a VPC endpoint in the VPC. For S3 this would be a gateway endpoint. The bucket policy can then be configured to restrict access to the S3 endpoint only which will ensure that only services originating from the VPC will be granted access.
+
+![privateVPC_Ec2_S3](../images/compute/privateVPC_Ec2_S3.png)
+
+
+**References:**
+
+https://docs.aws.amazon.com/vpc/latest/userguide/vpce-gateway.html
+
+**cheat sheets:**
+
+https://digitalcloud.training/amazon-vpc/

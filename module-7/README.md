@@ -410,6 +410,13 @@ The table below provides the details of each Amazon S3 storage class:
 
 Objects stored in the S3 One Zone-IA storage class are stored redundantly within a single Availability Zone in the AWS Region you select.
 
+[lifecycle-transition-general-considerations](https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-transition-general-considerations.html)
+
+![lifecycle](../images/storage/lifecicleS3.png)
+
+
+
+
 ### **Access and Access Policies**
 
 There are four mechanisms for controlling access to Amazon S3 resources:
@@ -1864,8 +1871,11 @@ Unit: Percent	|File, cached-volume, and tape gateways.|
 **Cheat Sheets**
 
 https://digitalcloud.training/aws-storage-gateway/
+s
 
 **References:**
+
+https://aws.amazon.com/storagegateway/faqs/
 
 https://docs.aws.amazon.com/vpc/latest/privatelink/gateway-endpoints.html#gateway-endpoint-pricing
 
@@ -2077,11 +2087,25 @@ Min size is 1.2 TiB with increments of 2.4 TiB.
 - Burst up to 1,300 Mb/s per TiB (uses a credit system).
 
 
+### Case use
+
+Amazon FSx for Lustre provides a high-performance file system optimized for fast processing of workloads such as machine learning, high-performance computing (HPC), video processing, financial modeling, and electronic design automation (EDA).
+
+These workloads commonly require data to be presented via a fast and scalable file system interface, and typically have data sets stored on long-term data stores like Amazon S3.
+
+![amazonFsxLustreHPC](../images/storage/amazonFsxLustreHPC.png)
+
+Amazon FSx works natively with Amazon S3, making it easy to access your S3 data to run data processing workloads. Your S3 objects are presented as files in your file system, and you can write your results back to S3. This lets you run data processing workloads on FSx for Lustre and store your long-term data on S3 or on-premises data stores.
+
+Therefore, the best combination for this scenario is to use S3 for cold data and FSx for Lustre for the parallel HPC job.
+
+
 **Cheat Sheets**
 
 https://digitalcloud.training/amazon-fsx/
 
 **References:**
+https://aws.amazon.com/fsx/lustre/
 
 https://aws.amazon.com/fsx/netapp-ontap/
 

@@ -38,7 +38,7 @@ https://www.youtube.com/watch?v=YiqTBDmn00I
 *************************************************************************************************************
 ## <a id="section-02"></a> **2 - AWS budgets**
 
-![AWS budgets](../images/Architecture-Service-Icons_01312022/Arch_AWS-Cost-Management/64/Arch_AWS-Budgets_64.svg)
+![AWS budgets](../images/Architecture-Service-Icons_07312022/Arch_AWS-Cost-Management/64/Arch_AWS-Budgets_64.svg)
 
 [AWS budgets](https://aws.amazon.com/aws-cost-management/aws-budgets/?nc1=h_ls)
 
@@ -98,11 +98,18 @@ Database administration, operating system licensing and application licensing wi
 
 *********************************************************************************************************
 ## <a id="section-04"></a> **4 - AWS Cost Explorer**
-![AWS Cost Explorer](../images/Architecture-Service-Icons_01312022/Arch_AWS-Cost-Management/48/Arch_AWS-Cost-Explorer_48.png)
+![AWS Cost Explorer](../images/Architecture-Service-Icons_07312022/Arch_AWS-Cost-Management/48/Arch_AWS-Cost-Explorer_48.png)
 
 [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/)
 
+
+AWS Cost Explorer has an easy-to-use interface that lets you visualize, understand, and manage your AWS costs and usage over time. AWS Cost Explorer provides you with a set of default reports that you can use as the starting place for your analysis. From there, use the filtering and grouping capabilities to dive deeper into your cost and usage data and generate custom insights.
+
+![Savings and Billing](../images/savingsAndBilling/2021-04-25_04-45-54-cb987c08235919fe7daa713ac8870bd8.jpg)
+
+
 **Cheat Sheets**
+
 https://digitalcloud.training/aws-billing-and-pricing/
 
 **References**
@@ -115,7 +122,7 @@ https://www.youtube.com/results?search_query=aws+cost+explorer
 
 *********************************************************************************************************
 ## <a id="section-05"></a> **5 - AWS Application Cost Profiler**
-![AWS-Application-Cost-Profiler](../images/Architecture-Service-Icons_01312022/Arch_AWS-Cost-Management/48/Arch_AWS-Application-Cost-Profiler_48.png)
+![AWS-Application-Cost-Profiler](../images/Architecture-Service-Icons_07312022/Arch_AWS-Cost-Management/48/Arch_AWS-Application-Cost-Profiler_48.png)
 
 [AWS-Application-Cost-Profiler](https://aws.amazon.com/aws-cost-management/aws-application-cost-profiler/)
 
@@ -129,7 +136,7 @@ https://digitalcloud.training/aws-billing-and-pricing/
 
 *********************************************************************************************************
 ## <a id="section-06"></a> **6 - AWS Cost and Usage Report**
-![AWS Cost and Usage Report](../images/Architecture-Service-Icons_01312022/Arch_AWS-Cost-Management/48/Arch_AWS-Cost-and-Usage-Report_48.png)
+![AWS Cost and Usage Report](../images/Architecture-Service-Icons_07312022/Arch_AWS-Cost-Management/48/Arch_AWS-Cost-and-Usage-Report_48.png)
 
 [AWS Cost and Usage Report](https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html)
 
@@ -155,7 +162,7 @@ https://www.youtube.com/results?search_query=AWS+Cost+and+Usage+Report
 
 *********************************************************************************************************
 ## <a id="section-07"></a> **7 - Savings Plans**
-![Savings Plans](../images/Architecture-Service-Icons_01312022/Arch_AWS-Cost-Management/48/Arch_Savings-Plans_48.png)
+![Savings Plans](../images/Architecture-Service-Icons_07312022/Arch_AWS-Cost-Management/48/Arch_Savings-Plans_48.png)
 
 [Savings Plans](https://aws.amazon.com/savingsplans/)
 

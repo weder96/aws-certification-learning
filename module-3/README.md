@@ -22,10 +22,10 @@ AWS is constantly expanding around the world and currently there are:
 - AWS Data Centers
 - AWS Edge Locations / Points of Presence
 
-[infra](https://aws.amazon.com/pt/about-aws/global-infrastructure/regions_az/)
+[infra](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
 
 
-<img src="../images/extra/aws_regions_resume.png" alt="aws_regions_resume" width=80%>
+<img src="../images/mod3/infra01.png" alt="aws_regions_resume" width=80%>
 
 **AWS Regions**
 - AWS has regions all over the world
@@ -42,6 +42,9 @@ The AWS Region is an area of ​​the world that they have selected for a full 
 - Beijing
 - London
 - Paris
+
+
+
 
 **How ​​do I choose an AWS Region?**
 
@@ -75,7 +78,10 @@ AZs within a region provide inexpensive, low-latency network connectivity to oth
 - They are separated from each other so that they are isolated from disasters
 - They are connected with high bandwidth, ultra-low latency network 
 
-<img src="../images/extra/infra.png" alt="aws" width=80%>
+
+<img src="../images/mod3/infra02.png" alt="aws_regions_resume" width=80%>
+
+# It is important to check the links below for references for updates, AWS is always evolving and data may be out of date on the date you read it.
 **AWS Edge Locations**
 Local distribution points. Useful for services like Netflix so they can store data closer to customers for high-speed, low-latency transfers.
 
@@ -126,11 +132,20 @@ Each AWS Local Zone location is an extension of an AWS Region where you can run 
 AWS Local Zones provide a secure, high-bandwidth connection between on-premises workloads and those running in the AWS Region, allowing you to seamlessly connect to the full range of services in the region through the same APIs and data sets. tools.
 
 **AWS Wavelength(AWS Wavelength)**
+
 AWS Wavelength enables developers to build applications that deliver single-digit millisecond latencies to mobile devices and end users.
 
 AWS developers can deploy their applications in wavelength zones, AWS infrastructure deployments that embed AWS compute and storage services in telecom providers' data centers at the edge of 5G networks, and easily access the breadth of AWS services at the region.
 
 AWS Wavelength brings AWS services to the edge of the 5G network, minimizing latency for connecting to an application from a mobile device.
+
+[wavelength Documentation](https://docs.aws.amazon.com/wavelength/)
+
+**Video :**
+
+https://www.youtube.com/watch?v=EhMqwPqPzcY
+
+https://www.youtube.com/watch?v=_UHNoxoyv6A
 
 **AWS Outposts(AWS Outposts)**
 AWS Outposts bring native AWS services, infrastructure, and operating models to virtually any data center, co-location space, or on-premises facility.
@@ -168,6 +183,8 @@ https://aws.amazon.com/about-aws/global-infrastructure/
 https://docs.aws.amazon.com/aws-technical-content/latest/aws-overview/global-infrastructure.html
 
 https://www.infrastructure.aws/
+
+https://docs.aws.amazon.com/pdfs/local-zones/latest/ug/local-zones.pdf
 
 **Videos**
 

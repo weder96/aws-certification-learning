@@ -22,6 +22,7 @@
 15. <a href="#section-15"> Amazon Aurora Serverless </a>
 16. <a href="#section-16"> Amazon Keyspaces (for Apache Cassandra) </a>
 17. <a href="#section-17"> Amazon Timestream  </a>
+18. <a href="#section-18"> Gobal Databases  </a>
 
 ***********************************************************************************************************
 ## <a id="section-01"></a> **1  - Use Cases For Different Database Types**
@@ -76,6 +77,14 @@ https://digitalcloud.training/aws-database-services/
 **References:**
 
 https://aws.amazon.com/rds/
+
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html
+
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Encryption.html
+
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html
+
+https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/encrypt-an-existing-amazon-rds-for-postgresql-db-instance.html
 
 **Videos**
 
@@ -293,6 +302,7 @@ RedShift uses replication and continuous backups to increase availability and du
 
 ***************************************************************************************************************
 ## <a id="section-05"></a> **5  - Amazon ElastiCache**
+
 ElastiCache is a web service that makes it easy to deploy and run server nodes that support the Memcached or Redis protocol in the cloud.
 
 The in-memory cache provided by ElastiCache can be used to significantly improve latency and throughput for many read-intensive application workloads or compute-intensive workloads.
@@ -322,6 +332,21 @@ ElastiCache can be used to store session state.
 ### **There are two types of ElastiCache engine:**
 - **Memcached** – simpler model, can run large nodes with multiple cores/threads, can scale in and out, can cache objects like databases.
 - **Redis** – complex model, supports encryption, master/slave replication, cross AZ (HA), automatic failover and backup/restore.
+
+**References**
+
+https://aws.amazon.com/elasticache/
+
+**cheat sheets**
+
+https://digitalcloud.training/amazon-elasticache/
+
+**Videos**
+
+https://www.youtube.com/watch?v=v0zozYN-mdI
+
+https://www.youtube.com/watch?v=lU4cHVL9IXM
+
 
 ****************************************************** ****************************************************** ***********
 ## <a id="section-06"></a> **6  - Amazon EMR**
@@ -418,7 +443,7 @@ https://www.youtube.com/watch?v=n0KK094sPnQ
 -----------------------------------------------------------------------------------------------------------------------
 ## <a id="section-11"></a> **11 - Amazon Neptune**
 
-![Neptune](../images/Architecture-Service-Icons_01312022/Arch_Database/64/Arch_Amazon-Neptune_64.svg)
+![Neptune](../images/Architecture-Service-Icons_07312022/Arch_Database/64/Arch_Amazon-Neptune_64.svg)
 
 **Definitions**
 
@@ -465,7 +490,7 @@ https://www.youtube.com/results?search_query=Amazon+Neptune++hands+on
 -----------------------------------------------------------------------------------------------------------------------
 ## <a id="section-12"></a> **12 - Amazon Aurora**
 
-![Aurora](../images/Architecture-Service-Icons_01312022/Arch_Database/48/Arch_Amazon-Aurora_48.png)
+![Aurora](../images/Architecture-Service-Icons_07312022/Arch_Database/48/Arch_Amazon-Aurora_48.png)
 
 **Definitions**
 
@@ -475,6 +500,115 @@ https://www.youtube.com/results?search_query=Amazon+Neptune++hands+on
 - Aurora supports quick, efficient cloning operations.
 - You can share your Amazon Aurora DB clusters with other AWS accounts for quick and efficient database cloning.
 - Aurora is fault-tolerant and self-healing.
+- Aurora is a proprietary technology from AWS (not open sourced)
+- Postgres and MySQL are both supported as Aurora DB (that means your drivers will work as if Aurora was a Postgres or MySQL database)
+- Aurora is “AWS cloud optimized” and claims 5x performance improvement over MySQL on RDS, over 3x the performance of Postgres on RDS
+- Aurora storage automatically grows in increments of 10GB, up to 128 TB.
+- Aurora can have up to 15 replicas and the replication process is faster than MySQL (sub 10 ms replica lag)
+- Failover in Aurora is instantaneous. It’s HA (High Availability) native.
+- Aurora costs more than RDS (20% more) – but is more efficient
+
+
+### **Aurora High Availability and Read Scaling**
+
+-  6 copies of your data across 3 AZ:
+-  4 copies out of 6 needed for writes
+-  3 copies out of 6 need for reads
+-  Self healing with peer-to-peer replication
+-  Storage is striped across 100s of volumes
+-  One Aurora Instance takes writes (master)
+-  Automated failover for master in less than 30 seconds
+-  Master + up to 15 Aurora Read Replicas serve reads
+-  Support for Cross Region Replication
+
+![aurora01](../images/databases/aurora01.png)
+
+
+### **Features of Aurora**
+
+-  Automatic fail-over
+-  Backup and Recovery
+-  Isolation and security
+-  Industry compliance
+-  Push-button scaling
+-  Automated Patching with Zero Downtime
+-  Advanced Monitoring
+-  Routine Maintenance
+-  Backtrack: restore data at any point of time without using backups
+
+
+### **Aurora DB Cluster**
+
+![aurora02](../images/databases/aurora2.png)
+
+
+---------------------------------------------------------------------------
+
+### **Aurora – Custom Endpoints**
+
+-  Define a subset of Aurora Instances as a Custom Endpoint
+-  Example: Run analytical queries on specific replicas
+-  The Reader Endpoint is generally not used after defining Custom Endpoints
+
+![aurora4](../images/databases/CustomEndPoint.png)
+
+
+### **Aurora Replicas - Auto Scaling**
+
+![aurora3](../images/databases/aurora3.png)
+
+
+
+### **Aurora Machine Learning**
+
+-  Enables you to add ML-based predictions to your applications via SQL
+-  Simple, optimized, and secure integration between Aurora and AWS ML services
+-  Supported services
+-  Amazon SageMaker (use with any ML model)
+-  Amazon Comprehend (for sentiment analysis)
+-  You don’t need to have ML experience
+-  Use cases: fraud detection, ads targeting, sentiment analysis, product recommendations
+
+![machineLearning](../images/databases/machineLearning.png)
+
+
+### **Aurora Backups**
+-  Automated backups
+-  1 to 35 days (cannot be disabled)
+-  point-in-time recovery in that timeframe
+-  Manual DB Snapshots
+-  Manually triggered by the user
+-  Retention of backup for as long as you want
+
+![backupAurora](../images/databases/backupAurora.png)
+
+
+### **RDS & Aurora Restore options**
+
+-  Restoring a RDS / Aurora backup or a snapshot creates a new database
+-  Restoring MySQL RDS database from S3
+-  Create a backup of your on-premises database
+-  Store it on Amazon S3 (object storage)
+-  Restore the backup file onto a new RDS instance running MySQL
+-  Restoring MySQL Aurora cluster from S3
+-  Create a backup of your on-premises database using Percona XtraBackup
+-  Store the backup file on Amazon S3
+-  Restore the backup file onto a new Aurora cluster running MySQL
+
+![backupAurora2](../images/databases/backupAurora2.png)
+
+### **Aurora Database Cloning**
+
+-  Create a new Aurora DB Cluster from an existing one
+-  Faster than snapshot & restore
+-  Uses copy-on-write protocol
+-  Initially, the new DB cluster uses the same data volume as the original DB cluster (fast and efficient – no copying is needed)
+-  When updates are made to the new DB cluster data, then additional storage is allocated and data is copied to be separated
+-  Very fast & cost-effective
+-  Useful to create a “staging” database from a “production” database without impacting the production database
+
+![cloneAurora](../images/databases/cloneAurora.png)
+
 
 ### **Monitoring**
 - Subscribe to Amazon RDS events to be notified when changes occur with a DB instance, DB cluster, DB cluster snapshot, DB parameter group, or DB security group.
@@ -490,6 +624,19 @@ https://www.youtube.com/results?search_query=Amazon+Neptune++hands+on
 - Aurora PostgreSQL support for Kerberos and Microsoft Active Directory provides the benefits of single sign-on and centralized authentication of Aurora PostgreSQL database users. In addition to password-based and IAM-based authentication methods, you can also authenticate using AWS Managed Microsoft AD Service
 
 
+### **RDS & Aurora Security**
+
+-  At-rest encryption:
+-  Database master & replicas encryption using AWS KMS – must be defined as launch time
+-  If the master is not encrypted, the read replicas cannot be encrypted
+-  To encrypt an un-encrypted database, go through a DB snapshot & restore as encrypted
+-  In-flight encryption: TLS-ready by default, use the AWS TLS root certificates client-side
+-  IAM Authentication: IAM roles to connect to your database (instead of username/pw)
+-  Security Groups: Control Network access to your RDS / Aurora DB
+-  No SSH available except on RDS Custom
+-  Audit Logs can be enabled and sent to CloudWatch Logs for longer retention
+
+
 
 **Cheat Sheets**
 
@@ -498,7 +645,12 @@ https://digitalcloud.training/amazon-aurora/
 https://tutorialsdojo.com/amazon-aurora/
 
 
+
 **References:**
+
+https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Replication.html
+
+https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html
 
 https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/
 
@@ -531,7 +683,7 @@ https://www.youtube.com/results?search_query=Amazon+Aurora+Hans+on
 -----------------------------------------------------------------------------------------------------------------------
 ## <a id="section-13"></a> **13 - Amazon DocumentDB**
 
-![DocumentDB](../images/Architecture-Service-Icons_01312022/Arch_Database/48/Arch_Amazon-DocumentDB_48.png)
+![DocumentDB](../images/Architecture-Service-Icons_07312022/Arch_Database/48/Arch_Amazon-DocumentDB_48.png)
 
 **Definitions**
 - Fully managed document database service designed to be fast, scalable, and highly available.
@@ -580,7 +732,7 @@ https://www.youtube.com/results?search_query=Amazon+DocumentDB+hands+on++
 -----------------------------------------------------------------------------------------------------------------------
 ## <a id="section-14"></a> **14 - Amazon QLDB Serverless**
 
-![DocumentDB](../images/Architecture-Service-Icons_01312022/Arch_Database/48/Arch_Amazon-Quantum-Ledger-Database_48.png)
+![DocumentDB](../images/Architecture-Service-Icons_07312022/Arch_Database/48/Arch_Amazon-Quantum-Ledger-Database_48.png)
 
 **Definitions**
 
@@ -654,6 +806,15 @@ Check <a href="#section-12"> Amazon Aurora </a>
     - Development and Test Databases
     - Multi-tenant Applications
 - DB cluster does not have a public IP address and can be accessed only from within a VPC based on the VPC service.
+-  Automated database instantiation and autoscaling based on actual usage
+-  Good for infrequent, intermittent or unpredictable workloads
+-  No capacity planning needed
+-  Pay per second, can be more cost-effective
+
+
+![auroraProxy](../images/databases/auroraProxy.png)
+
+
 
 
 ### **Aurora Serverless and Failover**
@@ -786,3 +947,38 @@ https://www.youtube.com/results?search_query=Amazon+Timestream
 https://www.youtube.com/results?search_query=Amazon+Timestream+hands+on
 
 ------------------------------------------------------------------------------------------------------------------------
+
+## <a id="section-18"></a> **18 - Global Database**
+
+**Definitions**
+
+Global Aurora
+
+-  Aurora Cross Region Read Replicas:
+-  Useful for disaster recovery
+-  Simple to put in place
+-  Aurora Global Database (recommended):
+-  1 Primary Region (read / write)
+-  Up to 5 secondary (read-only) regions, replication lag is less than 1 second
+-  Up to 16 Read Replicas per secondary region
+-  Helps for decreasing latency
+-  Promoting another region (for disaster recovery) has an RTO of < 1 minute
+-  Typical cross-region replication takes less than 1 second
+
+![globalAurora](../images/databases/globalAurora.png)
+
+
+**Cheat Sheets**
+
+
+**References:**
+
+https://aws.amazon.com/pt/rds/aurora/global-database/
+
+**Videos**
+
+**Hands On**
+
+
+------------------------------------------------------------------------------------------------------------------------
+
