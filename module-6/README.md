@@ -27,7 +27,7 @@
 ***************************************************************************************************
 ## <a id="section-1"></a> **1 - Amazon EC2**
 
-![Amazon EC2](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_Amazon-EC2_48.png "Amazon EC2")
+![Amazon EC2](../images/Architecture-Service-Icons_06072024/Arch_Compute/48/Arch_Amazon-EC2_48.png "Amazon EC2")
 
 Amazon Elastic Compute Cloud (Amazon [EC2](https://aws.amazon.com/ec2/?nc1=h_ls)) is a web service that provides resizable compute capacity in the cloud.
 
@@ -314,7 +314,7 @@ Each instance type includes one or more instance sizes, allowing you to scale yo
 ***************************************************************************************************
 ## <a id="section-4"></a> **4 - Amazon Elastic Container Service (ECS)**
 
-![Amazon-Elastic-Container-Service](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_Amazon-Elastic-Container-Service_48.png "Amazon-Elastic-Container-Service")
+![Amazon-Elastic-Container-Service](../images/Architecture-Service-Icons_06072024/Arch_Compute/48/Arch_Amazon-Elastic-Container-Service_48.png "Amazon-Elastic-Container-Service")
 
 
 **Cheat Sheets**
@@ -326,7 +326,7 @@ Each instance type includes one or more instance sizes, allowing you to scale yo
 ***************************************************************************************************
 ## <a id="section-5"></a> **5 - AWS Lambda**
 
-![AWS Lambda](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_AWS-Lambda_48.png "AWS Lambda")
+![AWS Lambda](../images/Architecture-Service-Icons_06072024/Arch_Compute/48/Arch_AWS-Lambda_48.png "AWS Lambda")
 
 **References**
 
@@ -335,7 +335,7 @@ Each instance type includes one or more instance sizes, allowing you to scale yo
 ***************************************************************************************************
 ## <a id="section-6"></a> **6 - Amazon LightSail**
 
-![Amazon LightSail](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_Amazon-Lightsail_48.png "Amazon Lightsail")
+![Amazon LightSail](../images/Architecture-Service-Icons_06072024/Arch_Compute/48/Arch_Amazon-Lightsail_48.png "Amazon Lightsail")
 
 [Amazon LightSail](https://aws.amazon.com/lightsail/features/)
 
@@ -725,7 +725,7 @@ You can also create [user policies](https://docs.aws.amazon.com/elasticbeanstalk
 ***************************************************************************************************
 ## <a id="section-9"></a> **9 - AWS Batch**
 
-![AWS-Batch](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_AWS-Batch_48.png "AWS-Batch")
+![AWS-Batch](../images/Architecture-Service-Icons_06072024/Arch_Compute/48/Arch_AWS-Batch_48.png "AWS-Batch")
 
 **Cheat Sheets**
 
@@ -758,9 +758,9 @@ https://www.youtube.com/watch?v=H8bmHU_z8Ac
 ## <a id="section-10"></a> **10 - AWS Outposts**
 
 
-![AWS Outposts Server](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_AWS-Outposts-servers_48.png "AWS Outposts Server")
-![AWS Outposts Family](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_AWS-Outposts-family_48.png "AWS Outposts Family")
-![AWS Outposts Rack](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_AWS-Outposts-rack_48.png "AWS Outposts Rack")
+![AWS Outposts Server](../images/Architecture-Service-Icons_06072024/Arch_Compute/48/Arch_AWS-Outposts-servers_48.png "AWS Outposts Server")
+![AWS Outposts Family](../images/Architecture-Service-Icons_06072024/Arch_Compute/48/Arch_AWS-Outposts-family_48.png "AWS Outposts Family")
+![AWS Outposts Rack](../images/Architecture-Service-Icons_06072024/Arch_Compute/48/Arch_AWS-Outposts-rack_48.png "AWS Outposts Rack")
 
 **Definitions**
 
@@ -814,7 +814,7 @@ https://www.youtube.com/results?search_query=AWS+Outposts+hands+on
 ***************************************************************************************************
 ## <a id="section-11"></a> **11 - AWS Serverless Application Repository**
 
-![AWS-Serverless-Application-Repository](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_AWS-Serverless-Application-Repository_48.png "AWS-Serverless-Application-Repository")
+![AWS-Serverless-Application-Repository](../images/Architecture-Service-Icons_06072024/Arch_Compute/48/Arch_AWS-Serverless-Application-Repository_48.png "AWS-Serverless-Application-Repository")
 
 **Definitions**
 
@@ -854,7 +854,7 @@ https://www.youtube.com/results?search_query=AWS+Serverless+Application+Reposito
 ***************************************************************************************************
 ## <a id="section-12"></a> **12 - VMware Cloud on AWS**
 
-![VMware-Cloud-on-AWS](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_VMware-Cloud-on-AWS_48.png "VMware-Cloud-on-AWS")
+![VMware-Cloud-on-AWS](../images/Architecture-Service-Icons_06072024/Arch_Compute/48/Arch_VMware-Cloud-on-AWS_48.png "VMware-Cloud-on-AWS")
 
 **Definitions**
 
@@ -884,7 +884,7 @@ https://www.youtube.com/results?search_query=VMware+Cloud+on+AWS+hands+ON
 ***************************************************************************************************
 ## <a id="section-13"></a> **13 - AWS Wavelength**
 
-![AWS-Wavelength](../images/Architecture-Service-Icons_07312022/Arch_Compute/48/Arch_AWS-Wavelength_48.png "AWS-Wavelength")
+![AWS-Wavelength](../images/Architecture-Service-Icons_06072024/Arch_Compute/48/Arch_AWS-Wavelength_48.png "AWS-Wavelength")
 
 **Definitons**
 
@@ -960,7 +960,7 @@ https://www.youtube.com/results?search_query=AWS+Wavelength+hands+on
 ***************************************************************************************************
 ## <a id="section-14"></a> **14 - Amazon WorkSpaces Family**
 
-![Amazon-WorkSpaces](../images/Architecture-Service-Icons_07312022/Arch_End-User-Computing/64/Arch_Amazon-WorkSpaces_64.svg "Amazon-WorkSpaces")
+![Amazon-WorkSpaces](../images/Architecture-Service-Icons_06072024/Arch_End-User-Computing/64/Arch_Amazon-WorkSpaces_64.svg "Amazon-WorkSpaces")
 
 **Definition**
 
@@ -986,7 +986,7 @@ https://www.youtube.com/results?search_query=amazon+WorkSpaces+hands+on
 --------------------------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-15"></a> **15 - Amazon Machine Images (AMIs)**
 
-![EC2-Image-Builder](../images/Architecture-Service-Icons_07312022/Arch_Compute/64/Arch_Amazon-EC2-Image-Builder_64.svg "EC2-Image-Builder")
+![EC2-Image-Builder](../images/Architecture-Service-Icons_06072024/Arch_Compute/64/Arch_Amazon-EC2-Image-Builder_64.svg "EC2-Image-Builder")
 
 **Definition**
 

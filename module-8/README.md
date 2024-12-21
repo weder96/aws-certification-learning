@@ -443,7 +443,7 @@ https://www.youtube.com/watch?v=n0KK094sPnQ
 -----------------------------------------------------------------------------------------------------------------------
 ## <a id="section-11"></a> **11 - Amazon Neptune**
 
-![Neptune](../images/Architecture-Service-Icons_07312022/Arch_Database/64/Arch_Amazon-Neptune_64.svg)
+![Neptune](../images/Architecture-Service-Icons_06072024/Arch_Database/64/Arch_Amazon-Neptune_64.svg)
 
 **Definitions**
 
@@ -490,7 +490,7 @@ https://www.youtube.com/results?search_query=Amazon+Neptune++hands+on
 -----------------------------------------------------------------------------------------------------------------------
 ## <a id="section-12"></a> **12 - Amazon Aurora**
 
-![Aurora](../images/Architecture-Service-Icons_07312022/Arch_Database/48/Arch_Amazon-Aurora_48.png)
+![Aurora](../images/Architecture-Service-Icons_06072024/Arch_Database/48/Arch_Amazon-Aurora_48.png)
 
 **Definitions**
 
@@ -683,7 +683,7 @@ https://www.youtube.com/results?search_query=Amazon+Aurora+Hans+on
 -----------------------------------------------------------------------------------------------------------------------
 ## <a id="section-13"></a> **13 - Amazon DocumentDB**
 
-![DocumentDB](../images/Architecture-Service-Icons_07312022/Arch_Database/48/Arch_Amazon-DocumentDB_48.png)
+![DocumentDB](../images/Architecture-Service-Icons_06072024/Arch_Database/48/Arch_Amazon-DocumentDB_48.png)
 
 **Definitions**
 - Fully managed document database service designed to be fast, scalable, and highly available.
@@ -732,7 +732,7 @@ https://www.youtube.com/results?search_query=Amazon+DocumentDB+hands+on++
 -----------------------------------------------------------------------------------------------------------------------
 ## <a id="section-14"></a> **14 - Amazon QLDB Serverless**
 
-![DocumentDB](../images/Architecture-Service-Icons_07312022/Arch_Database/48/Arch_Amazon-Quantum-Ledger-Database_48.png)
+![DocumentDB](../images/Architecture-Service-Icons_06072024/Arch_Database/48/Arch_Amazon-Quantum-Ledger-Database_48.png)
 
 **Definitions**
 
@@ -788,7 +788,7 @@ https://www.youtube.com/results?search_query=Amazon+QLDB+hands+on++
 ------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-15"></a> **15 - Amazon Aurora Serverless**
 
-![DocumentDB](../images/Architecture-Service-Icons_07312022/Arch_Database/64/Arch_Amazon-Aurora_64.svg)
+![DocumentDB](../images/Architecture-Service-Icons_06072024/Arch_Database/64/Arch_Amazon-Aurora_64.svg)
 
 **Definitions**
 
@@ -856,7 +856,7 @@ https://www.youtube.com/results?search_query=Amazon+Aurora+Serverless+Hans+on
 ------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-16"></a> **16 - Amazon Keyspaces (for Apache Cassandra)**
 
-![DocumentDB](../images/Architecture-Service-Icons_07312022/Arch_Database/64/Arch_Amazon-Keyspaces_64.svg)
+![DocumentDB](../images/Architecture-Service-Icons_06072024/Arch_Database/64/Arch_Amazon-Keyspaces_64.svg)
 
 **Definitions**
 
@@ -904,7 +904,7 @@ https://www.youtube.com/results?search_query=Amazon+Keyspaces+hands+on
 ------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-17"></a> **17 - Amazon Timestream**
 
-![DocumentDB](../images/Architecture-Service-Icons_07312022/Arch_Database/64/Arch_Amazon-Timestream_64.svg)
+![DocumentDB](../images/Architecture-Service-Icons_06072024/Arch_Database/64/Arch_Amazon-Timestream_64.svg)
 
 **Definitions**
 

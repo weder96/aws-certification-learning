@@ -15,7 +15,7 @@
 ***************************************************************************************************
 ## <a id="section_01"></a> **1 - AWS Amplify**
 
-![AWS Amplify](../images/Architecture-Service-Icons_07312022/Arch_Front-End-Web-Mobile/64/Arch_AWS-Amplify_64.svg)
+![AWS Amplify](../images/Architecture-Service-Icons_06072024/Arch_Front-End-Web-Mobile/64/Arch_AWS-Amplify_64.svg)
 
 **Definitions**
 
@@ -84,7 +84,7 @@ https://www.youtube.com/results?search_query=aws+amplify+hands+on
 
 ## <a id="section_03"></a> **3 - AWS Device Farm**
 
-![AWS Amplify](../images/Architecture-Service-Icons_07312022/Arch_Front-End-Web-Mobile/64/Arch_AWS-Device-Farm_64.svg)
+![AWS Amplify](../images/Architecture-Service-Icons_06072024/Arch_Front-End-Web-Mobile/64/Arch_AWS-Device-Farm_64.svg)
 
 **Definitions**
 
@@ -116,7 +116,7 @@ https://www.youtube.com/results?search_query=device+farm+aws+hands+on
 
 ## <a id="section_04"></a> **4 - Amazon Pinpoint**
 
-![Amazon Pinpoint](../images/Architecture-Service-Icons_07312022/Arch_Business-Applications/64/Arch_Amazon-Pinpoint_64.svg)
+![Amazon Pinpoint](../images/Architecture-Service-Icons_06072024/Arch_Business-Applications/64/Arch_Amazon-Pinpoint_64.svg)
 
 **Definitions**
 

@@ -20,7 +20,7 @@
 ***************************************************************************************************
 ## <a id="section-1"></a> **1 - Amazon CloudFront**
 
-![Amazon CloudFront](../images/Architecture-Service-Icons_07312022/Arch_Networking-Content-Delivery/48/Arch_Amazon-CloudFront_48.png "Amazon CloudFront")
+![Amazon CloudFront](../images/Architecture-Service-Icons_06072024/Arch_Networking-Content-Delivery/48/Arch_Amazon-CloudFront_48.png "Amazon CloudFront")
 
 **Cheat Sheets**
 
@@ -50,7 +50,7 @@ https://www.youtube.com/user/AmazonWebServices/search?query=CloudFront
 ***************************************************************************************************
 ## <a id="section-2"></a> **2 - AWS Direct Connect**
 
-![Amazon CloudFront](../images/Architecture-Service-Icons_07312022/Arch_Networking-Content-Delivery/48/Arch_AWS-Direct-Connect_48.png "AWS Direct Connect")
+![Amazon CloudFront](../images/Architecture-Service-Icons_06072024/Arch_Networking-Content-Delivery/48/Arch_AWS-Direct-Connect_48.png "AWS Direct Connect")
 
 **Cheat Sheets**
 
@@ -74,7 +74,7 @@ https://www.youtube.com/results?search_query=aws+direct+connect
 ***************************************************************************************************
 ## <a id="section-3"></a> **3 - Elastic Load Balancing (ELB)**
 
-![Elastic Load Balancing (ELB)](../images/Architecture-Service-Icons_07312022/Arch_Networking-Content-Delivery/48/Arch_Elastic-Load-Balancing_48.png "Elastic Load Balancing (ELB)")
+![Elastic Load Balancing (ELB)](../images/Architecture-Service-Icons_06072024/Arch_Networking-Content-Delivery/48/Arch_Elastic-Load-Balancing_48.png "Elastic Load Balancing (ELB)")
 
 **Cheat Sheets**
 
@@ -103,7 +103,7 @@ https://www.youtube.com/results?search_query=aws+Elastic+Load+Balancing
 ***************************************************************************************************
 ## <a id="section-4"></a> **4 - AWS Global Accelerator**
 
-![AWS Global Accelerator](../images/Architecture-Service-Icons_07312022/Arch_Networking-Content-Delivery/48/Arch_AWS-Global-Accelerator_48.png "AWS Global Accelerator")
+![AWS Global Accelerator](../images/Architecture-Service-Icons_06072024/Arch_Networking-Content-Delivery/48/Arch_AWS-Global-Accelerator_48.png "AWS Global Accelerator")
 
 
 **Definitions**
@@ -151,7 +151,7 @@ https://www.youtube.com/results?search_query=aws+AWS+Global+Accelerator
 ***************************************************************************************************
 ## <a id="section-5"></a> **5 - AWS PrivateLink**
 
-![](../images/Architecture-Service-Icons_07312022/Arch_Networking-Content-Delivery/48/Arch_AWS-PrivateLink_48.png "AWS PrivateLink")
+![](../images/Architecture-Service-Icons_06072024/Arch_Networking-Content-Delivery/48/Arch_AWS-PrivateLink_48.png "AWS PrivateLink")
 
 **Definitions**
 
@@ -168,7 +168,7 @@ https://www.youtube.com/results?search_query=AWS+PrivateLink
 ***************************************************************************************************
 ## <a id="section-6"></a> **6 - Amazon Route 53**
 
-![Amazon Route 53 ](../images/Architecture-Service-Icons_07312022/Arch_Networking-Content-Delivery/48/Arch_Amazon-Route-53_48.png "Amazon Route 53 ")
+![Amazon Route 53 ](../images/Architecture-Service-Icons_06072024/Arch_Networking-Content-Delivery/48/Arch_Amazon-Route-53_48.png "Amazon Route 53 ")
 
 **Cheat Sheets**
 
@@ -195,7 +195,7 @@ https://www.youtube.com/user/AmazonWebServices/search?query=Route+53
 ***************************************************************************************************
 ## <a id="section-7"></a> **7 - AWS Transit Gateway**
 
-![AWS Transit Gateway ](../images/Architecture-Service-Icons_07312022/Arch_Networking-Content-Delivery/48/Arch_AWS-Transit-Gateway_48.png "AWS Transit Gateway ")
+![AWS Transit Gateway ](../images/Architecture-Service-Icons_06072024/Arch_Networking-Content-Delivery/48/Arch_AWS-Transit-Gateway_48.png "AWS Transit Gateway ")
 
 **How it works**
 
@@ -241,7 +241,7 @@ https://youtu.be/xlTHkoKR-Os
 ***************************************************************************************************
 ## <a id="section-8"></a> **8 - Amazon VPC**
 
-![Amazon VPC](../images/Architecture-Service-Icons_07312022/Arch_Networking-Content-Delivery/48/Arch_Amazon-Virtual-Private-Cloud_48.png "Amazon VPC")
+![Amazon VPC](../images/Architecture-Service-Icons_06072024/Arch_Networking-Content-Delivery/48/Arch_Amazon-Virtual-Private-Cloud_48.png "Amazon VPC")
 
 An Amazon VPC includes multiple Availability Zones. Within a VPC you can create subnets in each AZ that is available in the Region and distribute your resources across these subnets for high availability.
 
@@ -273,7 +273,7 @@ https://www.youtube.com/watch?v=jZAvKgqlrjY&t=1s
 ***************************************************************************************************
 ## <a id="section-9"></a> **9 - AWS VPN**
 
-![Amazon CloudFront](../images/Architecture-Service-Icons_07312022/Arch_Networking-Content-Delivery/48/Arch_AWS-Client-VPN_48.png "AWS VPN")
+![Amazon CloudFront](../images/Architecture-Service-Icons_06072024/Arch_Networking-Content-Delivery/48/Arch_AWS-Client-VPN_48.png "AWS VPN")
 
 **Cheat Sheets**
 
@@ -290,7 +290,7 @@ https://www.youtube.com/results?search_query=AWS+Client+VPN
 ***************************************************************************************************
 ## <a id="section-10"></a> **10 - Amazon API Gateway**
 
-![Amazon CloudFront](../images/Architecture-Service-Icons_07312022/Arch_App-Integration/Arch_48/Arch_%20Amazon-API-Gateway_48.png "AWS VPN")
+![API-Gateway](../images/Architecture09172021/Arch_App-Integration/Arch_64/Arch_Amazon-API-Gateway_64.svg)
 
 **Cheat Sheets**
 

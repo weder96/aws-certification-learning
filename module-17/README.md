@@ -146,7 +146,7 @@ You can use X-Ray to analyze both applications in development and in production,
 **************************************************************************************
 ## <a id="section-05" ></a> **5 - AWS Managed Services**
 
-![AWS Managed Services](../images/Architecture-Service-Icons_07312022/Arch_Customer-Enablement/64/Arch_AWS-Managed-Services_64.svg)
+![AWS Managed Services](../images/Architecture-Service-Icons_06072024/Arch_Customer-Enablement/64/Arch_AWS-Managed-Services_64.svg)
 
 **Definition**
 
@@ -246,7 +246,7 @@ AWS Glue generates the code to execute your data transformations and data loadin
 --------------------------------------------------------------------------------------------------
 ## <a id="section-07" ></a> **7 - Media Services**
 
-![Amazon Elastic Transcoder](../images/Architecture-Service-Icons_07312022/Arch_Media-Services/64/Arch_Amazon-Elastic-Transcoder_64.svg)
+![Amazon Elastic Transcoder](../images/Architecture-Service-Icons_06072024/Arch_Media-Services/64/Arch_Amazon-Elastic-Transcoder_64.svg)
 
 ### [Amazon Elastic Transcoder](https://aws.amazon.com/elastictranscoder/)
 

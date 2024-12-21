@@ -1310,7 +1310,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-bucket-user-policy-spec
 
 ----------------------------------------------------------------------------------------------------
 ## <a id="section-2"> </a> **02 - AWS Snowball Edge**
-![](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowball-Edge_64.svg)
+![](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_AWS-Snowball-Edge_64.svg)
 
 **Definitions**
 
@@ -1388,7 +1388,7 @@ https://aws.amazon.com/snowball-edge/faqs/
 ----------------------------------------------------------------------------------------------------
 ## <a id="section-3"> </a> **03 - Amazon Elastic Block Store (EBS)**
 
-![Amazon Elastic Block Store](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-Elastic-Block-Store_64.svg "Amazon Elastic Block Store")
+![Amazon Elastic Block Store](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_Amazon-Elastic-Block-Store_64.svg "Amazon Elastic Block Store")
 
 **Definitions**
 
@@ -1570,7 +1570,7 @@ https://www.youtube.com/results?search_query=EC2+instance+store+Hands+On
 -------------------------------------------------- --------------------------------------------------
 ## <a id="section-5"> </a> **05 - Amazon Elastic File System (EFS)**
 
-![Arch_Amazon-EFS](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-EFS_64.svg)
+![Arch_Amazon-EFS](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_Amazon-EFS_64.svg)
 
 **Definitions**
 
@@ -1771,7 +1771,7 @@ https://www.youtube.com/user/AmazonWebServices/search?query=EFS
 ----------------------------------------------------------------------------------------------------
 ## <a id="section-6"> </a> **06 - AWS Storage Gateway**
 
-![AWS Storage Gateway](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Storage-Gateway_64.svg "AWS Storage Gateway")
+![AWS Storage Gateway](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_AWS-Storage-Gateway_64.svg "AWS Storage Gateway")
 
 **Definitions**
 
@@ -1902,7 +1902,7 @@ https://www.youtube.com/results?search_query=AWS+Storage+Gateway+hands+on
 
 **Definitions**
 
-![](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx_64.svg)
+![](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_Amazon-FSx_64.svg)
 
 - Amazon FSx provides fully managed third-party file systems.
 - Amazon FSx provides you with the native compatibility of third-party file systems with feature sets for workloads such as Windows-based storage, high-performance computing (HPC), machine learning, and electronic design automation (EDA).
@@ -1916,10 +1916,10 @@ https://www.youtube.com/results?search_query=AWS+Storage+Gateway+hands+on
 - **Amazon FSx for NetApp ONTAP**.
 - **Amazon FSX for OpenZFS**.
 
-![Amazon-FSx-for-WFS](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx-for-WFS_64.svg "Amazon-FSx-for-WFS")
-![Amazon-FSx-for-Lustre](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx-for-Lustre_64.svg "Amazon-FSx-for-Lustre")
-![Amazon-FSx-for-NetApp-ONTAP](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx-for-NetApp-ONTAP_64.svg "Amazon-FSx-for-NetApp-ONTAP")
-![Amazon-FSx-for-OpenZFS](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx-for-OpenZFS_64.svg "Amazon-FSx-for-OpenZFS")
+![Amazon-FSx-for-WFS](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_Amazon-FSx-for-WFS_64.svg "Amazon-FSx-for-WFS")
+![Amazon-FSx-for-Lustre](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_Amazon-FSx-for-Lustre_64.svg "Amazon-FSx-for-Lustre")
+![Amazon-FSx-for-NetApp-ONTAP](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_Amazon-FSx-for-NetApp-ONTAP_64.svg "Amazon-FSx-for-NetApp-ONTAP")
+![Amazon-FSx-for-OpenZFS](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_Amazon-FSx-for-OpenZFS_64.svg "Amazon-FSx-for-OpenZFS")
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 This concentrates on FSx for Windows File Server and FSx for Lustre as these are the only file systems currently featuring on exams.
@@ -1927,7 +1927,7 @@ This concentrates on FSx for Windows File Server and FSx for Lustre as these are
 ### **Amazon FSx for Windows File Server**
 
 
-![Amazon-FSx-for-WFS](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx-for-WFS_64.svg "Amazon-FSx-for-WFS")
+![Amazon-FSx-for-WFS](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_Amazon-FSx-for-WFS_64.svg "Amazon-FSx-for-WFS")
 
 
 **Overview of FSx for Windows File Server**
@@ -1971,7 +1971,7 @@ This concentrates on FSx for Windows File Server and FSx for Lustre as these are
 ----------------------------------------------------------------------------------------------------------------------------------------------
 ### **Amazon FSx for Lustre**
 
-![Amazon-FSx-for-Lustre](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx-for-Lustre_64.svg "Amazon-FSx-for-Lustre")
+![Amazon-FSx-for-Lustre](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_Amazon-FSx-for-Lustre_64.svg "Amazon-FSx-for-Lustre")
 
 ### Overview of FSx for Lustre
 
@@ -2007,7 +2007,7 @@ You can then write results back to S3, and simply delete your file system. FSx f
 
 ### **Amazon FSx for NetApp ONTAP**
 
-![Amazon-FSx-for-NetApp-ONTAP](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx-for-NetApp-ONTAP_64.svg "Amazon-FSx-for-NetApp-ONTAP")
+![Amazon-FSx-for-NetApp-ONTAP](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_Amazon-FSx-for-NetApp-ONTAP_64.svg "Amazon-FSx-for-NetApp-ONTAP")
 
 
 - Fully managed shared storage built on NetApp’s popular ONTAP file system
@@ -2025,7 +2025,7 @@ https://aws.amazon.com/fsx/netapp-ontap/
 
 ### **Amazon FSx for NetApp OpenZFS**
 
-![Amazon-FSx-for-OpenZFS](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_Amazon-FSx-for-OpenZFS_64.svg "Amazon-FSx-for-OpenZFS")
+![Amazon-FSx-for-OpenZFS](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_Amazon-FSx-for-OpenZFS_64.svg "Amazon-FSx-for-OpenZFS")
 
 
 - Fully managed shared storage built on the popular OpenZFS file system
@@ -2114,7 +2114,7 @@ https://aws.amazon.com/fsx/netapp-ontap/
 ----------------------------------------------------------------------------------------
 ## <a id="section-8"> </a> **08 - AWS Backup**
 
-![](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Backup_64.svg)
+![](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_AWS-Backup_64.svg)
 
 **Definitions**
 
@@ -2232,7 +2232,7 @@ https://www.youtube.com/results?search_query=AWS+Backup+Hands+On
 -----------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-9"> </a> **09 - AWS Snowmobile**
 
-![](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowmobile_64.svg "AWS Snowmobile")
+![](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_AWS-Snowmobile_64.svg "AWS Snowmobile")
 
 **Definitions**
 
@@ -2389,16 +2389,16 @@ Highly-secure, portable devices to collect and process data at the edge, and mig
 
 - **Data migration:**
 
-![Arch_AWS-Snowball](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowball_64.svg "Arch_AWS-Snowball")
-![Arch_AWS-Snowcone](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowcone_64.svg "Arch_AWS-Snowcone")
-![AWS-Snowball-Edge](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowball-Edge_64.svg "AWS-Snowball-Edge")
-![Arch_AWS-Snowmobile](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowmobile_64.svg "AWS-Snowmobile")
+![Arch_AWS-Snowball](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_AWS-Snowball_64.svg "Arch_AWS-Snowball")
+![Arch_AWS-Snowcone](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_AWS-Snowcone_64.svg "Arch_AWS-Snowcone")
+![AWS-Snowball-Edge](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_AWS-Snowball-Edge_64.svg "AWS-Snowball-Edge")
+![Arch_AWS-Snowmobile](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_AWS-Snowmobile_64.svg "AWS-Snowmobile")
 
 
 - **Edge computing:**
 
-![Arch_AWS-Snowcone](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowcone_64.svg "Arch_AWS-Snowcone")
-![AWS-Snowball-Edge](../images/Architecture-Service-Icons_07312022/Arch_Storage/64/Arch_AWS-Snowball-Edge_64.svg "AWS-Snowball-Edge")
+![Arch_AWS-Snowcone](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_AWS-Snowcone_64.svg "Arch_AWS-Snowcone")
+![AWS-Snowball-Edge](../images/Architecture-Service-Icons_06072024/Arch_Storage/64/Arch_AWS-Snowball-Edge_64.svg "AWS-Snowball-Edge")
 
 
 **Definitions**

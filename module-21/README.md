@@ -11,7 +11,7 @@
 ***************************************************************************************************
 ## <a id="section-1" ></a> **1 - Amazon Cloudfront**
 
-![Cloudfront](../images/Architecture-Service-Icons_07312022/Arch_Networking-Content-Delivery/48/Arch_Amazon-CloudFront_48.png "Cloudfront")
+![Cloudfront](../images/Architecture-Service-Icons_06072024/Arch_Networking-Content-Delivery/48/Arch_Amazon-CloudFront_48.png "Cloudfront")
 
 
 CloudFront is a web service that gives businesses and web application developers an easy and cost-effective way to distribute content with low latency and high data transfer speeds.
