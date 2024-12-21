@@ -437,6 +437,8 @@ Ways to Interact with AWS
 - AWS Management Console: Easy-to-use graphical interface
 - Command Line Interface (AWS CLI): Access to services by specific commands or scripts
 - Software development kits (SDKs): Access services directly from your code (such as Java, Python and others)
+
+
 ## <a id="section-04"></a> **4 - Moving to the AWS Cloud – AWS Cloud Adoption Framework (AWS CAF)**
 
 AWS Cloud Adoption Framework: is a document created to help organizations design and navigate an accelerated path to successful cloud adoption
@@ -449,6 +451,24 @@ Outlook:
 
 - Focuses on business resources: business, people and governance
 - Focuses on technical resources: platform, security and operations
+
+
+**Cheat Sheets**
+
+
+**References:**
+
+https://aws.amazon.com/cloud-adoption-framework/?nc1=h_ls
+
+https://cloudreadiness.amazonaws.com/#/cart
+
+**Videos**
+
+
+**Hands On**
+
+
+
 ## <a id="section-05"></a> **5 - AWS Shared Responsibility Model**
 The [AWS shared responsibility model](https://aws.amazon.com/compliance/shared-responsibility-model/) defines what you (as an AWS account holder/user) and AWS are responsible for when it comes to security and compliance.
 
