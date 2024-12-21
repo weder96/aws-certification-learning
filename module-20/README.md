@@ -24,6 +24,8 @@
 17. <a href="#section-17"> AWS Systems Manager </a>
 18. <a href="#section-18"> AWS Trusted Advisor </a>
 19. <a href="#section-19"> AWS Well-Architected Tool </a>
+20. <a href="#section-20"> AWS Launch Wizard </a>
+
 
 ***************************************************************************************************
 ## <a id="section-1"></a> **1 - AWS Auto Scaling**
@@ -348,9 +350,21 @@ https://www.youtube.com/results?search_query=AWS+Compute+Optimizer+hands+on
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-control-tower/
+
+https://digitalcloud.training/what-is-aws-control-tower/
+
 **References:**
 
+https://aws.amazon.com/controltower/
+
 **Videos**
+
+https://www.youtube.com/watch?v=daLvEb44d5Q
+
+https://www.youtube.com/watch?v=3-aaw-B1j8Y
+
+https://www.youtube.com/watch?v=pyiJbkJROTE
 
 ***************************************************************************************************
 ## <a id="section-9"></a> **9 - AWS License Manager**
@@ -812,3 +826,27 @@ https://www.youtube.com/results?search_query=AWS+Trusted+Advisor++hands+on
 **Videos**
 
 **Hands On**
+
+## <a id="section-20"></a> **20 - AWS Launch Wizard**
+
+**Definitions**
+
+AWS Launch Wizard offers a guided way of sizing, configuring, and deploying AWS resources for third party applications, such as Microsoft SQL Server and SAP ERP systems. With AWS Launch Wizard, you can eliminate the need to manually identify and provision individual AWS resources, instead automating deployment using APIs or a console-based approach. To start, you input your application requirements, including performance, number of nodes, and connectivity on the service console. Launch Wizard then identifies the right AWS resources, such as EC2 instances and EBS volumes, to deploy and run your application. Launch Wizard provides an estimated cost of deployment, and lets you modify your resources to instantly view an updated cost assessment. Once you approve the AWS resources, Launch Wizard automatically provisions and configures the selected resources to create a fully-functioning, production-ready application.
+
+AWS Launch Wizard also creates CloudFormation templates that can serve as a baseline to accelerate subsequent deployments. Launch Wizard is available to you at no additional charge. You only pay for the AWS resources that are provisioned for running your solution.
+
+**Cheat Sheets**
+
+https://portal.tutorialsdojo.com/forums/discussion/aws-launch-wizard-now-automates-deployment-of-sap-solution-manager/
+
+**References:**
+
+https://aws.amazon.com/launchwizard/?nc1=h_ls
+
+**Videos**
+
+https://www.youtube.com/results?search_query=AWS+Launch+Wizard
+
+**Hands On**
+
+

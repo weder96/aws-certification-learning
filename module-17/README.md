@@ -329,6 +329,31 @@ Allows you to connect IoT devices to the AWS cloud without the need to provision
 
 Can support billions of devices and trillions of messages.
 
+
+**Cheat Sheets**
+
+https://tutorialsdojo.com/aws-iot-core/
+
+**References:**
+
+https://aws.amazon.com/iot-core/?nc1=h_ls
+
+https://aws.amazon.com/iot-core/features/
+
+https://aws.amazon.com/iot-core/pricing/?nc=sn&loc=4
+
+https://aws.amazon.com/iot-core/getting-started/?nc=sn&loc=5&dn=1
+
+https://aws.amazon.com/iot/customers/?nc=sn&loc=6
+
+https://aws.amazon.com/iot/resources/?nc=sn&loc=6&dn=1
+
+https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html
+
+**Videos**
+
+**HandsOn**
+
 -------------------------------------------------------------------------------------------
 ## <a id="section-11" ></a> **11 - AWS Marketplace**
 
