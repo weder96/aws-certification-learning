@@ -18,6 +18,7 @@
 10. <a href="#section-10"> Internet of Things (IoT) </a>
 11. <a href="#section-11"> AWS Marketplace </a>
 12. <a href="#section-12"> AWS software development kits (SDKs) </a>
+13. <a href="#section-13"> AWS Billing Conductor </a>
 
 
 There are Additional AWS Services & Tools that may feature on the exam. Often you do not need to know these at a deep level but do need to understand what they are and what they are used for.
@@ -416,3 +417,29 @@ https://aws.amazon.com/developer/tools/?nc1=h_ls
 **Videos**
 
 **Hands On**
+
+
+-------------------------------------------------------------------------------------------------------------
+## <a id="section-13" ></a> **13 - AWS Billing Conductor**
+
+![](../images/Architecture-Service-Icons_07312022/Arch_Cloud-Financial-Management/64/Arch_AWS-Billing-Conductor_64.svg)
+
+
+**Definitions**
+
+The AWS Billing Conductor is a customizable billing service, allowing you to customize your billing data to match your desired showback or chargeback business logic. To start, you map your accounts to billing groups, which are mutually exclusive. You can then define the billing parameters for each group such as pricing rules and custom line items. Once each billing group is defined, you will be able to view the output of your configuration, by billing group, on the billing console bills page as well as generate a Cost and Usage Report (CUR) for each billing group.
+
+**Cheat Sheets**
+
+https://tutorialsdojo.com/aws-billing-conductor/
+
+**References:**
+
+https://aws.amazon.com/aws-cost-management/aws-billing-conductor/?nc1=h_ls
+
+**Videos**
+
+https://www.youtube.com/results?search_query=AWS+Billing+Conductor
+
+**Hands On**
+
