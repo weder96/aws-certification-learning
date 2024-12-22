@@ -13,6 +13,7 @@
 6. <a href="#section-06"> AWS Transfer Family </a>
 7. <a href="#section-07"> AWS Application Discovery Service </a>
 8. <a href="#section-08"> AWS Application Migration Service CloudEndure Migration</a>
+99. <a href="#section-99"> AWS Application Migration Service CloudEndure Migration</a>
 
 ----------------------------------------------------------------------------------------------
 ## <a id="section-01" ></a> **1 - AWS Database Migration Service (AWS DMS)**
@@ -219,6 +220,16 @@ https://www.youtube.com/results?search_query=+AWS+DataSync+hands+on
 
 
 **Definitions**
+
+Central location to collect servers and applications inventory data for the **assessment, planning, and tracking of migrations** to AWS
+
+Helps accelerate your migration to AWS, automate **lift-and-shift**
+
+**AWS Migration Hub Orchestrator** – provides pre-built templates to save time and effort migrating enterprise apps (e.g., SAP, Microsoft SQL Server…)
+
+Supports migrations status updates from **Application Migration Service (MGN)** and **Database Migration Service (DMS)**
+
+![iamge](../images/migrations/migrationHub.png)
 
 Discover the tools that you need to simplify your migration and modernization
 
@@ -445,6 +456,16 @@ https://www.youtube.com/results?search_query=AWS+Transfer+Family+hands+on
 
 **Definitions**
 
+- Plan migration projects by gathering information about on-premises data centers
+- Server utilization data and dependency mapping are important for migrations
+- **Agentless Discovery** (AWS Agentless Discovery Connector)
+ - VM inventory, configuration, and performance history such as CPU, memory, and disk usage
+- **Agent-based Discovery** (AWS Application Discovery Agent)
+ - System configuration, system performance, running processes, and details of the network connections between systems
+
+- Resulting data can be viewed within AWS Migration Hub
+
+
 Discover on-premises server inventory and behavior to plan cloud migrations
 
 Deploy 1,000 on-premises collectors
@@ -488,13 +509,21 @@ https://www.youtube.com/results?search_query=AWS+Application+Discovery+Service
 https://www.youtube.com/results?search_query=AWS+Application+Discovery+Service+hands+on
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## <a id="section-08" ></a> **8 - AWS Application Migration Service (CloudEndure Migration)**
+## <a id="section-08" ></a> **8 - AWS Application Migration Service (MGN)**
 
 
 ![AWS Application Migration Service](../images/Architecture-Service-Icons_07312022/Arch_Migration-Transfer/64/Arch_AWS-Application-Migration-Service_64.svg)
 
 
 **Definitions**
+
+- The “AWS evolution” of CloudEndure Migration, replacing AWS Server Migration Service (SMS)
+- Lift-and-shift (rehost) solution which simplify migrating applications to AWS
+- Converts your physical, virtual, and cloud-based servers to run natively on AWS
+- Supports wide range of platforms, Operating Systems, and databases
+- Minimal downtime, reduced costs
+
+![image](../images/migrations/AWSApplicationMigrationService%20.png)
 
 CloudEndure Migration and CloudEndure Disaster Recovery, services offered by AWS, now allow you to migrate, replicate, and recover applications from any source directly into AWS Outposts or between AWS Outposts devices, leading to lower latencies, better performance, and reduced costs. Previously, replicated data had to be transferred to and stored in a public AWS Region before being copied into EBS volumes on the AWS Outposts device. This caused increased cutover and recovery times, as well as data residency issues.
 
@@ -526,3 +555,58 @@ https://aws.amazon.com/disaster-recovery/
 **Hands On**
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## <a id="section-99" ></a> **99 - Cloud Migration Strategies: The 7Rs**
+
+[accelerate-your-application-migration-to-aws](https://aws.amazon.com/pt/blogs/enterprise-strategy/new-possibilities-seven-strategies-to-accelerate-your-application-migration-to-aws/)
+
+![iamge01](../images/migrations/7-R-1024x516.png)
+
+- **Retire**
+  - Turn off things you don’t need (maybe as a result of Re-architecting)
+  - Helps with reducing the surface areas for attacks (more security)
+  - Save cost, maybe up to 10% to 20%
+  - Focus your attention on resources that must be maintained
+
+
+- **Retain**
+  - Do nothing for now (it’s still a decision to make in a Cloud Migration)
+  - Security, data compliance, performance, unresolved dependencies
+  - No business value to migrate, mainframe or mid-range and non-x86 Unix apps
+
+- **Relocate**
+  - Move apps from on-premises to its Cloud version
+  - Move EC2 instances to a different VPC, AWS account or AWS Region
+  - Example: transfer servers from VMware Software-defined Data Center (SSDC) to VMware Cloud on AWS
+
+
+- **Rehost “lift and shift”**
+  - Simple migrations by re-hosting on AWS (applications, databases, data…)
+  - Migrate machines (physical, virtual, another Cloud) to AWS Cloud
+  - No cloud optimizations being done, applications is migrated as is
+  - Could save as much as 30% on cost
+  - Example: Migrate using AWS Application Migration Service
+
+
+- **Replatform “lift and reshape”**
+  - Example: migrate your database to RDS
+  - Example: migrate your application to Elastic Beanstalk
+  - Not changing the core architecture, but leverage some Cloud optimizations
+  - Save time and money by moving to a fully managed service or Serverless
+
+
+- **Repurchase “drop and shop”**
+  - Moving to a different product while moving to the Cloud
+  - Often you move to a SaaS platform
+  - Expensive in the short term, but quick to deploy
+  - Example: CRM to Salesforce.com, HR to Workday, CMS to Drupal
+
+
+- **Refactor / Re-architect**
+  - Reimagining how the application is architected using Cloud Native features
+  - Driven by the need of the business to add features and improve scalability, performance, security, and agility
+  - Move from a monolithic application to micro-services
+  - Example: move an application to Serverless architectures, use AWS S3
+
+[Cloud Migration Strategies the 6Rs](https://aws.amazon.com/pt/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/)
+
+![image02](../images/migrations/account-1024x435.png)

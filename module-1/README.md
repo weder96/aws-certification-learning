@@ -6,14 +6,15 @@
 
 
 ## Contents
-1. <a href="#section-01"> Introduction to Cloud Computing</a>
-2. <a href="#section-02"> Advantages of Cloud Computing </a>
+1. <a href="#section-01"> Introduction to Cloud Computing </a>
+2. <a href="#section-02"> Advantages of Cloud Computing  </a>
 3. <a href="#section-03"> Introduction to Amazon Web Services (AWS) </a>
-4. <a href="#section-04"> Moving to the AWS Cloud – AWS Cloud Adoption Framework (AWS CAF)</a>
-5. <a href="#section-05"> AWS Shared Responsibility Model</a>
-6. <a href="#section-06"> AWS Support</a>
-7. <a href="#section-07"> Architecting for the Cloud</a>
-8. <a href="#section-08"> Architecting for the Cloud</a>
+4. <a href="#section-04"> Moving to the AWS Cloud – AWS Cloud Adoption Framework (AWS CAF) </a>
+5. <a href="#section-05"> AWS Shared Responsibility Model </a>
+6. <a href="#section-06"> AWS Support </a>
+7. <a href="#section-07"> Architecting for the Cloud </a>
+8. <a href="#section-08"> Common‌ ‌Exam‌ ‌Scenarios </a>
+9. <a href="#section-09"> The Five Characteristics of Cloud Computing </a>
 
 *******************************************************************************************************
 ## <a id="section-01"></a> **1 - Introduction to Cloud Computing**
@@ -41,9 +42,16 @@ Infrastructure as software:
 ### There are three main cloud computing deployment models:
 
 - **Infrastructure as a Service (IaaS)** - Services that provide network connection, OS, storage, high flexibility of use. They are usually generic, can be used for various purposes. Ex: [EC2](https://aws.amazon.com/pt/ec2/) from AWS [instance-types](<https://aws.amazon.com/pt/ec2/instance-types/>) .
-- **Platform as a Service (PaaS)** - Services that provide a platform for deploying, restoring, maintaining data, but not giving you access to the OS directly, Ex: Elastic BeanStalk, [S3](https://aws .amazon.com/en/s3/).
+
+- **Platform as a Service (PaaS)** - Services that provide a platform for deploying, restoring, maintaining data, but not giving you access to the OS directly, Ex: Elastic BeanStalk, [S3](https://aws.amazon.com/en/s3/).
+
 - **Software as a Service (SaaS)** - Services that act as an AWS managed cloud application that you call from your application for some purpose, Ex: Rekognition, Polly, Translate.
-- **Code as a Service (Caas)** or Function as a Service (FaaS) - Event-driven services that perform a simple function in the cloud in a serverless environment, Ex: [Lambda](https://docs.aws .amazon.com/lambda/latest/dg/welcome.html).
+
+- **Code as a Service (Caas)** or Function as a Service (FaaS) - Event-driven services that perform a simple function in the cloud in a serverless environment. 
+
+Ex: [Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html).
+
+![image](../images/concepts/super%20cluster%20diagram-01.webp)
 
 ### **TYPES OF CLOUD COMPUTING**
 
@@ -136,6 +144,18 @@ Serverless‌ ‌involves‌ ‌a‌ ‌whole‌ ‌new‌ ‌dynamic‌ ‌of�
 The‌ ‌technology‌ ‌can‌ ‌save‌ ‌you‌ ‌a‌ ‌lot‌ ‌of‌ ‌cost‌ ‌due‌ ‌to‌ ‌its‌ ‌lower‌ ‌pricing‌ ‌than‌ ‌those‌ ‌of‌‌ traditional‌ ‌server‌ ‌models,‌ ‌but‌ ‌it‌ ‌may‌ ‌also‌ ‌introduce‌ ‌additional‌ ‌complexity‌ ‌to‌ ‌your‌ ‌code‌ ‌due‌ ‌to‌ ‌its‌‌ distributed‌ ‌nature.‌ ‌You‌ ‌also‌ ‌lose‌ ‌a‌ ‌lot‌ ‌of‌ ‌control‌ ‌over‌ ‌your‌ ‌environment‌ ‌if‌ ‌you‌ ‌usually‌ ‌manage‌ ‌your‌ ‌own‌‌ runtimes,‌ ‌etc.‌ ‌Serverless‌ ‌functions‌ ‌are‌ ‌also‌ ‌event-driven.‌ ‌If‌ ‌you’re‌ ‌a‌ ‌Node‌ ‌JS‌ ‌developer,‌ ‌get‌ ‌ready‌ ‌for‌ ‌a‌‌ lot‌ ‌of‌ ‌callbacks‌ ‌with‌ ‌this‌ ‌one.‌ ‌
 
 
+## Important
+### AWS Acceptable Use Policy
+
+
+https://aws.amazon.com/aup/?nc1=h_ls
+
+- No Illegal, Harmful, or Offensive Use or Content 
+- No Security Violations 
+- No Network Abuse 
+- No E-Mail or Other Message Abuse
+
+
 **Cheat Sheets**
 **References:**
 **Videos**
@@ -170,7 +190,7 @@ There are several reasons why the cloud market is growing so fast. Some of them 
     The six pillars of a well-architected structure
 </a>
 
-Accessed in: June 2022.
+Accessed in: December of  2022.
 
 Creating a software system is a lot like building a building. If the foundation is not solid, structural problems can impair the integrity and function of the building.
 
@@ -203,14 +223,18 @@ The Operational Excellence pillar includes the ability to effectively support th
 
 You can find prescriptive guidance on implementation in the Operational Excellence Pillar whitepaper.
 
+
+
 ### Design Principles
 
 There are five design principles for operational excellence in the cloud:
-- Perform operations as code
-- Make frequent, small and reversible changes
-- Refine operations procedures frequently
+- Perform operations as code - Infrastructure as code
+- Make frequent, small, reversible changes - So that in case of any failure, you can reverse it
+- Refine operations procedures frequently - And ensure that team members are familiar with it
 - Anticipate failure
 - Learn from all operational failures
+- Use managed services - to reduce operational burden
+- Implement observability for actionable insights - performance, reliability, cost…
 
 
 ### Best Practices
@@ -413,9 +437,44 @@ https://aws.amazon.com/blogs/apn/the-5-pillars-of-the-aws-well-architected-frame
 
 https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html
 
+AWS Blogs: 
+
+https://aws.amazon.com/blogs/aws/
+
+AWS Forums (community): 
+
+https://forums.aws.amazon.com/index.jspa
+
+
+AWS Whitepapers & Guides: 
+
+https://aws.amazon.com/whitepapers
+
+AWS Partner Solutions (formerly Quick Starts): 
+
+https://aws.amazon.com/quickstart/
+
+Example: WordPress on AWS 
+
+https://fwd.aws/P3yyv?did=qs_card&trk=qs_card
+
+
+AWS Solutions: 
+
+https://aws.amazon.com/solutions/
+
+Example - AWS Landing Zone: secure, multi-account AWS environment 
+
+https://aws.amazon.com/solutions/implementations/aws-landing-zone/
+
+
+
 **Videos**
 
 https://www.youtube.com/results?search_query=aws+cloud+computing+concepts
+
+
+
 
 ***************************************************************************************************************************
 ## <a id="section-03"></a> **3 - Introduction to Amazon Web Services (AWS)**
@@ -592,4 +651,24 @@ https://www.youtube.com/watch?v=vJ6XvQ94UnM
 | ‌A‌ ‌change‌ ‌or‌ ‌a‌ ‌failure‌ ‌in‌ ‌one‌ ‌component‌ ‌should‌ ‌not‌‌ cascade‌ ‌to‌ ‌other‌ ‌components.‌ | ‌Loose‌ ‌coupling‌ ‌|
 |You‌ ‌need‌ ‌to‌ ‌enable‌ ‌your‌ ‌Amazon‌ ‌EC2‌ ‌instances‌ ‌in‌ ‌the‌‌  ‌public‌ ‌subnet‌ ‌to‌ ‌connect‌ ‌to‌ ‌the‌ ‌public‌ ‌Internet.‌ | Internet‌ ‌Gateway‌ |
 |You‌ ‌need‌ ‌to‌ ‌enable‌ ‌your‌ ‌EC2‌ ‌instances‌ ‌in‌ ‌the‌ ‌private‌‌ subnet‌ ‌to‌ ‌connect‌ ‌to‌ ‌the‌ ‌public‌ ‌Internet.‌ | ‌NAT‌ ‌Gateway‌ ‌|
+
+--------------------------------------------------------------------------------------------------
+## <a id="section-09"></a> **9 -  The Five Characteristics of Cloud Computing**
+
+- **On-demand self service:**
+    - Users can provision resources and use them without human interaction from the service provider
+
+- **Broad network access:**
+    - Resources available over the network, and can be accessed by diverse client platforms
+
+- **Multi-tenancy and resource pooling:**
+    - Multiple customers can share the same infrastructure and applications with security and privacy
+    - Multiple customers are serviced from the same physical resources
+
+- **Rapid elasticity and scalability:**
+    - Automatically and quickly acquire and dispose resources when needed
+    - Quickly and easily scale based on demand
+
+- **Measured service:**
+    - Usage is measured, users pay correctly for what they have used
 
