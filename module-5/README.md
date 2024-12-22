@@ -321,37 +321,50 @@ https://aws.amazon.com/api-gateway/faqs/
 https://www.youtube.com/results?search_query=aws+api+gateway
 
 
-
-
 ***************************************************************************************************
 ## <a id="section-11"></a> **11 - Amazon VPC Lattice**
+
+![Amazon Artifact](../images/Architecture-Service-Icons_06072024/Arch_Networking-Content-Delivery/64/Arch_Amazon-VPC-Lattice_64.png)
+
 
 
 ***************************************************************************************************
 ## <a id="section-12"></a> **12 - AWS App Mesh**
 
+![Amazon Artifact](../images/Architecture-Service-Icons_06072024/Arch_Networking-Content-Delivery/64/Arch_AWS-App-Mesh_64.png)
 
 ***************************************************************************************************
 ## <a id="section-13"></a> **13 - AWS Client VPN**
 
+![Amazon Artifact](../images/Architecture-Service-Icons_06072024/Arch_Networking-Content-Delivery/64/Arch_AWS-Client-VPN_64.png)
+
 ***************************************************************************************************
 ## <a id="section-14"></a> **14 - AWS Cloud WAN**
 
+![Amazon Artifact](../images/Architecture-Service-Icons_06072024/Arch_Networking-Content-Delivery/64/Arch_AWS-Cloud-WAN_64.png)
+
+
 ***************************************************************************************************
 ## <a id="section-15"></a> **15 - AWS Private 5G**
+![Amazon Artifact](../images/Architecture-Service-Icons_06072024/Arch_Networking-Content-Delivery/64/Arch_AWS-Private-5G_64.png)
+
 
 ***************************************************************************************************
 ## <a id="section-16"></a> **16 - AWS Site-to-Site VPN**
+
+![Amazon Artifact](../images/Architecture-Service-Icons_06072024/Arch_Networking-Content-Delivery/64/Arch_AWS-Site-to-Site-VPN_64.png)
 
 
 ***************************************************************************************************
 ## <a id="section-17"></a> **17 - AWS Verified Access**
 
+![Amazon Artifact](../images/Architecture-Service-Icons_06072024/Arch_Networking-Content-Delivery/64/Arch_AWS-Verified-Access_64.png)
+
 
 ***************************************************************************************************
 ## <a id="section-18"></a> **18 - AWS Network Firewall**
 
-![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Network-Firewall_48.png)
+![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/64/Arch_AWS-Network-Firewall_64.png)
 
 
 - Protect your entire Amazon VPC
@@ -470,3 +483,10 @@ https://www.youtube.com/watch?v=WNFknf9zyZg
 [AWS Pricing Calculator](https://calculator.aws/#/)
 
 [AWS Network Firewall CloudFormation template](https://docs.aws.amazon.com/solutions/latest/centralized-network-inspection-on-aws/aws-cloudformation-template.html)
+
+
+[AWS — Difference between Security Groups and Network Access Control List (NACL)](https://medium.com/awesome-cloud/aws-difference-between-security-groups-and-network-acls-adc632ea29ae)
+
+[Difference Between Internet Gateway and NAT Gateway](https://www.geeksforgeeks.org/difference-between-internet-gateway-and-nat-gateway/)
+
+[Amazon VPC FAQs](https://aws.amazon.com/vpc/faqs/?nc1=h_ls)
