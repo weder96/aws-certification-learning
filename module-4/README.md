@@ -802,23 +802,7 @@ https://www.youtube.com/watch?v=ogVamzF2Dzk
 ---------------------------------------------------------------------------------------
 ## <a id="section-20"></a> **20 - Amazon Network Firewall**
 
-![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Network-Firewall_48.png)
-
-**Cheat Sheets**
-
-https://tutorialsdojo.com/aws-network-firewall/
-
-**References**
-
-https://aws.amazon.com/network-firewall/
-
-
-**Videos**
-
-https://www.youtube.com/results?search_query=Amazon+Network+Firewall
-
-https://www.youtube.com/watch?v=WNFknf9zyZg
-
+[ckeck](https://github.com/weder96/aws-certification-learning/tree/main/module-5#section-18)
 
 ---------------------------------------------------------------------------------------
 ## <a id="section-21"></a> **21 - AWS Resource Access Manager (AWS RAM)**
