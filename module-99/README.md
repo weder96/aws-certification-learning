@@ -202,6 +202,14 @@ https://docs.aws.amazon.com/storagegateway/latest/userguide/CreatingAnSMBFileSha
 https://tutorialsdojo.com/amazon-fsx/
 
 
+- AWS Local Zones: the Basics and How to Get Started
+
+https://cloudian.com/guides/hybrid-cloud/aws-local-zones-the-basics-and-how-to-get-started/#:~:text=In%20summary%2C%20AWS%20Local%20Zones,premises%20environments%20with%20AWS%20services.
+
+
+https://stackoverflow.com/questions/70908862/aws-local-zone-vs-edge-locations#:~:text=Mainly%20edge%20location%20is%20used,services%20close%20to%20large%20population.
+
+
 
 
 
