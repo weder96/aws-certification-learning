@@ -521,10 +521,79 @@ Magnifying glass searching for data
 - Over 1,000 free data products and custom data products
 - Automatic access to new data
 
+- A service that enables users to search, subscribe to, and use third-party data in the cloud.
+- Provides a central catalog where data providers may publish their data products, and data subscribers can search and subscribe to them.
+
+You can also find and use publicly available data sets that are part of the [Open Data on AWS](https://aws.amazon.com/opendata/) program with or without an AWS account.
+
+
+### Concepts
+- Data
+    -  AWS Data Exchange organizes data using these three building blocks:
+        - Assets – a piece of data.
+        - Revisions – container for one or more assets.
+        - Data sets – series of one or more revisions.
+
+- The type of asset defines how the data is delivered to the subscriber through the data sets and products that contain it.
+
+
+- Product
+    - It is the unit of exchange in AWS Data Exchange, published by a provider and made available to subscribers.
+    -  When a data provider publishes a data product on AWS Data Exchange, it is also listed in AWS Marketplace. Data providers can also use the AWS Marketplace Catalog API to see a list of all the data products they have published, as well as the details of each product.
+    - A data product has the following components:
+        - Product details
+        - Product offers
+        - Data sets
+
+- Subscriber
+    - All data products on AWS Data Exchange are subscription-based.
+    - If a data provider decides to unpublish a data product, you will still have access to the data sets as long as your subscription to that product is active.
+    - Data subscribers can see the same catalog of data products, regardless of which AWS Region they are using. However, the data sets, revisions, and assets that underlie the data products are stored in specific AWS Regions.
+    - With Bring Your Own Subscription (BYOS), you can move and manage your existing subscriptions with participating data providers without incurring additional fees.
+    - Some data providers may require you to verify your subscription and provide additional information before you can access their products.
+    - If your AWS account is part of an organization, you can share your AWS Data Exchange product licenses with the other accounts in that organization.
+
+
+- Provider
+    - Data providers can give access to products that are not publicly released.
+    - The Extended Provider Program (EPP) is a program for data providers who meet certain requirements to publish data products that contain sensitive personal information or personal information that is not otherwise publicly available.
+    - You can create data sets on AWS Data Exchange using the console or API. Once you have created a data set, you can create revisions and add assets to those revisions.
+    - To make a data product available on AWS Data Exchange, you must create an offer in the console. Offers define the terms that subscribers agree to when they subscribe to a product.
+    - You can also create custom offers:
+        - Private offers
+        - BYOS offers
+
+- Jobs
+    - Asynchronous import or export operations.
+    - These are deleted 90 days after they are created.
+    - Both data providers and subscribers can export revisions of a data set to an Amazon S3 bucket that they have access to.
+
+- Security
+    - AWS Data Exchange scans Amazon S3 object files published by data providers before making them available to subscribers. This is done using the Files delivery method.
+    - The service cannot guarantee that the data you consume as a subscriber is free of malware, but you can find anti-malware and security products in AWS Marketplace that can help you protect yourself.
+
+- Pricing
+    - The cost depends on what you do as a data subscriber or a data provider.
+        - Data subscribers – are charged for the data products that they subscribe to.
+            - The data product fees have two categories:
+                - Subscription-based products
+                - Pay-as-you-go based products
+            - You will be charged for any AWS services you use to store, process, or analyze data products.
+
+        - Data providers – are charged for the storage of their data products.
+            - You are also charged a fulfillment fee for each new subscription to data products
+
+    - If you import or export an asset to or from an S3 bucket in a different AWS Region than the data set’s region, you will be charged for the data transfer costs.
+
+    - If you export assets to a signed URL, your AWS account is charged for data transfer costs from Amazon S3 to the Internet.
+
 
 **Cheat Sheets**
 
+https://tutorialsdojo.com/aws-data-exchange/
+
 **References**
+https://docs.aws.amazon.com/data-exchange/latest/userguide/what-is.html
 
 https://aws.amazon.com/data-exchange/?nc1=h_ls
 
