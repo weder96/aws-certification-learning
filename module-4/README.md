@@ -5,15 +5,15 @@
 # Module 4: Cloud Security (AWS Security Services)
 
 ## Contents
-1. <a href="#section-01"> Amazon Inspector </a>
-2. <a href="#section-02"> AWS Artifact </a>
-3. <a href="#section-03"> Amazon GuardDuty</a>
-4. <a href="#section-04"> Amazon WAF & AWS Shield</a>
-5. <a href="#section-05"> Amazon Key Management Service (AWS KMS)</a>
-6. <a href="#section-06"> AWS CloudHSM</a>
-7. <a href="#section-07"> AWS Certificate Manager(ACM)</a>
-8. <a href="#section-08"> Amazon Inspector and AWS Trusted Advisor</a>
-9. <a href="#section-09"> Amazon Penetration Testing</a>
+1.  <a href="#section-01"> Amazon Inspector </a>
+2.  <a href="#section-02"> AWS Artifact </a>
+3.  <a href="#section-03"> Amazon GuardDuty</a>
+4.  <a href="#section-04"> Amazon WAF & AWS Shield</a>
+5.  <a href="#section-05"> Amazon Key Management Service (AWS KMS)</a>
+6.  <a href="#section-06"> AWS CloudHSM</a>
+7.  <a href="#section-07"> AWS Certificate Manager(ACM)</a>
+8.  <a href="#section-08"> Amazon Inspector and AWS Trusted Advisor</a>
+9.  <a href="#section-09"> Amazon Penetration Testing</a>
 10. <a href="#section-10"> AWS IAM Identity Center (Sucesor Single Sign-On (AWS SSO))</a>
 11. <a href="#section-11"> Amazon Cognito</a>
 12. <a href="#section-12"> AWS Directory Services </a>
@@ -35,7 +35,7 @@
 99. <a href="#section-99"> How do I report abuse of AWS resources? </a>
 
 ---------------------------------------------------------------------------------------
-## <a id="section-01"> </a> **1 - Amazon Inspector**
+## <a id="section-01"></a> **01 - Amazon Inspector**
 ![Amazon Inspector](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_Amazon-Inspector_48.png)
 
 The AWS Cloud allows for a shared responsibility model.
@@ -88,7 +88,7 @@ https://www.youtube.com/watch?v=F1-hvgZyw80
 https://www.youtube.com/results?search_query=aws+inspector
 
 ---------------------------------------------------------------------------------------
-## <a id="section-02"> </a> **2 - Amazon Artifact**
+## <a id="section-02"></a> **02 - Amazon Artifact**
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Artifact_48.png)
 
 [AWS Artifact](https://aws.amazon.com/en/artifact/) is your one-stop resource for compliance-related information that is important to you.
@@ -136,7 +136,7 @@ https://www.youtube.com/watch?v=u5UV-wr-lIA
 https://www.youtube.com/watch?v=lCUATy4emgY
 
 ---------------------------------------------------------------------------------------
-## <a id="section-03"> </a> **3 - Amazon GuardDuty**
+## <a id="section-03"></a> **03 - Amazon GuardDuty**
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Artifact_48.png)
 
 Amazon GuardDuty provides threat detection and continuous security monitoring for malicious or unauthorized behavior to help protect your AWS accounts and workloads.
@@ -178,7 +178,7 @@ https://www.youtube.com/watch?v=mKJ_ndS8q6M
 
 
 ---------------------------------------------------------------------------------------
-## <a id="section-04"> </a> **4 - AWS WAF & AWS Shield**
+## <a id="section-04"></a> **04 - AWS WAF & AWS Shield**
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Shield_48.png)
 
@@ -242,7 +242,7 @@ https://www.youtube.com/results?search_query=aws+Shield
 https://www.youtube.com/watch?v=ZeT5_ZfXMPY
 
 ---------------------------------------------------------------------------------------
-## <a id="section-05"> </a> **5 - AWS Key Management Service (AWS KMS)**
+## <a id="section-05"></a> **05 - AWS Key Management Service (AWS KMS)**
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Key-Management-Service_48.png)
 
@@ -306,7 +306,7 @@ AWS KMS allows developers to easily encrypt data, either through one-click encry
 **Videos**
 
 ---------------------------------------------------------------------------------------
-## <a id="section-06"> </a> **6 - AWS CloudHSM**
+## <a id="section-06"></a> **06 - AWS CloudHSM**
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-CloudHSM_48.png)
 
 **AWS CloudHSM** is a cloud-based Hardware Security Module (HSM) that allows you to easily generate and use your own encryption keys in the AWS Cloud.
@@ -337,7 +337,7 @@ https://www.youtube.com/watch?v=5RRDhNZ6cO0
 
 
 ---------------------------------------------------------------------------------------
-## <a id="section-07"> </a> **7 - AWS Certificate Manager**
+## <a id="section-07"></a> **07 - AWS Certificate Manager**
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Certificate-Manager_48.png)
 
@@ -356,7 +356,7 @@ AWS Certificate Manager removes the time-consuming manual process of purchasing,
 https://tutorialsdojo.com/aws-certificate-manager/
 
 ---------------------------------------------------------------------------------------
-## <a id="section-08"> </a> **8 - AWS Inspector and AWS Trusted Advisor**
+## <a id="section-08"></a> **08 - AWS Inspector and AWS Trusted Advisor**
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_Amazon-Inspector_48.png)
 
@@ -413,7 +413,7 @@ https://aws.amazon.com/premiumsupport/technology/trusted-advisor/
 **Videos**
 
 ---------------------------------------------------------------------------------------
-## <a id="section-09"> </a> **9 - Penetration Testing**
+## <a id="section-09"></a> **09 - Penetration Testing**
 
 **Penetration Testing** is the practice of testing the security of the application itself for vulnerabilities, simulating an attack.
 
@@ -771,12 +771,30 @@ https://www.youtube.com/watch?v=1nir_Mdy3bQ
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_Amazon-Macie_48.png)
 
+### **Definitions**
 
 Amazon Macie is a fully managed data security and data privacy service that uses machine learning and pattern matching to discover and protect your sensitive data in AWS. Amazon Macie automates the discovery of sensitive data at scale and lowers the cost of protecting your data.
 
 Macie automatically provides an inventory of Amazon S3 buckets including a list of unencrypted buckets, publicly accessible buckets, and buckets shared with AWS accounts outside those you have defined in AWS Organizations.
 
 Then, Macie applies machine learning and pattern matching techniques to the buckets you select to identify and alert you to sensitive data, such as personally identifiable information (PII).
+
+Amazon Macie is a fully managed data security and privacy service designed to protect sensitive data in AWS. Using **machine learning** and **pattern matching**, Macie discovers and classifies sensitive data stored in Amazon S3, including **personally identifiable information (PII)** such as names, addresses, and credit card numbers.
+
+### Key Features
+
+- **Automatic Detection**: Identifies a wide range of sensitive data types across your S3 buckets.
+- **Continuous Visibility**: Provides constant monitoring of your S3 data for privacy and security risks.
+- **Alerts**: Notifies you of potential vulnerabilities or policy violations, enabling quick remediation.
+- **Data Discovery Jobs**: Customize scans to identify specific types of sensitive data within selected S3 buckets.
+- **Integration with AWS Security Hub**: Consolidates findings for centralized security management.
+
+### Use Cases
+
+1. **Regulatory Compliance**: Helps meet data privacy regulations like GDPR, HIPAA, or PCI DSS.
+2. **Risk Mitigation**: Proactively identifies data exposure risks, such as misconfigured S3 buckets.
+3. **Audit and Reporting**: Provides detailed findings for audits or compliance reporting.
+
 
 **Cheat Sheets**
 
@@ -879,11 +897,12 @@ https://www.youtube.com/results?search_query=AWS+Security+Hub+hands+on
 
 ![Amazon Artifact](../images/Architecture09172021/Arch_Security-Identity-Compliance/48/Arch_AWS-Shield_48.png)
 
-**Definitions**
+### **Definitions**
 
 Shield Tiers and Features
+Amazon Shield is a managed Distributed Denial of Service (DDoS) protection service designed to safeguard AWS resources against network and application layer attacks. There are two levels of AWS Shield protection: **Shield Standard** and **Shield Advanced**. Both services help protect AWS customers from large-scale, sophisticated DDoS attacks, ensuring that applications and services remain available during potential disruptions.
 
-**Standard**
+### **Standard**
 
 - All AWS customers benefit from the automatic protections of Shield Standard.
 - Shield Standard provides always-on network flow monitoring which inspects incoming traffic to AWS and detect malicious traffic in real-time.
@@ -891,7 +910,7 @@ Shield Tiers and Features
 - When you use Shield Standard with CloudFront and Route 53, you receive comprehensive availability protection against all known infrastructure attacks.
 - You can also view all the events detected and mitigated by AWS Shield in your account.
 
-**Advanced**
+### **Advanced**
 
 - Shield Advanced provides enhanced detection, inspecting network flows and also monitoring application layer traffic to your Elastic IP address, Elastic Load Balancing, CloudFront, or Route 53 resources.
 - It handles the majority of DDoS protection and mitigation responsibilities for layer 3, layer 4, and layer 7 attacks.
@@ -905,6 +924,39 @@ Shield Tiers and Features
 ### **Pricing**
 - Shield Standard provides protection at no additional charge.
 - Shield Advanced, however, is a paid service. It requires a 1-year subscription commitment and charges a monthly fee, plus a usage fee based on data transfer out from CloudFront, ELB, EC2, and AWS Global Accelerator.
+
+
+###  Key Features of Amazon Shield
+
+1. **AWS Shield Standard**:
+   - **Free Service**: Shield Standard is automatically enabled for all AWS customers and offers protection against common DDoS attacks without additional cost.
+   - **Network and Transport Layer Protection**: Shield Standard provides protection against basic attacks like SYN/UDP Floods, Reflection attacks, and other layer 3 and layer 4 attacks.
+   - **Automatic Protection**: Shield Standard automatically protects all AWS resources (e.g., EC2, ELB, CloudFront, and Route 53) from these common threats without needing to take further action.
+
+2. **AWS Shield Advanced**:
+   - **Paid Service**: Shield Advanced offers additional, more robust protection for customers who need enhanced security against larger and more sophisticated DDoS attacks. It costs $3,000 per month per organization.
+   - **Comprehensive Protection**: Shield Advanced protects against attacks targeting Amazon EC2, Elastic Load Balancing (ELB), Amazon CloudFront, AWS Global Accelerator, and Amazon Route 53. It goes beyond Shield Standard’s protection by offering defense against more sophisticated attacks on the application layer (Layer 7).
+   - **24/7 Access to the DDoS Response Team (DRT)**: Customers can access AWS's DDoS Response Team for guidance on mitigating attacks and improving security posture.
+   - **Protection from DDoS-related Usage Spikes**: Shield Advanced also covers additional charges that may arise due to usage spikes during a DDoS attack, such as increased traffic or resource consumption.
+   - **Application Layer Mitigation**: Shield Advanced works with **AWS WAF (Web Application Firewall)** to provide automatic application layer (Layer 7) DDoS mitigation. This feature evaluates and deploys AWS WAF rules to defend against malicious web traffic that targets your applications.
+
+3. **Multi-Account Support**:
+   - Shield Advanced can be enabled on multiple AWS accounts under a single consolidated billing umbrella. Once enabled on each account via the AWS Management Console or API, it will provide DDoS protection across all linked AWS accounts, streamlining the management of DDoS defense across large environments.
+
+###  Key Use Cases
+
+1. **Protection for EC2, ELB, CloudFront, Global Accelerator, and Route 53**:
+   - Shield Advanced provides additional layers of protection for AWS resources, including EC2 instances, load balancers, and global distribution points like CloudFront and Route 53, ensuring that they remain resilient to large-scale DDoS attacks.
+
+2. **Enhanced Web Application Protection**:
+   - By using **AWS WAF** alongside Shield Advanced, customers can create custom rules to filter and block malicious web traffic, safeguarding web applications from sophisticated Layer 7 attacks such as SQL injection, cross-site scripting (XSS), and bot-driven attacks.
+
+3. **Disaster Recovery and Availability**:
+   - With near real-time visibility into attacks, Shield Advanced enables quick responses to mitigate DDoS attacks, ensuring that critical applications remain online and operational.
+
+4. **Cost Protection During Attacks**:
+   - Shield Advanced helps mitigate the financial impact of DDoS attacks by covering increased resource costs that might result from traffic spikes or higher usage associated with attack mitigation.
+
 
 **Cheat Sheets**
 

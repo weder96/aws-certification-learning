@@ -6,15 +6,15 @@
 
 ## Content
 
-1. <a href="#section_01">AWS X-Ray</a>
-2. <a href="#section_02">AWS Cloud9</a>
-3. <a href="#section_03">AWS CodeStar</a>
-4. <a href="#section_04">AWS CodeBuild</a>
-5. <a href="#section_05">AWS CloudShell</a>
-6. <a href="#section_06">AWS CodeCommit</a>
-7. <a href="#section_07">AWS CodeDeploy</a>
-8. <a href="#section_08">Amazon Corretto</a>
-9. <a href="#section_09">AWS CodeArtifact</a>
+1.  <a href="#section_01">AWS X-Ray</a>
+2.  <a href="#section_02">AWS Cloud9</a>
+3.  <a href="#section_03">AWS CodeStar</a>
+4.  <a href="#section_04">AWS CodeBuild</a>
+5.  <a href="#section_05">AWS CloudShell</a>
+6.  <a href="#section_06">AWS CodeCommit</a>
+7.  <a href="#section_07">AWS CodeDeploy</a>
+8.  <a href="#section_08">Amazon Corretto</a>
+9.  <a href="#section_09">AWS CodeArtifact</a>
 10. <a href="#section_10">AWS CodePipeline</a>
 11. <a href="#section_11">AWS Tools and SDKs</a>
 12. <a href="#section_12">AWS Cloud Development Kit</a>
@@ -60,6 +60,23 @@ https://www.youtube.com/results?search_query=AWS+x-ray+hands+on++
 ***************************************************************************************************
 ## <a id="section_02"></a> **2 - AWS Cloud9**
 ![01](../images/Architecture09172021/Arch_Developer-Tools/64/Arch_AWS-Cloud9_64.svg)
+
+### **Definitions**
+
+**AWS Cloud9** is a cloud-based integrated development environment (IDE) that allows developers to write, run, and debug code directly from a web browser. It provides a rich set of features, including a code editor, a terminal, and debugging tools, all integrated into a single environment. Cloud9 is particularly useful for developers who need an environment that can be easily accessed from anywhere without the need for complex local setups.
+
+Key Features:
+
+- **Browser-Based IDE**: Access your development environment from any device with an internet connection.
+- **Preconfigured with AWS Tools**: AWS Cloud9 comes preconfigured with the AWS SDKs and command-line tools, making it easy to develop applications that interact with AWS services.
+- **Collaborative Development**: You can invite team members to work on the same code in real time, which simplifies collaboration on projects.
+- **Support for Multiple Languages**: AWS Cloud9 supports multiple programming languages such as Python, JavaScript, PHP, Ruby, and more.
+- **Built-in Terminal**: Integrated with a terminal that allows you to run AWS CLI commands directly from the IDE.
+- **Debugging Tools**: Provides powerful debugging tools, including breakpoints, stack traces, and variable inspection.
+
+**Use Case**:
+AWS Cloud9 is particularly useful for cloud-based development, remote teams, or anyone needing to access a development environment without managing local resources. It is also handy for serverless application development, as it integrates easily with other AWS services like AWS Lambda.
+
 
 **Cheat Sheets**
 
@@ -110,6 +127,8 @@ https://www.youtube.com/results?search_query=+AWS+CodeStar+Hands+On
 
 A fully managed continuous integration service that compiles source code, runs tests, and produces software packages that are ready to deploy.
 
+AWS **CodeBuild** is a fully managed, serverless build service that compiles source code, runs tests, and produces deployment-ready packages. It integrates seamlessly with other AWS services, such as CodePipeline and CodeDeploy, making it an essential component for building a robust CI/CD pipeline.
+
 ### **Concepts**
 
 - A **build project** defines how CodeBuild will run a build. It includes information such as where to get the source code, which build environment to use, the build commands to run, and where to store the build output.
@@ -120,6 +139,19 @@ A fully managed continuous integration service that compiles source code, runs t
     - If you include a build spec as part of the source code, by default, the build spec file must be named buildspec.yml and placed in the root of your source directory.
 
 - A collection of input files is called build input artifacts or build input and a deployable version of a source code is called build output artifact or build output.
+
+### Key Features
+
+- **Fully Managed and Scalable**: CodeBuild automatically scales to meet your build requirements, without the need to manage infrastructure.
+- **Secure and Pay-As-You-Go**: You only pay for the build time you use, and builds are isolated for security.
+- **Buildspec File**: CodeBuild uses a `buildspec.yml` file that defines the build commands, environment variables, and runtime environment for your build, allowing for highly customizable build configurations.
+- **Integrates with AWS Services**: Works seamlessly with CodeCommit, CodePipeline, CodeDeploy, and other AWS services to automate the entire build and deployment process.
+
+### Use Cases
+
+- **Automated Build Process**: Automates compiling source code, running unit tests, and preparing the application for deployment.
+- **Customizable Build Environment**: Through `buildspec.yml`, developers can configure the build environment for different resource requirements, such as different compute resources for intensive builds.
+
 
 **Cheat Sheets**
 
@@ -166,6 +198,7 @@ https://www.youtube.com/results?search_query=CodeBuild+Hands+on
 
 **Definition**
 
+AWS **CodeCommit** is a fully managed source control service that hosts Git repositories. While AWS CodeCommit is still available, it is being gradually phased out, with new customers unable to sign up for the service after July 25, 2024. AWS recommends migrating to a third-party Git solution, such as GitHub.
 - A fully-managed source control service that hosts secure Git-based repositories, similar to Github.
 - You can create your own code repository and use Git commands to interact with your own repository and other repositories.
 - You can store and version any kind of file, including application assets such as images and libraries alongside your code.
@@ -196,6 +229,19 @@ AWS CodePipeline, as well as servers accessing CodeCommit using a unique AWS ide
 - A single blob in a repository cannot be more than 2 GB in size.
 - Total size of your files in a single commit should not be more than 20 MB.
 - An individual file should not exceed 6 MB.
+
+### Key Features
+
+- **Git-based Repository**: Provides a secure and scalable Git repository for storing and versioning your source code.
+- **Integrated with AWS Services**: Seamlessly integrates with AWS tools like CodeBuild, CodeDeploy, and CodePipeline, making it easy to build a complete CI/CD pipeline.
+- **Secure and Private**: CodeCommit ensures that repositories are secure, private, and integrated with IAM for fine-grained access control.
+- **Scalable and Highly Available**: As a fully managed service, CodeCommit automatically scales with your usage and ensures high availability.
+
+### Use Cases
+
+- **Version Control**: Used primarily for storing and versioning code in a private and secure repository.
+- **Integration with CI/CD**: Works well with AWS CI/CD tools like CodePipeline, CodeBuild, and CodeDeploy to automate the delivery process.
+
 
 **Cheat Sheets**
 
@@ -230,6 +276,8 @@ https://www.youtube.com/results?search_query=AWS+CodeCommit+Hands+on
 **Definition**
 - A fully managed deployment service that automates software deployments to a variety of compute services such as Amazon EC2, AWS Fargate, AWS Lambda, and your on-premises servers.
 
+AWS **CodeDeploy** is a fully managed deployment service that automates the deployment of applications to a variety of compute services, such as Amazon EC2 instances, Lambda functions, and even on-premises servers. CodeDeploy supports rolling updates, blue-green deployments, and can be integrated with other AWS services like AWS CodePipeline for seamless, automated application delivery.
+
 ### **Concepts**
 
 - An Application is a name that uniquely identifies the application you want to deploy. CodeDeploy uses this name, which functions as a container, to ensure the correct combination of revision, deployment configuration, and deployment group are referenced during a deployment.
@@ -241,6 +289,21 @@ https://www.youtube.com/results?search_query=AWS+CodeCommit+Hands+on
     - In an EC2/On-Premises deployment, a deployment group is a set of individual instances targeted for a deployment.
         - In an in-place deployment, the instances in the deployment group are updated with the latest application revision.
         - In a blue/green deployment, traffic is rerouted from one set of instances to another by deregistering the original instances from a load balancer and registering a replacement set of instances that typically has the latest application revision already installed.
+
+### Key Features
+
+- **Supports EC2 & On-Premises Deployments**: CodeDeploy can manage deployments to EC2 instances as well as on-premises servers, making it a flexible solution for hybrid cloud environments.
+- **Deployment Strategies**: CodeDeploy supports multiple deployment strategies, including:
+  - **Rolling deployments**: Gradual deployment of new application versions to EC2 instances.
+  - **Blue/Green deployments**: Shifting traffic between two environments (blue and green) to ensure minimal downtime and rapid rollback capabilities.
+- **Integrated with AWS Services**: Easily integrates with services like CodePipeline for CI/CD, and Lambda for serverless deployments.
+- **Customizable Deployment**: CodeDeploy allows you to customize deployment scripts (like hooks) to run specific actions at various stages of the deployment process.
+
+### Use Cases
+
+- **Automated Application Deployment**: Ideal for automatically deploying updates to applications on EC2 instances, Lambda, or on-premises systems.
+- **Zero-Downtime Deployments**: Blue/Green deployments help ensure that your application has no downtime during updates.
+
 
 
 
@@ -302,6 +365,8 @@ https://www.youtube.com/results?search_query=AWS+CodeDeploy++Hands+On
 
 **Definitions**
 
+AWS **CodePipeline** is a fully managed service that automates the build, test, and deployment processes in a continuous integration and continuous delivery (CI/CD) workflow. CodePipeline orchestrates the entire CI/CD pipeline, integrating services like CodeCommit for source control, CodeBuild for building and testing, and CodeDeploy for deployment.
+
 - A fully managed continuous delivery service that helps you automate your release pipelines for application and infrastructure updates.
 - You can easily integrate AWS CodePipeline with third-party services such as GitHub or with your own custom plugin
 
@@ -338,6 +403,17 @@ https://www.youtube.com/results?search_query=AWS+CodeDeploy++Hands+On
 - You are charged per active pipeline each month. Newly created pipelines are free to use during the first 30 days after creation.
 
 
+### Key Features
+
+- **End-to-End Automation**: CodePipeline allows you to automate the entire software delivery process, from source control to deployment.
+- **Seamless Integrations**: Easily integrates with other AWS services like CodeCommit, CodeBuild, CodeDeploy, Elastic Beanstalk, CloudFormation, and even third-party services like GitHub.
+- **Conditional Execution**: Supports conditional execution of actions, allowing you to customize workflows based on predefined criteria.
+- **Fast Delivery and Rapid Updates**: CodePipeline enables rapid application updates and faster time-to-market by automating the workflow.
+
+### Use Cases
+
+- **Automating CI/CD Pipelines**: Automates the entire pipeline process, including building, testing, and deploying applications.
+- **Continuous Integration & Delivery**: Ensures your code changes are built, tested, and deployed continuously for faster updates and releases.
 
 
 **Cheat Sheets**
@@ -379,6 +455,34 @@ https://www.youtube.com/results?search_query=aws+codepipeline++Hands+On
 
 ![01](../images/Architecture09172021/Arch_Developer-Tools/64/Arch_AWS-Cloud-Development-Kit_64.svg)
 
+### **Definitions**
+
+The **AWS Cloud Development Kit (CDK)** is a powerful framework for defining cloud infrastructure in a high-level programming language, allowing developers to use familiar programming languages to model and provision AWS resources. It abstracts the complexities of AWS infrastructure management by providing constructs, which are high-level components that can be used to create AWS resources.
+
+- **Programming Languages**: The AWS CDK supports a variety of languages such as JavaScript, TypeScript, Python, Java, and .NET, making it accessible to developers from different backgrounds.
+- **Constructs**: In CDK, the building blocks for your infrastructure are called constructs. These are pre-configured components that represent AWS resources, and you can easily use and customize them in your code.
+- **CloudFormation Integration**: While the CDK code is written in a high-level language, it is “compiled” into an underlying **CloudFormation template** (in JSON or YAML format). This enables users to take advantage of CloudFormation's powerful features for provisioning and managing AWS resources.
+- **Infrastructure and Application Code Together**: One of the standout features of the CDK is that it allows you to deploy both infrastructure and application runtime code together. This makes it ideal for **Lambda functions** and **Docker containers** running in services like **ECS** and **EKS**.
+- **Flexibility**: The CDK is extremely flexible, supporting all AWS services, from EC2 instances to serverless resources, and allowing you to model everything in code.
+
+The CDK is a great tool for developers who are familiar with coding and want to manage their AWS resources in the same way they write application code. It enables rapid development, iteration, and deployment of cloud infrastructure with much more flexibility and control compared to traditional declarative templates.
+
+### Comparison of AWS CDK and SAM
+
+| Feature                       | **AWS CDK**                                     | **AWS SAM**                                  |
+|-------------------------------|-------------------------------------------------|----------------------------------------------|
+| **Focus**                      | General-purpose cloud infrastructure deployment | Serverless applications, especially Lambda  |
+| **Supported Languages**        | JavaScript, TypeScript, Python, Java, .NET      | JSON/YAML (Declarative Templates)            |
+| **Abstraction Level**          | High-level, object-oriented constructs          | Declarative, simplifies Lambda & API Gateway |
+| **Flexibility**                | Supports all AWS services                       | Focused on Lambda, API Gateway, DynamoDB    |
+| **Deployment Model**           | Infrastructure and application code together    | Declarative, limited to specific serverless components |
+| **CloudFormation Integration** | Generates CloudFormation templates              | Leverages CloudFormation natively            |
+| **Ease of Use**                | Requires programming skills for setup           | Easier to start with, especially for Lambda  |
+| **Use Case**                   | Full-scale infrastructure (including Lambda, ECS, EKS, etc.) | Ideal for quick serverless Lambda setups    |
+
+In summary, **AWS CDK** is a versatile framework that can be used for any type of AWS service, giving developers the ability to use familiar programming languages to manage infrastructure, while **AWS SAM** is a more specialized, declarative tool focused on simplifying the deployment of serverless applications such as AWS Lambda functions.
+
+
 **Cheat Sheets**
 
 **References:**
@@ -390,6 +494,20 @@ https://www.youtube.com/results?search_query=aws+codepipeline++Hands+On
 ## <a id="section_13"></a> **13 - AWS Command Line Interface**
 
 ![01](../images/Architecture09172021/Arch_Developer-Tools/64/Arch_AWS-Command-Line-Interface_64.svg)
+
+
+### **Definitions**
+
+The **AWS Command Line Interface (CLI)** is a tool that allows you to interact with AWS services using commands directly in your command-line shell. It provides direct access to the public APIs of AWS services, making it a powerful tool for managing and automating AWS resources. The AWS CLI is commonly used for scripting and automating repetitive tasks, as well as for managing resources at scale.
+
+- **Open-source**: The AWS CLI is open-source and can be found on [GitHub](https://github.com/aws/aws-cli).
+- **Direct API Access**: It interacts directly with AWS services' public APIs, enabling you to perform actions like creating, managing, and deleting resources.
+- **Command-Line Alternative**: The AWS CLI is a convenient alternative to the AWS Management Console, especially for those who prefer command-line interfaces or need automation.
+- **Automation & Scripting**: You can develop scripts to automate tasks such as launching EC2 instances, managing S3 buckets, or configuring IAM roles.
+- **SSH Access**: The AWS CLI also supports SSH functionality for secure remote access to your EC2 instances. It allows you to connect to and manage instances directly from the command line, which is especially useful for instance management or troubleshooting.
+
+Overall, the AWS CLI is a powerful tool for AWS resource management, automation, and monitoring in environments where a GUI might not be ideal.
+
 
 **Cheat Sheets**
 

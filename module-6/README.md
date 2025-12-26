@@ -25,11 +25,14 @@
 
 
 ***************************************************************************************************
-## <a id="section-1"></a> **1 - Amazon EC2**
+## <a id="section-1"></a>  **01 - Amazon EC2**
 
 ![Amazon EC2](../images/Architecture-Service-Icons_06072024/Arch_Compute/48/Arch_Amazon-EC2_48.png "Amazon EC2")
 
 Amazon Elastic Compute Cloud (Amazon [EC2](https://aws.amazon.com/ec2/?nc1=h_ls)) is a web service that provides resizable compute capacity in the cloud.
+
+**Amazon Elastic Compute Cloud (EC2)** is a fundamental service within the Amazon Web Services (AWS) ecosystem, providing scalable compute capacity in the cloud. It allows businesses and developers to run applications on virtual servers without investing in or maintaining physical infrastructure. EC2 is part of AWS's IaaS (Infrastructure-as-a-Service) offerings and provides extensive flexibility, control, and cost optimization options.
+
 
 With Amazon [EC2](https://aws.amazon.com/ec2/?nc1=h_ls) you launch virtual server instances on the AWS cloud.
 
@@ -75,41 +78,24 @@ With [EC2](https://aws.amazon.com/ec2/?nc1=h_ls) you have full control at the op
 
 **Launching EC2 Instances**
 
-Choose an Amazon Machine Image (AMI).
-
-Choose whether to auto-assign a public IP – default is to use the subnet setting.
-
-Can add an instance to a placement group (more about this below).
-
-Instances can be assigned to IAM roles which configures them with credentials to access AWS resources.
-
-Termination protection can be enabled and prevents you from terminating an instance.
-
-Basic monitoring is enabled by default (5-minute periods), detailed monitoring can be enabled (1-minute periods, chargeable).
-
-Can define shared or dedicated tenancy.
-
-T2 unlimited allows applications to burst past CPU performance baselines as required (chargeable).
-
-Can add a script to run on startup (user data).
-
-Can join to a directory (Windows instances only).
-
-There is an option to enable an Elastic GPU (Windows instances only).
-
-Storage options include adding additional volumes and choosing the volume type.
-
-Use Amazon Elastic File System (EFS) for mounting a shared filesystem to multiple EC2 instances.
-
-Non-root volumes can be encrypted.
-
-Root volumes can be encrypted at launch.
-
-There is an option to create tags (or can be done later).
-
-You can select an existing security group or create a new one.
-
-You must create or use an existing key pair – this is required if you want to access your instances via SSH. However, you can also attach the ‘AmazonEC2RoleforSSM’ IAM role to your EC2 instance to allow connection to your instance via Systems Manager (Session Manager).
+- Choose an Amazon Machine Image (AMI).
+- Choose whether to auto-assign a public IP – default is to use the subnet setting.
+- Can add an instance to a placement group (more about this below).
+- Instances can be assigned to IAM roles which configures them with credentials to access AWS resources.
+- Termination protection can be enabled and prevents you from terminating an instance.
+- Basic monitoring is enabled by default (5-minute periods), detailed monitoring can be enabled (1-minute periods, chargeable).
+- Can define shared or dedicated tenancy.
+- T2 unlimited allows applications to burst past CPU performance baselines as required (chargeable).
+- Can add a script to run on startup (user data).
+- Can join to a directory (Windows instances only).
+- There is an option to enable an Elastic GPU (Windows instances only).
+- Storage options include adding additional volumes and choosing the volume type.
+- Use Amazon Elastic File System (EFS) for mounting a shared filesystem to multiple EC2 instances.
+- Non-root volumes can be encrypted.
+- Root volumes can be encrypted at launch.
+- There is an option to create tags (or can be done later).
+- You can select an existing security group or create a new one.
+- You must create or use an existing key pair – this is required if you want to access your instances via SSH. However, you can also attach the ‘AmazonEC2RoleforSSM’ IAM role to your EC2 instance to allow connection to your instance via Systems Manager (Session Manager).
 
 
 ### **Amazon Machine Images**
@@ -136,6 +122,157 @@ A company is planning to move a number of legacy applications to the AWS Cloud. 
 The most cost-effective solution that works is to use Amazon EC2 instances that are right-sized with the most optimum instance types. Right-sizing is the process of ensuring that the instance type selected for each application provides the right amount of resources for the application.
 
 
+### 1. **EC2 Instances**
+
+At the core of Amazon EC2 is the **EC2 instance** – a virtual server running in AWS's data center that can host applications, databases, and services. The instance is fully customizable, offering a variety of configurations tailored to meet different computational needs.
+
+#### Instance Types
+
+EC2 instances are categorized based on their resource profile and optimized use case. The major families include:
+
+- **General Purpose Instances**: Balanced compute, memory, and network resources for a variety of diverse workloads.
+  - **T-series** (e.g., `t4g`, `t3`): Burstable performance instances.
+  - **M-series** (e.g., `m6i`, `m5`): Balanced resources for many types of workloads.
+
+- **Compute Optimized**: Instances designed for compute-heavy workloads such as batch processing, video encoding, etc.
+  - **C-series** (e.g., `c7g`, `c5`): High-performance processors.
+
+- **Memory Optimized**: For workloads requiring high memory capacity, such as in-memory caches and real-time big data analytics.
+  - **R-series** (e.g., `r6g`, `r5`): Memory-intensive tasks.
+
+- **Storage Optimized**: For workloads that require high, sequential read and write access to very large datasets.
+  - **I-series** (e.g., `i3`, `i3en`): Local storage-heavy tasks.
+
+- **Accelerated Computing**: These instances provide specialized hardware accelerators like GPUs or FPGAs, useful for machine learning, artificial intelligence, or scientific computation.
+  - **P-series** (e.g., `p4d`): GPU-powered instances for ML and high-performance computing.
+  - **Inf1**: Instances designed for deep learning inference.
+
+### 2. **Auto Scaling**
+
+**Auto Scaling** is a feature that automatically adjusts the number of EC2 instances in response to demand, ensuring high availability and cost efficiency.
+
+- **Scaling Policies**: Auto Scaling can be configured to add or remove instances based on specific metrics (e.g., CPU utilization, memory usage, etc.).
+- **Health Checks**: You can leverage both Amazon EC2 instance status checks and ELB health checks to make scaling and health decisions about instances within the group. By default, it uses EC2 status check. When an instance is reported as impaired status, Amazon EC2 Auto Scaling waits a few minutes for the instance to recover and otherwise terminates it. Amazon EC2 Auto Scaling doesn’t terminate an instance in based on Amazon EC2 status checks and Elastic Load Balancing (ELB) health checks until the health check grace period expires.
+
+By integrating **Auto Scaling** with **Elastic Load Balancing (ELB)**, you can ensure that traffic is always distributed across healthy, scalable instances, optimizing application performance.
+
+Amazon EC2 Auto Scaling doesn’t terminate an instance in based on Amazon EC2 status checks and Elastic Load Balancing (ELB) health checks until the health check grace period expires.
+
+### Launch Template
+
+A launch template specifies instance configuration information. It includes the ID of the Amazon Machine Image (AMI), the instance type, a key pair, security groups, and other parameters used to launch EC2 instances.
+
+When you create a Launch Template, the default value for the instance tenancy is shared and the instance tenancy is controlled by the tenancy attribute of the VPC. If you set the Launch Template Tenancy to shared (default) and the VPC Tenancy is set to dedicated, then the instances have dedicated tenancy. If you set the Launch Template Tenancy to dedicated and the VPC Tenancy is set to default, then again the instances have dedicated tenancy.
+
+You can only change the tenancy of an instance from dedicated to host, or from host to dedicated after you’ve launched it.
+
+### 3. **Networking in EC2**
+
+### a. **Virtual Private Cloud (VPC)**
+
+An EC2 instance runs within a **Virtual Private Cloud (VPC)**, a logically isolated network that allows you to define your IP address range, subnets, and route tables. Each VPC is isolated from other VPCs in AWS, but you can connect them using VPC Peering or Transit Gateway.
+
+- **Subnets**: Segments of a VPC's IP address range that can house instances. You can have public and private subnets.
+- **Security Groups**: Virtual firewalls that control inbound and outbound traffic to instances.
+- **Network ACLs**: Provide an additional layer of security at the subnet level, filtering traffic entering and leaving subnets.
+
+### b. **Elastic Load Balancer (ELB)**
+
+**Elastic Load Balancing (ELB)** automatically distributes incoming traffic across multiple EC2 instances to ensure high availability and fault tolerance. ELB helps protect against a sudden surge in traffic by dynamically scaling as needed. There are three types of ELBs:
+
+- **Classic Load Balancer**: Provides basic load balancing for EC2 instances.
+- **Application Load Balancer (ALB)**: Best for HTTP and HTTPS traffic, routing requests based on URL path or hostname.
+- **Network Load Balancer (NLB)**: Designed for handling TCP traffic at very high throughput with low latency.
+
+### c. **Elastic IP (EIP)**
+
+An **Elastic IP** is a static IPv4 address designed for dynamic cloud computing. Unlike a regular public IP address, an Elastic IP can be reassigned to any EC2 instance within the same region, enabling resilience and flexibility in case of failure. This ensures that even if your instance fails, the IP can be remapped to another instance, maintaining uptime and continuity.
+
+### 4. **Amazon EC2 Storage Options**
+
+#### a. **Amazon EBS (Elastic Block Store)**
+
+EC2 instances often use **Amazon Elastic Block Store (EBS)** for persistent storage. EBS volumes provide high-availability block-level storage that persists even when the instance is stopped or terminated. Types of EBS volumes include:
+
+- **General Purpose SSD (gp3)**: Balanced price and performance for most workloads.
+- **Provisioned IOPS SSD (io2)**: High-performance volumes for I/O-intensive applications.
+- **Magnetic**: Low-cost, low-performance option for archival data.
+
+#### b. **Instance Store**
+
+**Instance Store** provides temporary block-level storage that is physically attached to the host server. Data is lost when the instance is stopped, so it is only suitable for non-persistent storage.
+
+#### c. **Amazon S3 (Simple Storage Service)**
+
+While S3 is not directly attached to EC2 instances, it is frequently used alongside EC2 for storing large amounts of unstructured data, backups, or logs. S3 provides a scalable, durable, and low-cost storage solution for use cases that require large-scale data storage and retrieval.
+
+### 5. **Security Features in EC2**
+
+#### a. **Security Groups and Key Pairs**
+
+- **Security Groups**: Act as a virtual firewall for EC2 instances. They define the allowed inbound and outbound traffic, functioning at the instance level. Security Groups are stateful, meaning that if you allow inbound traffic, the response traffic is automatically allowed, regardless of outbound rules.
+- **Key Pairs**: Key pairs are used for secure SSH access to EC2 instances. When launching an EC2 instance, you must associate it with an existing key pair or create a new one. The private key must be kept safe to ensure secure access.
+
+#### b. **IAM Roles and Policies**
+
+**AWS Identity and Access Management (IAM)** is used to define granular permissions for users, groups, and roles to control access to EC2 instances and other AWS services. IAM roles can be assigned to EC2 instances to allow them to interact with other AWS services, such as S3 or DynamoDB, without embedding access credentials in your application.
+
+#### c. **VPC endpoint**
+
+Data in transit can be secured by enabling VPC endpoint encryption, ensuring that data is protected during transmission between EC2 and EBS.
+
+### 6. **Pricing Models**
+
+### a. **On-Demand Instances**
+
+On-demand instances allow you to pay for compute capacity by the hour with no long-term commitments. This model is ideal for short-term workloads or unpredictable traffic patterns.
+
+### b. **Reserved Instances**
+
+Reserved instances require a commitment to a specific instance type and region for a one- or three-year term. In return, AWS offers significant discounts (up to 75%) compared to on-demand instance pricing. This is ideal for stable, predictable workloads.
+
+- Reserved Instance Marketplace: A platform for selling unused Reserved Instances, catering to changing business needs such as region shifting, instance type updates, or unused capacity.
+
+### c. **Spot Instances**
+
+**Spot Instances** allow you to purchase unused EC2 capacity at a significantly reduced rate compared to on-demand prices. Spot Instances can be terminated by AWS at any time with a two-minute warning, so they are suitable for flexible, fault-tolerant applications.
+
+- **Spot Fleet**: A set of Spot Instances that can be managed collectively to meet a specified target capacity.
+- **Spot Blocks**: A way to request Spot Instances for a fixed duration (1 to 6 hours), guaranteeing that the instance will run uninterrupted during the block period.
+
+### d. **Savings Plans**
+
+**EC2 Savings Plans** offer flexible pricing for EC2 usage in exchange for a commitment to consistent usage for a one- or three-year term. There are two types of Savings Plans:
+
+- **Compute Savings Plans**: Applies to any EC2 instance, regardless of region or instance type.
+- **EC2 Instance Savings Plans**: Applies to a specific instance family within a region
+
+### 7. **AWS Graviton**
+
+AWS Graviton refers to a family of custom ARM-based processors developed by Amazon Web Services (AWS) to deliver high performance, cost efficiency, and power savings for cloud workloads. These processors are designed to provide superior price/performance compared to traditional x86-based processors, enabling organizations to run a variety of workloads with enhanced efficiency and lower operational costs.
+
+Graviton processors are built using the ARM architecture, which is known for its energy efficiency, and they are optimized for a wide range of EC2 instances. This includes general-purpose, compute-optimized, memory-optimized, and storage-optimized instances. The Graviton2 and the more recent Graviton3 processors are available in multiple EC2 instance types, offering significant performance improvements over previous generations of AWS's general-purpose processors.
+
+For data processing tasks that are both compute-intensive and require cost-effective solutions, the c6g.2xlarge instances, powered by AWS Graviton2 processors, are the optimal choice. AWS Graviton2 processors provide up to 7x the performance of the first-generation Graviton processors, offering superior price-performance benefits for a wide range of workloads, including the compute and memory-intensive operations involved in preparing data for machine learning.
+
+### 8. **Tenancy Options**
+
+Amazon EC2 provides three options for the tenancy (way in which compute resources are allocated in physical servers) of your EC2 instances:
+
+1. **Shared:** Default, shared hardware among AWS accounts.
+2. **Dedicated:** Exclusive single-tenant hardware.
+3. **Dedicated Host:** Full control over server resources, beneficial for legacy software licensing and compliance.
+
+### 9. **AMI**
+
+An Amazon Machine Image (AMI) provides the information required to launch an instance. An AMI includes the following:
+
+- One or more Amazon EBS snapshots, or, for instance-store-backed AMIs, a template for the root volume of the instance.
+- Launch permissions that control which AWS accounts can use the AMI to launch instances.
+- A block device mapping that specifies the volumes to attach to the instance when it’s launched
+
+
+
 **Cheat Sheets**
 
 https://digitalcloud.training/aws-compute-services/
@@ -153,7 +290,7 @@ https://wa.aws.amazon.com/wellarchitected/2020-07-02T19-33-23/wat.concept.horizo
 **Videos**
 
 ***************************************************************************************************
-## <a id="section-2"></a> **2 - Pricing**
+## <a id="section-2"></a>  **02 - Pricing**
 ### **Billing and provisioning**
 
 There are several options for how you consume and pay for Amazon EC2 instances.
@@ -299,7 +436,7 @@ https://aws.amazon.com/aws-cost-management/aws-cost-optimization/
 
 
 ***************************************************************************************************
-## <a id="section-3"></a> **3 - Instance Types**
+## <a id="section-3"></a>  **03 - Instance Types**
 
 ### **EC2 Instance types**
 
@@ -312,7 +449,7 @@ Each instance type includes one or more instance sizes, allowing you to scale yo
 
 
 ***************************************************************************************************
-## <a id="section-4"></a> **4 - Amazon Elastic Container Service (ECS)**
+## <a id="section-4"></a>  **04 - Amazon Elastic Container Service (ECS)**
 
 ![Amazon-Elastic-Container-Service](../images/Architecture-Service-Icons_06072024/Arch_Compute/48/Arch_Amazon-Elastic-Container-Service_48.png "Amazon-Elastic-Container-Service")
 
@@ -324,7 +461,7 @@ Each instance type includes one or more instance sizes, allowing you to scale yo
 **Videos**
 
 ***************************************************************************************************
-## <a id="section-5"></a> **5 - AWS Lambda**
+## <a id="section-5"></a>  **05 - AWS Lambda**
 
 ![AWS Lambda](../images/Architecture-Service-Icons_06072024/Arch_Compute/48/Arch_AWS-Lambda_48.png "AWS Lambda")
 
@@ -333,7 +470,7 @@ Each instance type includes one or more instance sizes, allowing you to scale yo
 [AWS Lambda](https://github.com/weder96/aws-certification-learning/tree/main/module-14#section-1)
 
 ***************************************************************************************************
-## <a id="section-6"></a> **6 - Amazon LightSail**
+## <a id="section-6"></a>  **06 - Amazon LightSail**
 
 ![Amazon LightSail](../images/Architecture-Service-Icons_06072024/Arch_Compute/48/Arch_Amazon-Lightsail_48.png "Amazon Lightsail")
 
@@ -378,7 +515,7 @@ Application templates include WordPress, WordPress Multisite, Drupal, Joomla!, M
 Amazon LightSail currently supports 6 Linux or Unix-like distributions: Amazon Linux, CentOS, Debian, FreeBSD, OpenSUSE, and Ubuntu, as well as 2 Windows Server versions: 2012 R2 and 2016.
 
 ***************************************************************************************************
-## <a id="section-7"></a> **7 - Amazon LightSail Databases**
+## <a id="section-7"></a>  **07 - Amazon LightSail Databases**
 
 ### **Amazon LightSail Databases**
 Amazon LightSail databases are instances that are dedicated to running databases.
@@ -404,7 +541,7 @@ High Availability plans add redundancy and durability to your database, by autom
 For every **Amazon LightSail** plan you use, we charge you the fixed hourly price, up to the maximum monthly plan cost.
 
 ***************************************************************************************************
-## <a id="section-8"></a> **8 - AWS Elastic Beanstalk**
+## <a id="section-8"></a>  **08 - AWS Elastic Beanstalk**
 [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
 
 AWS Elastic Beanstalk can be used to quickly deploy and manage applications in the AWS Cloud.
@@ -723,9 +860,59 @@ The [instance profile](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/co
 You can also create [user policies](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts-roles-user.html) and apply them to IAM users and groups in your account to allow users to create and manage Elastic Beanstalk applications and environments. Elastic Beanstalk provides managed policies for full access and read-only access.
 
 ***************************************************************************************************
-## <a id="section-9"></a> **9 - AWS Batch**
+## <a id="section-9"></a>  **09 - AWS Batch**
 
 ![AWS-Batch](../images/Architecture-Service-Icons_06072024/Arch_Compute/48/Arch_AWS-Batch_48.png "AWS-Batch")
+
+### AWS Batch
+
+AWS Batch is a fully managed service designed to efficiently run batch computing workloads at any scale. It enables you to easily run batch jobs as Docker images without the need to manage infrastructure. AWS Batch automatically provisions the right amount and type of compute resources, including EC2 and Spot Instances, based on job volume and requirements. With its serverless architecture, there is no need to manage clusters or provision infrastructure manually, and you only pay for the EC2 instances used for the job execution.
+
+AWS Batch can be integrated with **AWS Step Functions** to orchestrate complex workflows and **Amazon CloudWatch Events** to schedule batch jobs. Additionally, **Amazon S3** serves as a reliable storage solution for input and output data during processing.
+
+### Key Features
+
+#### Run Batch Jobs as Docker Images
+
+  AWS Batch allows you to package your batch jobs as Docker images, enabling you to use custom environments, libraries, and dependencies for each job. This flexibility ensures that the execution environment is consistent across development, testing, and production.
+
+#### Dynamic Provisioning of EC2 and Spot Instances
+
+  AWS Batch automatically provisions the necessary compute resources (such as EC2 instances and Spot Instances) based on the volume and requirements of the job. This dynamic scaling ensures efficient resource allocation, optimizing cost and performance. You don't need to manually configure instances or worry about over-provisioning or under-provisioning resources.
+
+#### Optimal Resource Allocation Based on Job Volume and Requirements
+
+  AWS Batch intelligently determines the best types and number of instances to run your jobs. It dynamically adjusts the compute resources to meet the needs of the workload, ensuring that the right balance of performance, cost, and capacity is achieved without manual intervention.
+
+#### Fully Serverless, No Need to Manage Clusters
+
+  With AWS Batch, you don't need to manage clusters, which significantly reduces operational overhead. AWS handles the provisioning, scaling, and management of compute resources for you, allowing you to focus on building and running your jobs, not on the infrastructure.
+
+#### Pay Only for EC2 Instances Used During Job Execution
+
+  AWS Batch operates on a pay-as-you-go model, meaning you only pay for the EC2 instances that are used during job execution. This cost-efficient model ensures that you aren't charged for idle resources, and you only pay for the actual compute time needed to process your jobs.
+
+#### Schedule Batch Jobs with CloudWatch Events
+
+  AWS Batch integrates with **Amazon CloudWatch Events**, enabling you to schedule batch jobs to run at specific times or in response to certain triggers. You can automate job execution by setting up event-driven triggers, ensuring that batch jobs are run without manual intervention.
+
+#### Orchestrate Batch Jobs with AWS Step Functions
+
+  AWS Batch integrates seamlessly with **AWS Step Functions**, allowing you to orchestrate complex workflows that require multiple steps or services. For example, you can define a sequence of dependent jobs, including retries and error handling, to ensure that your batch workloads are processed in the correct order and with the desired outcomes.
+
+---
+
+### Comparison Table: AWS Batch vs AWS Glue
+
+| Feature                        | AWS Batch                                      | AWS Glue                                     |
+|--------------------------------|----------------------------------------------|---------------------------------------------|
+| **Purpose**                    | Batch computing for large-scale, parallel jobs | Data integration, ETL (Extract, Transform, Load) |
+| **Type of Jobs**               | Batch computing workloads (e.g., data processing, image rendering, scientific simulations) | Data preparation, transformation, and loading for analytics |
+| **Compute Resource**           | EC2 and Spot Instances (dynamic provisioning) | Serverless, provisions compute resources automatically |
+| **Job Orchestration**          | AWS Step Functions (manual orchestration)     | Built-in orchestration (ETL workflows)       |
+| **Integration with Data Stores**| Amazon S3 for input/output data              | Amazon S3 for ETL data sources and outputs  |
+| **Use Case**                   | High-performance, parallel jobs for processing large data sets | ETL jobs and data processing for analytics  |
+
 
 **Cheat Sheets**
 
@@ -1048,7 +1235,6 @@ https://www.youtube.com/results?search_query=Amazon+Machine+Images
 https://www.youtube.com/results?search_query=Amazon+Machine+Images+hands+on
 
 --------------------------------------------------------------------------------------------------------------------------------------------
-
 ## <a id="section-16"></a> **16 -Placement groups for your Amazon EC2**
 
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html
@@ -1080,7 +1266,6 @@ Before you use placement groups, be aware of the following rules:
 
 
 ***************************************************************************************************
-
 ## <a id="section-17"></a> **17 - Private access to public services, Amazon S3 creating a VPC**
 
 Private access to public services such as Amazon S3 can be achieved by creating a VPC endpoint in the VPC. For S3 this would be a gateway endpoint. The bucket policy can then be configured to restrict access to the S3 endpoint only which will ensure that only services originating from the VPC will be granted access.
