@@ -5,15 +5,15 @@
 # Module 11: AWS Analytics Services
 
 ## Contents
-1. <a href="#section-01"> Amazon Elastic Map Reduce (Amazon EMR)</a>
-2. <a href="#section-02"> Amazona Athena</a>
-3. <a href="#section-03"> AWS Glue</a>
-4. <a href="#section-04"> Data Analysis and Query Use Cases</a>
-5. <a href="#section-05"> Amazon Kinesis</a>
-6. <a href="#section-06"> Amazon Kinesis Video Streams</a>
-7. <a href="#section-07"> Amazon Kinesis Data Streams</a>
-8. <a href="#section-08"> Amazon Kinesis Data Firehose</a>
-9. <a href="#section-09"> Amazon Kinesis Data Analytics</a>
+1.  <a href="#section-01"> Amazon Elastic Map Reduce (Amazon EMR)</a>
+2.  <a href="#section-02"> Amazona Athena</a>
+3.  <a href="#section-03"> AWS Glue</a>
+4.  <a href="#section-04"> Data Analysis and Query Use Cases</a>
+5.  <a href="#section-05"> Amazon Kinesis</a>
+6.  <a href="#section-06"> Amazon Kinesis Video Streams</a>
+7.  <a href="#section-07"> Amazon Kinesis Data Streams</a>
+8.  <a href="#section-08"> Amazon Kinesis Data Firehose</a>
+9.  <a href="#section-09"> Amazon Kinesis Data Analytics</a>
 10. <a href="#section-10"> Amazon OpenSearch </a>
 11. <a href="#section-11"> Amazon Data Exchange </a>
 12. <a href="#section-12"> Amazon Data Pipeline </a>
@@ -308,6 +308,12 @@ However, implementing ACID transactions with Athena requires careful performance
 Amazon Athena Notebooks provides an interactive environment where you can write and execute Apache Spark code using Python. These notebooks combine SQL queries, calculations, and visualizations in one place, making it easier to perform advanced analytics on your data. You can chain SQL queries, create complex transformations, and visualize the results, all within the same notebook.
 
 For teams that need to perform iterative exploration or complex data manipulations, Athena Notebooks, coupled with Apache Spark, offers a powerful platform for data science workflows and analytics.
+
+[Amazon Athena for Apache Spark | Notebooks](https://www.youtube.com/watch?v=Tkltri-9s7k)
+
+[when-to-use-apache-spark-for-amazon-athena](https://medium.com/@bernardo.costa/quando-usar-o-apache-spark-para-amazon-athena-a6b6e7c05732)
+
+[data-exploration-with-amazon-athena](https://github.com/aws-samples/data-exploration-with-amazon-athena)
 
 
 **Cheat Sheets**
@@ -1339,6 +1345,10 @@ Lake Formation provides the concept of Governed Tables to ensure **data consiste
 
 However, Governed Tables will be deprecated in January 2025, and users are encouraged to migrate to alternative solutions before this deadline. While the deprecation will affect the specific implementation of governed tables, Lake Formation will continue to provide the foundational capabilities for data governance, including column-level and row-level security.
 
+### Serverless Datalake
+
+[serverless-datalake](https://github.com/aws-samples/serverless-datalake)
+
 
 **Cheat Sheets**
 
@@ -1834,6 +1844,8 @@ Amazon Managed Service for Apache Flink enables dynamic scaling, adjusting resou
 
 Users can develop and deploy custom processing logic using Java, Scala, Python, or SQL, leveraging Flink’s advanced capabilities for low-latency data processing. The managed service also supports continuous SQL queries on streaming sources, enabling time-series analytics, real-time metrics generation, and live data dashboards with minimal code.
 
+
+[sample-streaming-pipeline-kafka-flink-firehose-s3-cdk](https://github.com/aws-samples/sample-streaming-pipeline-kafka-flink-firehose-s3-cdk)
 
 
 **Cheat Sheets**

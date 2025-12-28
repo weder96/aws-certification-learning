@@ -71,6 +71,9 @@ With AWS managed services you can reduce your time spent performing common IT ta
 
 * "Taking a backup of a database" is also a correct answer.
 
+
+[sample-aws-database-cookbook](https://github.com/aws-samples/sample-aws-database-cookbook)
+
 **Cheat Sheets**
 
 https://digitalcloud.training/aws-database-services/
