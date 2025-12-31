@@ -569,6 +569,8 @@ DataBrew integrates seamlessly with other AWS services, meaning you can easily w
 
 [https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html](https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html)
 
+[https://docs.aws.amazon.com/glue/latest/dg/streaming-tutorial-studio.html](https://docs.aws.amazon.com/glue/latest/dg/streaming-tutorial-studio.html)
+
 
 **AWS Glue Databrew**
 
@@ -1484,7 +1486,7 @@ https://www.youtube.com/results?search_query=Amazon+quicksight+hands+On
 ------------------------------------------------------------------------------------------------------------------------
 ## <a id="section-16"></a> **16 - Amazon RedShift**
 
-![Amazon RedShift](/images/Architecture09172021/Arch_Analytics/Arch_64/Arch_Amazon-Redshift_64.png)
+![Amazon RedShift](/images/Architecture09172021/Arch_Analytics/Arch_64/Arch_Amazon-Redshift_64.svg)
 
 **Definition**
 - A fully managed, petabyte-scale data warehouse service.
@@ -1585,6 +1587,51 @@ https://www.youtube.com/results?search_query=Amazon+quicksight+hands+On
     - You pay a per-second billing rate based on the type and number of nodes in your cluster.
     - You pay for the number of bytes scanned by RedShift Spectrum
     - You can reserve instances by committing to using Redshift for a 1 or 3-year term and save costs.
+
+
+- **AWS Redshift Table Design Strategy**
+Unlike traditional PostgreSQL, Amazon Redshift is a columnar, Massively Parallel Processing (MPP) database. Therefore, table design strategy focuses not just on data structure, but on how data is distributed and stored across cluster nodes to minimize data movement and disk I/O.
+
+- **1. Distribution Styles (DISTSTYLE)**
+The goal is to distribute data uniformly across nodes, avoiding "hot nodes" (overloaded nodes) and minimizing network traffic during joins.
+
+
+|Style	          |When to Use                            |
+|-----------------|---------------------------------------|
+|**KEY**	      |Distributes rows based on the values of a specific column. Ideal for columns frequently used in JOINs or GROUP BYs.|
+|**ALL**	      |A full copy of the table is sent to every node. Excellent for small dimension tables (e.g., zip codes or categories) that join with large fact tables.|
+|**EVEN**	      |Round-robin distribution. Use when the table does not have frequent joins or when there is no obvious distribution column.|
+|**AUTO**	      |Redshift decides the best style (usually starts with ALL for small tables and switches to EVEN as they grow).|
+
+
+
+- **2. Sort Keys (SORT KEY)**
+Sort keys determine the physical order in which data is stored on disk. They act like indices, allowing Redshift to skip blocks of data that do not meet the criteria of a filter (WHERE clause).
+
+**COMPOUND SORT KEY:** The default. It works like a traditional composite index (column order matters). It is most efficient for filters that follow the order of the key.
+
+**INTERLEAVED SORT KEY:** Gives equal weight to all columns in the key. It is useful when you filter by different columns in different queries, but it is more "expensive" during data loads.
+
+- **3. Compression and Encoding (ENCODING)**
+Since Redshift is columnar, compression is vital. It reduces disk space and speeds up queries because less data needs to be read.
+
+**AZ64:** AWS's proprietary algorithm, highly optimized for performance and compression on numeric and date types.
+
+**ZSTD:** Offers a very high compression ratio, ideal for long text columns or data with high variance.
+
+**Pro Tip:** Whenever possible, use the command ANALYZE COMPRESSION <table_name> so that Redshift can recommend the best encoding for each specific column.
+
+
+- **4. Best Practices for Typing and Constraints**
+Redshift handles metadata differently than standard Postgres:
+
+**VARCHAR Size:** Define the smallest size possible. Although Redshift only stores the actual content, query processing allocates memory based on the maximum width defined in the table.
+
+**Constraints (PK/FK):** In Redshift, Primary Keys and Foreign Keys are informational only. The database does not enforce them. They help the query optimizer create more efficient plans, but you must ensure data integrity during your ETL process.
+
+**Date/Time:** Always use DATE or TIMESTAMP instead of strings for dates to take advantage of storage optimizations and specific functions.
+
+
 
 **Cheat Sheets**
 

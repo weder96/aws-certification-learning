@@ -533,20 +533,14 @@ https://www.youtube.com/watch?v=HaEPXoXVf2k
 
 Amazon Redshift is a fast, fully managed data warehouse that makes it simple and cost-effective to analyze all your data using standard SQL and existing Business Intelligence (BI) tools.
 
-RedShift is an SQL-based data warehouse used for analytics applications.
-
-RedShift is a relational database used for OLAP (Online Analytics Processing) use cases.
-
-RedShift is used to run complex analytical queries on petabytes of structured data, using sophisticated query optimization, columnar storage on high-performance local disks, and massively parallel query execution.
-
-RedShift is ideal for processing large amounts of data for business intelligence.
-
-RedShift is 10x faster than a traditional SQL database.
-Amazon Redshift is a fully managed, petabyte-scale cloud data warehouse service designed for fast and scalable storage and analysis of large datasets. It is built for performing complex queries and analytics on vast amounts of structured and semi-structured data.
-
-Amazon Redshift is a relational database management system (RDBMS) that provides the same functionality as typical RDBMS platforms, including online transaction processing (OLTP) features such as inserting and deleting data. However, Redshift is optimized for high-performance data analysis and reporting, especially for large datasets.
-
-A Redshift data warehouse consists of a cluster of computing resources called **nodes**. These nodes are grouped together into a **cluster**, and if the cluster is provisioned with two or more compute nodes, an additional **leader node** is used to coordinate the compute nodes and handle communication with external systems.
+- RedShift is an SQL-based data warehouse used for analytics applications.
+- RedShift is a relational database used for OLAP (Online Analytics Processing) use cases.
+- RedShift is used to run complex analytical queries on petabytes of structured data, using sophisticated query optimization, columnar storage on high-performance local disks, and massively parallel query execution.
+- RedShift is ideal for processing large amounts of data for business intelligence.
+- RedShift is 10x faster than a traditional SQL database.
+- Amazon Redshift is a fully managed, petabyte-scale cloud data warehouse service designed for fast and scalable storage and analysis of large datasets. It is built for performing complex queries and analytics on vast amounts of structured and semi-structured data.
+- Amazon Redshift is a relational database management system (RDBMS) that provides the same functionality as typical RDBMS platforms, including online transaction processing (OLTP) features such as inserting and deleting data. However, Redshift is optimized for high-performance data analysis and reporting, especially for large datasets.
+- A Redshift data warehouse consists of a cluster of computing resources called **nodes**. These nodes are grouped together into a **cluster**, and if the cluster is provisioned with two or more compute nodes, an additional **leader node** is used to coordinate the compute nodes and handle communication with external systems.
 
 ### **RedShift uses columnar data storage:**
 - Data is stored sequentially in columns instead of rows.
@@ -834,6 +828,30 @@ Amazon Redshift offers two main methods for scaling, allowing accommodation for 
 **RA3 nodes** use **Managed Storage**, which automatically offloads infrequently accessed (cold) data to Amazon S3 while keeping frequently accessed (hot) data on SSDs. This helps in cost-effective scaling of storage, as compute and storage can be scaled independently.
 
 This feature helps optimize both storage costs and query performance by using high-performance SSDs for hot data and utilizing Amazon S3's scalability for cold data.
+
+
+**DC2 Nodes:** Processing and storage are coupled. To increase disk space, you are required to add more nodes, which increases computing costs even if you don't need more CPUs.
+
+### 2. Storage Technology and Performance
+
+**RA3 Nodes:** Data is permanently stored in Amazon S3 in an optimized format, while the nodes' local SSD disks act as a high-performance cache for "hot" (frequently accessed) data.
+
+**DC2 Nodes:** Use fixed local NVMe-SSD storage on each node, offering extreme performance for datasets that do not exceed local capacity.
+
+### 3. Advanced Features and Use Cases
+- Proof Trigger for RA3: Recommended for large data warehouses (generally above 1 TB) and use cases requiring Data Sharing (live data sharing between clusters) or Multi-AZ deployments.
+- DC2 Exam Trigger: Recommended for small data warehouses (less than 1 TB compressed) that have computationally intensive workloads and stable data volumes.
+
+- **Comparative Summary for the Exam**
+
+|Feature            |Redshift RA3           | Redshift DC2 |
+|-------------------|-----------------------|--------------|
+|Architecture       |S3-based (RMS)         |Local SSD     |
+|Scalability        |Independent (Compute vs. Storage) |Coupled (Increases both simultaneously)|
+|Data Sharing       |Natively supported     |Not supported|
+|Multi-AZ           |Supported (for high availability)     |Not supported|
+|Ideal for          |Large-scale and unpredictable         |workloads Small and CPU-intensive workloads|
+
 
 ### Distribution
 

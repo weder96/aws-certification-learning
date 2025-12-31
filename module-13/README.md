@@ -325,6 +325,11 @@ AWS DataSync supports moving data between other public clouds and AWS Storage se
 AWS recommends that you should use AWS DataSync to migrate existing data from on-premises to Amazon S3, and subsequently use the File Gateway configuration of AWS Storage Gateway to retain access to the migrated data and for ongoing updates from your on-premises file-based applications.
 
 
+### On-Premisses
+
+![on-premises](./../images/storage/dataSyncOnPremises.png)
+
+
 
 **Cheat Sheets**
 
